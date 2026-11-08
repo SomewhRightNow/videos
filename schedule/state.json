@@ -3,7 +3,7 @@
   "timezone": "Europe/Istanbul",
   "runs": ["08:00", "09:00", "10:00", "11:00", "12:00", "13:00"],
   "runs_done": [],
-  "protect_published_after_utc": "2026-11-08T21:00:00Z",
+  "protect_published_after_utc": "2026-11-09T05:00:00Z",
   "view_threshold": 20,
   "ours": ["NTa8PD1ovJQ", "y5yAg-rzeSw", "cSIir38Ruwg", "_ZiwQ_DA3PQ", "0SHRBGMZufQ", "KDPsKEAS_tE", "d47wIADJeMI", "OTIYQQZ9fRo", "Pbwi0zDpuIk", "rAwo2pWBMsg", "YKgoKCGsgpQ", "novkZxycbbI", "DROciPN10RY", "hVefvKozYK8", "ADQJR6AhCZA", "3KUVBvq3G4A", "TjJYBN6bBAw"],
   "deleted": [],
