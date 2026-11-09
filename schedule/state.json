@@ -9,7 +9,8 @@
   "11:00"
  ],
  "runs_done": [
-  "07:12"
+  "07:12",
+  "08:00"
  ],
  "protect_published_after_utc": "2026-11-09T04:12:47Z",
  "view_threshold": 20,
@@ -126,8 +127,6 @@
   }
  ],
  "upload_queue": [
-  "ADQJR6AhCZA",
-  "OTIYQQZ9fRo",
   "novkZxycbbI",
   "KDPsKEAS_tE",
   "0SHRBGMZufQ",
@@ -154,8 +153,32 @@
    "new_id": "BFa82_DbWjY",
    "url": "https://www.youtube.com/shorts/BFa82_DbWjY",
    "at_utc": "2026-11-09T04:34:01Z"
+  },
+  {
+   "old_id": "ADQJR6AhCZA",
+   "new_id": "eLvnp-qvPk8",
+   "url": "https://www.youtube.com/shorts/eLvnp-qvPk8",
+   "at_utc": "2026-11-09T05:01:50Z"
+  },
+  {
+   "old_id": "OTIYQQZ9fRo",
+   "new_id": "0i0BP06Ns_0",
+   "url": "https://www.youtube.com/shorts/0i0BP06Ns_0",
+   "at_utc": "2026-11-09T05:01:57Z"
   }
  ],
  "started_at_utc": "2026-11-09T04:12:47Z",
- "note": "Owner moved the plan 1 hour earlier twice: started 07:12 Istanbul; extra upload at 07:34 on request; last run now 11:00."
+ "note": "Owner moved the plan 1 hour earlier twice: started 07:12 Istanbul; extra upload at 07:34 on request; last run now 11:00.",
+ "run_log": [
+  {
+   "run": "08:00",
+   "scanned": 32,
+   "deleted": [],
+   "uploaded": [
+    "eLvnp-qvPk8",
+    "0i0BP06Ns_0"
+   ],
+   "note": "novkZxycbbI upload throttled by Zapier twice; verified not on channel; stays queued"
+  }
+ ]
 }
