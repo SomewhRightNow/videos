@@ -6,8 +6,7 @@
   "08:00",
   "09:00",
   "10:00",
-  "11:00",
-  "12:00"
+  "11:00"
  ],
  "runs_done": [
   "07:12"
@@ -127,7 +126,6 @@
   }
  ],
  "upload_queue": [
-  "TjJYBN6bBAw",
   "ADQJR6AhCZA",
   "OTIYQQZ9fRo",
   "novkZxycbbI",
@@ -150,8 +148,14 @@
    "new_id": "qbrcfQnCN_4",
    "url": "https://www.youtube.com/shorts/qbrcfQnCN_4",
    "at_utc": "2026-11-09T04:15:40Z"
+  },
+  {
+   "old_id": "TjJYBN6bBAw",
+   "new_id": "BFa82_DbWjY",
+   "url": "https://www.youtube.com/shorts/BFa82_DbWjY",
+   "at_utc": "2026-11-09T04:34:01Z"
   }
  ],
  "started_at_utc": "2026-11-09T04:12:47Z",
- "note": "Owner moved the plan 1 hour earlier and asked to start immediately (07:12 Istanbul); last run 12:00."
+ "note": "Owner moved the plan 1 hour earlier twice: started 07:12 Istanbul; extra upload at 07:34 on request; last run now 11:00."
 }
