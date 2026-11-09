@@ -15,7 +15,8 @@
  "runs_done": [
   "07:12",
   "08:00",
-  "09:00"
+  "09:00",
+  "09:30"
  ],
  "protect_published_after_utc": "2026-11-09T04:12:47Z",
  "view_threshold": 20,
@@ -132,7 +133,6 @@
   }
  ],
  "upload_queue": [
-  "novkZxycbbI",
   "KDPsKEAS_tE",
   "0SHRBGMZufQ",
   "d47wIADJeMI",
@@ -170,6 +170,13 @@
    "new_id": "0i0BP06Ns_0",
    "url": "https://www.youtube.com/shorts/0i0BP06Ns_0",
    "at_utc": "2026-11-09T05:01:57Z"
+  },
+  {
+   "old_id": "novkZxycbbI",
+   "new_id": "4UIIQoG-4Qo",
+   "url": "https://www.youtube.com/shorts/4UIIQoG-4Qo",
+   "at_utc": "2026-11-09T06:10:41Z",
+   "by": "owner (phone)"
   }
  ],
  "started_at_utc": "2026-11-09T04:12:47Z",
@@ -191,6 +198,13 @@
    "deleted": [],
    "uploaded": [],
    "note": "Zapier upload_video throttled for novkZxycbbI and KDPsKEAS_tE; verified neither on channel; queue unchanged"
+  },
+  {
+   "run": "09:30",
+   "scanned": 35,
+   "deleted": [],
+   "uploaded": [],
+   "note": "owner uploaded novkZxycbbI by phone; KDPsKEAS_tE throttled by Zapier (daily limit), stays queued"
   }
  ]
 }
