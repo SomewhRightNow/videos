@@ -20,7 +20,8 @@
   "10:00",
   "10:30",
   "11:00",
-  "11:30"
+  "11:30",
+  "12:00"
  ],
  "protect_published_after_utc": "2026-11-09T04:12:47Z",
  "view_threshold": 20,
@@ -243,6 +244,14 @@
    "deleted": [],
    "uploaded": [],
    "note": "no auto upload (owner uploads by phone); owner uploaded d47wIADJeMI as bDVc-0wYn-A"
+  },
+  {
+   "run": "12:00",
+   "scanned": 36,
+   "deleted": [],
+   "uploaded": [],
+   "note": "final run; no new owner uploads; 5 still queued for owner phone upload"
   }
- ]
+ ],
+ "finished_at_utc": "2026-11-09T09:01Z"
 }
