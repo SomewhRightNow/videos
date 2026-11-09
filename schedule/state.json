@@ -1,12 +1,132 @@
 {
-  "plan_date": "2026-11-09",
-  "timezone": "Europe/Istanbul",
-  "runs": ["08:00", "09:00", "10:00", "11:00", "12:00", "13:00"],
-  "runs_done": [],
-  "protect_published_after_utc": "2026-11-09T05:00:00Z",
-  "view_threshold": 20,
-  "ours": ["NTa8PD1ovJQ", "y5yAg-rzeSw", "cSIir38Ruwg", "_ZiwQ_DA3PQ", "0SHRBGMZufQ", "KDPsKEAS_tE", "d47wIADJeMI", "OTIYQQZ9fRo", "Pbwi0zDpuIk", "rAwo2pWBMsg", "YKgoKCGsgpQ", "novkZxycbbI", "DROciPN10RY", "hVefvKozYK8", "ADQJR6AhCZA", "3KUVBvq3G4A", "TjJYBN6bBAw"],
-  "deleted": [],
-  "upload_queue": [],
-  "uploaded": []
+ "plan_date": "2026-11-09",
+ "timezone": "Europe/Istanbul",
+ "runs": [
+  "07:12",
+  "08:00",
+  "09:00",
+  "10:00",
+  "11:00",
+  "12:00"
+ ],
+ "runs_done": [],
+ "protect_published_after_utc": "2026-11-09T04:12:47Z",
+ "view_threshold": 20,
+ "ours": [
+  "NTa8PD1ovJQ",
+  "y5yAg-rzeSw",
+  "cSIir38Ruwg",
+  "_ZiwQ_DA3PQ",
+  "0SHRBGMZufQ",
+  "KDPsKEAS_tE",
+  "d47wIADJeMI",
+  "OTIYQQZ9fRo",
+  "Pbwi0zDpuIk",
+  "rAwo2pWBMsg",
+  "YKgoKCGsgpQ",
+  "novkZxycbbI",
+  "DROciPN10RY",
+  "hVefvKozYK8",
+  "ADQJR6AhCZA",
+  "3KUVBvq3G4A",
+  "TjJYBN6bBAw"
+ ],
+ "deleted": [],
+ "upload_queue": [
+  "DROciPN10RY",
+  "3KUVBvq3G4A",
+  "TjJYBN6bBAw",
+  "ADQJR6AhCZA",
+  "OTIYQQZ9fRo",
+  "novkZxycbbI",
+  "KDPsKEAS_tE",
+  "0SHRBGMZufQ",
+  "d47wIADJeMI",
+  "Pbwi0zDpuIk",
+  "rAwo2pWBMsg",
+  "YKgoKCGsgpQ"
+ ],
+ "uploaded": [],
+ "started_at_utc": "2026-11-09T04:12:47Z",
+ "note": "Owner moved the plan 1 hour earlier and asked to start immediately (07:12 Istanbul); last run 12:00.",
+ "to_delete_run1": [
+  {
+   "id": "TjJYBN6bBAw",
+   "views": 1,
+   "ours": true,
+   "old_title": "Would You Drive These Roads? 😱 #shorts"
+  },
+  {
+   "id": "3KUVBvq3G4A",
+   "views": 0,
+   "ours": true,
+   "old_title": "This Town Has Been Burning for 60 Years 🔥"
+  },
+  {
+   "id": "ADQJR6AhCZA",
+   "views": 0,
+   "ours": true,
+   "old_title": "Man United Are in the Relegation Zone 😳"
+  },
+  {
+   "id": "DROciPN10RY",
+   "views": 6,
+   "ours": true,
+   "old_title": "The Last Photos Taken Before Disaster 😢"
+  },
+  {
+   "id": "d47wIADJeMI",
+   "views": 10,
+   "ours": true,
+   "old_title": "Top 5 Best Selling GTA Games… Will GTA 6 Beat Them"
+  },
+  {
+   "id": "unpPy9TslEs",
+   "views": 9,
+   "ours": false,
+   "old_title": "The Karachi Billboard Hack"
+  },
+  {
+   "id": "novkZxycbbI",
+   "views": 8,
+   "ours": true,
+   "old_title": "I Will Read Your Mind in 40 Seconds 👁️"
+  },
+  {
+   "id": "YKgoKCGsgpQ",
+   "views": 3,
+   "ours": true,
+   "old_title": "How Much They Earn While You Watch This 💸"
+  },
+  {
+   "id": "rAwo2pWBMsg",
+   "views": 4,
+   "ours": true,
+   "old_title": "Country Marble Race: Part 1"
+  },
+  {
+   "id": "Pbwi0zDpuIk",
+   "views": 12,
+   "ours": true,
+   "old_title": "Pause On Your Birth Year 🤯"
+  },
+  {
+   "id": "OTIYQQZ9fRo",
+   "views": 8,
+   "ours": true,
+   "old_title": "5 People Who Should Not Be Alive 😳"
+  },
+  {
+   "id": "KDPsKEAS_tE",
+   "views": 5,
+   "ours": true,
+   "old_title": "Your Brain Is Lying To You 🤯"
+  },
+  {
+   "id": "0SHRBGMZufQ",
+   "views": 10,
+   "ours": true,
+   "old_title": "Real or Fake? 🤯"
+  }
+ ]
 }

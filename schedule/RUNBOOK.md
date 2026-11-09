@@ -1,6 +1,6 @@
 # 9 November 2026 — channel clean-up and re-upload (runbook)
 
-Agreed with the channel owner on 8 Nov 2026. Runs only on **9 Nov 2026**, at 08:00, 09:00, 10:00, 11:00, 12:00 and 13:00
+Agreed with the channel owner on 8 Nov 2026. Runs only on **9 Nov 2026**, at 07:12 (start, moved up by the owner), 08:00, 09:00, 10:00, 11:00 and 12:00 (last)
 Europe/Istanbul (UTC+3). Each run is one scheduled message into this session.
 
 Channel: **Somewhere Right Now** — channel id `UCjtP6wFSjGODBeP9fAtX_yQ`, uploads playlist `UUjtP6wFSjGODBeP9fAtX_yQ`.
@@ -25,9 +25,9 @@ All YouTube calls go through the Zapier YouTube app (`selected_api: YouTubeV4CLI
 4. Re-uploads are spread over the runs from 08:00 to 13:00: each run uploads `ceil(remaining / runs_left)`,
    runs_left counting this run. The 13:00 run uploads everything still queued.
 5. **09:00–13:00 runs** scan the channel again and delete videos under 20 views **except** any video published at or after
-   08:00 Istanbul on 9 Nov (publishedAt >= `2026-11-09T05:00:00Z`) — that protects the morning's re-uploads and anything
+   07:12 Istanbul on 9 Nov (the start) (publishedAt >= `2026-11-09T04:12:47Z`) — that protects the morning's re-uploads and anything
    the owner posts from 08:00 on. Any of ours deleted in a later scan joins the upload queue.
-6. Never delete a video published on or after `2026-11-09T05:00:00Z`. Videos published overnight before 08:00 (e.g.
+6. Never delete a video published on or after `2026-11-09T04:12:47Z`. Videos published overnight before 08:00 (e.g.
    TjJYBN6bBAw, 02:15 Istanbul) are scanned like the rest at 08:00. Never upload a file that is not in `mine/`.
 7. After each run: write `state.json`, commit and push it, and post a short report in the chat (deleted, uploaded with new
    links, queue left). After the 13:00 run, give the final summary.
