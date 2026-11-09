@@ -16,7 +16,8 @@
   "07:12",
   "08:00",
   "09:00",
-  "09:30"
+  "09:30",
+  "10:00"
  ],
  "protect_published_after_utc": "2026-11-09T04:12:47Z",
  "view_threshold": 20,
@@ -205,6 +206,13 @@
    "deleted": [],
    "uploaded": [],
    "note": "owner uploaded novkZxycbbI by phone; KDPsKEAS_tE throttled by Zapier (daily limit), stays queued"
+  },
+  {
+   "run": "10:00",
+   "scanned": 35,
+   "deleted": [],
+   "uploaded": [],
+   "note": "0SHRBGMZufQ throttled (Zapier daily limit); KDPsKEAS_tE skipped (owner may upload by phone); queue unchanged"
   }
  ]
 }
