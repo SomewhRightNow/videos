@@ -5,8 +5,12 @@
   "07:12",
   "08:00",
   "09:00",
+  "09:30",
   "10:00",
-  "11:00"
+  "10:30",
+  "11:00",
+  "11:30",
+  "12:00"
  ],
  "runs_done": [
   "07:12",
@@ -168,7 +172,7 @@
   }
  ],
  "started_at_utc": "2026-11-09T04:12:47Z",
- "note": "Owner moved the plan 1 hour earlier twice: started 07:12 Istanbul; extra upload at 07:34 on request; last run now 11:00.",
+ "note": "Owner moved the plan earlier (start 07:12). At 08:37 the owner asked for uploads every 30 minutes: one video per slot 09:00-12:00 (last).",
  "run_log": [
   {
    "run": "08:00",
