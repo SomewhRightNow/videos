@@ -18,7 +18,8 @@
   "09:00",
   "09:30",
   "10:00",
-  "10:30"
+  "10:30",
+  "11:00"
  ],
  "protect_published_after_utc": "2026-11-09T04:12:47Z",
  "view_threshold": 20,
@@ -221,6 +222,13 @@
    "deleted": [],
    "uploaded": [],
    "note": "0SHRBGMZufQ throttled again; queue unchanged"
+  },
+  {
+   "run": "11:00",
+   "scanned": 35,
+   "deleted": [],
+   "uploaded": [],
+   "note": "0SHRBGMZufQ throttled again (after Pacific midnight too); queue unchanged"
   }
  ]
 }
