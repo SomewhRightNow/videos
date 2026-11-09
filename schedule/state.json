@@ -19,7 +19,8 @@
   "09:30",
   "10:00",
   "10:30",
-  "11:00"
+  "11:00",
+  "11:30"
  ],
  "protect_published_after_utc": "2026-11-09T04:12:47Z",
  "view_threshold": 20,
@@ -138,7 +139,6 @@
  "upload_queue": [
   "KDPsKEAS_tE",
   "0SHRBGMZufQ",
-  "d47wIADJeMI",
   "Pbwi0zDpuIk",
   "rAwo2pWBMsg",
   "YKgoKCGsgpQ"
@@ -179,6 +179,13 @@
    "new_id": "4UIIQoG-4Qo",
    "url": "https://www.youtube.com/shorts/4UIIQoG-4Qo",
    "at_utc": "2026-11-09T06:10:41Z",
+   "by": "owner (phone)"
+  },
+  {
+   "old_id": "d47wIADJeMI",
+   "new_id": "bDVc-0wYn-A",
+   "url": "https://www.youtube.com/shorts/bDVc-0wYn-A",
+   "at_utc": "2026-11-09T08:14:19Z",
    "by": "owner (phone)"
   }
  ],
@@ -229,6 +236,13 @@
    "deleted": [],
    "uploaded": [],
    "note": "0SHRBGMZufQ throttled again (after Pacific midnight too); queue unchanged"
+  },
+  {
+   "run": "11:30",
+   "scanned": 36,
+   "deleted": [],
+   "uploaded": [],
+   "note": "no auto upload (owner uploads by phone); owner uploaded d47wIADJeMI as bDVc-0wYn-A"
   }
  ]
 }
