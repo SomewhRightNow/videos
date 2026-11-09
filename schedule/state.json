@@ -14,7 +14,8 @@
  ],
  "runs_done": [
   "07:12",
-  "08:00"
+  "08:00",
+  "09:00"
  ],
  "protect_published_after_utc": "2026-11-09T04:12:47Z",
  "view_threshold": 20,
@@ -183,6 +184,13 @@
     "0i0BP06Ns_0"
    ],
    "note": "novkZxycbbI upload throttled by Zapier twice; verified not on channel; stays queued"
+  },
+  {
+   "run": "09:00",
+   "scanned": 34,
+   "deleted": [],
+   "uploaded": [],
+   "note": "Zapier upload_video throttled for novkZxycbbI and KDPsKEAS_tE; verified neither on channel; queue unchanged"
   }
  ]
 }
