@@ -1,0 +1,6 @@
+CREDITS
+Music: "Ljosalfheimr IV" by Ivan Tregub (https://www.jamendo.com/track/1529567), licensed under CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+Photos (Flickr, CC BY 2.0, https://creativecommons.org/licenses/by/2.0/): "Tugboat and cement barge" by quinet · "Underwater Shipwreck" by peteoshea · "flying" by { pranav } · "Morning at jungle river" by Phuketian.S · "Lone Oarsman" by Abhisek Sarda · "Marshall Islands" by keithpolya · "Nagasaki bomb 9 August 1945" by The Official CTBTO Photostream
+Public domain: Hiroshima, 6 August 1945 (via WWII in View) · jet photos by "planes, space, nature"
+Map data: Made with Natural Earth
+Narration voice: Kokoro TTS (Apache 2.0)

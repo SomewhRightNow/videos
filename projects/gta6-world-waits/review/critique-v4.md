@@ -1,0 +1,11 @@
+# Critique: draft-v4
+
+1. **23.83–30.50 s · the ending stands still.** For 6.7 s (a fifth of the film) we see one still of the Vice City sign. It sits in a narrow band across the middle of the frame, with brown blur above and below. "13 YEARS" floats on that blur, not on a picture, and the scene barely moves (action residual 1.54 against 4–26 elsewhere). The opening is a busy countdown, so the film loses its energy at the end. **Fix:** run the sign full-bleed with a slow push-in, and cut to a second screenshot at ~26.9 s for "Next stop: Vice City" so the end card has a new picture.
+2. **~12.5–12.8 s · a cut that looks broken.** Going from the WORLD RECORD card to the GTA V lifeguard tower, two or three frames show both pictures sliced together in vertical strips ("20S RECORD", with half of the "GAS" sign inside the tower). On a phone this reads as a render glitch, not a transition. Also, the record card before it lasts only 1.6 s. **Fix:** use a hard cut or a plain crossfade there, and give the record card ~0.4 s more.
+3. **0.00–0.70 s · the first number we see is wrong.** The opening frame shows a huge "99", then 87, 49, 26 and 15, with no label until it settles. The "COUNTDOWN" tag and "DAYS" only appear after ~0.7 s, while the voice is already saying "In eleven days". A scroller who freezes on the first frame sees 99. **Fix:** show "DAYS" and the tag from frame 1 and start the count at ~30, or open on 11 with a punch-in.
+
+Verdict: FIX
+Red items:
+- 12.5 s: the strip-sliced mixed frame between the World Record card and the GTA V shot looks like a broken render
+Polish: The map type at 4–6 s ("NOV 19, 2026" tag, "PS5 · XBOX SERIES X|S") is too small to read at phone size, so make it bigger. At 15 s the "COPIES SOLD" tag is faded and no number shows while the voice says the figure, so bring the counter in sooner. The 2013→2026 timeline marker at 13–14 s could read "2013" and stay there, because the moving year tag competes with "came out in 2013". The audio passes (-13.8 LUFS, peak -3.3 dBFS, no silences, no scene flagged).
+Evidence: review/qc-draft-v4/sheet.jpg (1 fps, 0–30 s); strips strip-0s.jpg, strip-12.5s.jpg, strip-23.5s.jpg; report.txt: cuts at 6.92/9.04/11.13/14.83/16.96/19.08, scene #8 residual 1.54, scene #4 1.59 s long, loudness -13.8 LUFS I / -3.3 dBFS peak, 0 black, 0 frozen, 0 repeats.

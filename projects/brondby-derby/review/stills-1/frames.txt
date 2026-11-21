@@ -1,0 +1,16 @@
+file '/home/user/Filmler/brondby-derby/review/stills-1/000036.jpg'
+duration 1
+file '/home/user/Filmler/brondby-derby/review/stills-1/000120.jpg'
+duration 1
+file '/home/user/Filmler/brondby-derby/review/stills-1/000204.jpg'
+duration 1
+file '/home/user/Filmler/brondby-derby/review/stills-1/000300.jpg'
+duration 1
+file '/home/user/Filmler/brondby-derby/review/stills-1/000408.jpg'
+duration 1
+file '/home/user/Filmler/brondby-derby/review/stills-1/000504.jpg'
+duration 1
+file '/home/user/Filmler/brondby-derby/review/stills-1/000612.jpg'
+duration 1
+file '/home/user/Filmler/brondby-derby/review/stills-1/000732.jpg'
+duration 1

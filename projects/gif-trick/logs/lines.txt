@@ -1,0 +1,7 @@
+H	Everyone on X says this trick turns any GIF into a WhatsApp sticker. I tested it.
+S1	Hold the GIF.
+S2	Tap copy video link.
+S3	Paste it into WhatsApp.
+YES	And it works. The GIF shows up right in the chat.
+NO	And nothing. Just a link. No sticker.
+CTA	Did it work for you? Comment yes or no, and follow for more.

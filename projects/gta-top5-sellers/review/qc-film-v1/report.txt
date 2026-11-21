@@ -1,0 +1,72 @@
+== info: /home/user/Filmler/gta-top5-sellers/renders/film-v1.mp4
+duration=45.833333
+size=34147011
+bit_rate=5960205
+codec_name=h264
+profile=High
+width=1080
+height=1920
+pix_fmt=yuv420p
+color_range=tv
+color_space=bt709
+color_transfer=bt709
+color_primaries=bt709
+r_frame_rate=24/1
+frames=1100
+audio_codec_name=aac
+audio_sample_rate=48000
+audio_channels=2
+audio_bit_rate=322585
+== hook (first 2 s must move from frame 1; min mean 0.5, motion >= 0.02 in every 2 frames):
+  steps=47 mean=5.84 min=0.685 first_step=13.452
+  PASS
+  (also look at the strip: qc.py strip <video> 0 2 12, so grain or flicker is not mistaken for motion)
+== sheet: /home/user/Filmler/gta-top5-sellers/review/qc-film-v1/sheet.jpg (index: /home/user/Filmler/gta-top5-sellers/review/qc-film-v1/sheet-index.txt, one tile every 3s)
+== black intervals (>= 0.1 s, 98% of pixels dark):
+none
+== frozen intervals (>= 1.5 s):
+none
+(grain hides freezes from this detector; also check strips and duplicates)
+== exact duplicate consecutive frames:
+frames: 1100, duplicates: 0
+== one-frame pops (a frame unlike both neighbours, 48 px grey): 0
+== repeated compositions (the same picture again, 6 s or more later; 32 px grey): 0 repeats, 0 s of 46
+== brightness (4 samples/s):
+samples: 183, mean L*: 19.0, min: 7.1, max: 35.9, very dark (L*<12): 14.2%
+== hard cuts (scene score > 0.3):
+cuts: 3
+  00:06.625
+  00:26.333
+  00:32.083
+== action per scene (camera move removed; flag when the median residual < 1.0 or < 30% of the total; 4 samples/s):
+     #1 00:00.00-00:02.75  residual 11.03  total 12.68  ok
+     #2 00:02.75-00:06.62  residual  3.23  total  3.23  ok
+     #3 00:06.62-00:14.21  residual  1.50  total  1.50  ok
+     #4 00:14.21-00:20.66  residual  3.29  total  3.29  ok
+     #5 00:20.66-00:26.32  residual  1.98  total  1.98  ok
+     #6 00:26.32-00:32.06  residual  2.49  total  2.49  ok
+     #7 00:32.06-00:35.26  residual  3.00  total  3.00  ok
+     #8 00:35.26-00:38.21  residual  2.56  total  2.56  ok
+     #9 00:38.21-00:45.83  residual 10.55  total 11.03  ok
+  0 scene(s) flagged
+== loudness (EBU R128, true peak):
+      I:         -13.8 LUFS
+      Threshold: -23.9 LUFS
+      LRA:         1.0 LU
+      Threshold: -33.8 LUFS
+      Peak:       -3.1 dBFS
+== silences (< -50 dB, >= 0.5 s):
+  none
+targets for web: I = -14 LUFS (+/-1), true peak <= -1 dBTP; every silence must be scripted
+== sound per scene (median -13.6 LUFS, harsh-band median -15.9 dB; flag > 3.0 LU or > 3.0 dB above):
+     #1 00:00.00-00:02.75   -13.4 LUFS  harsh -15.0 dB  ok
+     #2 00:02.75-00:06.62   -13.7 LUFS  harsh -17.1 dB  ok
+     #3 00:06.62-00:14.21   -13.7 LUFS  harsh -15.8 dB  ok
+     #4 00:14.21-00:20.66   -13.6 LUFS  harsh -15.9 dB  ok
+     #5 00:20.66-00:26.32   -13.6 LUFS  harsh -16.3 dB  ok
+     #6 00:26.32-00:32.06   -13.6 LUFS  harsh -15.6 dB  ok
+     #7 00:32.06-00:35.26   -13.4 LUFS  harsh -15.6 dB  ok
+     #8 00:35.26-00:38.21   -13.7 LUFS  harsh -16.7 dB  ok
+     #9 00:38.21-00:45.83   -14.5 LUFS  harsh -16.5 dB  ok
+  0 scene(s) flagged
+== spectrogram: /home/user/Filmler/gta-top5-sellers/review/qc-film-v1/spectrogram.png (look for persistent horizontal lines = pitched layers)

@@ -1,0 +1,73 @@
+== info: /home/user/Filmler/shorts-belgesel/renders/draft-v4.mp4
+duration=30.208333
+size=12499136
+bit_rate=3310116
+codec_name=h264
+profile=High
+width=540
+height=960
+pix_fmt=yuv420p
+color_range=tv
+color_space=bt709
+color_transfer=bt709
+color_primaries=bt709
+r_frame_rate=24/1
+frames=725
+audio_codec_name=aac
+audio_sample_rate=48000
+audio_channels=2
+audio_bit_rate=328542
+== hook (first 2 s must move from frame 1; min mean 0.5, motion >= 0.02 in every 2 frames):
+  steps=47 mean=3.01 min=0.319 first_step=0.319
+  PASS
+  (also look at the strip: qc.py strip <video> 0 2 12, so grain or flicker is not mistaken for motion)
+== sheet: /home/user/Filmler/shorts-belgesel/review/qc-draft-v4/sheet.jpg (index: /home/user/Filmler/shorts-belgesel/review/qc-draft-v4/sheet-index.txt, one tile every 2s)
+== black intervals (>= 0.1 s, 98% of pixels dark):
+none
+== frozen intervals (>= 1.5 s):
+none
+(grain hides freezes from this detector; also check strips and duplicates)
+== exact duplicate consecutive frames:
+frames: 725, duplicates: 0
+== one-frame pops (a frame unlike both neighbours, 48 px grey): 0
+== repeated compositions (the same picture again, 6 s or more later; 32 px grey): 0 repeats, 0 s of 30
+== brightness (4 samples/s):
+samples: 121, mean L*: 27.3, min: 7.3, max: 55.6, very dark (L*<12): 13.2%
+== hard cuts (scene score > 0.3):
+cuts: 3
+  00:11.250
+  00:15.708
+  00:23.542
+== action per scene (camera move removed; flag when the median residual < 1.0 or < 30% of the total; 4 samples/s):
+     #1 00:00.00-00:03.93  residual  2.02  total  2.53  ok
+     #2 00:03.93-00:07.85  residual  5.07  total 12.39  ok
+     #3 00:07.85-00:09.42  residual  1.56  total  1.87  ok
+     #4 00:09.42-00:11.25  residual  4.26  total  6.77  ok
+     #5 00:11.25-00:13.34  residual  2.34  total  8.76  CHECK: camera-led, the subject barely acts
+     #6 00:13.34-00:15.69  residual  1.69  total  5.16  ok
+     #7 00:15.69-00:20.40  residual  1.65  total  2.00  ok
+     #8 00:20.40-00:23.54  residual  1.94  total  2.14  ok
+     #9 00:23.54-00:30.20  residual  1.55  total  1.55  ok
+    #10 00:30.20-00:30.21  too short to measure
+  1 scene(s) flagged; look at their strips (qc.py strip) and give each an action
+== loudness (EBU R128, true peak):
+      I:         -14.0 LUFS
+      Threshold: -24.0 LUFS
+      LRA:         0.9 LU
+      Threshold: -34.1 LUFS
+      Peak:       -3.2 dBFS
+== silences (< -50 dB, >= 0.5 s):
+  none
+targets for web: I = -14 LUFS (+/-1), true peak <= -1 dBTP; every silence must be scripted
+== sound per scene (median -13.9 LUFS, harsh-band median -15.6 dB; flag > 3.0 LU or > 3.0 dB above):
+     #1 00:00.00-00:03.93   -13.8 LUFS  harsh -15.2 dB  ok
+     #2 00:03.93-00:07.85   -13.9 LUFS  harsh -16.3 dB  ok
+     #3 00:07.85-00:09.42   -14.1 LUFS  harsh -15.6 dB  ok
+     #4 00:09.42-00:11.25   -14.3 LUFS  harsh -15.4 dB  ok
+     #5 00:11.25-00:13.34   -14.3 LUFS  harsh -16.5 dB  ok
+     #6 00:13.34-00:15.69   -14.1 LUFS  harsh -15.4 dB  ok
+     #7 00:15.69-00:20.40   -13.8 LUFS  harsh -14.9 dB  ok
+     #8 00:20.40-00:23.54   -13.8 LUFS  harsh -16.5 dB  ok
+     #9 00:23.54-00:30.20   -13.8 LUFS  harsh -16.5 dB  ok
+  0 scene(s) flagged
+== spectrogram: /home/user/Filmler/shorts-belgesel/review/qc-draft-v4/spectrogram.png (look for persistent horizontal lines = pitched layers)

@@ -1,0 +1,6 @@
+oslo https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Oslo_City_Hall_in_2026_%28World_Cup_match_-_Norway_vs._England%29.jpg/1280px-Oslo_City_Hall_in_2026_%28World_Cup_match_-_Norway_vs._England%29.jpg
+bellingham https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Jude_Bellingham_England_v_Ghana_23_June_2026-061_%28cropped%29.jpg/1280px-Jude_Bellingham_England_v_Ghana_23_June_2026-061_%28cropped%29.jpg
+schjelderup https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Andreas_Schjelderup_France_v_Norway_26_June_26-111_%28cropped%29.jpg/1280px-Andreas_Schjelderup_France_v_Norway_26_June_26-111_%28cropped%29.jpg
+fra_nor https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/France_v_Norway_26_June_26-049.jpg/1280px-France_v_Norway_26_June_26-049.jpg
+haaland_m https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Erling_Haaland_Morocco_v_Norway_7_June_2026-51_%28cropped%29.jpg/1280px-Erling_Haaland_Morocco_v_Norway_7_June_2026-51_%28cropped%29.jpg
+haaland_s https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Alexander_Sorloth_Erling_Haaland_Morocco_v_Norway_7_June_2026-123.jpg/1280px-Alexander_Sorloth_Erling_Haaland_Morocco_v_Norway_7_June_2026-123.jpg

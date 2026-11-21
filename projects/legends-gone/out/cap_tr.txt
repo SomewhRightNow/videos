@@ -1,0 +1,261 @@
+--srtboundary7781
+Content-Type: application/json; charset=UTF-8
+
+{"snippet": {"videoId": "K2ihxNkZtns", "language": "tr", "name": "Türkçe", "isDraft": false}}
+--srtboundary7781
+Content-Type: application/x-subrip; charset=UTF-8
+
+1
+00:00:00,850 --> 00:00:07,409
+Bir cuma gecesi Buenos Aires'te Arjantin, Lionel Messi'siz ilk maçına çıktı.
+
+2
+00:00:07,429 --> 00:00:14,308
+Yirmi dört saat sonra Braga'da Portekiz, Cristiano Ronaldo'suz ilk maçına çıktı.
+
+3
+00:00:14,328 --> 00:00:16,075
+İkisi de kaybetti.
+
+4
+00:00:16,095 --> 00:00:19,312
+Yirmi yıl boyunca bu iki adam ülkelerini sırtladı.
+
+5
+00:00:19,312 --> 00:00:24,660
+Bu, futbolun onlarsız yaşamayı öğrenmek zorunda kaldığı hafta sonunun hikâyesi.
+
+6
+00:00:28,618 --> 00:00:33,626
+Cristiano Ronaldo, Portekiz formasıyla ilk kez Ağustos 2003'te oynadı.
+
+7
+00:00:33,626 --> 00:00:35,028
+On sekiz yaşındaydı.
+
+8
+00:00:35,048 --> 00:00:39,045
+İki yıl sonra Lionel Messi, Arjantin'de ilk maçına çıktı.
+
+9
+00:00:39,045 --> 00:00:41,044
+Yaklaşık iki dakika sürdü.
+
+10
+00:00:41,044 --> 00:00:44,997
+Oyuna girdi, bir rakibini itti ve kırmızı kart gördü.
+
+11
+00:00:45,017 --> 00:00:50,041
+Bu başlangıçlardan, futbol tarihinin en büyük rekabeti doğdu.
+
+12
+00:00:50,061 --> 00:00:55,569
+Ronaldo, erkekler milli futbol tarihinin en golcü oyuncusu oldu.
+
+13
+00:00:55,569 --> 00:01:00,329
+234 maçta 146 gol.
+
+14
+00:01:00,349 --> 00:01:05,764
+2016'da Avrupa Şampiyonası'nı, iki kez de Uluslar Ligi'ni kazandı.
+
+15
+00:01:05,784 --> 00:01:08,452
+Messi neredeyse geri kalan her şeyi kazandı.
+
+16
+00:01:08,452 --> 00:01:09,907
+İki Copa América.
+
+17
+00:01:09,907 --> 00:01:13,459
+Ve 2022'de Katar'da Dünya Kupası.
+
+18
+00:01:13,479 --> 00:01:15,609
+Messi'ye sekiz Ballon d'Or.
+
+19
+00:01:15,609 --> 00:01:17,308
+Ronaldo'ya beş.
+
+20
+00:01:21,293 --> 00:01:25,153
+Son yazları 2026 Dünya Kupası oldu.
+
+21
+00:01:25,173 --> 00:01:27,193
+Arjantin finale çıktı.
+
+22
+00:01:27,193 --> 00:01:30,613
+Spanya uzatmada 1-0 kazandı.
+
+23
+00:01:30,613 --> 00:01:34,056
+Messi ikincilik madalyasını almaya gözyaşları içinde yürüdü.
+
+24
+00:01:34,076 --> 00:01:36,656
+Haftalar sonra el yazısıyla bir not yazdı.
+
+25
+00:01:36,656 --> 00:01:39,056
+Milli takımı bırakıyordu.
+
+26
+00:01:39,056 --> 00:01:42,537
+Yazdığına göre bu karar, ruhunun derinliklerini acıtmıştı.
+
+27
+00:01:42,557 --> 00:01:45,407
+Ronaldo'nun vedası o kadar sessiz olmadı.
+
+28
+00:01:45,407 --> 00:01:50,722
+Sonbaharda Norveç maçında yedek bırakıldı ve kadrodan ayrıldı.
+
+29
+00:01:50,742 --> 00:01:53,972
+Federasyon ona otuz gün men cezası verdi.
+
+30
+00:01:53,972 --> 00:01:57,112
+5 Kasım'da milli takımı bıraktığını açıkladı.
+
+31
+00:01:57,112 --> 00:01:59,134
+Yirmi üç yıl sona ermişti.
+
+32
+00:02:04,057 --> 00:02:05,947
+13 Kasım.
+
+33
+00:02:05,947 --> 00:02:07,097
+La Bombonera.
+
+34
+00:02:07,097 --> 00:02:11,766
+Arjantin karşısında Uruguay ve yeni teknik direktörleri Diego Forlán.
+
+35
+00:02:11,786 --> 00:02:15,147
+Sadece yaklaşık yirmi beş bin taraftar geldi.
+
+36
+00:02:15,147 --> 00:02:17,357
+Stadın yarısından az.
+
+37
+00:02:17,377 --> 00:02:23,945
+48. dakika. Leonardo Balerdi'den kendi kalesine gol. 53. dakika. Maxi Araújo. 2-0.
+
+38
+00:02:23,965 --> 00:02:27,305
+Julián Álvarez, bitime on yedi dakika kala attı.
+
+39
+00:02:27,305 --> 00:02:28,595
+Yetmedi.
+
+40
+00:02:28,595 --> 00:02:30,660
+Uruguay 2-1 kazandı.
+
+41
+00:02:30,680 --> 00:02:35,622
+"Leo Messi olmadan yeniden kurmak zorundayız" dedi teknik direktör Lionel Scaloni.
+
+42
+00:02:39,975 --> 00:02:43,342
+Ertesi gece, Braga'da stadyumdaydık.
+
+43
+00:02:43,362 --> 00:02:51,415
+Başlama vuruşundan önce Portekizli oyuncular yedi numaralı formalarla sahaya çıktı. Stadyum veda etti. Obrigado, Capitão. Teşekkürler, kaptan.
+
+44
+00:02:51,435 --> 00:02:53,195
+Sonra Danimarka partiyi bozdu.
+
+45
+00:02:53,195 --> 00:02:57,995
+Pierre-Emile Højbjerg, ilk yarının hemen sonunda penaltıdan attı.
+
+46
+00:02:58,015 --> 00:03:00,395
+Rasmus Højlund iki gol attı.
+
+47
+00:03:00,395 --> 00:03:02,763
+Joachim Andersen dördüncüyü ekledi.
+
+48
+00:03:02,783 --> 00:03:05,533
+Bernardo Silva uzatmada attı.
+
+49
+00:03:05,533 --> 00:03:06,993
+Hiçbir şey değişmedi.
+
+50
+00:03:06,993 --> 00:03:09,359
+Portekiz 1, Danimarka 4.
+
+51
+00:03:09,379 --> 00:03:13,854
+Bu, Portekiz tarihinin evindeki en ağır resmi yenilgisiydi.
+
+52
+00:03:17,753 --> 00:03:19,193
+İki efsane gitti.
+
+53
+00:03:19,193 --> 00:03:21,716
+Yirmi dört saatte iki yenilgi.
+
+54
+00:03:21,736 --> 00:03:31,478
+Ama tarihin bir uyarısı var. Euro 2016 finalinde Ronaldo 25. dakikada sakatlanıp çıktı. Portekiz yine de Fransa'yı yendi.
+
+55
+00:03:31,498 --> 00:03:37,672
+Arjantin'de hâlâ Julián Álvarez, Enzo Fernández ve Alexis Mac Allister var.
+
+56
+00:03:37,672 --> 00:03:43,012
+Portekiz'de Vitinha, João Neves, Bruno Fernandes ve Rafael Leão.
+
+57
+00:03:43,032 --> 00:03:47,162
+Artık soru Messi mi Ronaldo mu değil.
+
+58
+00:03:47,162 --> 00:03:49,748
+Soru, onların izinden kimin gidebileceği.
+
+59
+00:03:49,768 --> 00:03:53,908
+İki efsane bıraktı ve iki takım da hemen ardından oynadığı ilk maçı kaybetti.
+
+60
+00:03:53,908 --> 00:03:55,068
+Tesadüf mü?
+
+61
+00:03:55,068 --> 00:03:57,168
+Yoksa ne kadar yük taşıdıklarının kanıtı mı?
+
+62
+00:03:57,168 --> 00:03:59,708
+Yorumlarda yaz ve abone ol.
+
+63
+00:03:59,708 --> 00:04:02,405
+İki takımı da yeni dönemde takip edeceğiz.
+
+
+--srtboundary7781--

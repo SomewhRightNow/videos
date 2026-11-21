@@ -1,0 +1,65 @@
+== info: /home/user/Filmler/predict-the-scores/renders/film-v1.mp4
+duration=30.541667
+size=34264263
+bit_rate=8975086
+codec_name=h264
+profile=High
+width=1080
+height=1920
+pix_fmt=yuv420p
+color_range=tv
+color_space=bt709
+color_transfer=bt709
+color_primaries=bt709
+r_frame_rate=24/1
+frames=733
+audio_codec_name=aac
+audio_sample_rate=48000
+audio_channels=2
+audio_bit_rate=323452
+== hook (first 2 s must move from frame 1; min mean 0.5, motion >= 0.02 in every 2 frames):
+  steps=47 mean=12.99 min=1.662 first_step=1.662
+  PASS
+  (also look at the strip: qc.py strip <video> 0 2 12, so grain or flicker is not mistaken for motion)
+== sheet: /home/user/Filmler/predict-the-scores/review/qc-film-v1/sheet.jpg (index: /home/user/Filmler/predict-the-scores/review/qc-film-v1/sheet-index.txt, one tile every 2s)
+== black intervals (>= 0.1 s, 98% of pixels dark):
+none
+== frozen intervals (>= 1.5 s):
+none
+(grain hides freezes from this detector; also check strips and duplicates)
+== exact duplicate consecutive frames:
+frames: 733, duplicates: 0
+== one-frame pops (a frame unlike both neighbours, 48 px grey): 0
+== repeated compositions (the same picture again, 6 s or more later; 32 px grey): 0 repeats, 0 s of 31
+== brightness (4 samples/s):
+samples: 122, mean L*: 21.5, min: 5.5, max: 55.9, very dark (L*<12): 13.9%
+== hard cuts (scene score > 0.3):
+cuts: 2
+  00:04.333
+  00:09.667
+== action per scene (camera move removed; flag when the median residual < 1.0 or < 30% of the total; 4 samples/s):
+     #1 00:00.00-00:04.35  residual  2.91  total 15.72  CHECK: camera-led, the subject barely acts
+     #2 00:04.35-00:09.68  residual  1.98  total  7.15  CHECK: camera-led, the subject barely acts
+     #3 00:09.68-00:14.58  residual  2.45  total 10.94  CHECK: camera-led, the subject barely acts
+     #4 00:14.58-00:18.37  residual  3.01  total  5.50  ok
+     #5 00:18.37-00:22.39  residual  3.11  total  7.59  ok
+     #6 00:22.39-00:30.54  residual  1.59  total  1.87  ok
+  3 scene(s) flagged; look at their strips (qc.py strip) and give each an action
+== loudness (EBU R128, true peak):
+      I:         -13.9 LUFS
+      Threshold: -24.1 LUFS
+      LRA:         1.1 LU
+      Threshold: -34.1 LUFS
+      Peak:       -3.4 dBFS
+== silences (< -50 dB, >= 0.5 s):
+  none
+targets for web: I = -14 LUFS (+/-1), true peak <= -1 dBTP; every silence must be scripted
+== sound per scene (median -13.8 LUFS, harsh-band median -17.0 dB; flag > 3.0 LU or > 3.0 dB above):
+     #1 00:00.00-00:04.35   -13.9 LUFS  harsh -17.1 dB  ok
+     #2 00:04.35-00:09.68   -13.8 LUFS  harsh -16.8 dB  ok
+     #3 00:09.68-00:14.58   -13.7 LUFS  harsh -17.1 dB  ok
+     #4 00:14.58-00:18.37   -13.8 LUFS  harsh -16.5 dB  ok
+     #5 00:18.37-00:22.39   -13.8 LUFS  harsh -18.2 dB  ok
+     #6 00:22.39-00:30.54   -14.0 LUFS  harsh -17.0 dB  ok
+  0 scene(s) flagged
+== spectrogram: /home/user/Filmler/predict-the-scores/review/qc-film-v1/spectrogram.png (look for persistent horizontal lines = pitched layers)

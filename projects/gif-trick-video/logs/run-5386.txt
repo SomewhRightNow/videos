@@ -1,0 +1,5 @@
+FAILED: capture.mjs (exit 1)
+Error: page error: Error: type check: display "Big Shoulders Display" has no glyphs for: →
+    at file:///home/user/Filmler/gif-trick-video/film.html?capture=1&w=1080&h=1920:1514:31
+    at Object.eval (file:///home/user/Filmler/gif-trick-video/tools/capture.mjs:479:37)
+log: logs/make-stills.log

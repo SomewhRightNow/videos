@@ -1,0 +1,412 @@
+{{<includeonly>safesubst:</includeonly>#switch: {{{1}}}
+|Group 1={{#invoke:Sports table|main|style=WDL|param1_valid=y|generate_links=y|baselink=2026–27 UEFA Nations League A
+|class_rules=[[2026–27 UEFA Nations League#Tiebreakers for group ranking|Tiebreakers]]
+|source=[https://www.uefa.com/uefanationsleague/standings/ UEFA]
+
+<!--Automatically generate standings-->
+|auto_generate_standings=y
+|ranking_criteria=pts, (h2h_pts, h2h_gd, h2h_gf), gd, gf, agf, w, aw
+
+<!--Default order of teams when tied-->
+|default_order=<!--DO NOT CHANGE, THIS DOESN'T DETERMINE THE ACTUAL RANKING-->FRA, ITA, BEL, TUR
+
+<!--Update match results below (including date) to generate the standings-->
+|update=complete
+
+|match_FRA_ITA=1–1
+|match_FRA_BEL=4–1
+|match_FRA_TUR=2–1
+
+|match_ITA_FRA=3–1
+|match_ITA_BEL=0–2
+|match_ITA_TUR=3–1
+
+|match_BEL_FRA=0–1
+|match_BEL_ITA=4–1
+|match_BEL_TUR=3–0
+
+|match_TUR_FRA=0–1
+|match_TUR_ITA=1–4
+|match_TUR_BEL=1–2
+
+<!--Team definitions-->
+|name_FRA={{fb|FRA}} |short_FRA={{fbicon|FRA}} |status_FRA=
+|status_text_X=Safe from direct relegation
+|name_ITA={{fb|ITA}} |short_ITA={{fbicon|ITA}} |status_ITA=
+|name_BEL={{fb|BEL}} |short_BEL={{fbicon|BEL}} |status_BEL=
+|name_TUR={{fb|TUR}} |short_TUR={{fbicon|TUR}} |status_TUR=Z
+|status_text_Z=Can at best reach relegation play-offs
+|status_text_W=Safe from relegation
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|result1=QF |result2=QF |result3=3rd |result4=4th
+|col_QF=green1 |text_QF={{nowrap|Advance to [[2026–27 UEFA Nations League A#Quarter-finals|quarter-finals]]}}
+|col_3rd=blue1 |text_3rd=Will play in [[2028–29 UEFA Nations League A]]
+|col_4th=red1  |text_4th=Qualification for [[2026–27 UEFA Nations League promotion/relegation play-offs#League A vs League B|relegation play-offs]] or relegation to [[2028–29 UEFA Nations League B|League B]]
+<!--|col_RPO=red2  |text_RPO={{nowrap|Qualification for [[2026–27 UEFA Nations League promotion/relegation play-offs#League A vs League B|relegation play-offs]]}}
+|col_REL=red1  |text_REL=Relegation to [[2028–29 UEFA Nations League B|League B]]-->
+}}
+|Group 2={{#invoke:Sports table|main|style=WDL|param1_valid=y|generate_links=y|baselink=2026–27 UEFA Nations League A
+|class_rules=[[2026–27 UEFA Nations League#Tiebreakers for group ranking|Tiebreakers]]
+|source=[https://www.uefa.com/uefanationsleague/standings/ UEFA]
+
+<!--Automatically generate standings-->
+|auto_generate_standings=y
+|ranking_criteria=pts, (h2h_pts, h2h_gd, h2h_gf), gd, gf, agf, w, aw
+
+<!--Default order of teams when tied-->
+|default_order=<!--DO NOT CHANGE, THIS DOESN'T DETERMINE THE ACTUAL RANKING-->GER, NED, SRB, GRE
+|hth_GRE=Head-to-head points: Greece 4, Germany 1.
+|hth_GER=GRE
+
+<!--Update match results below (including date) to generate the standings-->
+|update=13 November 2026
+
+|match_GER_NED={{small|16 Nov}}
+|match_GER_SRB=2–0
+|match_GER_GRE=0–1
+
+|match_NED_GER=1–1
+|match_NED_SRB=2–1
+|match_NED_GRE=7–0
+
+|match_SRB_GER=1–3
+|match_SRB_NED=1–2
+|match_SRB_GRE=1–2
+
+|match_GRE_GER=0–0
+|match_GRE_NED=2–2
+|match_GRE_SRB={{small|16 Nov}}
+
+<!--Team definitions-->
+|name_GER={{fb|GER}} |short_GER={{fbicon|GER}} |status_GER=X
+|name_NED={{fb|NED}} |short_NED={{fbicon|NED}} |status_NED=W
+|status_text_X=Safe from direct relegation
+|status_text_W=Safe from relegation
+|name_SRB={{fb|SRB}} |short_SRB={{fbicon|SRB}} |status_SRB=Z
+|status_text_Z=Can at best reach relegation play-offs
+|name_GRE={{fb|GRE}} |short_GRE={{fbicon|GRE}} |status_GRE=X
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|result1=QF |result2=QF |result3=3rd |result4=4th
+|col_QF=green1 |text_QF={{nowrap|Advance to [[2026–27 UEFA Nations League A#Quarter-finals|quarter-finals]]}}
+|col_3rd=red2  |text_3rd=Possible qualification for [[2026–27 UEFA Nations League promotion/relegation play-offs#League A vs League B|relegation play-offs]]
+|col_4th=red1  |text_4th=Qualification for [[2026–27 UEFA Nations League promotion/relegation play-offs#League A vs League B|relegation play-offs]] or relegation to [[2028–29 UEFA Nations League B|League B]]
+<!--|col_RPO=red2  |text_RPO={{nowrap|Qualification for [[2026–27 UEFA Nations League promotion/relegation play-offs#League A vs League B|relegation play-offs]]}}
+|col_REL=red1  |text_REL=Relegation to [[2028–29 UEFA Nations League B|League B]]-->
+}}
+|Group 3={{#invoke:Sports table|main|style=WDL|param1_valid=y|generate_links=y|baselink=2026–27 UEFA Nations League A
+|class_rules=[[2026–27 UEFA Nations League#Tiebreakers for group ranking|Tiebreakers]]
+|source=[https://www.uefa.com/uefanationsleague/standings/ UEFA]
+
+<!--Automatically generate standings-->
+|auto_generate_standings=y
+|ranking_criteria=pts, (h2h_pts, h2h_gd, h2h_gf), gd, gf, agf, w, aw
+
+<!--Default order of teams when tied-->
+|default_order=<!--DO NOT CHANGE, THIS DOESN'T DETERMINE THE ACTUAL RANKING-->ENG, ESP, CRO, CZE
+
+|hth_ENG=Tied on head-to-head results. Overall goal difference: England +13, Spain +8.
+|hth_ESP=ENG
+
+<!--Update match results below (including date) to generate the standings-->
+|update=complete
+
+|match_ESP_CRO=4–1
+|match_ESP_ENG=2–3
+|match_ESP_CZE=3–1
+
+|match_CRO_ESP=1–2
+|match_CRO_ENG=0–7
+|match_CRO_CZE=2–1
+
+|match_ENG_ESP=2–3
+|match_ENG_CRO=2–1
+|match_ENG_CZE=3–0
+
+|match_CZE_ESP=0–2
+|match_CZE_CRO=1–2
+|match_CZE_ENG=0–2
+
+<!--Team definitions-->
+|name_ESP={{fb|ESP}} |short_ESP={{fbicon|ESP}} |status_ESP=
+|name_CRO={{fb|CRO}} |short_CRO={{fbicon|CRO}} |status_CRO=
+|name_ENG={{fb|ENG}} |short_ENG={{fbicon|ENG}} |status_ENG=
+|name_CZE={{fb|CZE}} |short_CZE={{fbicon|CZE}} |status_CZE=R
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|result1=QF |result2=QF |result3=3rd |result4=4th
+|col_QF=green1 |text_QF={{nowrap|Advance to [[2026–27 UEFA Nations League A#Quarter-finals|quarter-finals]]}}
+|col_3rd=red2  |text_3rd=Qualification for [[2026–27 UEFA Nations League promotion/relegation play-offs#League A vs League B|relegation play-offs]]
+|col_4th=red1  |text_4th=Relegation to [[2028–29 UEFA Nations League B|League B]]
+<!--|col_RPO=red2  |text_RPO={{nowrap|Qualification for [[2026–27 UEFA Nations League promotion/relegation play-offs#League A vs League B|relegation play-offs]]}}
+|col_REL=red1  |text_REL=Relegation to [[2028–29 UEFA Nations League B|League B]]-->
+}}
+|Group 4={{#invoke:Sports table|main|style=WDL|param1_valid=y|generate_links=y|baselink=2026–27 UEFA Nations League A
+|class_rules=[[2026–27 UEFA Nations League#Tiebreakers for group ranking|Tiebreakers]]
+|source=[https://www.uefa.com/uefanationsleague/standings/ UEFA]
+
+<!--Automatically generate standings-->
+|auto_generate_standings=y
+|ranking_criteria=pts, (h2h_pts, h2h_gd, h2h_gf), gd, gf, agf, w, aw
+
+<!--Default order of teams when tied-->
+|default_order=<!--DO NOT CHANGE, THIS DOESN'T DETERMINE THE ACTUAL RANKING-->POR, DEN, NOR, WAL
+|team_order=POR, DEN, NOR, WAL
+
+<!--Update match results below (including date) to generate the standings-->
+|update=14 November 2026
+
+|match_POR_DEN=1–4
+|match_POR_NOR=2–1
+|match_POR_WAL=1–0
+
+|match_DEN_POR=2–4
+|match_DEN_NOR={{small|17 Nov}}
+|match_DEN_WAL=2–0
+
+|match_NOR_POR=1–2
+|match_NOR_DEN=3–2
+|match_NOR_WAL=3–1
+
+|match_WAL_POR={{small|17 Nov}}
+|match_WAL_DEN=0–1
+|match_WAL_NOR=2–1
+
+<!--Team definitions-->
+|name_POR={{fb|POR}} |short_POR={{fbicon|POR}} |status_POR=Q
+|name_DEN={{fb|DEN}} |short_DEN={{fbicon|DEN}} |status_DEN=X
+|name_NOR={{fb|NOR}} |short_NOR={{fbicon|NOR}} |status_NOR=X
+|name_WAL={{fb|WAL}} |short_WAL={{fbicon|WAL}} |status_WAL=Q
+|status_text_X=Safe from direct relegation
+|status_text_Z=Can at best reach relegation play-offs
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=Q
+|result1=QF |result2=QF |result3=3rd |result4=4th
+|col_QF=green1 |text_QF={{nowrap|Advance to [[2026–27 UEFA Nations League A#Quarter-finals|quarter-finals]]}}
+|col_3rd=red2  |text_3rd=Possible qualification for [[2026–27 UEFA Nations League promotion/relegation play-offs#League A vs League B|relegation play-offs]]
+|col_4th=red2  |text_4th=Qualification for [[2026–27 UEFA Nations League promotion/relegation play-offs#League A vs League B|relegation play-offs]] 
+<!--|col_RPO=red2  |text_RPO={{nowrap|Qualification for [[2026–27 UEFA Nations League promotion/relegation play-offs#League A vs League B|relegation play-offs]]}}
+|col_REL=red1  |text_REL=Relegation to [[2028–29 UEFA Nations League B|League B]]-->
+}}
+|3rd place={{#invoke:Sports table|main|style=WDL|param1_valid=y
+|class_rules=[[2026–27 UEFA Nations League#Criteria for league ranking|Ranking criteria]]
+|source=[https://www.uefa.com/uefanationsleague/standings/ UEFA]
+
+<!--Update team positions below (check tiebreakers)-->
+|team_order= Gr1, Gr2, Gr4, Gr3
+
+<!--Update team results below (including date)-->
+|update=15 November 2026
+|win_Gr1=3 |draw_Gr1=1 |loss_Gr1=2 |gf_Gr1=12|ga_Gr1=10|status_Gr1=Q
+|win_Gr2=2 |draw_Gr2=2 |loss_Gr2=1 |gf_Gr2=6 |ga_Gr2=4 |status_Gr2=
+|win_Gr3=2 |draw_Gr3=0 |loss_Gr3=4 |gf_Gr3=7 |ga_Gr3=17|status_Gr3=Q
+|win_Gr4=2 |draw_Gr4=0 |loss_Gr4=3 |gf_Gr4=9 |ga_Gr4=9 |status_Gr4=
+
+<!--Team definitions-->
+|name_Gr1={{fb|ITA}}
+|name_Gr2={{fb|GER}}
+|name_Gr3={{fb|CRO}}
+|name_Gr4={{fb|NOR}}
+
+<!--Group definitions-->
+|show_groups=T
+|group_Gr1=[[2026–27 UEFA Nations League A#Group 1|A1]]
+|group_Gr2=[[2026–27 UEFA Nations League A#Group 2|A2]]
+|group_Gr3=[[2026–27 UEFA Nations League A#Group 3|A3]]
+|group_Gr4=[[2026–27 UEFA Nations League A#Group 4|A4]]
+
+<!--Qualification column definitions-->
+|res_col_header=Q
+|result1=LeagueA |result2=LeagueA |result3=RPO |result4=RPO
+|col_LeagueA=blue1 |text_LeagueA=Will play in [[2028–29 UEFA Nations League A]]
+|col_RPO=red2 |text_RPO={{nowrap|Qualification for [[2026–27 UEFA Nations League promotion/relegation play-offs#League A vs League B|relegation play-offs]]}}
+}}
+|4th place={{#invoke:Sports table|main|style=WDL|param1_valid=y
+|class_rules=[[2026–27 UEFA Nations League#Criteria for league ranking|Ranking criteria]]
+|source=[https://www.uefa.com/uefanationsleague/standings/ UEFA]
+
+<!--Update team positions below (check tiebreakers)-->
+|team_order= Gr4, Gr2, Gr1, Gr3
+
+<!--Update team results below (including date)-->
+|update=15 November 2026
+|win_Gr1=0 |draw_Gr1=0 |loss_Gr1=6 |gf_Gr1=4 |ga_Gr1=15 |status_Gr1=
+|win_Gr2=0 |draw_Gr2=0 |loss_Gr2=5 |gf_Gr2=4 |ga_Gr2=11 |status_Gr2=
+|win_Gr3=0 |draw_Gr3=0 |loss_Gr3=6 |gf_Gr3=3 |ga_Gr3=14|status_Gr3=R
+|win_Gr4=1 |draw_Gr4=0 |loss_Gr4=4 |gf_Gr4=3 |ga_Gr4=8 |status_Gr4=Q
+
+<!--Team definitions-->
+|name_Gr1={{fb|TUR}}
+|name_Gr2={{fb|SRB}}
+|name_Gr3={{fb|CZE}}
+|name_Gr4={{fb|WAL}}
+
+<!--Group definitions-->
+|show_groups=T
+|group_Gr1=[[2026–27 UEFA Nations League A#Group 1|A1]]
+|group_Gr2=[[2026–27 UEFA Nations League A#Group 2|A2]]
+|group_Gr3=[[2026–27 UEFA Nations League A#Group 3|A3]]
+|group_Gr4=[[2026–27 UEFA Nations League A#Group 4|A4]]
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|result1=RPO |result2=RPO |result3=REL |result4=REL
+|col_RPO=red2 |text_RPO={{nowrap|Qualification for [[2026–27 UEFA Nations League promotion/relegation play-offs#League A vs League B|relegation play-offs]]}}
+|col_REL=red1 |text_REL=Relegation to [[2028–29 UEFA Nations League B|League B]]
+}}
+|Interim overall ranking={{#invoke:Sports table|main|style=WDL|param1_valid=y
+|postitle={{abbr|Rnk|Interim overall ranking}}
+|class_rules=[[2026–27 UEFA Nations League#Criteria for interim overall ranking|Ranking criteria]]
+|source=[https://www.uefa.com/uefanationsleague/standings/ UEFA]
+|show_groups=T
+|split4=yes |split8=yes |split12=yes
+
+<!--Automatically generate team records-->
+|auto_generate_standings=y
+
+|team_order= ENG, FRA, POR, NED, ESP, BEL, DEN, GRE, ITA, GER, NOR, CRO, WAL, SRB, TUR, CZE
+
+<!--Team and group definitions-->
+|group_BEL='''[[2026–27 UEFA Nations League A#Group 1|A1]]''' |name_BEL={{fb|BEL}}
+|group_CRO='''[[2026–27 UEFA Nations League A#Group 3|A3]]''' |name_CRO={{fb|CRO}}
+|group_CZE='''[[2026–27 UEFA Nations League A#Group 3|A3]]''' |name_CZE={{fb|CZE}}
+|group_DEN='''[[2026–27 UEFA Nations League A#Group 4|A4]]''' |name_DEN={{fb|DEN}}
+|group_ENG='''[[2026–27 UEFA Nations League A#Group 3|A3]]''' |name_ENG={{fb|ENG}}
+|group_FRA='''[[2026–27 UEFA Nations League A#Group 1|A1]]''' |name_FRA={{fb|FRA}}
+|group_GER='''[[2026–27 UEFA Nations League A#Group 2|A2]]''' |name_GER={{fb|GER}}
+|group_GRE='''[[2026–27 UEFA Nations League A#Group 2|A2]]''' |name_GRE={{fb|GRE}}
+|group_ITA='''[[2026–27 UEFA Nations League A#Group 1|A1]]''' |name_ITA={{fb|ITA}}
+|group_NED='''[[2026–27 UEFA Nations League A#Group 2|A2]]''' |name_NED={{fb|NED}}
+|group_NOR='''[[2026–27 UEFA Nations League A#Group 4|A4]]''' |name_NOR={{fb|NOR}}
+|group_POR='''[[2026–27 UEFA Nations League A#Group 4|A4]]''' |name_POR={{fb|POR}}
+|group_SRB='''[[2026–27 UEFA Nations League A#Group 2|A2]]''' |name_SRB={{fb|SRB}}
+|group_ESP='''[[2026–27 UEFA Nations League A#Group 3|A3]]''' |name_ESP={{fb|ESP}}
+|group_TUR='''[[2026–27 UEFA Nations League A#Group 1|A1]]''' |name_TUR={{fb|TUR}}
+|group_WAL='''[[2026–27 UEFA Nations League A#Group 4|A4]]''' |name_WAL={{fb|WAL}}
+
+<!--Update date of most recent match-->
+|update=15 November 2026
+
+<!--Group 1-->
+|match_FRA_ITA=1–1
+|match_FRA_BEL=4–1
+|match_FRA_TUR=2–1
+
+|match_ITA_FRA=3–1
+|match_ITA_BEL=0–2
+|match_ITA_TUR=3–1
+
+|match_BEL_FRA=0–1
+|match_BEL_ITA=4–1
+|match_BEL_TUR=3–0
+
+|match_TUR_FRA=0–1
+|match_TUR_ITA=1–4
+|match_TUR_BEL=1–2
+
+<!--Group 2-->
+|match_GER_NED=
+|match_GER_SRB=2–0
+|match_GER_GRE=0–1
+
+|match_NED_GER=1–1
+|match_NED_SRB=2–1
+|match_NED_GRE=7–0
+
+|match_SRB_GER=1–3
+|match_SRB_NED=1–2
+|match_SRB_GRE=1–2
+
+|match_GRE_GER=0–0
+|match_GRE_NED=2–2
+|match_GRE_SRB=
+
+<!--Group 3-->
+|match_ESP_CRO=4–1
+|match_ESP_ENG=2–3
+|match_ESP_CZE=3–1
+
+|match_CRO_ESP=1–2
+|match_CRO_ENG=0–7
+|match_CRO_CZE=2–1
+
+|match_ENG_ESP=2–3
+|match_ENG_CRO=2–1
+|match_ENG_CZE=3–0
+
+|match_CZE_ESP=0–2
+|match_CZE_CRO=1–2
+|match_CZE_ENG=0–2
+
+<!--Group 4-->
+|match_POR_DEN=1–4
+|match_POR_NOR=2–1
+|match_POR_WAL=1–0
+
+|match_DEN_POR=2–4
+|match_DEN_NOR=
+|match_DEN_WAL=2–0
+
+|match_NOR_POR=1–2
+|match_NOR_DEN=3–2
+|match_NOR_WAL=3–1
+
+|match_WAL_POR=
+|match_WAL_DEN=0–1
+|match_WAL_NOR=2–1
+}}
+|Final overall ranking={{#invoke:Sports table|main|style=Custom|param1_valid=y
+|postitle={{abbr|Rnk|Final overall ranking}}
+|num_cols=1
+|col_header1={{abbr|P|Promoted at end of season}}
+|ranking_col=0
+|class_rules=[[2026–27 UEFA Nations League#Criteria for final overall ranking|Ranking criteria]]
+|source=[https://www.uefa.com/uefanationsleague/standings/ UEFA]
+|split4=yes |split8=yes |split10=yes
+
+<!--Temporary team names (replace as the competition progresses)-->
+|name_T01=Nations League Finals winner
+|name_T02=Nations League Finals runner-up
+|name_T03=Nations League Finals 3rd place
+|name_T04=Nations League Finals 4th place
+|name_T05=1st-ranked quarter-final loser
+|name_T06=2nd-ranked quarter-final loser
+|name_T07=3rd-ranked quarter-final loser
+|name_T08=4th-ranked quarter-final loser
+|name_T09=Team ranked 9th in interim ranking
+|name_T10=Team ranked 10th in interim ranking
+|name_T11=1st-ranked League A/B play-off winner or League B group winner
+|name_T12=2nd-ranked League A/B play-off winner or League B group winner
+|name_T13=3rd-ranked League A/B play-off winner or League B group winner
+|name_T14=4th-ranked League A/B play-off winner or League B group winner
+|name_T15=5th-ranked League A/B play-off winner or League B group winner
+|name_T16=6th-ranked League A/B play-off winner or League B group winner
+|name_T17=7th-ranked League A/B play-off winner or League B group winner
+|name_T18=8th-ranked League A/B play-off winner or League B group winner
+
+<!--Promoted column-->
+|col1_T11=
+|col1_T12=
+|col1_T13=
+|col1_T14=
+|col1_T15=
+|col1_T16=
+|col1_T17=
+|col1_T18=
+
+<!--Update date-->
+<!--Set to complete so it doesn't show during the competition. Set to date after league games and during finals and playoffs.-->
+|update=complete
+
+<!--Update team positions below (check tiebreakers)-->
+|team_order=T01, T02, T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18
+}}
+}}<noinclude>
+{{Multiple sports table preview|matches=yes|matches5=no|matches6=no|matches7=no|matches8=no|Group 1|Group 2|Group 3|Group 4|3rd place|4th place|Interim overall ranking|Final overall ranking}}
+[[Category:2026–27 UEFA Nations League table templates]]
+</noinclude>

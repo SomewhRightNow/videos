@@ -1,0 +1,83 @@
+== info: /home/user/Filmler/centralia/renders/film-v2.mp4
+duration=51.000000
+size=34162974
+bit_rate=5358897
+codec_name=h264
+profile=High
+width=1080
+height=1920
+pix_fmt=yuv420p
+color_range=tv
+color_space=bt709
+color_transfer=bt709
+color_primaries=bt709
+r_frame_rate=24/1
+frames=1224
+audio_codec_name=aac
+audio_sample_rate=48000
+audio_channels=2
+audio_bit_rate=291785
+== hook (first 2 s must move from frame 1; min mean 0.5, motion >= 0.02 in every 2 frames):
+  steps=47 mean=1.44 min=0.660 first_step=0.804
+  PASS
+  (also look at the strip: qc.py strip <video> 0 2 12, so grain or flicker is not mistaken for motion)
+== sheet: /home/user/Filmler/centralia/review/qc-film-v2/sheet.jpg (index: /home/user/Filmler/centralia/review/qc-film-v2/sheet-index.txt, one tile every 3s)
+== black intervals (>= 0.1 s, 98% of pixels dark):
+none
+== frozen intervals (>= 1.5 s):
+none
+(grain hides freezes from this detector; also check strips and duplicates)
+== exact duplicate consecutive frames:
+frames: 1224, duplicates: 0
+== one-frame pops (a frame unlike both neighbours, 48 px grey): 5
+     frame 51 (00:02.12)  step 4.2
+     frame 52 (00:02.17)  step 4.2
+     frame 59 (00:02.46)  step 4.1
+     frame 67 (00:02.79)  step 4.4
+     frame 74 (00:03.08)  step 4.3
+  look at each (qc.py strip <video> <t - 0.1> 0.3 24): a stray frame, or a flash on purpose?
+== repeated compositions (the same picture again, 6 s or more later; 32 px grey): 0 repeats, 0 s of 51
+== brightness (4 samples/s):
+samples: 204, mean L*: 22.4, min: 0.8, max: 39.0, very dark (L*<12): 16.7%
+== hard cuts (scene score > 0.3):
+cuts: 4
+  00:13.208
+  00:17.625
+  00:29.125
+  00:41.000
+== action per scene (camera move removed; flag when the median residual < 1.0 or < 30% of the total; 4 samples/s):
+     #1 00:00.00-00:04.70  residual  2.09  total  2.49  ok
+     #2 00:04.70-00:08.00  residual  2.50  total  3.53  ok
+     #3 00:08.00-00:13.20  residual  6.89  total  8.63  ok
+     #4 00:13.20-00:17.60  residual  2.50  total  2.50  ok
+     #5 00:17.60-00:25.90  residual  3.93  total  4.25  ok
+     #6 00:25.90-00:29.10  residual  4.01  total  5.43  ok
+     #7 00:29.10-00:33.60  residual  7.68  total  7.68  ok
+     #8 00:33.60-00:37.80  residual  3.34  total  3.35  ok
+     #9 00:37.80-00:41.00  residual  2.39  total  2.64  ok
+    #10 00:41.00-00:46.40  residual  6.24  total  6.24  ok
+    #11 00:46.40-00:51.00  residual  4.10  total  4.43  ok
+  0 scene(s) flagged
+== loudness (EBU R128, true peak):
+      I:         -14.0 LUFS
+      Threshold: -24.4 LUFS
+      LRA:         1.5 LU
+      Threshold: -34.3 LUFS
+      Peak:       -3.4 dBFS
+== silences (< -50 dB, >= 0.5 s):
+  none
+targets for web: I = -14 LUFS (+/-1), true peak <= -1 dBTP; every silence must be scripted
+== sound per scene (median -14.0 LUFS, harsh-band median -17.6 dB; flag > 3.0 LU or > 3.0 dB above):
+     #1 00:00.00-00:04.70   -14.0 LUFS  harsh -17.6 dB  ok
+     #2 00:04.70-00:08.00   -13.3 LUFS  harsh -16.5 dB  ok
+     #3 00:08.00-00:13.20   -14.3 LUFS  harsh -18.1 dB  ok
+     #4 00:13.20-00:17.60   -13.9 LUFS  harsh -17.4 dB  ok
+     #5 00:17.60-00:25.90   -13.7 LUFS  harsh -17.6 dB  ok
+     #6 00:25.90-00:29.10   -14.1 LUFS  harsh -18.3 dB  ok
+     #7 00:29.10-00:33.60   -14.0 LUFS  harsh -18.8 dB  ok
+     #8 00:33.60-00:37.80   -14.1 LUFS  harsh -17.3 dB  ok
+     #9 00:37.80-00:41.00   -14.5 LUFS  harsh -18.3 dB  ok
+    #10 00:41.00-00:46.40   -13.8 LUFS  harsh -18.6 dB  ok
+    #11 00:46.40-00:51.00   -14.3 LUFS  harsh -16.6 dB  ok
+  0 scene(s) flagged
+== spectrogram: /home/user/Filmler/centralia/review/qc-film-v2/spectrogram.png (look for persistent horizontal lines = pitched layers)

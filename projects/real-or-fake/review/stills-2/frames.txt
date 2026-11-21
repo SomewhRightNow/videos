@@ -1,0 +1,16 @@
+file '/home/user/Filmler/real-or-fake/review/stills-2/000060.jpg'
+duration 1
+file '/home/user/Filmler/real-or-fake/review/stills-2/000204.jpg'
+duration 1
+file '/home/user/Filmler/real-or-fake/review/stills-2/000223.jpg'
+duration 1
+file '/home/user/Filmler/real-or-fake/review/stills-2/000648.jpg'
+duration 1
+file '/home/user/Filmler/real-or-fake/review/stills-2/000708.jpg'
+duration 1
+file '/home/user/Filmler/real-or-fake/review/stills-2/000780.jpg'
+duration 1
+file '/home/user/Filmler/real-or-fake/review/stills-2/000996.jpg'
+duration 1
+file '/home/user/Filmler/real-or-fake/review/stills-2/001080.jpg'
+duration 1

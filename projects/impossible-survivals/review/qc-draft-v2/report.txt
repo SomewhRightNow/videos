@@ -1,0 +1,85 @@
+== info: /home/user/Filmler/impossible-survivals/renders/draft-v2.mp4
+duration=51.791667
+size=16517357
+bit_rate=2551353
+codec_name=h264
+profile=High
+width=540
+height=960
+pix_fmt=yuv420p
+color_range=tv
+color_space=bt709
+color_transfer=bt709
+color_primaries=bt709
+r_frame_rate=24/1
+frames=1243
+audio_codec_name=aac
+audio_sample_rate=48000
+audio_channels=2
+audio_bit_rate=324306
+== hook (first 2 s must move from frame 1; min mean 0.5, motion >= 0.02 in every 2 frames):
+  steps=47 mean=1.46 min=0.826 first_step=1.089
+  PASS
+  (also look at the strip: qc.py strip <video> 0 2 12, so grain or flicker is not mistaken for motion)
+== sheet: /home/user/Filmler/impossible-survivals/review/qc-draft-v2/sheet.jpg (index: /home/user/Filmler/impossible-survivals/review/qc-draft-v2/sheet-index.txt, one tile every 3s)
+== black intervals (>= 0.1 s, 98% of pixels dark):
+none
+== frozen intervals (>= 1.5 s):
+none
+(grain hides freezes from this detector; also check strips and duplicates)
+== exact duplicate consecutive frames:
+frames: 1243, duplicates: 0
+== one-frame pops (a frame unlike both neighbours, 48 px grey): 0
+== repeated compositions (the same picture again, 6 s or more later; 32 px grey): 0 repeats, 0 s of 52
+== brightness (4 samples/s):
+samples: 207, mean L*: 23.5, min: 5.7, max: 59.9, very dark (L*<12): 13.0%
+== hard cuts (scene score > 0.3):
+cuts: 7
+  00:05.250
+  00:17.542
+  00:29.208
+  00:32.208
+  00:34.833
+  00:37.167
+  00:39.792
+== action per scene (camera move removed; flag when the median residual < 1.0 or < 30% of the total; 4 samples/s):
+     #1 00:00.00-00:05.22  residual  1.97  total  2.04  ok
+     #2 00:05.22-00:08.82  residual  3.03  total 10.37  CHECK: camera-led, the subject barely acts
+     #3 00:08.82-00:14.12  residual  1.16  total  1.16  ok
+     #4 00:14.12-00:17.52  residual  1.85  total  1.85  ok
+     #5 00:17.52-00:23.36  residual  3.99  total  4.63  ok
+     #6 00:23.36-00:25.16  residual  1.18  total  1.43  ok
+     #7 00:25.16-00:29.20  residual  1.62  total  1.63  ok
+     #8 00:29.20-00:32.20  residual  1.42  total  2.08  ok
+     #9 00:32.20-00:34.80  residual  1.18  total  1.18  ok
+    #10 00:34.80-00:37.16  residual  7.33  total 10.86  ok
+    #11 00:37.16-00:39.76  residual  0.33  total  0.33  CHECK: nothing moves
+    #12 00:39.76-00:45.82  residual  5.88  total  5.88  ok
+    #13 00:45.82-00:51.79  residual  0.80  total  0.80  CHECK: nothing moves
+    #14 00:51.79-00:51.79  too short to measure
+  3 scene(s) flagged; look at their strips (qc.py strip) and give each an action
+== loudness (EBU R128, true peak):
+      I:         -13.9 LUFS
+      Threshold: -23.8 LUFS
+      LRA:         0.8 LU
+      Threshold: -33.8 LUFS
+      Peak:       -3.2 dBFS
+== silences (< -50 dB, >= 0.5 s):
+  none
+targets for web: I = -14 LUFS (+/-1), true peak <= -1 dBTP; every silence must be scripted
+== sound per scene (median -13.7 LUFS, harsh-band median -16.3 dB; flag > 3.0 LU or > 3.0 dB above):
+     #1 00:00.00-00:05.22   -13.9 LUFS  harsh -15.8 dB  ok
+     #2 00:05.22-00:08.82   -13.9 LUFS  harsh -16.3 dB  ok
+     #3 00:08.82-00:14.12   -13.6 LUFS  harsh -16.4 dB  ok
+     #4 00:14.12-00:17.52   -13.1 LUFS  harsh -16.9 dB  ok
+     #5 00:17.52-00:23.36   -13.8 LUFS  harsh -15.3 dB  ok
+     #6 00:23.36-00:25.16   -13.1 LUFS  harsh -17.6 dB  ok
+     #7 00:25.16-00:29.20   -13.7 LUFS  harsh -15.3 dB  ok
+     #8 00:29.20-00:32.20   -13.4 LUFS  harsh -15.9 dB  ok
+     #9 00:32.20-00:34.80   -13.9 LUFS  harsh -15.2 dB  ok
+    #10 00:34.80-00:37.16   -13.9 LUFS  harsh -17.2 dB  ok
+    #11 00:37.16-00:39.76   -13.7 LUFS  harsh -17.9 dB  ok
+    #12 00:39.76-00:45.82   -13.6 LUFS  harsh -15.7 dB  ok
+    #13 00:45.82-00:51.79   -14.7 LUFS  harsh -17.4 dB  ok
+  0 scene(s) flagged
+== spectrogram: /home/user/Filmler/impossible-survivals/review/qc-draft-v2/spectrogram.png (look for persistent horizontal lines = pitched layers)

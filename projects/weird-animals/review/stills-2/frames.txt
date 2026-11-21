@@ -1,0 +1,6 @@
+file '/home/user/Filmler/weird-animals/review/stills-2/000216.jpg'
+duration 1
+file '/home/user/Filmler/weird-animals/review/stills-2/000648.jpg'
+duration 1
+file '/home/user/Filmler/weird-animals/review/stills-2/000888.jpg'
+duration 1

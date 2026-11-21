@@ -1,0 +1,5 @@
+FAILED: capture.mjs (exit 1)
+Error: page error: Error: type check: ink on bg contrast 1.13:1 (needs 4.5:1 for text, 3:1 for large display)
+    at file:///home/user/Filmler/gta6-world-waits/film.html?capture=1:1637:31
+    at Object.eval (file:///home/user/Filmler/gta6-world-waits/tools/capture.mjs:479:37)
+log: logs/make-stills.log

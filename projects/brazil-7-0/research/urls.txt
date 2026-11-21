@@ -1,0 +1,5 @@
+vini1 https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Vinicius_Junior_Brazil_V_Morocco_13_June_2026-93.jpg/1280px-Vinicius_Junior_Brazil_V_Morocco_13_June_2026-93.jpg
+vini2 https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Brahim_Diaz_Vinicius_Junior_Brazil_V_Morocco_13_June_2026-128.jpg/1280px-Brahim_Diaz_Vinicius_Junior_Brazil_V_Morocco_13_June_2026-128.jpg
+vini3 https://upload.wikimedia.org/wikipedia/commons/4/47/Brazil_vs_Serbia_WC2022_Vinicius_Jr_and_serbian_players.jpg
+endrick https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Endrick-Palmeiras-Liverpool-abr24.jpg/1280px-Endrick-Palmeiras-Liverpool-abr24.jpg
+estevao https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Estevao-Palmeiras-Criciuma-sep24.jpg/1280px-Estevao-Palmeiras-Criciuma-sep24.jpg

@@ -1,0 +1,14 @@
+file '/home/user/Filmler/manutd-relegation/review/stills-1/000036.jpg'
+duration 1
+file '/home/user/Filmler/manutd-relegation/review/stills-1/000084.jpg'
+duration 1
+file '/home/user/Filmler/manutd-relegation/review/stills-1/000168.jpg'
+duration 1
+file '/home/user/Filmler/manutd-relegation/review/stills-1/000264.jpg'
+duration 1
+file '/home/user/Filmler/manutd-relegation/review/stills-1/000360.jpg'
+duration 1
+file '/home/user/Filmler/manutd-relegation/review/stills-1/000444.jpg'
+duration 1
+file '/home/user/Filmler/manutd-relegation/review/stills-1/000576.jpg'
+duration 1

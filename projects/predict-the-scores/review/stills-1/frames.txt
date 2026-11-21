@@ -1,0 +1,12 @@
+file '/home/user/Filmler/predict-the-scores/review/stills-1/000052.jpg'
+duration 1
+file '/home/user/Filmler/predict-the-scores/review/stills-1/000168.jpg'
+duration 1
+file '/home/user/Filmler/predict-the-scores/review/stills-1/000291.jpg'
+duration 1
+file '/home/user/Filmler/predict-the-scores/review/stills-1/000395.jpg'
+duration 1
+file '/home/user/Filmler/predict-the-scores/review/stills-1/000489.jpg'
+duration 1
+file '/home/user/Filmler/predict-the-scores/review/stills-1/000635.jpg'
+duration 1

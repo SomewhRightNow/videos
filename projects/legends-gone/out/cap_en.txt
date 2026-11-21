@@ -1,0 +1,261 @@
+--srtboundary7781
+Content-Type: application/json; charset=UTF-8
+
+{"snippet": {"videoId": "K2ihxNkZtns", "language": "en", "name": "English", "isDraft": false}}
+--srtboundary7781
+Content-Type: application/x-subrip; charset=UTF-8
+
+1
+00:00:00,850 --> 00:00:07,409
+On a Friday night in Buenos Aires, Argentina played their first game without Lionel Messi.
+
+2
+00:00:07,429 --> 00:00:14,308
+Twenty-four hours later, in Braga, Portugal played their first game without Cristiano Ronaldo.
+
+3
+00:00:14,328 --> 00:00:16,075
+Both of them lost.
+
+4
+00:00:16,095 --> 00:00:19,312
+For twenty years, these two men carried their countries.
+
+5
+00:00:19,312 --> 00:00:24,660
+This is the story of the weekend football had to learn to live without them.
+
+6
+00:00:28,618 --> 00:00:33,626
+Cristiano Ronaldo first played for Portugal in August two thousand and three.
+
+7
+00:00:33,626 --> 00:00:35,028
+He was eighteen.
+
+8
+00:00:35,048 --> 00:00:39,045
+Two years later, Lionel Messi made his debut for Argentina.
+
+9
+00:00:39,045 --> 00:00:41,044
+It lasted about two minutes.
+
+10
+00:00:41,044 --> 00:00:44,997
+He came on, pushed an opponent away, and was sent off.
+
+11
+00:00:45,017 --> 00:00:50,041
+From those beginnings came the greatest rivalry the sport has ever seen.
+
+12
+00:00:50,061 --> 00:00:55,569
+Ronaldo became the top scorer in the history of men's international football.
+
+13
+00:00:55,569 --> 00:01:00,329
+One hundred and forty-six goals, in two hundred and thirty-four games.
+
+14
+00:01:00,349 --> 00:01:05,764
+He won the European Championship in twenty sixteen, and the Nations League twice.
+
+15
+00:01:05,784 --> 00:01:08,452
+Messi won almost everything else.
+
+16
+00:01:08,452 --> 00:01:09,907
+Two Copa Américas.
+
+17
+00:01:09,907 --> 00:01:13,459
+And in twenty twenty-two, in Qatar, the World Cup.
+
+18
+00:01:13,479 --> 00:01:15,609
+Eight Ballon d'Ors for Messi.
+
+19
+00:01:15,609 --> 00:01:17,308
+Five for Ronaldo.
+
+20
+00:01:21,293 --> 00:01:25,153
+Their final summer was the twenty twenty-six World Cup.
+
+21
+00:01:25,173 --> 00:01:27,193
+Argentina reached the final.
+
+22
+00:01:27,193 --> 00:01:30,613
+Spain won it, one-nil, in extra time.
+
+23
+00:01:30,613 --> 00:01:34,056
+Messi walked up to collect his runner-up medal in tears.
+
+24
+00:01:34,076 --> 00:01:36,656
+Weeks later, he wrote a note by hand.
+
+25
+00:01:36,656 --> 00:01:39,056
+He was retiring from the national team.
+
+26
+00:01:39,056 --> 00:01:42,537
+A decision, he wrote, that hurt deep in his soul.
+
+27
+00:01:42,557 --> 00:01:45,407
+Ronaldo's ending was not so quiet.
+
+28
+00:01:45,407 --> 00:01:50,722
+In the autumn, he was left on the bench against Norway, and walked out of the squad.
+
+29
+00:01:50,742 --> 00:01:53,972
+The federation suspended him for thirty days.
+
+30
+00:01:53,972 --> 00:01:57,112
+On the fifth of November, he announced his retirement.
+
+31
+00:01:57,112 --> 00:01:59,134
+Twenty-three years were over.
+
+32
+00:02:04,057 --> 00:02:05,947
+The thirteenth of November.
+
+33
+00:02:05,947 --> 00:02:07,097
+La Bombonera.
+
+34
+00:02:07,097 --> 00:02:11,766
+Argentina against Uruguay, and their new coach, Diego Forlán.
+
+35
+00:02:11,786 --> 00:02:15,147
+Only around twenty-five thousand fans came.
+
+36
+00:02:15,147 --> 00:02:17,357
+Less than half of the stadium.
+
+37
+00:02:17,377 --> 00:02:23,945
+Forty-eight minutes. An own goal by Leonardo Balerdi. Fifty-three. Maxi Araújo. Two-nil.
+
+38
+00:02:23,965 --> 00:02:27,305
+Julián Álvarez scored with seventeen minutes left.
+
+39
+00:02:27,305 --> 00:02:28,595
+It was not enough.
+
+40
+00:02:28,595 --> 00:02:30,660
+Uruguay won, two-one.
+
+41
+00:02:30,680 --> 00:02:35,622
+We have to rebuild without Leo Messi, said coach Lionel Scaloni.
+
+42
+00:02:39,975 --> 00:02:43,342
+The next night, we were in the stadium in Braga.
+
+43
+00:02:43,362 --> 00:02:51,415
+Before kick-off, the Portugal players walked out wearing the number seven. The stadium said goodbye. Obrigado, Capitão.
+
+44
+00:02:51,435 --> 00:02:53,195
+Then Denmark ruined the party.
+
+45
+00:02:53,195 --> 00:02:57,995
+Pierre-Emile Højbjerg scored a penalty just before half-time.
+
+46
+00:02:58,015 --> 00:03:00,395
+Rasmus Højlund scored twice.
+
+47
+00:03:00,395 --> 00:03:02,763
+Joachim Andersen added a fourth.
+
+48
+00:03:02,783 --> 00:03:05,533
+Bernardo Silva scored in stoppage time.
+
+49
+00:03:05,533 --> 00:03:06,993
+It changed nothing.
+
+50
+00:03:06,993 --> 00:03:09,359
+Portugal one, Denmark four.
+
+51
+00:03:09,379 --> 00:03:13,854
+It was the heaviest competitive home defeat in Portugal's history.
+
+52
+00:03:17,753 --> 00:03:19,193
+Two legends gone.
+
+53
+00:03:19,193 --> 00:03:21,716
+Two defeats in twenty-four hours.
+
+54
+00:03:21,736 --> 00:03:31,478
+But history has a warning. In the Euro twenty sixteen final, Ronaldo went off injured after twenty-five minutes. Portugal still beat France.
+
+55
+00:03:31,498 --> 00:03:37,672
+Argentina still have Julián Álvarez, Enzo Fernández and Alexis Mac Allister.
+
+56
+00:03:37,672 --> 00:03:43,012
+Portugal have Vitinha, João Neves, Bruno Fernandes and Rafael Leão.
+
+57
+00:03:43,032 --> 00:03:47,162
+The question is no longer who is better, Messi or Ronaldo.
+
+58
+00:03:47,162 --> 00:03:49,748
+The question is who can follow them.
+
+59
+00:03:49,768 --> 00:03:53,908
+Two legends retired, and both teams lost their very next game.
+
+60
+00:03:53,908 --> 00:03:55,068
+Coincidence?
+
+61
+00:03:55,068 --> 00:03:57,168
+Or proof of how much they carried?
+
+62
+00:03:57,168 --> 00:03:59,708
+Tell us in the comments, and subscribe.
+
+63
+00:03:59,708 --> 00:04:02,405
+We will follow both teams into the new era.
+
+
+--srtboundary7781--

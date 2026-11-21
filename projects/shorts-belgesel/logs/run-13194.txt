@@ -1,0 +1,1 @@
+FAILED: no independent viewer's report on draft v4 (review/critique-v4.md). The final waits for it: start the viewer in the background (templates/quick/REVIEWER.md, model inherit) on renders/draft-v4.mp4 and run make.py final when its report is in (make.py final --force only when the user asks for the final without it)

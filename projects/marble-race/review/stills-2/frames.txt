@@ -1,0 +1,16 @@
+file '/home/user/Filmler/marble-race/review/stills-2/000144.jpg'
+duration 1
+file '/home/user/Filmler/marble-race/review/stills-2/000240.jpg'
+duration 1
+file '/home/user/Filmler/marble-race/review/stills-2/000360.jpg'
+duration 1
+file '/home/user/Filmler/marble-race/review/stills-2/000468.jpg'
+duration 1
+file '/home/user/Filmler/marble-race/review/stills-2/000545.jpg'
+duration 1
+file '/home/user/Filmler/marble-race/review/stills-2/000576.jpg'
+duration 1
+file '/home/user/Filmler/marble-race/review/stills-2/000648.jpg'
+duration 1
+file '/home/user/Filmler/marble-race/review/stills-2/000720.jpg'
+duration 1

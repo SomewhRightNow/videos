@@ -1,0 +1,14 @@
+file '/home/user/Filmler/shorts-belgesel/review/stills-2/000408.jpg'
+duration 1
+file '/home/user/Filmler/shorts-belgesel/review/stills-2/000475.jpg'
+duration 1
+file '/home/user/Filmler/shorts-belgesel/review/stills-2/000516.jpg'
+duration 1
+file '/home/user/Filmler/shorts-belgesel/review/stills-2/000547.jpg'
+duration 1
+file '/home/user/Filmler/shorts-belgesel/review/stills-2/000583.jpg'
+duration 1
+file '/home/user/Filmler/shorts-belgesel/review/stills-2/000629.jpg'
+duration 1
+file '/home/user/Filmler/shorts-belgesel/review/stills-2/000684.jpg'
+duration 1

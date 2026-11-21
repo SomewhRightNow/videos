@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /home/user/Filmler/gta-vice; export HF_HOME=/home/user/.hf HF_HUB_OFFLINE=1
+pr=$(python3 -c "import json;print(json.load(open('logs/prompts2.json'))['haaland'])")
+/home/user/.sdvenv/bin/python logs/scene.py "$pr" scene/t_haaland 301,302,303,304,305,306,307,308 576 768 2>&1 | grep -E "^[0-9]+ " | tr '\n' ' '; echo " haaland done"

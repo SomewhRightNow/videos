@@ -1,0 +1,11 @@
+SOURCES
+Release date: Rockstar Games / Take-Two Interactive
+Trailer record: Guinness World Records (December 2023)
+GTA V sales: Take-Two Interactive earnings, August 2026
+First-week estimate: Newzoo (analyst estimate)
+
+CREDITS
+GTA VI screenshots © Rockstar Games, from rockstargames.com/VI. Used for news and commentary.
+Music: "Night In The City" by Moonwalk (https://www.jamendo.com/track/2037580), licensed under CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+Map data: Made with Natural Earth
+Narration voice: Kokoro TTS (Apache 2.0)
