@@ -248,3 +248,5 @@ Bir videoda kullanılan fotoğraf/klip/konu bir daha kullanılmaz. Her yeni vide
 - 21.11 CLASSIC Messi Last UCL Goal for Barca (lspn1, hazır): X @LSPN__FC_12 2123786678968156476 klibi 0-7.5, 12.0-16.5, 22.0-27.3 KULLANILDI. Ses am_michael, müzik FSM Ghost ofset 26.5.
 - 21.11 05:35 UTC: Messi LAST UCL Goal for Barcelona YÜKLENDİ -> be7R-NhxZtA (up-messi-ucl).
 - 21.11 GUESS THE GOAL #1 (gtg1, hazır, YENİ FORMAT: 2D rotoskop animasyon): Dailymotion x7en67k (Messi-Getafe 2007) 14.3-23.0 referans olarak KULLANILDI (piksel yok, yeniden çizim). Araç: gtg1/roto.py (YOLO11-seg + çizgi/kale yeniden çizimi), ball.py (top takibi), compose.py (dikey, kamera keyframe). Ses am_michael, müzik FSM Acceleration ofset 60. Kullanıcı bu seri için 2D kuralını esnetti ("ok").
+- 21.11 ON THIS DAY Mexès rövaşata (dmk1, hazır): X @demarkesports 2124027530621624669 klibi 0-8.3, 8.5-11.5, 16.5-18.3, 18.5-23.2 KULLANILDI. Ses bm_daniel, müzik FSM Ghost.
+- 21.11 Kullanıcı geri bildirimi: Guess The Goal #1 animasyonu "çok kötü", referans (soccertorey) çok daha kaliteli. Segmentasyon-bant figürler yetersiz; daha iyi yöntem gerekli (pose tabanlı çizim karakter).
