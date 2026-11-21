@@ -45,4 +45,4 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 - UZUN VİDEO konu adayı (kullanıcı "kenarda kalsın", 21.11): "Same parents, different countries" — Williams (Nico İspanya / Iñaki Gana) + Doué (Désiré Fransa / Guéla Fildişi) kardeşler, 2026 DK. Kadrolar henüz doğrulanmadı. Reddedilenler: Ronaldo/Messi/Haaland/Norveç (çok çekildi), City 115, 2030 DK 3 kıta, İspanya marşı, kupa replikası, soccer kelimesi, ağız kapatma, çorap deliği, Merlin ördek.
 - brothers (UZUN VİDEO, kullanıcı onayladı 21.11): Williams + Doué kardeşler. Senaryo taslağı brothers/script.md (37 satır, ~3:20). Durum: kullanıcı onayı bekleniyor; sonra Commons foto + harita + VO + 2560x1440 render.
 - tgz1 "Coventry 1-1 Palace" HAZIR (yerel). brothers belgeseli SIRADA (2K): VO hazır (bm_lewis 3:00, audio/narration.m4a), harita hazır, Commons arama logs/cs.json (rate-limit), müzik seçilecek.
-- brothers: 2K render başladı (logs/render.log, out/final_raw.mp4). Sonra burn_captions + check + up-brothers dalı (LFS gerekebilir) + künye.
+- brothers: HAZIR (up-brothers LFS, 850MB). Kullanıcı "yükle" demedi.

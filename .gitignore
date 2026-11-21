@@ -23,3 +23,4 @@ _engine/engine_backup_v1.py
 
 # reference repos (cloned by bootstrap, too big to sync)
 _refs/
+_up/
