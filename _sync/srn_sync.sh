@@ -12,7 +12,7 @@ pull() {
   commit_local
   git merge -q --no-edit -X ours origin/workspace >/dev/null 2>&1 || { git merge --abort 2>/dev/null; git merge -q --no-edit -X theirs origin/workspace >/dev/null 2>&1; }
   # install rules for Claude in this container
-  mkdir -p ~/.claude; grep -q "@/home/user/Filmler/CLAUDE.md" ~/.claude/CLAUDE.md 2>/dev/null || printf '@/home/user/Filmler/CLAUDE.md\n' > ~/.claude/CLAUDE.md
+  mkdir -p ~/.claude; grep -q "@/home/user/Filmler/CLAUDE.md" ~/.claude/CLAUDE.md 2>/dev/null || printf '\n@/home/user/Filmler/CLAUDE.md\n' >> ~/.claude/CLAUDE.md
   FD=/mnt/skills/examples/canvas-design/canvas-fonts; [ -d "$FD" ] || { mkdir -p "$FD" 2>/dev/null && cp -n "$D"/fonts/* "$FD"/ 2>/dev/null; }
 }
 push() {
