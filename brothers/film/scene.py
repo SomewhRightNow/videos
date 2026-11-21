@@ -1,46 +1,232 @@
-"""Starter scene: a short explainer in the studio look, built only from code (no photos needed).
+"""SAME PARENTS. DIFFERENT COUNTRIES. — Williams & Doué brothers, ~3:00, 16:9 (rendered 2560x1440).
 
-Runs as soon as the project has a voice:
-  tts_say.py -> split_takes.py -> build_narration.py -> render.py --probe / --out
-
-Replace it with your film. The pattern stays the same: lay the world out in clusters, add items on
-voiceover times (doc.L line start, doc.W spoken word), then camera keys with film.shot().
-World units are 4K pixels at zoom 1 (zoom 0.5 shows 7680 x 4320).
+One camera over one wall: a map from West Africa to England in the middle (K=60000), the cold open
+out on the right, the FIFA-rule and World Cup clusters on the right, the Doué cluster out in the Atlantic.
+All photos: Wikimedia Commons, free licences (credits.md). Cards are plain explainer panels, not documents.
 """
-from engine import BigText, Card, Counter, Film, PenMark, Route
+import math
+from engine import (HILITE, MUSTARD, RUST, TEAL, WHITE, BigText, Card, Counter, Film, GeoMap, PenMark, Print,
+                    RegionFill, Route, Stamp, StringLine, XMarker)
 
-ACCENT = (198, 92, 46)
-INK = (34, 32, 30)
-CARD_W, CARD_H, GAP = 3200, 1800, 4400          # four cards in a row, one per step
-XS = [i * GAP for i in range(4)]
-MID = (XS[0] + XS[-1]) / 2
+K = 60000
+CX, CY = 34000, 0            # cold open
+FX, FY = 31000, -17000       # Athletic / FIFA rule cluster
+WX, WY = 31000, 9500         # World Cup cluster
+DX, DY = -13000, -19500      # Doué cluster (Atlantic, west of Rennes)
+SPAIN = (198, 40, 36)
+GHANA = (230, 180, 40)
+LBL = dict(size=3.2, label_size=170)
+CARD = dict(rgb=(246, 243, 236), text_rgb=(30, 28, 26))
+
+
+def P(lat, lon):
+    return K * math.radians(lon + 3), K * math.radians(30 - lat)
 
 
 def build_film(doc):
     L, E, W = doc.L, doc.E, doc.W
-    film = Film(doc.duration, fps=30, look="studio")
+    film = Film(doc.duration, fps=30, look="charcoal")
+    film.look["grain"] = 0.02
+    cam, foc, cue, shot = film.cam, film.focus, film.cue, film.shot
 
-    # 1  the title, then an underline on the word that matters
-    film.add(BigText("FROM CHERRY TO CUP", MID, -2300, 760, L(1) - 0.1, rgb=INK, shadow=False, grunge=False, type_on=0.7))
-    film.add(PenMark("underline", MID, -2080, 5800, 60, t_in=W(1, "cherry") - 0.2, dur=0.5, width=34, rgb=ACCENT))
+    m = film.add(GeoMap(doc.map("route"), K, look="explainer"))
+    GH, MEL, BIL, PAM = m.place("Ghana"), m.place("Melilla"), m.place("Bilbao"), m.place("Pamplona")
+    LON, REN, NAN, ABJ, SAH = m.place("London"), m.place("Rennes"), m.place("Nantes"), m.place("Abidjan"), m.place("Sahara")
+    LIB = P(6.4, -9.4)
 
-    # 2-5  a card per step appears as its line starts; arrows draw on between them
-    steps = [("GROW", ["On a shrub, in the Coffee Belt"], 2),
-             ("PICK", ["Ripe cherries only", "Fruit washed or dried away"], 3),
-             ("ROAST", ["The green seed turns brown"], 4),
-             ("BREW", ["Ground, brewed, poured"], 5)]
-    for (title, lines, line), x in zip(steps, XS):
-        film.add(Card(x, 0, CARD_W, CARD_H, L(line) + 0.05, title=title, lines=lines, accent=ACCENT, title_size=300, body_size=150))
-    for a, b, line in zip(XS, XS[1:], (3, 4, 5)):
-        film.add(Route((a + CARD_W / 2 + 80, 0), (b - CARD_W / 2 - 80, 0), t_in=L(line) - 0.2, dur=0.5, bend=-0.3, width=24, rgb=INK))
-    film.add(Counter(XS[2], 2150, 600, 200, W(4, "two") - 0.1, dur=1.0, suffix="°C", caption="ROAST", rgb=ACCENT))
+    # ================================================= COLD OPEN (1-5)
+    film.add(Print("P01", CX - 2300, CY, 3000, rot=-1.5, t_in=L(1) + 0.05, label="NICO WILLIAMS", label_t=W(1, "mother")))
+    film.add(Print("P03", CX + 2300, CY, 3000, rot=1.5, t_in=W(1, "father") - 0.1, label="IÑAKI WILLIAMS", label_t=W(1, "father") + 0.2))
+    film.add(BigText("SAME PARENTS", CX, CY - 3500, 640, W(1, "bedroom") - 0.2, rgb=WHITE, hit=0.6))
+    film.add(BigText("SPAIN", CX - 2300, CY + 3350, 520, W(2, "two") - 0.1, bar=SPAIN, bar_h=0.92, rgb=WHITE, shadow=False))
+    film.add(BigText("GHANA", CX + 2300, CY + 3350, 520, W(2, "countries") - 0.2, bar=GHANA, bar_h=0.92, rgb=(20, 20, 20), shadow=False))
+    film.add(Print("P02", CX, CY + 7600, 5600, rot=0.8, t_in=L(3) - 0.1, label="SPAIN · WORLD CHAMPIONS · 19 JULY 2026", label_t=W(3, "champion") - 0.3))
+    film.add(Stamp("WORLD CHAMPION", CX + 800, CY + 7000, size=420, rot=-7, t_in=W(3, "champion"), rgb=(196, 30, 24)))
+    film.add(Print("P08", CX + 8600, CY - 600, 2300, rot=2.0, t_in=W(4, "only") - 0.1, label="DÉSIRÉ DOUÉ", label_t=W(4, "brothers")))
+    film.add(Print("P09", CX + 12000, CY - 300, 2300, rot=-1.6, t_in=W(4, "brothers") - 0.2, label="GUÉLA DOUÉ", label_t=W(4, "brothers") + 0.3))
+    film.add(BigText("WHY?", CX + 3500, CY - 6600, 1500, W(5, "why") - 0.05, bar=HILITE, bar_h=0.92, rgb=(20, 20, 20), shadow=False, hit=0.9))
 
-    # camera: the title, then along the row (landing on each card just after it appears), then the whole journey
-    film.shot(0.0, MID, -2250, 0.52)
-    film.shot(E(1) + 0.3, MID, -1100, 0.34)                    # wide: the title and the empty row the cards will fill
-    for (title, lines, line), x in zip(steps, XS):
-        film.shot(L(line) + 0.45, x, 350, 0.62, rot=-0.4 if line % 2 else 0.4)
-        film.shot(E(line) - 0.1, x + 350, 500 if line != 4 else 600, 0.58)
-    film.shot(L(6) + 0.6, MID, 0, 0.27)
-    film.shot(film.duration, MID, -200, 0.205, radius=20000, strength=0.1)
+    cam(0.0, CX - 2300, CY - 300, 0.62, -1.0)
+    cam(W(1, "father") + 0.2, CX, CY - 500, 0.5, -0.4)
+    cam(E(1), CX, CY - 1600, 0.47, 0.0)
+    cam(W(2, "World") + 0.2, CX, CY + 800, 0.45, 0.3)
+    cam(E(2), CX, CY + 1200, 0.44, 0.4)
+    cam(W(3, "champion") + 0.2, CX, CY + 7300, 0.62, 0.0)
+    cam(E(3) + 0.2, CX + 200, CY + 7200, 0.66, -0.3)
+    cam(W(4, "brothers") + 0.3, CX + 10300, CY - 400, 0.52, 0.4)
+    cam(E(4) + 0.2, CX + 10200, CY - 400, 0.55, 0.6)
+    cam(L(5) + 0.4, CX + 4500, CY - 1500, 0.23, 0.0)
+    cam(E(5) + 0.4, CX + 4200, CY - 2500, 0.2, 0.0)
+    foc(0.0, CX - 2300, CY, 2400, 0.55)
+    foc(W(1, "father") + 0.2, CX, CY - 500, 5200, 0.45)
+    foc(W(3, "champion"), CX, CY + 7300, 3800, 0.55)
+    foc(W(4, "brothers") + 0.2, CX + 10300, CY - 400, 3800, 0.55)
+    foc(L(5) + 0.3, CX + 4500, CY - 1500, 14000, 0.15)
+
+    # ================================================= THE DESERT (6-11)
+    cue("riser", L(6) - 1.4, 0.5, dur=1.3)
+    film.add(RegionFill(m, ["Ghana"], RUST, L(6) + 0.3, to_rgb=MUSTARD, t_change=L(7) + 1.0))
+    film.add(XMarker(*GH, "GHANA", t_in=W(6, "Ghana"), side="right", **LBL))
+    film.add(BigText("EARLY 1990s", GH[0] + 9000, GH[1] - 2600, 640, W(6, "nineties") - 0.4, bar=HILITE, bar_h=0.92, rgb=(20, 20, 20), shadow=False))
+    film.add(Route(GH, MEL, t_in=W(7, "north") - 0.2, dur=3.2, bend=-0.12, width=90, rgb=(252, 236, 200)))
+    film.add(BigText("SAHARA", SAH[0] - 6000, SAH[1] + 1500, 900, W(7, "Sahara") - 0.2, rgb=(236, 220, 186)))
+    film.add(Card(SAH[0] + 8200, SAH[1] - 800, 6200, 2600, W(8, "Inyaki") - 0.2, title="“MY PARENTS CROSSED THE DESERT BAREFOOT”",
+                  lines=["IÑAKI WILLIAMS, TO THE GUARDIAN"], accent=HILITE, title_size=300, body_size=170, **CARD))
+    film.add(PenMark("underline", SAH[0] + 9600, SAH[1] - 420, 2400, 40, t_in=W(8, "barefoot") - 0.2, dur=0.4, width=60, rgb=(196, 30, 24)))
+    film.add(RegionFill(m, ["Spain"], RUST, W(9, "Spain") - 0.1, to_rgb=MUSTARD, t_change=L(12)))
+    film.add(XMarker(*MEL, "MELILLA (SPAIN)", t_in=W(9, "Melilla"), side="right", **LBL))
+    film.add(BigText("BORDER FENCE", MEL[0] + 6400, MEL[1] + 2200, 620, W(9, "fence") - 0.2, bar=(196, 30, 24), bar_h=0.92, rgb=WHITE, shadow=False))
+    film.add(Stamp("PREGNANT", MEL[0] + 6400, MEL[1] + 3800, size=470, rot=-6, t_in=W(10, "pregnant") - 0.05))
+    film.add(Card(MEL[0] - 9800, MEL[1] + 5200, 6400, 2500, W(11, "lawyer") - 0.1, title="THE LAWYER'S ADVICE",
+                  lines=["“Say you fled the war in Liberia.”"], accent=(196, 30, 24), title_size=330, body_size=260, **CARD))
+    film.add(RegionFill(m, ["Liberia"], (196, 30, 24), W(11, "Liberia") - 0.1, alpha=0.9))
+    film.add(StringLine((MEL[0] - 9800, MEL[1] + 6450), LIB, t_in=W(11, "Liberia"), dur=1.0, sag=0.02, width=26))
+
+    shot(L(6) + 0.6, GH[0] + 3000, GH[1] - 1500, 0.3, 0.0)
+    shot(E(6), GH[0] + 3500, GH[1] - 2000, 0.32, 0.2, strength=0.35)
+    cam(W(7, "north") + 0.2, GH[0] + 1000, (GH[1] + MEL[1]) / 2, 0.13, 0.0)
+    cam(E(7), SAH[0] + 2000, SAH[1] + 800, 0.15, 0.0)
+    foc(W(7, "north"), SAH[0], SAH[1], 26000, 0.12)
+    shot(W(8, "Inyaki") + 0.3, SAH[0] + 8200, SAH[1] - 800, 0.5, 0.6)
+    shot(E(8) + 0.2, SAH[0] + 8800, SAH[1] - 700, 0.54, 0.8)
+    shot(W(9, "Melilla") + 0.2, MEL[0] + 2500, MEL[1] + 1200, 0.3, 0.0, strength=0.35)
+    shot(W(9, "fence") + 0.3, MEL[0] + 5000, MEL[1] + 2200, 0.42, -0.3)
+    shot(W(10, "pregnant") + 0.1, MEL[0] + 6200, MEL[1] + 3300, 0.58, -0.6)
+    shot(E(10) + 0.2, MEL[0] + 6300, MEL[1] + 3400, 0.6, -0.4)
+    shot(W(11, "lawyer") + 0.3, MEL[0] - 9800, MEL[1] + 5200, 0.5, 0.4)
+    cam(W(11, "Liberia") + 0.5, MEL[0] - 7000, MEL[1] + 16000, 0.12, 0.0)
+    foc(W(11, "Liberia") + 0.4, MEL[0] - 7000, MEL[1] + 16000, 24000, 0.12)
+    cam(E(11) + 0.3, MEL[0] - 6500, MEL[1] + 15000, 0.125, 0.0)
+
+    # ================================================= BILBAO & PAMPLONA (12-15)
+    film.add(Route(MEL, BIL, t_in=W(12, "Bilbao") - 0.9, dur=1.2, bend=0.2, width=70))
+    film.add(XMarker(*BIL, "BILBAO", t_in=W(12, "Bilbao"), side="left", **LBL))
+    film.add(Card(BIL[0] - 9500, BIL[1] + 3600, 5600, 1900, W(12, "charity") - 0.2, title="CÁRITAS", lines=["Catholic charity, Bilbao"], accent=HILITE, title_size=420, body_size=230, **CARD))
+    film.add(BigText("JUNE 1994", BIL[0] - 9500, BIL[1] - 4300, 820, W(13, "June") - 0.15, bar=HILITE, bar_h=0.92, rgb=(20, 20, 20), shadow=False, hit=0.5))
+    film.add(Print("P04", BIL[0] - 9500, BIL[1] - 9200, 3000, rot=-1.2, t_in=W(14, "named") - 0.1, label="IÑAKI", label_t=W(14, "Inyaki") - 0.05))
+    film.add(XMarker(*PAM, "PAMPLONA", t_in=W(15, "Pamplona"), side="right", **LBL))
+    film.add(BigText("8 YEARS LATER", PAM[0] + 9000, PAM[1] - 4300, 640, W(15, "Eight") - 0.1, rgb=WHITE))
+    film.add(Print("P05", PAM[0] + 9000, PAM[1] - 9000, 3000, rot=1.4, t_in=W(15, "Nico") - 0.25, label="NICO", label_t=W(15, "Nico")))
+
+    shot(W(12, "Bilbao") - 0.3, (MEL[0] + BIL[0]) / 2 - 2000, (MEL[1] + BIL[1]) / 2, 0.16, 0.0, strength=0.25)
+    shot(W(12, "charity") + 0.3, BIL[0] - 6000, BIL[1] + 1500, 0.3, 0.3, strength=0.35)
+    shot(W(13, "June"), BIL[0] - 9000, BIL[1] - 3500, 0.42, 0.0)
+    shot(W(14, "named") + 0.2, BIL[0] - 9500, BIL[1] - 8000, 0.45, -0.4)
+    shot(E(14) + 0.2, BIL[0] - 9400, BIL[1] - 8600, 0.5, -0.6)
+    shot(W(15, "Pamplona") + 0.2, PAM[0] + 4500, PAM[1] - 4000, 0.24, 0.0, strength=0.3)
+    shot(W(15, "Nico") + 0.2, PAM[0] + 9000, PAM[1] - 8200, 0.47, 0.5)
+    shot(E(15) + 0.4, PAM[0] + 9000, PAM[1] - 8600, 0.5, 0.7)
+
+    # ================================================= ENGLAND (16-17)
+    film.add(Route(PAM, LON, t_in=W(16, "England") - 0.6, dur=1.3, bend=-0.25, width=60))
+    film.add(XMarker(*LON, "ENGLAND", t_in=W(16, "England"), side="right", **LBL))
+    film.add(Card(LON[0] + 10500, LON[1] + 1500, 7200, 2700, W(17, "father") - 0.9, title="“HE WAS LIKE A FATHER TO ME”",
+                  lines=["NICO WILLIAMS, ON IÑAKI"], accent=HILITE, title_size=380, body_size=200, **CARD))
+    shot(W(16, "England") + 0.3, (PAM[0] + LON[0]) / 2 + 2000, (PAM[1] + LON[1]) / 2, 0.2, 0.0, strength=0.25)
+    shot(W(16, "raise") + 0.2, PAM[0] + 4500, PAM[1] - 6000, 0.22, 0.0, strength=0.25)
+    shot(L(17) + 0.4, LON[0] + 10500, LON[1] + 1500, 0.45, 0.5)
+    shot(E(17) + 0.4, LON[0] + 10600, LON[1] + 1600, 0.5, 0.7)
+
+    # ================================================= ATHLETIC / ONE GAME / FIFA RULE (18-23)
+    cue("riser", L(18) - 1.0, 0.4, dur=0.9)
+    film.add(Card(FX, FY - 3200, 7400, 2800, W(18, "Athletic") - 0.2, title="ATHLETIC CLUB", lines=["Only picks players from the Basque Country"],
+                  accent=SPAIN, title_size=520, body_size=240, **CARD))
+    film.add(BigText("2016", FX - 4600, FY + 1500, 900, W(19, "sixteen") - 0.3, bar=HILITE, bar_h=0.92, rgb=(20, 20, 20), shadow=False))
+    film.add(Counter(FX, FY + 1700, 1300, 1, W(19, "Once") - 0.1, dur=0.4, caption="GAME FOR SPAIN"))
+    film.add(BigText("FRIENDLY vs BOSNIA", FX + 5200, FY + 1500, 460, W(19, "friendly") - 0.1, rgb=WHITE))
+    film.add(Stamp("NEVER CALLED AGAIN", FX + 400, FY + 3600, size=380, rot=-5, t_in=W(20, "never") - 0.05))
+    film.add(Card(FX, FY + 7600, 8600, 3000, W(21, "FIFA") - 0.2, title="FIFA ELIGIBILITY RULE",
+                  lines=["Friendly matches do not tie a player to a country.", "Official competitive matches do."], accent=HILITE, title_size=420, body_size=290, **CARD))
+    film.add(PenMark("highlight", FX - 300, FY + 7720, 7000, 0, t_in=W(21, "friendly") - 0.1, dur=0.5, width=180, rot=0))
+    film.add(Stamp("NOT LOCKED IN", FX + 2400, FY + 9900, size=400, rot=-7, t_in=W(21, "lock") - 0.1, rgb=(30, 120, 60)))
+    film.add(RegionFill(m, ["Ghana"], (40, 120, 70), W(22, "Ghana") - 0.1, alpha=0.95))
+    film.add(BigText("2022: IÑAKI CHOOSES GHANA", FX, FY + 13200, 620, W(22, "chose") - 0.2, bar=GHANA, bar_h=0.92, rgb=(20, 20, 20), shadow=False, hit=0.5))
+    film.add(BigText("2024: NICO SCORES IN THE EURO FINAL", FX, FY + 15000, 560, W(23, "final") - 0.4, bar=SPAIN, bar_h=0.92, rgb=WHITE, shadow=False))
+
+    shot(W(18, "Athletic") + 0.3, FX, FY - 3200, 0.42, 0.0)
+    shot(E(18), FX, FY - 2800, 0.45, 0.3)
+    shot(W(19, "sixteen") + 0.1, FX, FY + 1400, 0.36, 0.0)
+    shot(W(19, "Once") + 0.2, FX, FY + 1700, 0.5, -0.3)
+    shot(W(19, "friendly") + 0.2, FX + 2500, FY + 1700, 0.36, 0.0)
+    shot(W(20, "never") + 0.2, FX + 400, FY + 3300, 0.5, -0.5)
+    shot(W(21, "FIFA") + 0.3, FX, FY + 7600, 0.4, 0.0)
+    shot(W(21, "lock") + 0.3, FX + 1200, FY + 8700, 0.44, 0.4)
+    shot(E(21), FX + 1000, FY + 8500, 0.42, 0.5)
+    cam(W(22, "Ghana") + 0.1, (FX + GH[0]) / 2, (FY + GH[1]) / 2 + 4000, 0.09, 0.0)
+    foc(W(22, "Ghana"), (FX + GH[0]) / 2, (FY + GH[1]) / 2, 40000, 0.1)
+    shot(W(22, "parents") + 0.2, FX, FY + 13200, 0.36, 0.0)
+    shot(W(23, "final") + 0.1, FX, FY + 14400, 0.36, 0.0)
+    shot(E(23) + 0.3, FX, FY + 14600, 0.37, 0.2)
+
+    # ================================================= THE WORLD CUP (24-27)
+    cue("riser", L(24) - 0.6, 0.55, dur=0.8)
+    film.add(BigText("SUMMER 2026", WX, WY - 3800, 900, W(24, "summer") - 0.15, rgb=WHITE, hit=0.7))
+    film.add(Print("P12", WX - 4300, WY + 500, 5000, rot=-1.0, t_in=W(25, "Inyaki") - 0.1, label="IÑAKI · GHANA", label_t=W(25, "Ghana")))
+    film.add(Stamp("ELIMINATED", WX - 4300, WY + 900, size=460, rot=-8, t_in=W(25, "home") - 0.05))
+    film.add(Print("P10", WX + 4300, WY + 500, 5000, rot=1.0, t_in=W(26, "Nico") - 0.1, label="NICO · SPAIN · THE FINAL", label_t=W(26, "final") - 0.2))
+    film.add(BigText("SPAIN 1-0 ARGENTINA", WX, WY + 5200, 900, W(26, "Argentina") - 0.3, bar=SPAIN, bar_h=0.92, rgb=WHITE, shadow=False, hit=0.8))
+    film.add(Print("P11", WX, WY + 10600, 7600, rot=0.5, t_in=W(26, "World") - 0.3, label="19 JULY 2026 · WORLD CHAMPIONS", label_t=W(26, "Cup") - 0.1))
+
+    shot(W(24, "summer"), WX, WY - 3000, 0.4, 0.0)
+    shot(W(25, "Inyaki") + 0.3, WX - 4300, WY + 400, 0.5, -0.4)
+    shot(W(25, "home") + 0.2, WX - 4200, WY + 700, 0.58, -0.6)
+    shot(W(26, "Nico") + 0.3, WX + 4300, WY + 400, 0.5, 0.4)
+    shot(W(26, "Argentina"), WX, WY + 4500, 0.34, 0.0)
+    shot(W(26, "Cup") + 0.3, WX, WY + 10000, 0.42, 0.2)
+    shot(E(26) + 0.6, WX, WY + 10300, 0.45, 0.4)
+    # 27: callback to the two brothers of the cold open
+    film.add(BigText("WORLD CHAMPION", CX - 2300, CY - 2600, 380, W(27, "champion") - 0.2, bar=SPAIN, bar_h=0.92, rgb=WHITE, shadow=False))
+    film.add(BigText("RAISED HIM", CX + 2300, CY - 2600, 380, W(27, "raise") - 0.2, bar=GHANA, bar_h=0.92, rgb=(20, 20, 20), shadow=False))
+    shot(L(27) + 0.4, CX, CY - 300, 0.46, 0.0, radius=5200, strength=0.45)
+    shot(E(27) + 0.4, CX, CY - 400, 0.43, 0.0, radius=5200, strength=0.45)
+
+    # ================================================= THE DOUÉ BROTHERS (28-35)
+    cue("riser", L(28) - 1.0, 0.45, dur=0.9)
+    film.add(RegionFill(m, ["France"], (40, 70, 150), W(28, "France") - 0.1, alpha=0.9))
+    film.add(XMarker(*REN, "RENNES", t_in=W(29, "Rennes") - 0.1, side="right", **LBL))
+    film.add(Print("P07", DX - 2400, DY, 3000, rot=-1.5, t_in=W(29, "Gwayla") - 0.1, label="GUÉLA DOUÉ · RENNES", label_t=W(29, "academy")))
+    film.add(Print("P06", DX + 2400, DY, 3000, rot=1.5, t_in=W(29, "Dezeeray") - 0.1, label="DÉSIRÉ DOUÉ · RENNES", label_t=W(29, "Rennes")))
+    film.add(StringLine((DX + 3300, DY - 2200), REN, t_in=W(29, "Rennes") + 0.1, dur=0.8, sag=0.03, width=24))
+    film.add(BigText("MOTHER: FRENCH", DX - 2400, DY + 3900, 440, W(30, "French") - 0.3, bar=(40, 70, 150), bar_h=0.92, rgb=WHITE, shadow=False))
+    film.add(BigText("FATHER: IVORIAN", DX + 2400, DY + 3900, 440, W(30, "Ivory") - 0.2, bar=(236, 120, 30), bar_h=0.92, rgb=WHITE, shadow=False))
+    film.add(RegionFill(m, ["Côte d'Ivoire"], (236, 120, 30), W(30, "Ivory") - 0.1, alpha=0.95))
+    film.add(Print("P08", DX + 2400, DY + 8600, 3000, rot=1.2, t_in=W(31, "France") - 0.3, label="DÉSIRÉ · FRANCE", label_t=W(31, "France")))
+    film.add(Print("P09", DX - 2400, DY + 8600, 3000, rot=-1.2, t_in=W(31, "Ivory") - 0.3, label="GUÉLA · IVORY COAST", label_t=W(31, "Ivory")))
+    film.add(XMarker(*NAN, "NANTES · 4 JUNE 2026", t_in=W(32, "Nantes") - 0.1, side="right", **LBL))
+    film.add(BigText("IVORY COAST 2-1 FRANCE", DX, DY - 4500, 820, W(33, "winner") - 0.3, bar=(236, 120, 30), bar_h=0.92, rgb=WHITE, shadow=False, hit=0.8))
+    film.add(Stamp("FIRST TIME EVER", DX, DY - 2600, size=520, rot=-6, t_in=W(34, "first") - 0.05))
+    film.add(PenMark("ellipse", DX + 2400, DY + 8700, 3800, 5200, t_in=W(35, "bench") - 0.5, dur=0.6, width=40, seed=8, rgb=(196, 30, 24)))
+    film.add(BigText("ON THE BENCH", DX + 2400, DY + 12300, 560, W(35, "bench") - 0.2, bar=(196, 30, 24), bar_h=0.92, rgb=WHITE, shadow=False))
+
+    cam(L(28) + 0.5, REN[0] - 3000, REN[1] + 2000, 0.14, 0.0)
+    foc(L(28) + 0.4, REN[0], REN[1], 20000, 0.15)
+    shot(W(29, "Gwayla") + 0.3, DX, DY, 0.42, 0.0)
+    shot(E(29), DX, DY - 200, 0.44, 0.2)
+    shot(W(30, "French") - 0.1, DX, DY + 2500, 0.4, 0.0)
+    cam(W(30, "Ivory") + 0.2, (DX + ABJ[0]) / 2, (DY + ABJ[1]) / 2, 0.085, 0.0)
+    foc(W(30, "Ivory"), (DX + ABJ[0]) / 2, (DY + ABJ[1]) / 2, 40000, 0.1)
+    shot(W(31, "France") + 0.2, DX, DY + 8400, 0.42, 0.0)
+    shot(E(31), DX, DY + 8500, 0.43, 0.2)
+    shot(W(32, "Nantes") + 0.3, (DX + NAN[0]) / 2, NAN[1] - 1000, 0.25, 0.0, strength=0.3)
+    shot(W(33, "winner") + 0.2, DX, DY - 4000, 0.42, 0.0)
+    shot(W(34, "first") + 0.2, DX, DY - 3000, 0.48, -0.5)
+    shot(E(34) + 0.2, DX, DY - 2900, 0.5, -0.3)
+    shot(W(35, "bench") + 0.2, DX + 2400, DY + 9800, 0.42, 0.4)
+    shot(E(35) + 0.5, DX + 2400, DY + 10000, 0.44, 0.6)
+
+    # ================================================= CLOSE (36-39)
+    film.add(BigText("2010: BOATENG vs BOATENG", CX + 3500, CY - 9000, 640, W(36, "Boateng") - 0.2, rgb=WHITE))
+    film.add(BigText("GERMANY vs GHANA", CX + 3500, CY - 8000, 420, W(36, "face") - 0.2, rgb=(210, 205, 196)))
+    film.add(BigText("GHANA vs SPAIN?", CX, CY + 4750, 760, W(37, "Ghana") - 0.1, bar=HILITE, bar_h=0.92, rgb=(20, 20, 20), shadow=False, hit=0.7))
+    film.add(BigText("WHO SHOULD THEIR MOTHER CHEER FOR?", CX + 3500, CY - 3100, 520, W(38, "cheer") - 0.4, rgb=WHITE))
+
+    shot(L(36) + 0.4, CX + 3500, CY - 8600, 0.4, 0.0)
+    shot(E(36), CX + 3500, CY - 8400, 0.42, 0.3)
+    shot(W(37, "Ghana") + 0.2, CX, CY + 1500, 0.42, 0.0, radius=5600, strength=0.45)
+    shot(W(38, "cheer") + 0.1, CX + 1200, CY - 1500, 0.36, 0.0, radius=7000, strength=0.35)
+    cam(L(39) + 0.4, CX - 6000, CY - 3000, 0.1, 0.0)
+    foc(L(39) + 0.3, 8000, 0, 60000, 0.05)
+    cam(film.duration, 9000, 0, 0.055, 0.0)
+
+    film.fade_in, film.fade_out = 0.6, 2.0
     return film
