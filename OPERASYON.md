@@ -239,3 +239,4 @@ Bir videoda kullanılan fotoğraf/klip/konu bir daha kullanılmaz. Her yeni vide
 - Format: SERİLER + farklı sesler: BREAKING (bm_george), MATCH CENTER/sonuç (am_michael), CLASSIC (bm_daniel), STATS/"Did you know" (bf_emma), ROAD TO 1000 Ronaldo serisi (am_onyx). Her video 15-30 sn, ilk 1 sn sonuç/şok, sonda abone CTA sözlü.
 - Hafta sonu takvimi: canlı maç takibi + gol/sonuç haberi 1 saat içinde; günde 4-6 Shorts (Zapier kota sınırı dikkat).
 - 21.11 DEVİR: workspace dalı (SomewhRightNow/videos@workspace) = motor+araçlar+projeler+CLAUDE.md+HANDOFF.md+setup.sh. Her çalışma oturumu sonunda HANDOFF.md ve OPERASYON.md güncellenip workspace dalına push edilecek.
+- 21.11 senkron testi: srn_sync.sh pull/push kuruldu.
