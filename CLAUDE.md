@@ -37,3 +37,10 @@ Referans: TikTok @00.09.66.00 "Spain vs France" hype edit (19 sn, 55.8K izlenme,
 ## OYNATMA LİSTESİ KURALI (kullanıcı, 21.11)
 Her videonun üst etiketi = oynatma listesi adı (BREAKING, LAST NIGHT, GOAL OF THE DAY, ON THIS DAY, CLASSIC, TOP 5, PLAY ALONG, BIG GAMES, FANS). Künyeye "Playlist: <ad>" satırı ekle; yükleyince listeye ekle. Lig/yıldız listesi ancak 6+ video olunca açılır. Dağılım ve video ID'leri: PLAYLISTS.md (yeni yüklemeyi oraya da yaz).
 Topluluk gönderileri (Posts): esasen abonelere gider -> abone kazanımı için kullanma; en fazla haftada 1 maç önü anketi. Anlık haber = BREAKING Short.
+
+## TELİF RİSK UYARISI (kullanıcı, 21.11 — Anderson videosu PL Content ID ile DÜNYA GENELİNDE ENGELLENDİ)
+Teslimden ÖNCE riski sınıfla. YÜKSEK riskte cevabın EN BAŞINA "🔴 **YÜKSEK TELİF RİSKİ — ENGELLENEBİLİR**" satırını koy ve nedenini yaz (terminal kırmızı yazı desteklemiyor; kırmızı = 🔴).
+- YÜKSEK (engellenir): Premier League yayın görüntüsü (TNT/Sky/NBC/beIN vb., özellikle MAÇ GÜNÜ/aynı hafta), La Liga, Bundesliga, Serie A, Ligue 1, UCL/UEL güncel yayın görüntüsü; FIFA Dünya Kupası/World Cup yayınları. Aynı gün yüklenen lig maçı yayın klibi = neredeyse kesin engel.
+- ORTA: eski maç yayın görüntüsü (yıllar önce, ikinci lig, telefonla TV çekimi), fan hesaplarındaki derlemeler.
+- DÜŞÜK: tribünden çekilmiş taraftar videosu, resmi kulüp/federasyon/UEFA sosyal klipleri (Wirtz, Nusa geçti), Commons fotoğraf + VO formatı.
+YÜKSEK riskte alternatif öner: sadece tribün çekimi, ya da Commons foto + skor kartı + VO (Almanya 5-0 formatı).
