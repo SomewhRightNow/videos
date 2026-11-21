@@ -13,11 +13,7 @@ PLAN = [('a', 0.0, N['a'] / 30 - 0.05, 1.0)]
 SEGS = []; t0 = 0
 for v, sa, sb, sp in PLAN:
     d = (sb - sa) / sp; SEGS.append((t0, t0 + d, v, sa, sb, sp)); t0 += d
-CLIP_END = t0 + 0.6
-PHOTOS = [('photos/n1.jpg', 1.8, 'DORTMUND WIN 1-0'), ('photos/n2.jpg', 2.0, 'BAYERN DREW 1-1 WITH KOLN...'), ('photos/n3.jpg', 3.0, 'DORTMUND GO TOP!')]
-PH_T = [CLIP_END, CLIP_END + 1.8, CLIP_END + 3.8]
-HOLD = 0; TOTAL = CLIP_END + 6.8
-_PH = {}
+HOLD = 1.6; TOTAL = t0 + HOLD
 def ft(k, s):  # film time of source time s in segment k
     a, b, v, sa, sb, sp = SEGS[k]; return a + (s - sa) / sp
 G1 = ft(0, 11.0); G1R = G2 = G2R = -9
@@ -44,17 +40,6 @@ def center(d, y, text, f, fill, stroke=6):
     w = d.textlength(text, font=f); d.text(((W - w) / 2, y), text, font=f, fill=fill, stroke_width=stroke, stroke_fill=(0, 0, 0))
 def ease(u): u = max(0, min(1, u)); return 1 - (1 - u) ** 3
 def frame(t):
-    if t >= CLIP_END:
-        j = 2 if t >= PH_T[2] else (1 if t >= PH_T[1] else 0); f, dur, hl = PHOTOS[j]
-        if f not in _PH: _PH[f] = Image.open(f).convert('RGB')
-        im = _PH[f]
-        bg = im.resize((48, 64)).filter(ImageFilter.GaussianBlur(2)).resize((W, H), Image.BILINEAR)
-        bg = Image.eval(bg, lambda x: int(x * 0.3))
-        bg.paste(im.resize((W, int(W * im.height / im.width)), Image.LANCZOS), (0, 470)); d = ImageDraw.Draw(bg)
-        tag(d, 60, 250, 'BUNDESLIGA', (200, 20, 30))
-        center(d, 340, hl, fB(92 if len(hl) < 26 else 80), WHITE)
-        if t > TOTAL - 0.5: bg = Image.eval(bg, lambda x, q=(TOTAL - t) / 0.5: int(x * max(0, q)))
-        return bg
     k, v, s = at(t); im = src(v, s)
     bg = im.resize((48, 27)).filter(ImageFilter.GaussianBlur(2)).resize((W, H), Image.BILINEAR)
     bg = Image.eval(bg, lambda x: int(x * 0.3))
@@ -80,6 +65,6 @@ if __name__ == '__main__':
                           '-c:v', 'libx264', '-preset', 'medium', '-crf', '16', '-pix_fmt', 'yuv420p', 'video.mp4'], stdin=subprocess.PIPE)
     for i in range(int(TOTAL * FPS)): p.stdin.write(frame(i / FPS).tobytes())
     p.stdin.close(); p.wait()
-    ims = [frame(tt).resize((360, 640)) for tt in (8.0, G1 + 0.5, PH_T[0] + 0.5, PH_T[1] + 0.5, TOTAL - 0.6)]
+    ims = [frame(tt).resize((360, 640)) for tt in (0.5, 8.0, 10.6, G1 + 0.5, TOTAL - 0.4)]
     s = Image.new('RGB', (1800, 640)); [s.paste(im, (i * 360, 0)) for i, im in enumerate(ims)]; s.save('logs/stills.jpg')
     print('TOTAL', round(TOTAL, 2), 'G1', round(G1, 2), 'SEGS', [(round(a, 2), round(b, 2)) for a, b, *_ in SEGS])
