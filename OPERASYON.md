@@ -253,3 +253,4 @@ Bir videoda kullanılan fotoğraf/klip/konu bir daha kullanılmaz. Her yeni vide
 
 ## Yükleme 21.11 — Mexès ON THIS DAY
 - to7oHtH8LaE "On This Day 2012: A Defender Scored THIS in the Champions League" (dmk1, ses bm_daniel, müzik FSM Ghost ofs 26.5). Kaynak: demarkesports X klibi, kullanılan sn: 0-8.3, 8.5-11.5, 16.5-18.3, 18.5-23.2 -> klibin tamamı KULLANILDI, tekrar kullanma.
+- 21.11 GUESS THE GOAL #1 v2 (gtg1): yeni boru hattı analyze.py (YOLO11m-pose + ByteTrack, takım oyu, çizgi/kale geometrisi) + render.py (konturlu poz-figürler, Hough birleştirme, uyarlanır kamera/zoom). Referans stil: soccertorey. Kaynak aynı (x7en67k 14.3-23.0), yeni kaynak kullanılmadı. Yüklenmedi.
