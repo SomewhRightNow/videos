@@ -14,3 +14,5 @@
 - P12: Inaki Williams 19, Jude Bellingham 10 England v Ghana at 2026 Fifa World Cup by YantsImages 01.jpg — YantsImages, CC BY-SA 4.0, via Wikimedia Commons — https://commons.wikimedia.org/wiki/File:Inaki_Williams_19,_Jude_Bellingham_10_England_v_Ghana_at_2026_Fifa_World_Cup_by_YantsImages_01.jpg
 - Map: Natural Earth (public domain) via world-atlas (ISC).
 - Voice: Kokoro TTS (Apache 2.0). Music: FSM Team, free-stock-music.com (CC BY 4.0).
+- P13: Desire Doue France v Morocco 9 July 2026-047.jpg — Bryan Berlin, CC BY-SA 4.0, via Wikimedia Commons — https://commons.wikimedia.org/wiki/File:Desire_Doue_France_v_Morocco_9_July_2026-047.jpg
+- P14: Guela Doue Cote D'Ivoire v Ecuador 14 June 2026-105.jpg — Bryan Berlin, CC BY-SA 4.0, via Wikimedia Commons — https://commons.wikimedia.org/wiki/File:Guela_Doue_Cote_D'Ivoire_v_Ecuador_14_June_2026-105.jpg
