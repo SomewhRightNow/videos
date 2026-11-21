@@ -1,0 +1,27 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -d /home/user/Filmler/.git ] || git clone -q -b workspace --single-branch https://github.com/SomewhRightNow/videos /home/user/Filmler; bash /home/user/Filmler/_sync/srn_sync.sh pull 2>/dev/null || true",
+            "timeout": 120,
+            "statusMessage": "Syncing shared workspace..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /home/user/Filmler/_sync/srn_sync.sh push 2>/dev/null || true",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}
