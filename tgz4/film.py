@@ -23,7 +23,10 @@ def src(v, s):
     k = min(N[v], max(1, int(round(s * 30)) + 1))
     if (v, k) not in _c:
         if len(_c) > 40: _c.clear()
-        _c[(v, k)] = Image.open(f'src/f{v}/f_{k:04d}.jpg').convert('RGB')
+        im = Image.open(f'src/f{v}/f_{k:04d}.jpg').convert('RGB')
+        bw, bh = int(im.width * 0.085), int(im.height * 0.115); box = (im.width - bw - 4, 4, im.width - 4, 4 + bh)
+        im.paste(im.crop(box).filter(ImageFilter.GaussianBlur(14)), box[:2])
+        _c[(v, k)] = im
     return _c[(v, k)]
 def at(t):
     for k, (a, b, v, sa, sb, sp) in enumerate(SEGS):
