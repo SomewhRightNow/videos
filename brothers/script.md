@@ -66,7 +66,7 @@ Ekrandaki etiket/playlist: CLASSIC değil -> yeni uzun format "THE STORY" (playl
 - 16 Athletic Bask politikası: genel bilgi, Wikipedia
 - 17-20 tek hazırlık maçı Bosna 2016, 2022 Gana: Yahoo Sports + World Soccer Talk + Bolavip
 - 21 Euro 2024 final golü: Wikipedia + UEFA
-- 23-24 DK 2026: ESPN + NPR (final 1-0, 19 Temmuz); Nico 6 maç: Wikipedia + 22bet haber (ikincisi zayıf -> UEFA/FIFA ile teyit)
+- 26 DK 2026 final: ESPN + NPR (1-0, 19 Temmuz); Nico finalde yedekten girdi: Squawka + Goal + Wikipedia. "6 maç" iki kaynakla doğrulanamadı -> çıkarıldı.
 - 25 "big brother raised him": İñaki röportajları — İKİNCİ KAYNAK ARANACAK
 - 26-33 Doué: Yahoo + APA News (seçim nedenleri); maç 4 Haziran 2026 Nantes 2-1: TNT Sports + Africanews + Gulf News
 - 34 Boateng 2010: genel bilgi (Ballon d'Or makalesi)
