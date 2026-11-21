@@ -3,6 +3,7 @@ Kanal: 139 abone, 127k izlenme, 69 video. HEDEF: hafta sonu (22.11) bitene kadar
 Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 
 ## Son yüklenen
+- 21.11 Messi LAST UCL Goal for Barcelona -> be7R-NhxZtA
 - 21.11 On This Day 2007 England 2-3 Croatia -> WR941GM4zTY
 - 21.11 Xavi & Iniesta Tore Arsenal Apart (CLASSIC) -> bzXPaU3tQO0
 

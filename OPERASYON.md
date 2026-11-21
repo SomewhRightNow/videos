@@ -245,3 +245,4 @@ Bir videoda kullanılan fotoğraf/klip/konu bir daha kullanılmaz. Her yeni vide
 - 21.11 ON THIS DAY England 2-3 Croatia (otd-1121, hazır): Dailymotion x5rqs1y (BBC özet) 1-8, 56.5-64.5, 111-118, 220-226, 285.5-292.5, 308.5-316.5, 357-360.5, 378.5-381.5 KULLANILDI (aynı videonun 6:25-12:13 tekrar bölümü de bu sahneler, kullanılmaz). Ses bm_daniel, müzik FSM Ghost ofset 26.5.
 - 21.11 04:17 UTC: On This Day 2007 England 2-3 Croatia YÜKLENDİ -> WR941GM4zTY (up-otd1121). NOT: GitHub 100MB sınırı -> yükleme kopyasını crf19/9M ile yeniden kodla.
 - 21.11 CLASSIC Messi Last UCL Goal for Barca (lspn1, hazır): X @LSPN__FC_12 2123786678968156476 klibi 0-7.5, 12.0-16.5, 22.0-27.3 KULLANILDI. Ses am_michael, müzik FSM Ghost ofset 26.5.
+- 21.11 05:35 UTC: Messi LAST UCL Goal for Barcelona YÜKLENDİ -> be7R-NhxZtA (up-messi-ucl).
