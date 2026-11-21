@@ -4,14 +4,10 @@ from PIL import Image, ImageDraw, ImageFont, ImageEnhance
 W, H, FPS = 1080, 1920, 30
 FD = '/mnt/skills/examples/canvas-design/canvas-fonts/'; F_T = FD + 'BigShoulders-Bold.ttf'; F_MB = FD + 'GeistMono-Bold.ttf'
 RED = (214, 28, 36); WH = (255, 255, 255); GOLD = (244, 196, 64); DIM = (205, 210, 220)
-SEG = [('x', 22.50, 26.00, 5, 'KEVIN DE BRUYNE', 'MAN CITY v BOURNEMOUTH · MAY 2025'),
-       ('x', 26.02, 31.15, 4, 'KYLIAN MBAPPÉ', 'REAL MADRID · CHAMPIONS LEAGUE'),
-       ('x', 13.02, 18.18, 3, 'CRISTIANO RONALDO', 'PORTUGAL'),
-       ('x', 37.20, 42.33, 2, 'LIONEL MESSI', 'ARGENTINA'),
-       ('x', 54.55, 60.15, 1, 'LIONEL MESSI', 'INTER MIAMI')]
-END = 4.0
-LINES = [l.strip() for l in open('logs/lines.txt') if l.strip()]
-VO = [sf.info(f'audio/vo/v{i}.wav').duration for i in range(len(LINES))]
+SEG = [('x', 0.0, 60.15, 0, '', '')]
+END = 3.5
+LINES = []
+VO = []
 starts, t = [], 0.0
 for s in SEG: starts.append(t); t += s[2] - s[1]
 T_END = t; TOTAL = T_END + END
@@ -48,18 +44,20 @@ def chrome(d):
     d.text((W / 2, 148), 'EVEN MESSI MISSED', font=FT['chip'], fill=WH, anchor='mm')
     d.text((W / 2, 1875), 'SOMEWHERE RIGHT NOW', font=FT['brand'], fill=(200, 204, 212), anchor='mm')
 def lower(d, k, lt):
+    a = min(1, lt / 0.3)
+    d.text((W / 2, 300), 'OPEN GOAL... MISSED', font=font(F_T, 120), fill=WH, anchor='mm', stroke_width=7, stroke_fill=(0, 0, 0)); return
     _, _, _, rank, name, sub = SEG[k]; a = min(1, lt / 0.25); x = 60 - (1 - a) * 80
     d.text((x, 395), f'#{rank}', font=font(F_T, 200), fill=GOLD if rank == 1 else WH, anchor='ls', stroke_width=6, stroke_fill=(0, 0, 0))
     nx = x + (250 if rank != 1 else 225)
     d.text((nx, 322), name, font=FT['name'] if len(name) < 16 else font(F_T, 78), fill=WH, anchor='ls', stroke_width=5, stroke_fill=(0, 0, 0))
     d.text((nx + 4, 378), sub, font=FT['sub'] if len(sub) < 42 else font(F_MB, 23), fill=DIM, anchor='ls', stroke_width=3, stroke_fill=(0, 0, 0))
 p = subprocess.Popen(['ffmpeg', '-nostdin', '-loglevel', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
-                      '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p', 'out/video.mp4'], stdin=subprocess.PIPE)
+                      '-c:v', 'libx264', '-preset', 'medium', '-crf', '22', '-pix_fmt', 'yuv420p', 'out/video.mp4'], stdin=subprocess.PIPE)
 n = 0; last = None
 for k, (sid, a, b, *_r) in enumerate(SEG):
     for j, im in enumerate(src_reader(sid, a, b)):
         t = n / FPS; clean = im; im = im.copy()
-        if j < 3: im = Image.blend(im, Image.new('RGB', (W, H), WH), 0.5 * (1 - j / 3))  # flash cut
+        if False: im = Image.blend(im, Image.new('RGB', (W, H), WH), 0.5 * (1 - j / 3))  # flash cut
         d = ImageDraw.Draw(im); chrome(d); lower(d, k, j / FPS); caption(d, t)
         p.stdin.write(im.tobytes()); n += 1; last = im if False else None
         base = clean
@@ -72,7 +70,7 @@ for j in range(int(END * FPS)):
     d.text((W / 2, 760), 'WHO MISSED', font=FT['end1'], fill=WH, anchor='mm', stroke_width=6, stroke_fill=(0, 0, 0))
     d.text((W / 2, 890), 'THE EASIEST?', font=FT['end1'], fill=GOLD, anchor='mm', stroke_width=6, stroke_fill=(0, 0, 0))
     if j > 20:
-        d.rounded_rectangle((150, 1040, W - 150, 1150), 55, fill=RED); d.text((W / 2, 1095), 'COMMENT 5, 4, 3, 2 OR 1', font=FT['end2'], fill=WH, anchor='mm')
+        d.rounded_rectangle((150, 1040, W - 150, 1150), 55, fill=RED); d.text((W / 2, 1095), 'COMMENT BELOW', font=FT['end2'], fill=WH, anchor='mm')
     if j > 45: d.text((W / 2, 1240), 'FOLLOW FOR MORE', font=FT['end2'], fill=WH, anchor='mm', stroke_width=4, stroke_fill=(0, 0, 0))
     caption(d, t); p.stdin.write(im.tobytes()); n += 1
 p.stdin.close(); p.wait(); print('frames', n, 'dur', n / FPS, 'expected', TOTAL)
