@@ -191,6 +191,7 @@ Bir videoda kullanılan fotoğraf/klip/konu bir daha kullanılmaz. Her yeni vide
 - 20.11 05:32 UTC: Boca Fans Cartagena YÜKLENDİ (kullanıcı isteğiyle, public): https://www.youtube.com/watch?v=agXRvQ7yvzE — kaynak uploads@93bdada.
 
 | 20.11 (13-19.11, 7g) | 42.416 izlenme | engaged/views %51.5 | +37 abone | en iyi oran: Portugal who wears 7 %60.9, Red Bulls-América %60.8, Rao %59.2 | en kötü: Mourinho 16 games %32.1, Hulk %37.5, Same Age Ep1 %40.3 | ülkeler: US 10.4k, TR 6.0k, IN 3.5k, GB 2.4k |
+| 21.11 | Norveç geri dönüşü (ewROJ8P0vE0) 35.108 izl., 25 abone | 7 gün 72,0K (↑↑) | engaged/views %49,1 (hedef %70) | 52 abone / 72K ≈ 0,72; paylaşım 0,53/1K, yorum 0,68/1K | En iyi oran: Neymar Santos %60,9, Red Bulls–América %60,8, Rao golazo %59,2 = hareketli kaos/gol ile açılış. En kötü: Mourinho %32, Hulk %37,8, Same Age %40,1, Arda pratik %43,4 = yazı/istatistik ya da sakin açılış. Veri ~18.11'e kadar (gecikme); 19-21.11 yüklemeleri (Xavi, OTD 2007, Messi) yok. US %87, TR %62, IN %76, GB %72 |
 
 - 20.11 Yashin Tribute (hazır): @nocontextfooty X 2123296815214887230 kaynak sn 0-30 KULLANILDI.
 
