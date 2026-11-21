@@ -241,3 +241,4 @@ Bir videoda kullanılan fotoğraf/klip/konu bir daha kullanılmaz. Her yeni vide
 - 21.11 DEVİR: workspace dalı (SomewhRightNow/videos@workspace) = motor+araçlar+projeler+CLAUDE.md+HANDOFF.md+setup.sh. Her çalışma oturumu sonunda HANDOFF.md ve OPERASYON.md güncellenip workspace dalına push edilecek.
 - 21.11 senkron testi: srn_sync.sh pull/push kuruldu.
 - 21.11 SENKRON KURULDU: main dalında CLAUDE.md + .claude/settings.json (SessionStart: workspace klonla/pull, Stop: push). /home/user/Filmler = workspace dalı. Kural ekle -> CLAUDE.md, bilgi -> OPERASYON.md, durum -> HANDOFF.md; hook otomatik push eder.
+- 21.11 KONUŞMA SENKRONU: her cevap sonunda konusmalar/YYYY-MM-DD.md (düz metin, e-posta maskeli) + push; oturum başında HANDOFF + son konuşmalar Claude bağlamına yükleniyor (_sync/context.sh).
