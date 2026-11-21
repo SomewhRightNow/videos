@@ -250,3 +250,6 @@ Bir videoda kullanılan fotoğraf/klip/konu bir daha kullanılmaz. Her yeni vide
 - 21.11 GUESS THE GOAL #1 (gtg1, hazır, YENİ FORMAT: 2D rotoskop animasyon): Dailymotion x7en67k (Messi-Getafe 2007) 14.3-23.0 referans olarak KULLANILDI (piksel yok, yeniden çizim). Araç: gtg1/roto.py (YOLO11-seg + çizgi/kale yeniden çizimi), ball.py (top takibi), compose.py (dikey, kamera keyframe). Ses am_michael, müzik FSM Acceleration ofset 60. Kullanıcı bu seri için 2D kuralını esnetti ("ok").
 - 21.11 ON THIS DAY Mexès rövaşata (dmk1, hazır): X @demarkesports 2124027530621624669 klibi 0-8.3, 8.5-11.5, 16.5-18.3, 18.5-23.2 KULLANILDI. Ses bm_daniel, müzik FSM Ghost.
 - 21.11 Kullanıcı geri bildirimi: Guess The Goal #1 animasyonu "çok kötü", referans (soccertorey) çok daha kaliteli. Segmentasyon-bant figürler yetersiz; daha iyi yöntem gerekli (pose tabanlı çizim karakter).
+
+## Yükleme 21.11 — Mexès ON THIS DAY
+- to7oHtH8LaE "On This Day 2012: A Defender Scored THIS in the Champions League" (dmk1, ses bm_daniel, müzik FSM Ghost ofs 26.5). Kaynak: demarkesports X klibi, kullanılan sn: 0-8.3, 8.5-11.5, 16.5-18.3, 18.5-23.2 -> klibin tamamı KULLANILDI, tekrar kullanma.
