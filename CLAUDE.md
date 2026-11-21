@@ -19,7 +19,7 @@ Tüm hesaplar tek hafızadan ilerler: kalıcı her bilgi SADECE bu klasöre yaz�
 - Stil: profesyonel futbol haber kanalı (BREAKING/CONFIRMED/CLASSIC etiketleri, temiz lower-third, hatasız İngilizce VO + altyazı, merak + abone CTA). Çocukça/duygusal ekran yazısı yok ("tears", "AURA" vb.). Seri başına farklı Kokoro sesi (OPERASYON.md STRATEJİ).
 - Bilgiyi 2 kaynakla doğrula; tek kaynaklıysa videoya koyma ya da belirt.
 - Yükleme yalnızca kullanıcı "yükle" deyince. Aksi halde dosya + künye ver (künye düz kopyalanabilir metin, kod bloğu değil).
-- Yayıncı logolarını silme. Content ID'den kaçmak için klip dönüştürme yapma. YouTube cookie kullanma, bot korumasını aşma.
+- Yayıncı logolarını silme (istisna: kullanıcı açıkça isterse bulanıklaştır — 21.11 Sakamoto). Content ID'den kaçmak için klip dönüştürme yapma. YouTube cookie kullanma, bot korumasını aşma.
 - Kullanıcının e-postası gizli; dış servislere gönderme.
 - Her teslimde tek satır telif riski notu. Yorum sorusu evet/hayır olmasın. Quiz videolarında 2D grafik yok. Kliplerde zoom yok, oyunlar tam gösterilir.
 - Müzik: sadece Content ID'ye kayıtlı olmayan parçalar (free-stock-music.com FSM Team "not registered" ibareli; Kevin MacLeod). FMA "CC BY" phonk'lar Content ID yedi -> kullanma. Sentez müzik yapma (kullanıcı beğenmiyor).
