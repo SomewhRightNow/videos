@@ -21,6 +21,7 @@ def crest(k, size, alpha=1.0):
     a = im.getchannel('A').point(lambda v: int(v * alpha)); im = im.copy(); im.putalpha(a); return im
 FOC = {k: 0.5 for k in P}            # horizontal focus of each photo for the 9:16 crop (set after looking)
 FOC.update(dict(a=0.52, b=0.5, c=0.5))
+FOCY = dict(b=0.95)
 SHOTS = [('a', 3.0), ('b', 6.6), ('c', 3.8)]
 T0 = [0]
 for _, d in SHOTS: T0.append(T0[-1] + d)
@@ -37,7 +38,7 @@ def cover(k):
 def bgshot(k, u):
     im = cover(k); fx = FOC[k]; z = 1.0 + 0.045 * ease(u)
     cw, ch = int(W / z), int(H / z)
-    cx = int((im.width - W) * fx + W / 2); cy = int((im.height - H) * 0.35 + H / 2)
+    cx = int((im.width - W) * fx + W / 2); cy = int((im.height - H) * FOCY.get(k, 0.35) + H / 2)
     x = max(0, min(im.width - cw, cx - cw // 2)); y = max(0, min(im.height - ch, cy - ch // 2))
     fr = im.crop((x, y, x + cw, y + ch)).resize((W, H), Image.BICUBIC)
     # dark gradient bottom for the cards, top for the title
