@@ -2,8 +2,8 @@
 import os, subprocess
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
-S = 4 / 3
-W, H, FPS = 1440, 2560, 30
+S = 1.0
+W, H, FPS = 1080, 1920, 30
 F = '/home/user/Filmler/fonts/'
 fB = lambda s: ImageFont.truetype(F + 'BigShoulders-Bold.ttf', int(s * S))
 fO = lambda s: ImageFont.truetype(F + 'Outfit-Bold.ttf', int(s * S))
