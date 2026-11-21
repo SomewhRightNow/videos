@@ -260,3 +260,8 @@ Bir videoda kullanılan fotoğraf/klip/konu bir daha kullanılmaz. Her yeni vide
 - 21.11 EVEN MESSI MISSED (emr1, hazır, kullanıcı isteği: TOP 5 YOK, verdiği videonun TAMAMI karışık sırayla, sadece yazı + müzik FSM Acceleration ofset 30, VO yok): X @emrahc_ 2124042630551978008 fan derlemesi 0-60.15 TAMAMI KULLANILDI.
 - KULLANICI TERCİHİ (21.11): kullanıcı bir derleme video verirse Top 5 / sıralama yapma; videonun tamamını kullan, üstüne başlık yazısı + müzik koy, kısa tut.
 - 21.11 emr1 güncellendi: 'EVEN MESSI MISSED' etiketi kaldırıldı (kullanıcı isteği) -> 'Open Goal Missed.mp4'. top5fk yerel mp4 silindi (GitHub up-top5fk dalında duruyor).
+
+## HYPE EDIT ŞABLONU (kullanıcı 21.11: "şu tarz videolar inanılmaz tutuyor, edit istediğimde buna benzer yap")
+Referans: https://vt.tiktok.com/ZSs1A3jHe/ (@00.09.66.00, "I can't wait 25th march.. Spain vs France who will win?", 19 sn, 768x576 kaynak, 55.8K izl / 3.6K beğeni, şarkı Hans Kazan "Dopebwoy" -> telifli, biz kullanmayız).
+Akış (sn): 0-5.6 kura çekimi: sunucu kâğıdı açar, "SPAIN" ve "FRANCE" görünür (bağlam, merak) | 5.6-8.3 UEFA Nations League kupası/logo | 8.3-19 beat-senkron kesmeler, 25 kesme/24 sn: Yamal, Olise/Kounde, Nico Williams, Dembélé, Pedri, Saliba, Mikel Merino sevinçleri; yakın plan yüz + sevinç + şut anı karışık; drop'ta 0.3 sn kesmeler | son: zafer pozu.
+Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalanır; zoom yok, her klip parçası tek kullanım; üst/alt yazı yok veya tek satır "X vs Y"; VO yok; başlık + açıklamada soru (evet/hayır değil: "Who wins and why?"). Kaynak: kullanıcının verdiği klipler veya resmi hesaplar.

@@ -22,3 +22,10 @@ Bu klasör (/home/user/Filmler) GitHub SomewhRightNow/videos `workspace` dalıyl
 
 ## Yükleme akışı
 Video -> bu depoya tek-commit dal (`up-<isim>`), raw URL https://raw.githubusercontent.com/SomewhRightNow/videos/up-<isim>/<dosya>.mp4 -> Zapier YouTube `youtube_upload_video` (title, description, video=raw URL, tags, privacy_status public, category_id 17, made_for_kids false, default_language en, localizations tr). Zapier "throttled" derse kota dolu: kullanıcıya elle yüklemeyi öner. Zapier bağlantısı hesaba bağlıdır; yeni hesapta kullanıcı kendi Zapier+YouTube bağlantısını kurmalı.
+
+## EDIT STİLİ (kullanıcı, 21.11) — "edit" istendiğinde varsayılan bu
+Referans: TikTok @00.09.66.00 "Spain vs France" hype edit (19 sn, 55.8K izlenme, 3.6K beğeni). Ayrıntı: OPERASYON.md "HYPE EDIT ŞABLONU".
+- Yapı: 1) kanca/bağlam (ör. kura çekimi "SPAIN" - "FRANCE" kâğıdı açılıyor, 0-5 sn) 2) kupa/sahne görseli (1-2 sn) 3) beat'e senkron HIZLI KESMELER: yıldız oyuncuların yakın plan bakışları, gol sevinçleri, tünel/marş anları (her kesme 0.3-1.3 sn, drop'ta hızlanır) 4) son kare güçlü sevinç/poz.
+- Yazı yok ya da minimum; seslendirme yok. Soru açıklamada/başlıkta: "Who will win?".
+- Müzik: sert phonk/drop'lu parça, kesmeler vuruşa oturur. (Telif: sadece FSM Team "not registered" / Kevin MacLeod; ticari şarkı KULLANMA.)
+- Konu: büyük maç öncesi iki takım/iki yıldız karşılaşması (X vs Y), derbi, final.
