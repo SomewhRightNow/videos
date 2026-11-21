@@ -108,7 +108,7 @@ def frame(t):
         text_c(d, 200, 'BAYERN SLIPPED UP...', fB(96), WHITE, 6)
         scorecard(img, 1380, 'BAYERN', FCB, 1, 'KÖLN', KOE, 1, "Moore 12'  |  Brown 37'", 'FRIDAY', lt / 0.5, 'fcb', 'koe')
     elif j == 2:
-        text_c(d, 200, '...DORTMUND DID NOT', fB(96), WHITE, 6)
+        text_c(d, 200, '...DORTMUND MADE THEM PAY', fB(84), WHITE, 6)
         scorecard(img, 1380, 'GLADBACH', BMG, 0, 'DORTMUND', BVB, 1, "Felix Nmecha 80'", 'SATURDAY', lt / 0.5, 'bmg', 'bvb')
     else:
         text_c(d, 200, 'DORTMUND ARE TOP', fB(110), YEL, 7)
