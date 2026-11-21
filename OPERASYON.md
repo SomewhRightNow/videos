@@ -242,3 +242,4 @@ Bir videoda kullanılan fotoğraf/klip/konu bir daha kullanılmaz. Her yeni vide
 - 21.11 senkron testi: srn_sync.sh pull/push kuruldu.
 - 21.11 SENKRON KURULDU: main dalında CLAUDE.md + .claude/settings.json (SessionStart: workspace klonla/pull, Stop: push). /home/user/Filmler = workspace dalı. Kural ekle -> CLAUDE.md, bilgi -> OPERASYON.md, durum -> HANDOFF.md; hook otomatik push eder.
 - 21.11 KONUŞMA SENKRONU: her cevap sonunda konusmalar/YYYY-MM-DD.md (düz metin, e-posta maskeli) + push; oturum başında HANDOFF + son konuşmalar Claude bağlamına yükleniyor (_sync/context.sh).
+- 21.11 ON THIS DAY England 2-3 Croatia (otd-1121, hazır): Dailymotion x5rqs1y (BBC özet) 1-8, 56.5-64.5, 111-118, 220-226, 285.5-292.5, 308.5-316.5, 357-360.5, 378.5-381.5 KULLANILDI (aynı videonun 6:25-12:13 tekrar bölümü de bu sahneler, kullanılmaz). Ses bm_daniel, müzik FSM Ghost ofset 26.5.
