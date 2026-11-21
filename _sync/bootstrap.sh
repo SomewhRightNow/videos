@@ -8,4 +8,6 @@ mkdir -p ~/.claude/skills; [ -d ~/.claude/skills/cinematic-film ] || cp -r $D/_s
 # base tools (Kokoro voice, ffmpeg, yt-dlp) and AI image tools: install once, in background so the session starts fast
 [ -f ~/.cinecode/kokoro/voices-v1.0.bin ] || (nohup bash $D/setup.sh > /tmp/srn_setup.log 2>&1 &)
 [ -f /home/user/.yolo/sam_vit_b.pth ] || (nohup bash $D/setup_ml.sh > /tmp/srn_setup_ml.log 2>&1 &)
+# reference repos the user added (21.11): cloned in background
+(mkdir -p $D/_refs; cd $D/_refs; for r in OpenMontageInc/openmontage lemomo-ai/lemo-opuscar JuneYaooo/rea-video kajisho5/ffmpeg-skill; do [ -d "${r#*/}" ] || git clone -q --depth 1 https://github.com/$r 2>/dev/null; done) >/dev/null 2>&1 &
 bash $D/_sync/context.sh

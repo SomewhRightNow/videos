@@ -20,3 +20,6 @@ _engine/tiles/**
 _engine/world/**
 _engine/engine_backup_v1.py
 **/.git_local/**
+
+# reference repos (cloned by bootstrap, too big to sync)
+_refs/

@@ -44,3 +44,6 @@ Teslimden ÖNCE riski sınıfla. YÜKSEK riskte cevabın EN BAŞINA "🔴 **YÜK
 - ORTA: eski maç yayın görüntüsü (yıllar önce, ikinci lig, telefonla TV çekimi), fan hesaplarındaki derlemeler.
 - DÜŞÜK: tribünden çekilmiş taraftar videosu, resmi kulüp/federasyon/UEFA sosyal klipleri (Wirtz, Nusa geçti), Commons fotoğraf + VO formatı.
 YÜKSEK riskte alternatif öner: sadece tribün çekimi, ya da Commons foto + skor kartı + VO (Almanya 5-0 formatı).
+
+## REFERANS ARAÇLAR (kullanıcı, 21.11)
+_refs/ altında: ffmpeg-skill, rea-video, lemo-opuscar, OpenMontage. Ne işe yaradıkları ve komutlar: REFS.md. Her teslimden önce: `python3 /home/user/Filmler/_refs/ffmpeg-skill/scripts/check.py <video> --platform youtube-shorts` (FAIL varsa düzelt). Kullanıcı referans video verirse önce rea-video ile çözümle.
