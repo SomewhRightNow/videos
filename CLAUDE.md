@@ -51,3 +51,4 @@ _refs/ altında: ffmpeg-skill, rea-video, lemo-opuscar, OpenMontage. Ne işe yar
 ## YÜKLEME KALİTESİ (kullanıcı, 21.11: "YouTube'a yüklenince görüntü bozuluyor")
 Nedenler: (1) 1080p yükleme -> YouTube düşük bitrate AVC verir; (2) GitHub 100MB sınırı için crf19/9M ile yeniden sıkıştırıyorduk; (3) düşük çözünürlüklü kaynak klipler (576p) büyütülüyordu; (4) bulanık degrade arka planlar YouTube sıkıştırmasında bantlaşır.
 Kural: yükleme kopyası HER ZAMAN 1440p (Shorts 1440x2560, uzun 2560x1440), crf 16, maxrate 45M, bt709 etiketli (engine.deliver varsayılanı bu). 100MB üstü -> Git LFS (yeniden sıkıştırma YOK). Kaynak en az 720p olmalı; daha düşükse uyar. Teslim öncesi ffmpeg-skill check.py.
+- Gol edit'lerinde yavaş çekim tekrarı KOYMA (kullanıcı 21.11: "slow motion koyma"); klip gerçek hızda, kullanıcı fotoğraf verirse sona ekle.

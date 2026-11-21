@@ -9,14 +9,17 @@ fB = lambda s: ImageFont.truetype(F + 'BigShoulders-Bold.ttf', s)
 fO = lambda s: ImageFont.truetype(F + 'Outfit-Bold.ttf', s)
 N = {v: len(os.listdir(f'src/f{v}')) for v in 'a'}
 # (clip, src_a, src_b, speed)
-PLAN = [('a', 0.0, 4.6, 1.0), ('a', 2.6, 4.6, 0.5), ('a', 4.6, N['a'] / 30 - 0.05, 1.0)]
+PLAN = [('a', 0.0, N['a'] / 30 - 0.05, 1.0)]
 SEGS = []; t0 = 0
 for v, sa, sb, sp in PLAN:
     d = (sb - sa) / sp; SEGS.append((t0, t0 + d, v, sa, sb, sp)); t0 += d
-HOLD = 1.4; TOTAL = t0 + HOLD
+CLIP_END = t0; PHOTOS = [('photos/ph2.jpg', 1.7), ('photos/ph1.jpg', 3.0)]
+PH_T = [CLIP_END, CLIP_END + PHOTOS[0][1]]
+HOLD = 0.0; TOTAL = CLIP_END + sum(d for _, d in PHOTOS)
 def ft(k, s):  # film time of source time s in segment k
     a, b, v, sa, sb, sp = SEGS[k]; return a + (s - sa) / sp
-G1 = ft(0, 4.3); G1R = ft(1, 4.3); G2 = G2R = -9
+G1 = ft(0, 4.3); G1R = PH_T[0]; G2 = PH_T[1]; G2R = -9
+_PH = {}
 WHITE = (255, 255, 255); SKY = (92, 180, 230); RED = (30, 70, 160); YEL = (255, 206, 0)
 _c = {}
 def src(v, s):
@@ -37,23 +40,34 @@ def center(d, y, text, f, fill, stroke=6):
     w = d.textlength(text, font=f); d.text(((W - w) / 2, y), text, font=f, fill=fill, stroke_width=stroke, stroke_fill=(0, 0, 0))
 def ease(u): u = max(0, min(1, u)); return 1 - (1 - u) ** 3
 def frame(t):
-    k, v, s = at(t); im = src(v, s)
-    bg = im.resize((48, 27)).filter(ImageFilter.GaussianBlur(2)).resize((W, H), Image.BILINEAR)
-    bg = Image.eval(bg, lambda x: int(x * 0.3))
-    pan = im.resize((W, PH), Image.LANCZOS).filter(ImageFilter.UnsharpMask(2, 40, 2))
-    bg.paste(pan, (0, PY)); d = ImageDraw.Draw(bg)
+    if t >= CLIP_END:
+        j = 0 if t < PH_T[1] else 1; f = PHOTOS[j][0]
+        if f not in _PH: _PH[f] = Image.open(f).convert('RGB')
+        im = _PH[f]; k = 10 + j
+        bg = im.resize((48, 27)).filter(ImageFilter.GaussianBlur(2)).resize((W, H), Image.BILINEAR)
+        bg = Image.eval(bg, lambda x: int(x * 0.3))
+        ph = im.resize((W, int(W * im.height / im.width)), Image.LANCZOS)
+        y = PY + PH // 2 - ph.height // 2 if j == 0 else 470
+        bg.paste(ph, (0, y)); d = ImageDraw.Draw(bg)
+    else:
+        k, v, s = at(t); im = src(v, s)
+        bg = im.resize((48, 27)).filter(ImageFilter.GaussianBlur(2)).resize((W, H), Image.BILINEAR)
+        bg = Image.eval(bg, lambda x: int(x * 0.3))
+        pan = im.resize((W, PH), Image.LANCZOS).filter(ImageFilter.UnsharpMask(2, 40, 2))
+        bg.paste(pan, (0, PY)); d = ImageDraw.Draw(bg)
     tag(d, 60, 250, 'PREMIER LEAGUE', (55, 0, 60))
-    if k == 0: hl = 'HE IS ONLY 18...' if t < 2.4 else ('FIRST CAREER START...' if t < G1 else 'LUCA WILLIAMS-BARNETT!')
-    elif k == 1: hl = '15 MINUTES IN. GOAL.'
-    else: hl = 'HIS FIRST TOTTENHAM GOAL'
+    if k == 0: hl = 'HE IS ONLY 18...' if t < 2.4 else ('FIRST CAREER START...' if t < G1 else ('LUCA WILLIAMS-BARNETT!' if t < 6.2 else '15 MINUTES IN. GOAL.'))
+    elif k == 10: hl = 'HIS FIRST TOTTENHAM GOAL'
+    else: hl = 'A STAR IS BORN?'
     center(d, 340, hl, fB(92 if len(hl) < 26 else 82), WHITE)
-    if k == 1: tag(d, 60, PY + 20, 'REPLAY  0.5x', (0, 0, 0), YEL, 40)
     ly = PY + PH + 60
+    if k == 11: ly = 470 + 1264 + 30
+    if k == 10: ly = PY + PH // 2 + 362 + 50
     d.rectangle([60, ly, 72, ly + 150], fill=(232, 232, 240))
     d.text((96, ly - 4), "LUCA WILLIAMS-BARNETT  15'", font=fB(72), fill=WHITE)
     d.text((96, ly + 82), 'TOTTENHAM vs IPSWICH  |  AGE 18  |  21 NOV 2026', font=fO(34), fill=(200, 200, 210))
-    if t >= TOTAL - HOLD - 1.6:
-        u = ease((t - (TOTAL - HOLD - 1.6)) / 0.4)
+    if k == 10:
+        u = ease((t - PH_T[0]) / 0.4)
         center(d, ly + 270 + int((1 - u) * 30), 'First Premier League goal, first career start', fO(44), (235, 235, 240), 4)
     for tf in (G1, G1R, G2, G2R):
         if 0 <= t - tf < 0.12: bg = Image.blend(bg, Image.new('RGB', (W, H), WHITE), 0.45 * (1 - (t - tf) / 0.12))
@@ -64,6 +78,6 @@ if __name__ == '__main__':
                           '-c:v', 'libx264', '-preset', 'medium', '-crf', '16', '-pix_fmt', 'yuv420p', 'video.mp4'], stdin=subprocess.PIPE)
     for i in range(int(TOTAL * FPS)): p.stdin.write(frame(i / FPS).tobytes())
     p.stdin.close(); p.wait()
-    ims = [frame(tt).resize((360, 640)) for tt in (0.5, 3.0, G1 + 0.4, SEGS[1][0] + 2.0, TOTAL - 0.8)]
+    ims = [frame(tt).resize((360, 640)) for tt in (0.5, 4.4, 7.0, PH_T[0] + 0.8, TOTAL - 0.8)]
     s = Image.new('RGB', (1800, 640)); [s.paste(im, (i * 360, 0)) for i, im in enumerate(ims)]; s.save('logs/stills.jpg')
     print('TOTAL', round(TOTAL, 2), 'G1', round(G1, 2), 'SEGS', [(round(a, 2), round(b, 2)) for a, b, *_ in SEGS])
