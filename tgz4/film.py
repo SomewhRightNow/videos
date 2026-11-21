@@ -13,7 +13,7 @@ PLAN = [('a', 0.0, N['a'] / 30 - 0.05, 1.0)]
 SEGS = []; t0 = 0
 for v, sa, sb, sp in PLAN:
     d = (sb - sa) / sp; SEGS.append((t0, t0 + d, v, sa, sb, sp)); t0 += d
-HOLD = 0.8; TOTAL = t0 + HOLD
+HOLD = 1.6; TOTAL = t0 + HOLD
 def ft(k, s):  # film time of source time s in segment k
     a, b, v, sa, sb, sp = SEGS[k]; return a + (s - sa) / sp
 G1 = ft(0, 11.0); G1R = G2 = G2R = -9
@@ -46,12 +46,16 @@ def frame(t):
     pan = im.resize((W, PH), Image.LANCZOS).filter(ImageFilter.UnsharpMask(2, 40, 2))
     bg.paste(pan, (0, PY)); d = ImageDraw.Draw(bg)
     tag(d, 60, 250, 'BUNDESLIGA', (200, 20, 30))
-    hl = 'WATCH THE KEEPER...' if t < 7.5 else ('NMECHA SHOOTS LOW...' if t < G1 else 'HOW DID THAT GO IN?')
+    hl = 'WATCH THE KEEPER...' if t < 7.5 else ('NMECHA SHOOTS LOW...' if t < G1 else ('HOW DID THAT GO IN?' if t < G1 + 1.0 else 'DORTMUND GO TOP!'))
     center(d, 340, hl, fB(92 if len(hl) < 26 else 82), WHITE)
     ly = PY + PH + 60
     d.rectangle([60, ly, 72, ly + 150], fill=SKY)
-    d.text((96, ly - 4), "FELIX NMECHA", font=fB(72), fill=WHITE)
-    d.text((96, ly + 82), 'GLADBACH 0-1 DORTMUND  |  BUNDESLIGA  |  21 NOV 2026', font=fO(34), fill=(200, 200, 210))
+    d.text((96, ly - 4), "FELIX NMECHA  80'", font=fB(72), fill=WHITE)
+    d.text((96, ly + 82), 'GLADBACH 0-1 DORTMUND  |  FULL TIME  |  21 NOV 2026', font=fO(34), fill=(200, 200, 210))
+    if t >= G1 + 1.0:
+        u = ease((t - G1 - 1.0) / 0.4)
+        center(d, ly + 260 + int((1 - u) * 30), 'The only goal of the game.', fO(44), (235, 235, 240), 4)
+        center(d, ly + 325 + int((1 - u) * 30), 'Dortmund are top of the Bundesliga.', fO(44), (235, 235, 240), 4)
     for tf in (G1, G1R, G2, G2R):
         if 0 <= t - tf < 0.12: bg = Image.blend(bg, Image.new('RGB', (W, H), WHITE), 0.45 * (1 - (t - tf) / 0.12))
     if t > TOTAL - 0.5: bg = Image.eval(bg, lambda x, q=(TOTAL - t) / 0.5: int(x * max(0, q)))
