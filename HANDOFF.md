@@ -10,7 +10,7 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 
 ## Hazır ama yüklenmedi
 - kane-news/"Kane Out For Months.mp4" (BREAKING, Kane syndesmosis + Olise). Kullanıcı "yükle" demedi.
-- Moura own goal: kullanıcı "yükleme" dedi -> İPTAL. (Yükleme çağrısı yarıda kesildi; kanalda çıkarsa kullanıcıya sor.)
+- Moura own goal: kullanıcı "yükleme" demişti AMA kanalda yayında (VGn6YYz2QsQ "Porto Scores Own Goal vs a 3rd-Tier Team") -> kullanıcıya soruldu.
 - Diğer hazır dosyalar: wk-fix (8 maç fikstür, Acceleration müzik), cr986 (Ronaldo 986), cr14 (14 more to the dream). Medya dosyaları bu depoda değil; gerekiyorsa yeniden üret.
 
 
@@ -41,3 +41,4 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 - Bu hesabın bulut ortamı "videos" adlı kişisel ortama alındı (Default ortam X/twimg'i engelliyordu). İzinli: x.com, api.x.com, twitter.com, *twimg (cdn.syndication, video, pbs, abs), free-stock-music.com, dailymotion (www/api/geo), tiktok (www/vt), commons/upload.wikimedia.org. Dailymotion CDN (dmcdn.net) listede yok; engellenirse eklenmeli.
 - tfb1 "Keeper Sent Off For This" HAZIR (raw up-tfb1/keeper-sent-off.mp4). Kullanıcı "yükle" demedi.
 - llf1 "Anderson Equaliser" HAZIR (raw up-anderson/anderson-equaliser.mp4). Maç sonucu 88. dk itibarıyla 1-1, final teyit edilmedi. Kullanıcı "yükle" demedi.
+- 21.11 14:45: Oynatma listesi planı PLAYLISTS.md (9 format + 2 yıldız listesi, 76 video dağıtıldı). Listeleri oluşturma: Zapier bağlanınca dene, yoksa kullanıcı Studio'dan.

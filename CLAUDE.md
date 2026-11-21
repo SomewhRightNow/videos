@@ -33,3 +33,7 @@ Referans: TikTok @00.09.66.00 "Spain vs France" hype edit (19 sn, 55.8K izlenme,
 - Yazı yok ya da minimum; seslendirme yok. Soru açıklamada/başlıkta: "Who will win?".
 - Müzik: sert phonk/drop'lu parça, kesmeler vuruşa oturur. (Telif: sadece FSM Team "not registered" / Kevin MacLeod; ticari şarkı KULLANMA.)
 - Konu: büyük maç öncesi iki takım/iki yıldız karşılaşması (X vs Y), derbi, final.
+
+## OYNATMA LİSTESİ KURALI (kullanıcı, 21.11)
+Her videonun üst etiketi = oynatma listesi adı (BREAKING, LAST NIGHT, GOAL OF THE DAY, ON THIS DAY, CLASSIC, TOP 5, PLAY ALONG, BIG GAMES, FANS). Künyeye "Playlist: <ad>" satırı ekle; yükleyince listeye ekle. Lig/yıldız listesi ancak 6+ video olunca açılır. Dağılım ve video ID'leri: PLAYLISTS.md (yeni yüklemeyi oraya da yaz).
+Topluluk gönderileri (Posts): esasen abonelere gider -> abone kazanımı için kullanma; en fazla haftada 1 maç önü anketi. Anlık haber = BREAKING Short.
