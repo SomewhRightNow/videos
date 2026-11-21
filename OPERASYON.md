@@ -240,3 +240,4 @@ Bir videoda kullanılan fotoğraf/klip/konu bir daha kullanılmaz. Her yeni vide
 - Hafta sonu takvimi: canlı maç takibi + gol/sonuç haberi 1 saat içinde; günde 4-6 Shorts (Zapier kota sınırı dikkat).
 - 21.11 DEVİR: workspace dalı (SomewhRightNow/videos@workspace) = motor+araçlar+projeler+CLAUDE.md+HANDOFF.md+setup.sh. Her çalışma oturumu sonunda HANDOFF.md ve OPERASYON.md güncellenip workspace dalına push edilecek.
 - 21.11 senkron testi: srn_sync.sh pull/push kuruldu.
+- 21.11 SENKRON KURULDU: main dalında CLAUDE.md + .claude/settings.json (SessionStart: workspace klonla/pull, Stop: push). /home/user/Filmler = workspace dalı. Kural ekle -> CLAUDE.md, bilgi -> OPERASYON.md, durum -> HANDOFF.md; hook otomatik push eder.
