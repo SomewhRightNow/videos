@@ -39,4 +39,4 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 
 ## 21.11 14:10 UTC — ikinci hesap (Pro) oturumu
 - Bu hesabın bulut ortamı "videos" adlı kişisel ortama alındı (Default ortam X/twimg'i engelliyordu). İzinli: x.com, api.x.com, twitter.com, *twimg (cdn.syndication, video, pbs, abs), free-stock-music.com, dailymotion (www/api/geo), tiktok (www/vt), commons/upload.wikimedia.org. Dailymotion CDN (dmcdn.net) listede yok; engellenirse eklenmeli.
-- Devam eden: tfb1 (kullanıcı "edit" istedi): X @TrollFootball2 2124136749408370964, 4.4 sn: "Almanya'da kaleci topu yumrukladı (ceza sahası dışı), 2. sarı ile atıldı, stoper kaleye geçti". Klip tfb1/src/x.mp4 indirildi (1244x720). Sonraki: kareleri incele, edit + FSM müzik, künye.
+- tfb1 "Keeper Sent Off For This" HAZIR (raw up-tfb1/keeper-sent-off.mp4). Kullanıcı "yükle" demedi.
