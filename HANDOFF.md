@@ -40,3 +40,4 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 ## 21.11 14:10 UTC — ikinci hesap (Pro) oturumu
 - Bu hesabın bulut ortamı "videos" adlı kişisel ortama alındı (Default ortam X/twimg'i engelliyordu). İzinli: x.com, api.x.com, twitter.com, *twimg (cdn.syndication, video, pbs, abs), free-stock-music.com, dailymotion (www/api/geo), tiktok (www/vt), commons/upload.wikimedia.org. Dailymotion CDN (dmcdn.net) listede yok; engellenirse eklenmeli.
 - tfb1 "Keeper Sent Off For This" HAZIR (raw up-tfb1/keeper-sent-off.mp4). Kullanıcı "yükle" demedi.
+- llf1 "Anderson Equaliser" HAZIR (raw up-anderson/anderson-equaliser.mp4). Maç sonucu 88. dk itibarıyla 1-1, final teyit edilmedi. Kullanıcı "yükle" demedi.
