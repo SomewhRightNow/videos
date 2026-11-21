@@ -13,3 +13,7 @@ R=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
 which ffmpeg >/dev/null || (apt-get update -qq && apt-get install -y -qq ffmpeg)
 echo "setup ok"
 bash /home/user/Filmler/_sync/srn_sync.sh pull
+
+# cinematic-film engine (skia) needs EGL/GL libs
+apt-get install -y -q libegl1 libgl1 >/dev/null 2>&1 || (apt-get update -q >/dev/null 2>&1 && apt-get install -y -q libegl1 libgl1 >/dev/null 2>&1)
+pip install -q skia-python 2>/dev/null
