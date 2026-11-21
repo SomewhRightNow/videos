@@ -672,6 +672,9 @@ def main(argv):
         open('out/parts.txt', 'w').write(''.join(f"file 'part{k}.mp4'\n" for k in range(n)))
         subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', 'out/parts.txt', '-c', 'copy', 'out/video.mp4'])
         print('video done')
-def deliver(name, crf=21, maxrate='12M'):
-    subprocess.run(['ffmpeg', '-nostdin', '-y', '-loglevel', 'error', '-i', 'out/video.mp4', '-i', 'audio/mix.wav', '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-preset', 'slow', '-crf', str(crf), '-maxrate', maxrate, '-bufsize', '32M',
-                    '-pix_fmt', 'yuv420p', '-profile:v', 'high', '-movflags', '+faststart', '-c:a', 'aac', '-b:a', '192k', '-shortest', name])
+def deliver(name, crf=16, maxrate='45M', up=1440):
+    # 21.11 quality fix: YouTube re-encodes 1080p uploads to low-bitrate AVC; a 1440p (2K) upload gets VP9/AV1 -> sharp even at 1080 playback.
+    # Upload copy: short side upscaled to `up` (lanczos), high bitrate. >100MB -> push via Git LFS (OPERASYON: LFS yöntemi). up=0 keeps native size.
+    vf = ['-vf', f"scale='if(gt(iw,ih),-2,{up})':'if(gt(iw,ih),{up},-2)':flags=lanczos"] if up else []
+    subprocess.run(['ffmpeg', '-nostdin', '-y', '-loglevel', 'error', '-i', 'out/video.mp4', '-i', 'audio/mix.wav', '-map', '0:v', '-map', '1:a'] + vf + ['-c:v', 'libx264', '-preset', 'slow', '-crf', str(crf), '-maxrate', maxrate, '-bufsize', '90M',
+                    '-pix_fmt', 'yuv420p', '-profile:v', 'high', '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709', '-movflags', '+faststart', '-c:a', 'aac', '-b:a', '256k', '-ar', '48000', '-shortest', name])
