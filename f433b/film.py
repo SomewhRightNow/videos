@@ -13,7 +13,7 @@ WHITE = (255, 255, 255); YEL = (253, 225, 0); INK = (14, 14, 18)
 BVB = (253, 225, 0); FCB = (220, 5, 45); KOE = (237, 28, 36); BMG = (0, 160, 80); SCF = (200, 16, 46)
 P = {k: Image.open(f'photos/{k}.jpg').convert('RGB') for k in ('a', 'b', 'c', 'd')}
 FOC = {k: 0.5 for k in P}            # horizontal focus of each photo for the 9:16 crop (set after looking)
-FOC.update(dict(a=0.5, b=0.5, c=0.5, d=0.5))
+FOC.update(dict(a=0.5, b=0.5, c=0.5, d=0.42))
 SHOTS = [('a', 2.6), ('b', 2.9), ('c', 3.4), ('d', 4.6)]
 T0 = [0]
 for _, d in SHOTS: T0.append(T0[-1] + d)
@@ -28,10 +28,11 @@ def cover(k):
         _cov[k] = Image.blend(im, g, 0.0)
     return _cov[k]
 def bgshot(k, u):
-    im = cover(k); fx = FOC[k]
-    x = int((im.width - W) * fx); x = max(0, min(im.width - W, x + int((u - 0.5) * 30)))
-    y = int((im.height - H) * 0.35)
-    fr = im.crop((x, y, x + W, y + H))
+    im = cover(k); fx = FOC[k]; z = 1.0 + 0.045 * ease(u)
+    cw, ch = int(W / z), int(H / z)
+    cx = int((im.width - W) * fx + W / 2); cy = int((im.height - H) * 0.35 + H / 2)
+    x = max(0, min(im.width - cw, cx - cw // 2)); y = max(0, min(im.height - ch, cy - ch // 2))
+    fr = im.crop((x, y, x + cw, y + ch)).resize((W, H), Image.BICUBIC)
     # dark gradient bottom for the cards, top for the title
     grad = Image.new('L', (1, H)); grad.putdata([int(max(0, (i - H * 0.45) / (H * 0.55)) ** 1.3 * 235) if i > H * 0.45 else int(max(0, (H * 0.16 - i) / (H * 0.16)) * 180) for i in range(H)])
     fr.paste(Image.new('RGB', (W, H), INK), (0, 0), grad.resize((W, H)))
@@ -54,17 +55,34 @@ def scorecard(img, y, a, ca, sa, b, cb, sb, line, when, u):
     d.text(((W - ww) / 2, yy - 25), when, font=fw, fill=INK + (int(255 * a_),))
     img.paste(ov, (0, 0), ov)
 def table(img, y, u):
-    rows = [('1', 'DORTMUND', BVB, '24'), ('2', 'BAYERN', FCB, '22'), ('3', 'FREIBURG', SCF, '22')]
+    rows = [('1', 'DORTMUND', 'BVB', BVB, INK, '24', True), ('2', 'BAYERN', 'FCB', FCB, WHITE, '22', False), ('3', 'FREIBURG', 'SCF', SCF, WHITE, '22', False)]
     ov = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(ov)
-    a0 = ease(u * 1.5); d.rounded_rectangle([60, y, W - 60, y + 420], 28, fill=(14, 14, 18, int(225 * a0)))
-    fh = fO(30); d.text((110, y + 26), 'BUNDESLIGA TABLE', font=fh, fill=(190, 190, 200, int(255 * a0))); d.text((W - 190, y + 26), 'PTS', font=fh, fill=(190, 190, 200, int(255 * a0)))
-    for i, (n, name, c, pts) in enumerate(rows):
-        a = ease((u - 0.12 - i * 0.12) * 3); ry = y + 90 + i * 104 + int((1 - a) * 30); al = int(255 * a)
-        if i == 0: d.rounded_rectangle([80, ry - 8, W - 80, ry + 88], 16, fill=BVB + (int(235 * a),))
-        col = INK if i == 0 else WHITE
-        d.rectangle([100, ry + 8, 110, ry + 72], fill=(INK if i == 0 else c) + (al,))
-        f = fB(76); d.text((130, ry), n, font=f, fill=col + (al,)); d.text((200, ry), name, font=f, fill=col + (al,))
-        wp = d.textlength(pts, font=f); d.text((W - 120 - wp, ry), pts, font=f, fill=col + (al,))
+    a0 = ease(u * 2.0); A = lambda v: int(v * a0)
+    x0, x1 = 50, W - 50
+    d.rounded_rectangle([x0, y, x1, y + 560], 34, fill=(10, 10, 14, A(232)))
+    d.rounded_rectangle([x0, y, x1, y + 86], 34, fill=(255, 255, 255, A(18)))
+    d.text((x0 + 44, y + 22), 'BUNDESLIGA', font=fB(46), fill=(255, 255, 255, A(255)))
+    wm = d.textlength('BUNDESLIGA', font=fB(46)); d.text((x0 + 60 + wm, y + 30), 'MATCHDAY 10  ·  TOP 3', font=fO(30), fill=(170, 170, 185, A(255)))
+    d.text((x1 - 120, y + 30), 'PTS', font=fO(30), fill=(170, 170, 185, A(255)))
+    for i, (n, name, ab, c, tc, pts, hi) in enumerate(rows):
+        a = ease((u - 0.15 - i * 0.12) * 3.2); ry = y + 118 + i * 140 + int((1 - a) * 40); al = int(255 * a)
+        if hi:
+            d.rounded_rectangle([x0 + 18, ry - 14, x1 - 18, ry + 116], 22, fill=BVB + (int(245 * a),))
+        col = INK if hi else WHITE
+        d.text((x0 + 50, ry + 4), n, font=fB(92), fill=col + (al,))
+        cxb, cyb = x0 + 175, ry + 51
+        d.ellipse([cxb - 46, cyb - 46, cxb + 46, cyb + 46], fill=(INK if hi else c) + (al,), outline=(255, 255, 255, int(120 * a)) if not hi else None, width=3)
+        fb = fB(36); wb = d.textlength(ab, font=fb); d.text((cxb - wb / 2, cyb - 22), ab, font=fb, fill=(BVB if hi else tc) + (al,))
+        d.text((x0 + 245, ry + 4), name, font=fB(92), fill=col + (al,))
+        wp = d.textlength(pts, font=fB(92)); d.text((x1 - 70 - wp, ry + 4), pts, font=fB(92), fill=col + (al,))
+        if hi:  # up arrow: moved to the top this weekend
+            ax = x0 + 245 + d.textlength(name, font=fB(92)) + 40; ay = ry + 30
+            d.polygon([(ax, ay + 44), (ax + 26, ay), (ax + 52, ay + 44)], fill=(20, 140, 60, al))
+    a = ease((u - 0.65) * 3); 
+    if a > 0:
+        pill = '+2 POINTS CLEAR AT THE TOP'; f = fB(48); wp = d.textlength(pill, font=f); px = (W - wp) / 2
+        d.rounded_rectangle([px - 30, y + 580, px + wp + 30, y + 660], 40, fill=(20, 140, 60, int(240 * a)))
+        d.text((px, y + 592), pill, font=f, fill=(255, 255, 255, int(255 * a)))
     img.paste(ov, (0, 0), ov)
 def frame(t):
     j = max(i for i in range(len(SHOTS)) if T0[i] <= t) if t < TOTAL else len(SHOTS) - 1
@@ -84,7 +102,7 @@ def frame(t):
         scorecard(img, 1380, 'GLADBACH', BMG, 0, 'DORTMUND', BVB, 1, "Felix Nmecha 80'", 'SATURDAY', lt / 0.5)
     else:
         text_c(d, 200, 'DORTMUND ARE TOP', fB(110), YEL, 7)
-        table(img, 1300, lt / 1.6)
+        table(img, 1080, lt / 1.8)
     if 0 <= lt < 0.1 and j > 0: img = Image.blend(img, Image.new('RGB', (W, H), WHITE), 0.35 * (1 - lt / 0.1))
     if t > TOTAL - 0.5: img = Image.eval(img, lambda x, q=(TOTAL - t) / 0.5: int(x * max(0, q)))
     return img
