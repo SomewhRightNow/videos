@@ -4,6 +4,9 @@ Kullanıcı Türkçe yazar; Türkçe cevap ver. Kanal global İngilizce futbol S
 ## Senkron (iki hesap tek beyin)
 Bu klasör (/home/user/Filmler) GitHub SomewhRightNow/videos `workspace` dalıyla iki yönlü ANLIK senkron (hook'lar otomatik): oturum başında `_sync/bootstrap.sh` (klasör+kurallar+beceriler+araç kurulumu), HER kullanıcı mesajından önce `_sync/live.sh` (diğer hesabın yeni işi/sohbeti gelir ve gösterilir), HER cevaptan sonra konuşma kaydı + `srn_sync.sh push`. Diğer hesabın sohbeti: konusmalar/<tarih>.md — yeni oturumda oku ve kaldığı yerden devam et. Bitmiş videolar: `up-<isim>` dallarında (HANDOFF.md'de raw URL). Yeni kural -> bu dosyaya ekle; yeni bilgi/klip/yükleme -> OPERASYON.md; durum -> HANDOFF.md. Sonra push. Medya senkron edilmez.
 
+## TEK HAFIZA (kullanıcı, 21.11)
+Tüm hesaplar tek hafızadan ilerler: kalıcı her bilgi SADECE bu klasöre yazılır (kural -> CLAUDE.md, bilgi/klip/yükleme -> OPERASYON.md, durum/açık iş -> HANDOFF.md, sohbet -> konusmalar/ otomatik). Hesaba özel hafıza/not yerine her zaman buraya yaz. Bir hesap bir şey öğrendiyse/değiştirdiyse diğeri sonraki mesajda görür (live.sh). Çelişki olursa en yeni kayıt geçerli.
+
 ## Başlarken (yeni oturum / yeni hesap)
 1. /home/user/Filmler yoksa: `git clone -b workspace --single-branch https://github.com/SomewhRightNow/videos /home/user/Filmler`, sonra `bash /home/user/Filmler/setup.sh` (araçlar, fontlar, Kokoro ses modeli).
 2. `HANDOFF.md` (son durum + açık işler) ve `OPERASYON.md` (kullanılan klipler, yüklemeler, strateji, stil) oku.
