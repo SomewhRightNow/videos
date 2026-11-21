@@ -7,7 +7,8 @@ Bu klasör (/home/user/Filmler) GitHub SomewhRightNow/videos `workspace` dalıyl
 ## Başlarken (yeni oturum / yeni hesap)
 1. /home/user/Filmler yoksa: `git clone -b workspace --single-branch https://github.com/SomewhRightNow/videos /home/user/Filmler`, sonra `bash /home/user/Filmler/setup.sh` (araçlar, fontlar, Kokoro ses modeli).
 2. `HANDOFF.md` (son durum + açık işler) ve `OPERASYON.md` (kullanılan klipler, yüklemeler, strateji, stil) oku.
-3. Çalışma klasörü: /home/user/Filmler/<proje>/ ; motor: /home/user/Filmler/_engine/engine.py
+3. Yapay zekâ görsel araçları (yüz değiştirme, SD-Turbo, YOLO, SAM) ve beceriler (cinematic-film harita/pano motoru, cinecode) gerekiyorsa: `bash /home/user/Filmler/setup_ml.sh` (~3 GB, bir kez).
+4. Çalışma klasörü: /home/user/Filmler/<proje>/ ; motor: /home/user/Filmler/_engine/engine.py
 
 ## Kurallar
 - Bir görüntü/klip/fotoğraf yalnızca BİR KEZ kullanılır (aynı klibin başka saniyesi/kırpması da tekrar sayılır); eski videolarda kullanılanlar kullanılmaz (OPERASYON.md'deki listeye bak, kullandığını oraya yaz).
