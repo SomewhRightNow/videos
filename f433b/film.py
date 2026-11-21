@@ -12,6 +12,15 @@ fO = lambda s: ImageFont.truetype(F + 'Outfit-Bold.ttf', s)
 WHITE = (255, 255, 255); YEL = (253, 225, 0); INK = (14, 14, 18)
 BVB = (253, 225, 0); FCB = (220, 5, 45); KOE = (237, 28, 36); BMG = (0, 160, 80); SCF = (200, 16, 46)
 P = {k: Image.open(f'photos/{k}.jpg').convert('RGB') for k in ('a', 'b', 'c', 'd')}
+CR = {k: Image.open(f'crests/{k}.png').convert('RGBA') for k in ('bvb', 'fcb', 'koe', 'bmg', 'scf')}
+_crc = {}
+def crest(k, size, alpha=1.0):
+    key = (k, size)
+    if key not in _crc:
+        im = CR[k].copy(); im.thumbnail((size, size), Image.LANCZOS); _crc[key] = im
+    im = _crc[key]
+    if alpha >= 0.999: return im
+    a = im.getchannel('A').point(lambda v: int(v * alpha)); im = im.copy(); im.putalpha(a); return im
 FOC = {k: 0.5 for k in P}            # horizontal focus of each photo for the 9:16 crop (set after looking)
 FOC.update(dict(a=0.5, b=0.5, c=0.5, d=0.42))
 SHOTS = [('a', 2.6), ('b', 2.9), ('c', 3.4), ('d', 4.6)]
@@ -42,14 +51,16 @@ def text_c(d, y, s, f, fill, stroke=0):
 def tag(d, x, y, s, bg, fg=INK, size=40):
     f = fB(size); w = d.textlength(s, font=f)
     d.rectangle([x, y, x + w + 32, y + size + 16], fill=bg); d.text((x + 16, y + 5), s, font=f, fill=fg)
-def scorecard(img, y, a, ca, sa, b, cb, sb, line, when, u):
+def scorecard(img, y, a, ca, sa, b, cb, sb, line, when, u, ka=None, kb=None):
     a_ = ease(u); ov = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(ov)
     yy = y + int((1 - a_) * 60); al = int(225 * a_)
     d.rounded_rectangle([60, yy, W - 60, yy + 330], 28, fill=(14, 14, 18, al))
     d.rectangle([60, yy + 40, 72, yy + 290], fill=ca + (int(255 * a_),)); d.rectangle([W - 72, yy + 40, W - 60, yy + 290], fill=cb + (int(255 * a_),))
-    fa = fB(64); d.text((110, yy + 48), a, font=fa, fill=(255, 255, 255, int(255 * a_)))
-    wb = d.textlength(b, font=fa); d.text((W - 110 - wb, yy + 48), b, font=fa, fill=(255, 255, 255, int(255 * a_)))
-    fs = fB(170); sc = f'{sa} - {sb}'; ws = d.textlength(sc, font=fs); d.text(((W - ws) / 2, yy + 100), sc, font=fs, fill=(255, 255, 255, int(255 * a_)))
+    fa = fB(52)
+    for kk, nm, cx in ((ka, a, 230), (kb, b, W - 230)):
+        cr = crest(kk, 150, a_); ov.paste(cr, (cx - cr.width // 2, yy + 34), cr)
+        wn = d.textlength(nm, font=fa); d.text((cx - wn / 2, yy + 192), nm, font=fa, fill=(255, 255, 255, int(255 * a_)))
+    fs = fB(170); sc = f'{sa} - {sb}'; ws = d.textlength(sc, font=fs); d.text(((W - ws) / 2, yy + 60), sc, font=fs, fill=(255, 255, 255, int(255 * a_)))
     fl = fO(34); wl = d.textlength(line, font=fl); d.text(((W - wl) / 2, yy + 276), line, font=fl, fill=(205, 205, 215, int(255 * a_)))
     fw = fB(40); ww = d.textlength(when, font=fw); d.rounded_rectangle([(W - ww) / 2 - 22, yy - 30, (W + ww) / 2 + 22, yy + 26], 10, fill=YEL + (int(255 * a_),))
     d.text(((W - ww) / 2, yy - 25), when, font=fw, fill=INK + (int(255 * a_),))
@@ -71,8 +82,7 @@ def table(img, y, u):
         col = INK if hi else WHITE
         d.text((x0 + 50, ry + 4), n, font=fB(92), fill=col + (al,))
         cxb, cyb = x0 + 175, ry + 51
-        d.ellipse([cxb - 46, cyb - 46, cxb + 46, cyb + 46], fill=(INK if hi else c) + (al,), outline=(255, 255, 255, int(120 * a)) if not hi else None, width=3)
-        fb = fB(36); wb = d.textlength(ab, font=fb); d.text((cxb - wb / 2, cyb - 22), ab, font=fb, fill=(BVB if hi else tc) + (al,))
+        cr = crest(ab.lower(), 100, a); ov.paste(cr, (cxb - cr.width // 2, cyb - cr.height // 2), cr)
         d.text((x0 + 245, ry + 4), name, font=fB(92), fill=col + (al,))
         wp = d.textlength(pts, font=fB(92)); d.text((x1 - 70 - wp, ry + 4), pts, font=fB(92), fill=col + (al,))
         if hi:  # up arrow: moved to the top this weekend
@@ -96,10 +106,10 @@ def frame(t):
         text_c(d, 1515 + int((1 - a) * 40), 'LEADERS', fB(150), YEL, 8)
     elif j == 1:
         text_c(d, 200, 'BAYERN SLIPPED UP...', fB(96), WHITE, 6)
-        scorecard(img, 1380, 'BAYERN', FCB, 1, 'KÖLN', KOE, 1, "Moore 12'  |  Brown 37'", 'FRIDAY', lt / 0.5)
+        scorecard(img, 1380, 'BAYERN', FCB, 1, 'KÖLN', KOE, 1, "Moore 12'  |  Brown 37'", 'FRIDAY', lt / 0.5, 'fcb', 'koe')
     elif j == 2:
         text_c(d, 200, '...DORTMUND DID NOT', fB(96), WHITE, 6)
-        scorecard(img, 1380, 'GLADBACH', BMG, 0, 'DORTMUND', BVB, 1, "Felix Nmecha 80'", 'SATURDAY', lt / 0.5)
+        scorecard(img, 1380, 'GLADBACH', BMG, 0, 'DORTMUND', BVB, 1, "Felix Nmecha 80'", 'SATURDAY', lt / 0.5, 'bmg', 'bvb')
     else:
         text_c(d, 200, 'DORTMUND ARE TOP', fB(110), YEL, 7)
         table(img, 1080, lt / 1.8)
