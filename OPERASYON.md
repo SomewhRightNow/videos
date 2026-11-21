@@ -247,3 +247,4 @@ Bir videoda kullanılan fotoğraf/klip/konu bir daha kullanılmaz. Her yeni vide
 - 21.11 04:17 UTC: On This Day 2007 England 2-3 Croatia YÜKLENDİ -> WR941GM4zTY (up-otd1121). NOT: GitHub 100MB sınırı -> yükleme kopyasını crf19/9M ile yeniden kodla.
 - 21.11 CLASSIC Messi Last UCL Goal for Barca (lspn1, hazır): X @LSPN__FC_12 2123786678968156476 klibi 0-7.5, 12.0-16.5, 22.0-27.3 KULLANILDI. Ses am_michael, müzik FSM Ghost ofset 26.5.
 - 21.11 05:35 UTC: Messi LAST UCL Goal for Barcelona YÜKLENDİ -> be7R-NhxZtA (up-messi-ucl).
+- 21.11 GUESS THE GOAL #1 (gtg1, hazır, YENİ FORMAT: 2D rotoskop animasyon): Dailymotion x7en67k (Messi-Getafe 2007) 14.3-23.0 referans olarak KULLANILDI (piksel yok, yeniden çizim). Araç: gtg1/roto.py (YOLO11-seg + çizgi/kale yeniden çizimi), ball.py (top takibi), compose.py (dikey, kamera keyframe). Ses am_michael, müzik FSM Acceleration ofset 60. Kullanıcı bu seri için 2D kuralını esnetti ("ok").
