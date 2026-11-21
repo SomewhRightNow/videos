@@ -60,7 +60,7 @@ def table(img, y, u):
     a0 = ease(u * 2.0); A = lambda v: int(v * a0)
     x0, x1 = 50, W - 50
     d.rounded_rectangle([x0, y, x1, y + 560], 34, fill=(10, 10, 14, A(232)))
-    d.rounded_rectangle([x0, y, x1, y + 86], 34, fill=(255, 255, 255, A(18)))
+    d.rounded_rectangle([x0, y, x1, y + 86], 34, fill=(34, 34, 42, A(245))); d.rectangle([x0, y + 50, x1, y + 86], fill=(34, 34, 42, A(245)))
     d.text((x0 + 44, y + 22), 'BUNDESLIGA', font=fB(46), fill=(255, 255, 255, A(255)))
     wm = d.textlength('BUNDESLIGA', font=fB(46)); d.text((x0 + 60 + wm, y + 30), 'MATCHDAY 10  ·  TOP 3', font=fO(30), fill=(170, 170, 185, A(255)))
     d.text((x1 - 120, y + 30), 'PTS', font=fO(30), fill=(170, 170, 185, A(255)))
