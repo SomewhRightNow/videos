@@ -1,0 +1,12 @@
+I WILL READ YOUR MIND — credits
+
+Music: "Mystery Awaits" by Silver Aeroplane — Jamendo track 1215019 — CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+Narration: Kokoro TTS (Apache 2.0), voice "bm_george".
+Fonts: Big Shoulders Display, Familjen Grotesk (SIL Open Font License).
+All graphics drawn in code. Made with cinecode.
+
+How the trick works (for you, not the video): any number 1-10 x 9 gives digits that add up to 9;
+9 - 5 = 4 = D. Most people pick Denmark, then E = Elephant, which is grey.
+
+For the description:
+Music: "Mystery Awaits" by Silver Aeroplane (Jamendo, CC BY 3.0)

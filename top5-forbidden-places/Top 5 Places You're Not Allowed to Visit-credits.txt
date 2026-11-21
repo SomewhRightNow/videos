@@ -1,0 +1,10 @@
+CREDITS
+Music: "Documentary Background" by Soundrider/Dope (https://www.jamendo.com/track/1670561), licensed under CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+Photos:
+"left wall of the hall of bulls" by subarcticmike, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+"Svalbard, landscape" by Billy Lindblom, CC BY 2.0
+"Svalbard Global Seed Vault" by Dag Endresen, CC BY 2.0
+"Ilha da Queimada Grande - Itanhaém3" by Prefeitura Municipal de Itanhaém, CC BY 2.5 (https://creativecommons.org/licenses/by/2.5/)
+"AREA 51" by Wendelin Jacober (CC0) · golden lancehead by Tiago Lubiana (CC0) · North Sentinel Island by DLR (public domain)
+Area 51 warning sign recreated in graphics from the wording of the real signs.
+Narration voice: Kokoro TTS (Apache 2.0)

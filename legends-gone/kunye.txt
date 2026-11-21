@@ -1,0 +1,63 @@
+LEGENDS GONE — KÜNYE (uzun video, 16:9, 1920x1080, ~4:02)
+İngilizce anlatım (Kokoro bm_george) + videoya gömülü İngilizce altyazı. Türkçe: ayrı altyazı dosyası (Legends Gone.tr.srt) + Türkçe ses kanalı
+Ek: Türkçe seslendirme dosyası (Supertonic-3) → YouTube Studio'da "ikinci ses kanalı" olarak eklenebilir
+
+=== BAŞLIK (İngilizce, ana) ===
+Messi & Ronaldo Retired… and Both Countries Lost Their First Game Without Them
+
+=== TÜRKÇE BAŞLIK (Studio → Çeviriler → Türkçe) ===
+Messi ve Ronaldo Gitti… İki Ülke de Onlarsız İlk Maçını Kaybetti
+
+=== AÇIKLAMA (İngilizce) ===
+In 24 hours, football learned to live without its two kings.
+Friday, Buenos Aires: Argentina's first game without Lionel Messi — Uruguay won 2–1 at La Bombonera.
+Saturday, Braga: Portugal's first game without Cristiano Ronaldo — Denmark won 4–1, Portugal's heaviest competitive home defeat ever.
+We were in the stadium in Braga.
+
+Two legends retired — and both teams lost their very next game. Coincidence? 👇
+
+00:00 Two games, two defeats
+00:25 01 · The Two Kings
+01:18 02 · The Goodbyes
+02:00 03 · Friday, Buenos Aires
+02:36 04 · Saturday, Braga
+03:15 05 · What now?
+
+🎥 Braga footage: filmed by us at Estádio Municipal de Braga, 14 Nov 2026
+🌍 Globe shots: God's Eye View (open source, MIT) · Imagery © Esri, Maxar, Earthstar Geographics
+📷 Photos via Wikimedia Commons: Berlination (CC BY-SA 4.0), Sangianense (CC BY-SA 4.0), Dltl2010 (CC BY-SA 4.0), Mahdi Zare (CC BY 4.0), Darz Mol (CC BY-SA 2.5 es), Palácio do Planalto (CC BY 2.0)
+🎵 Music: Kevin MacLeod (incompetech.com) — "Rising Game", "Heartbreaking", "Stormfront", "Impact Lento" — Licensed under CC BY 4.0
+🎙️ Narration: AI voice (Kokoro). Turkish audio: Supertonic-3.
+Sources: AP, ESPN, Al Jazeera, CBS Sports, Goal.
+
+#messi #ronaldo #football
+
+=== TÜRKÇE AÇIKLAMA (Studio → Çeviriler → Türkçe) ===
+Futbol, 24 saat içinde iki kralı olmadan yaşamayı öğrendi.
+Cuma, Buenos Aires: Arjantin Messi'siz ilk maçında La Bombonera'da Uruguay'a 2–1 yenildi.
+Cumartesi, Braga: Portekiz Ronaldo'suz ilk maçında Danimarka'ya 4–1 yenildi; tarihindeki en ağır resmi ev yenilgisi.
+Braga'da stattaydık.
+İki efsane bıraktı, iki takım da hemen ardından oynadığı ilk maçı kaybetti. Tesadüf mü? 👇
+Abone ol — iki takımı da yeni dönemde takip ediyoruz.
+(Türkçe altyazı: CC → Türkçe. Türkçe seslendirme: Ayarlar → Ses parçası → Türkçe.)
+
+=== ETİKETLER ===
+messi, ronaldo, messi retired, ronaldo retired, argentina vs uruguay, portugal vs denmark, first game without messi, first game without ronaldo, la bombonera, braga, football documentary
+
+=== SABİTLENECEK YORUM ===
+Messi retires, Argentina lose. Ronaldo retires, Portugal lose. Coincidence or not? 👇 (Subscribe — we follow both teams into the new era)
+
+=== TÜRKÇE SES KANALI (isteğe bağlı) ===
+Dosya: "Legends Gone - Turkish audio.m4a"
+YouTube Studio → Videolar → video → Dil (Languages) → "Dublaj ekle / Add dub" → Türkçe → ses dosyasını yükle.
+Bu özellik kanalınızda açık değilse, Türkçe sesli versiyon ayrı video olarak da yayınlanabilir (önerilmez; izlenmeyi böler).
+
+=== KAYNAKLAR ===
+AP/Houston Chronicle & ESPN (ARG 1–2 URU, 13.11.2026, ~25.000 seyirci, Forlán, Scaloni sözü) · Al Jazeera, CBS (Ronaldo 5.11.2026, Norveç maçı, 30 gün ceza) ·
+ESPN, ABC/AP (Dünya Kupası finali 19.07.2026, İspanya 1–0 Arjantin uzatma, Ferran Torres 106') · NBC/ESPN (Messi'nin el yazısı notu) ·
+Goal, ESPN (POR 1–4 DEN, 14.11.2026, Braga, en ağır resmi ev yenilgisi) · Euro 2016 finali (Ronaldo 25' sakatlık, Éder 109').
+
+=== TÜRKÇE ALTYAZI (CC) ===
+Dosya: "Legends Gone.tr.srt" → Studio → video → Altyazılar → Dil ekle: Türkçe → Dosya yükle (zamanlamalı).
+İngilizce altyazı dosyası da var: "Legends Gone.en.srt" (video içinde zaten İngilizce altyazı görünüyor; bu dosya arama/erişilebilirlik için).
+Yabancı izleyici Türkçe hiçbir şey görmez; Türk izleyici CC'den Türkçe altyazıyı veya ses ayarından Türkçe dublajı seçer.

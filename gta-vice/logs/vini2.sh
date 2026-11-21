@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /home/user/Filmler/gta-vice; export HF_HOME=/home/user/.hf HF_HUB_OFFLINE=1
+/home/user/.sdvenv/bin/python logs/scene.py "GTA V loading screen artwork, medium close-up from the chest up, 26-year-old Brazilian footballer, slim young face, dark brown skin, short black hair, thin mustache, wide happy smile at the camera, open yellow and green tropical shirt, white tank top, gold chain, standing on a speedboat, ocean and Vice City skyline at sunset behind him, palm trees, digital painting, bold ink outlines, cel shading, highly detailed" scene/s_vini2 201,202,203,204,205,206,207,208 576 768 2>&1 | grep -E "^[0-9]+ " | tr '\n' ' '; echo " vini2 done"

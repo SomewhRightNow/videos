@@ -1,0 +1,3 @@
+CREDITS
+Music: "Night In The City" by Moonwalk (https://www.jamendo.com/track/2037580), licensed under CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+Narration voice: Kokoro TTS (Apache 2.0)

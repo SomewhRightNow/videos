@@ -1,0 +1,5 @@
+CREDITS
+Music: "The Mind Trap - Part 1" by zero-project (https://www.jamendo.com/track/1710142), licensed under CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+Photos (Flickr, CC BY 2.0, https://creativecommons.org/licenses/by/2.0/):
+"Frames" by Editor B · "JFK 1970?" by mcdolan79 · "Stack of US currency" by The.Comedian · "Dark Underground" by darkday. · "Ramsgate Wind Tunnels" by Disco-Dan · "Parachute jumper against cloudy sky" by Horia Varlan · "Bank Vault Door" by Infrogmation · "diamonds" by jared · "Isabella Stewart Gardner Museum" by Boston City Archives · "Rembrandt, Storm on the Sea of Galilee" photo by FotoGuy 49057
+Narration voice: Kokoro TTS (Apache 2.0)

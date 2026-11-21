@@ -1,0 +1,5 @@
+CREDITS
+GTA box art and screenshots © Rockstar Games, from rockstargames.com. Used for commentary.
+Music: "flow" by podnebo prod. (https://www.jamendo.com/track/1773500), licensed under CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+Sales: Take-Two Interactive (GTA V, Aug 2026); Wikipedia "List of best-selling video games"; VGChartz
+Narration voice: Kokoro TTS (Apache 2.0)

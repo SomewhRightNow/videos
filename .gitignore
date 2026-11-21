@@ -1,0 +1,22 @@
+# Whitelist: only code, rules, notes and fonts are synced (media stays local)
+*
+!*/
+!*.py
+!*.md
+!*.sh
+!*.txt
+!*.tsv
+!KUNYE*
+!.gitignore
+!.gitattributes
+!fonts/*.ttf
+**/src/**
+**/__pycache__/**
+**/out/**
+**/audio/**
+**/vo-raw/**
+**/vo-t/**
+_engine/tiles/**
+_engine/world/**
+_engine/engine_backup_v1.py
+**/.git_local/**

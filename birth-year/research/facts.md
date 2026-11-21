@@ -1,0 +1,1 @@
+Each year's first is a widely documented event (company founding dates, release dates, NASA/ESA missions, Guinness for Gangnam Style 2012, first SMS 3 Dec 1992, first website 6 Aug 1991, Walkman 1 Jul 1979, TAT-8 14 Dec 1988). 1983: ARPANET switched to TCP/IP on 1 Jan 1983. 2001: Wikipedia (Jan) and iPod (Oct). 2008: Bitcoin white paper (Oct).

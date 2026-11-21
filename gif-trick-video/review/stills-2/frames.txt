@@ -1,0 +1,14 @@
+file '/home/user/Filmler/gif-trick-video/review/stills-2/000039.jpg'
+duration 1
+file '/home/user/Filmler/gif-trick-video/review/stills-2/000094.jpg'
+duration 1
+file '/home/user/Filmler/gif-trick-video/review/stills-2/000130.jpg'
+duration 1
+file '/home/user/Filmler/gif-trick-video/review/stills-2/000177.jpg'
+duration 1
+file '/home/user/Filmler/gif-trick-video/review/stills-2/000267.jpg'
+duration 1
+file '/home/user/Filmler/gif-trick-video/review/stills-2/000436.jpg'
+duration 1
+file '/home/user/Filmler/gif-trick-video/review/stills-2/000541.jpg'
+duration 1

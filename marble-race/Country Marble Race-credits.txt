@@ -1,0 +1,10 @@
+COUNTRY MARBLE RACE — credits
+
+Race: a physics simulation written in code (seed 1, not hand-picked). Flags drawn in code.
+Narration: Kokoro TTS (Apache 2.0), voice "bm_george".
+Music: "rev'era" by podnebo prod. — Jamendo track 1708119 — CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+Fonts: Big Shoulders Display, Familjen Grotesk (SIL Open Font License).
+Made with cinecode.
+
+For the YouTube / Instagram description:
+Music: "rev'era" by podnebo prod. (Jamendo, CC BY 3.0)

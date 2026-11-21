@@ -1,0 +1,12 @@
+file '/home/user/Filmler/marble-race/review/stills-6/000000.jpg'
+duration 1
+file '/home/user/Filmler/marble-race/review/stills-6/000024.jpg'
+duration 1
+file '/home/user/Filmler/marble-race/review/stills-6/000060.jpg'
+duration 1
+file '/home/user/Filmler/marble-race/review/stills-6/000144.jpg'
+duration 1
+file '/home/user/Filmler/marble-race/review/stills-6/000545.jpg'
+duration 1
+file '/home/user/Filmler/marble-race/review/stills-6/000648.jpg'
+duration 1

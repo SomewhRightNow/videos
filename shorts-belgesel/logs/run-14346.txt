@@ -1,0 +1,4 @@
+FAILED: the independent viewer's review/critique-v4.md names red items:
+  - 18.0–20.4 the WINDOW/PELÉE arrow points at the window, which contradicts the narration and the film's whole premise
+  - 22.6–23.54 the day counter ends at DAY 3 against "four days"
+fix them, draft again and let the viewer look at the new draft; its report must name no red item (make.py final --force only when the user keeps one)

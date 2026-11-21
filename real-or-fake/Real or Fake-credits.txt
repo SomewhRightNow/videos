@@ -1,0 +1,5 @@
+CREDITS
+Music: "Light Upbeat Pop" by Sevennotes (https://www.jamendo.com/track/2182850), licensed under CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+Photos (Flickr, CC BY 2.0, https://creativecommons.org/licenses/by/2.0/): "Mirror" by Christopher Crouzet · "Vinicunca (Rainbow Mountain)" by Backpackreiziger · "Fly Geyser" by RuggyBearLA · "Rainbow Eucalyptus" by ToastyKen · "Rainbow Eucalyptus bark" by Judy Gallagher
+"Tunnel of Love, Klevan" by amanderson2 (public domain)
+Narration voice: Kokoro TTS (Apache 2.0)

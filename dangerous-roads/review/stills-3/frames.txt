@@ -1,0 +1,4 @@
+file '/home/user/Filmler/dangerous-roads/review/stills-3/000888.jpg'
+duration 1
+file '/home/user/Filmler/dangerous-roads/review/stills-3/000984.jpg'
+duration 1

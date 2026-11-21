@@ -1,0 +1,6 @@
+file '/home/user/Filmler/top5-forbidden-places/review/stills-3/000420.jpg'
+duration 1
+file '/home/user/Filmler/top5-forbidden-places/review/stills-3/000732.jpg'
+duration 1
+file '/home/user/Filmler/top5-forbidden-places/review/stills-3/000876.jpg'
+duration 1

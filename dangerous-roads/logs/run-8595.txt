@@ -1,0 +1,2 @@
+FAILED: a dash in the film's words (never on screen or in a line): film.html:179 'PAKISTAN–CHINA · 4,700 M'
+replace each with a comma, a full stop, a colon or a line break; python3 tools/words_check.py

@@ -1,0 +1,12 @@
+file '/home/user/Filmler/gta6-world-waits/review/stills-2/000038.jpg'
+duration 1
+file '/home/user/Filmler/gta6-world-waits/review/stills-2/000125.jpg'
+duration 1
+file '/home/user/Filmler/gta6-world-waits/review/stills-2/000350.jpg'
+duration 1
+file '/home/user/Filmler/gta6-world-waits/review/stills-2/000463.jpg'
+duration 1
+file '/home/user/Filmler/gta6-world-waits/review/stills-2/000518.jpg'
+duration 1
+file '/home/user/Filmler/gta6-world-waits/review/stills-2/000686.jpg'
+duration 1

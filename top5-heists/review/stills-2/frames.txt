@@ -1,0 +1,4 @@
+file '/home/user/Filmler/top5-heists/review/stills-2/000192.jpg'
+duration 1
+file '/home/user/Filmler/top5-heists/review/stills-2/000840.jpg'
+duration 1

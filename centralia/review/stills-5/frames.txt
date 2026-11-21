@@ -1,0 +1,4 @@
+file '/home/user/Filmler/centralia/review/stills-5/000456.jpg'
+duration 1
+file '/home/user/Filmler/centralia/review/stills-5/000552.jpg'
+duration 1

@@ -1,0 +1,6 @@
+file '/home/user/Filmler/impossible-survivals/review/stills-2/000624.jpg'
+duration 1
+file '/home/user/Filmler/impossible-survivals/review/stills-2/000684.jpg'
+duration 1
+file '/home/user/Filmler/impossible-survivals/review/stills-2/001032.jpg'
+duration 1

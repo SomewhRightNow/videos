@@ -1,0 +1,5 @@
+CREDITS
+Music: "Andromeda Starlight Ritual" by KonstantinPazuzuStudio (https://www.jamendo.com/track/2326415), licensed under CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+Photos: "Fly Geyser" by RuggyBearLA, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/) · "Tunnel of Love, Klevan" by amanderson2 (public domain)
+Illusions: lilac chaser after Jeremy Hinton; spiral motion aftereffect; negative colour afterimage (recreated in code)
+Narration voice: Kokoro TTS (Apache 2.0)

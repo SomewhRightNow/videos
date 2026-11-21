@@ -1,0 +1,12 @@
+file '/home/user/Filmler/kid-messi/review/stills-2/000024.jpg'
+duration 1
+file '/home/user/Filmler/kid-messi/review/stills-2/000278.jpg'
+duration 1
+file '/home/user/Filmler/kid-messi/review/stills-2/000420.jpg'
+duration 1
+file '/home/user/Filmler/kid-messi/review/stills-2/000624.jpg'
+duration 1
+file '/home/user/Filmler/kid-messi/review/stills-2/000780.jpg'
+duration 1
+file '/home/user/Filmler/kid-messi/review/stills-2/000912.jpg'
+duration 1

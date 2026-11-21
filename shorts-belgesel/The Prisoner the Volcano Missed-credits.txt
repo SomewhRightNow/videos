@@ -1,0 +1,7 @@
+Music: "Stuttgart" by Portrayal (https://www.jamendo.com/track/1317779), licensed under CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+Photos: "Sylbaris's Solitary Confinement Cell" and "Ruins of the Prison courtesy of 1902 Mount Pelee eruption" by carnaval.com (https://linktr.ee/carnaval.com), licensed under CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+Archive photographs: Angelo Heilprin, "Mont Pelée and the Tragedy of Martinique" (1903), public domain, via Internet Archive
+Portrait of Ludger Sylbaris (Cyparis), public domain, via Wikimedia Commons
+Still from "Éruption volcanique à la Martinique", Georges Méliès (1902), public domain
+Map data: Made with Natural Earth
+Narration voice: Kokoro TTS (Apache 2.0)

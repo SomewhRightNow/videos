@@ -1,0 +1,7 @@
+final v1: renders/film-v1.mp4 (not delivered) · 30.2083 s · 1080x1920 · -14.0 LUFS, peak -3.2 dBFS · 2.9 min
+hook PASS · action 2 flags: #5 00:11.25-00:13.34 residual 2.53 total 8.83 CHECK: camera-led, the subject barely acts; #11 00:30.20-00:30.21 too short to measure · sound 0 flags · GUARD OFF: the cinecode guard has not run in this Claude Code session, so the kit's checks will not hold. Its hooks need Node.js and Python (on Windows: Python from python.org), then a new session. Tell the user in one line before going on., SOUND ALL CODE: no ready or recorded effect: every sound is synthesised in code (sounds.py search / get for the designed ones, asset_search.py search --type sound for the long ones; code only where a sound follows the motion, lands a whoosh on a cut or sits in the score's key, sound.md §5)
+look: review/qc-film-v1/sheet-small.jpg (a frame every 2 s) · poster: review/qc-film-v1/thumb-film-v1-21.15s-768.jpg
+files: renders/film-v1.mp4 · report: review/qc-film-v1/report.txt · log: logs/make-final.log
+NOT DELIVERED (sound all code): no final has been delivered yet; this one is renders/film-v1.mp4; one fix pass on the flagged windows (an action in each still one, a new picture for each repeat, scene lengths that vary), then make.py draft again: that one is shown, with what remains
+viewer: review/critique-v5.md read, no red items
+taste: the palette is the look family's untouched default (give the film its own, from its references) (a reason on the director card, or change it)

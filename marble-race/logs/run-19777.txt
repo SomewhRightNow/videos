@@ -1,0 +1,6 @@
+FAILED: capture.mjs (exit 1)
+Error: page never defined window.READY / window.captureFrame
+SyntaxError: Identifier 'CAM' has already been declared (film.html?capture=1:304)
+    at openPage (file:///home/user/Filmler/marble-race/tools/capture.mjs:468:13)
+    at async file:///home/user/Filmler/marble-race/tools/capture.mjs:106:15
+log: logs/make-stills.log

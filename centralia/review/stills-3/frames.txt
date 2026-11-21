@@ -1,0 +1,10 @@
+file '/home/user/Filmler/centralia/review/stills-3/000240.jpg'
+duration 1
+file '/home/user/Filmler/centralia/review/stills-3/000300.jpg'
+duration 1
+file '/home/user/Filmler/centralia/review/stills-3/000492.jpg'
+duration 1
+file '/home/user/Filmler/centralia/review/stills-3/000660.jpg'
+duration 1
+file '/home/user/Filmler/centralia/review/stills-3/001092.jpg'
+duration 1

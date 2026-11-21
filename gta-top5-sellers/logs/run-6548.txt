@@ -1,0 +1,6 @@
+FAILED: capture.mjs (exit 1)
+[capture] renderer: canvas2d
+[capture] page: 1080x1920, 1100 frames @ 24 fps
+[capture] frame 550 rendered twice (with frame 0 in between): DIFFERENT
+[capture] deterministic: NO - find state carried between frames, Date/performance.now, Math.random
+log: logs/make-final.log
