@@ -12,7 +12,7 @@ fB = lambda s: ImageFont.truetype(F + 'BigShoulders-Bold.ttf', s)
 fO = lambda s: ImageFont.truetype(F + 'Outfit-Bold.ttf', s)
 WHITE = (255, 255, 255); YEL = (253, 225, 0); INK = (14, 14, 18)
 BVB = (253, 225, 0); FCB = (220, 5, 45); KOE = (237, 28, 36); BMG = (0, 160, 80); SCF = (200, 16, 46)
-CHE = (3, 70, 148); LEE = (255, 205, 0); P = {k: Image.open(f'photos/{k}.jpg').convert('RGB') for k in ('a', 'b')}
+CHE = (3, 70, 148); LEE = (255, 205, 0); P = {k: Image.open(f'photos/{k}.jpg').convert('RGB') for k in ('m1', 'm2')}
 import numpy as np
 def make_design():
     yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
@@ -54,7 +54,7 @@ def cover(k):
 def bgshot(k, u):
     im = cover(k); fx = FOC[k]; z = 1.0 + 0.045 * ease(u)
     cw, ch = int(W / z), int(H / z)
-    cx = int((im.width - W) * fx + W / 2); cy = int((im.height - H) * 0.35 + H / 2)
+    cx = int((im.width - W) * fx + W / 2); cy = int((im.height - H) * FOCY.get(k, 0.35) + H / 2)
     x = max(0, min(im.width - cw, cx - cw // 2)); y = max(0, min(im.height - ch, cy - ch // 2))
     fr = im.crop((x, y, x + cw, y + ch)).resize((W, H), Image.BICUBIC)
     # dark gradient bottom for the cards, top for the title
@@ -81,8 +81,8 @@ def scorecard(img, y, a, ca, sa, b, cb, sb, line, when, u, ka=None, kb=None):
     d.text(((W - ww) / 2, yy - 25), when, font=fw, fill=INK + (int(255 * a_),))
     img.paste(ov, (0, 0), ov)
 
-FOC = dict(a=0.42, b=0.55)
-SHOTS = [('design', 3.2), ('a', 3.4), ('b', 3.4), ('design', 3.0)]
+FOC = dict(m1=0.6, m2=0.70); FOCY = dict(m1=0.0, m2=0.12)
+SHOTS = [('design', 3.2), ('m1', 3.6), ('m2', 3.4), ('design', 3.4), ('design', 3.0)]
 T0 = [0]
 for _, d in SHOTS: T0.append(T0[-1] + d)
 TOTAL = T0[-1]
@@ -112,7 +112,7 @@ def scorers(img, y, u):
     for k, cx in (('che', 190), ('lee', W - 190)):
         cr = crest(k, 130, a_); ov.paste(cr, (cx - cr.width // 2, yy + 30), cr)
     f = fB(150); sc = '1 - 4'; w = d.textlength(sc, font=f); d.text(((W - w) / 2, yy + 10), sc, font=f, fill=(255, 255, 255, int(255 * a_)))
-    lines = [("OKAFOR 28'  ·  58'", LEE), ("CALVERT-LEWIN 53' (P)  ·  AARONSON 90+1'", (235, 235, 240)), ("CHELSEA: EMEGHA 25'", (170, 175, 190))]
+    lines = [("OKAFOR  x2", LEE), ("CALVERT-LEWIN (P)  ·  AARONSON", (235, 235, 240)), ("CHELSEA: EMEGHA", (170, 175, 190))]
     for i, (s_, c_) in enumerate(lines):
         ff = fO(44 if i == 0 else 34); w = d.textlength(s_, font=ff); d.text(((W - w) / 2, yy + 200 + i * 66), s_, font=ff, fill=c_ + (int(255 * a_),))
     img.paste(ov, (0, 0), ov)
@@ -124,13 +124,24 @@ def frame(t):
     tag(d, 60 + 230, 110, 'PREMIER LEAGUE', (255, 255, 255), INK, 44)
     if j == 0: img = intro(img, lt)
     elif j == 1:
-        text_c(d, 240, 'NOAH OKAFOR', fB(150), LEE, 8); text_c(d, 400, 'TWO GOALS AT THE BRIDGE', fB(76), WHITE, 5)
+        text_c(d, 1030, 'NOAH OKAFOR', fB(150), LEE, 8); text_c(d, 1185, 'TWO GOALS AT THE BRIDGE', fB(76), WHITE, 5)
         scorers(img, 1300, lt / 0.5)
     elif j == 2:
         a = ease(lt / 0.4)
         text_c(d, 1180 + int((1 - a) * 40), "LEEDS' FIRST WIN AT", fB(96), WHITE, 6)
         text_c(d, 1290 + int((1 - a) * 40), 'STAMFORD BRIDGE', fB(150), LEE, 8)
         text_c(d, 1450 + int((1 - a) * 40), 'SINCE 1999', fB(150), LEE, 8)
+    elif j == 3:
+        ov = Image.new('RGBA', (W, H), (0, 0, 0, 0)); o = ImageDraw.Draw(ov); a = ease(lt / 0.35)
+        cr = crest('che', 260, a); ov.paste(cr, ((W - cr.width) // 2, 430 + int((1 - a) * 40)), cr)
+        img.paste(ov, (0, 0), ov); d = ImageDraw.Draw(img)
+        text_c(d, 760, 'CHELSEA IN CRISIS', fB(120), WHITE, 6)
+        res = ['L', 'W', 'L', 'L'] if False else None
+        b = ease((lt - 0.35) / 0.35)
+        if b > 0:
+            text_c(d, 930 + int((1 - b) * 30), '3', fB(420), (235, 40, 50), 10)
+            text_c(d, 1370 + int((1 - b) * 30), 'DEFEATS IN THEIR LAST', fB(92), WHITE, 6)
+            text_c(d, 1470 + int((1 - b) * 30), '4 PREMIER LEAGUE GAMES', fB(92), WHITE, 6)
     else:
         a = ease(lt / 0.4)
         text_c(d, 1150 + int((1 - a) * 40), 'WHO WAS YOUR', fB(110), WHITE, 6)
@@ -143,9 +154,9 @@ def frame(t):
     return img
 if __name__ == '__main__':
     if len(sys.argv) > 1:
-        ts = [1.6, 3.2 + 1.6, 6.6 + 1.6, 10.0 + 1.6]
+        ts = [T0[i] + 1.6 for i in range(len(SHOTS))]
         ims = [frame(t).resize((360, 640)) for t in ts]
-        s = Image.new('RGB', (1440, 640)); [s.paste(im, (i * 360, 0)) for i, im in enumerate(ims)]; s.save('logs/stills.jpg'); sys.exit()
+        s = Image.new('RGB', (360 * len(ims), 640)); [s.paste(im, (i * 360, 0)) for i, im in enumerate(ims)]; s.save('logs/stills.jpg'); sys.exit()
     p = subprocess.Popen(['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
                           '-c:v', 'libx264', '-preset', 'medium', '-crf', '14', '-pix_fmt', 'yuv420p', 'video.mp4'], stdin=subprocess.PIPE)
     for i in range(int(TOTAL * FPS)): p.stdin.write(frame(i / FPS).tobytes())
