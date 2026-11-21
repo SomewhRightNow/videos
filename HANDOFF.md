@@ -46,3 +46,4 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 - brothers (UZUN VİDEO, kullanıcı onayladı 21.11): Williams + Doué kardeşler. Senaryo taslağı brothers/script.md (37 satır, ~3:20). Durum: kullanıcı onayı bekleniyor; sonra Commons foto + harita + VO + 2560x1440 render.
 - tgz1 "Coventry 1-1 Palace" HAZIR (yerel). brothers belgeseli SIRADA (2K): VO hazır (bm_lewis 3:00, audio/narration.m4a), harita hazır, Commons arama logs/cs.json (rate-limit), müzik seçilecek.
 - brothers: HAZIR (up-brothers LFS, 850MB). Kullanıcı "yükle" demedi.
+- brothers v2: kullanıcı QA istedi; bulunan sorunlar (altyazı bandı çakışması, Doué bölümünde İñaki fotoğrafı görünmesi, boş kareler, Liberya kadraj dışı) scene.py'de düzeltildi, v2 render + burn arka planda (logs/render2.log, burn2.log). YouTube yüklemesi bu hesapta yok (Zapier bağlı değil).
