@@ -42,3 +42,4 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 - tfb1 "Keeper Sent Off For This" HAZIR (raw up-tfb1/keeper-sent-off.mp4). Kullanıcı "yükle" demedi.
 - llf1 "Anderson Equaliser" HAZIR (raw up-anderson/anderson-equaliser.mp4). Maç sonucu 88. dk itibarıyla 1-1, final teyit edilmedi. Kullanıcı "yükle" demedi.
 - 21.11 14:45: Oynatma listesi planı PLAYLISTS.md (9 format + 2 yıldız listesi, 76 video dağıtıldı). Listeleri oluşturma: Zapier bağlanınca dene, yoksa kullanıcı Studio'dan.
+- UZUN VİDEO konu adayı (kullanıcı "kenarda kalsın", 21.11): "Same parents, different countries" — Williams (Nico İspanya / Iñaki Gana) + Doué (Désiré Fransa / Guéla Fildişi) kardeşler, 2026 DK. Kadrolar henüz doğrulanmadı. Reddedilenler: Ronaldo/Messi/Haaland/Norveç (çok çekildi), City 115, 2030 DK 3 kıta, İspanya marşı, kupa replikası, soccer kelimesi, ağız kapatma, çorap deliği, Merlin ördek.
