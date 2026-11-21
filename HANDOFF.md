@@ -13,6 +13,16 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 - Moura own goal: kullanıcı "yükleme" dedi -> İPTAL. (Yükleme çağrısı yarıda kesildi; kanalda çıkarsa kullanıcıya sor.)
 - Diğer hazır dosyalar: wk-fix (8 maç fikstür, Acceleration müzik), cr986 (Ronaldo 986), cr14 (14 more to the dream). Medya dosyaları bu depoda değil; gerekiyorsa yeniden üret.
 
+
+## 21.11 öğlen durum (hesap değişimi öncesi)
+- Bekleyen yüklemeler (YouTube kotası doldu, Zapier throttled): 
+  1) Top 5 Free Kicks -> raw https://raw.githubusercontent.com/SomewhRightNow/videos/up-top5fk/top5-free-kicks.mp4 (künye konuşma 2026-11-21.md'de)
+  2) Nakamura ON THIS DAY -> dmk2/"Nakamura Free Kick On This Day.mp4" (yerel; yeni hesap konteynerinde YOK, gerekirse dmk2 film.py ile yeniden render: kaynak X demarkesports 2124057731862511733)
+  3) Open Goal Missed -> emr1/"Open Goal Missed.mp4" (yerel; kaynak X emrahc_ 2124042630551978008, compose.py)
+- Devam eden: kits1 "IN ANOTHER UNIVERSE" (oyuncu başka formada). Yüz değişimi denendi (Messi->Valverde RM karesi); kullanıcı "alakası yok" dedi -> sonraki adım: oyuncunun KENDİ fotoğrafında forma değişimi (433 tarzı). Videoda "In another universe" çerçevesi + YouTube altered content beyanı.
+- Kullanıcı tercihleri: derleme verirse Top5 yapma, tamamını kullan + yazı + müzik; "edit" = HYPE EDIT şablonu (CLAUDE.md).
+- Canlı: Man City 0-1 Fulham (Muniz 15', Haaland golü VAR iptal) -> Fulham kazanırsa BREAKING önerildi.
+
 ## Hafta sonu takvimi (TSİ)
 - Cmt 20:30 Newcastle–Arsenal, 23:00 Real Madrid–Celta, gece Sudamericana finali Boca–Atlético Mineiro.
 - Paz 15:00 Barcelona–Villarreal, 19:30 Liverpool–Man Utd (Pochettino'nun ilk maçı), 22:45 Atalanta–Inter.
