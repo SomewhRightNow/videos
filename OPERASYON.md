@@ -259,3 +259,4 @@ Bir videoda kullanılan fotoğraf/klip/konu bir daha kullanılmaz. Her yeni vide
 - 21.11 ON THIS DAY 2006 Nakamura frikik (dmk2, hazır): X @demarkesports 2124057731862511733 (UEFA resmi klip) 0-19.25 TAMAMI KULLANILDI. Ses bm_daniel, müzik FSM Ghost ofset 26.5. Not: engine full render ~120MB parça yazar; disk dar ise parçalardan doğrudan final encode et.
 - 21.11 EVEN MESSI MISSED (emr1, hazır, kullanıcı isteği: TOP 5 YOK, verdiği videonun TAMAMI karışık sırayla, sadece yazı + müzik FSM Acceleration ofset 30, VO yok): X @emrahc_ 2124042630551978008 fan derlemesi 0-60.15 TAMAMI KULLANILDI.
 - KULLANICI TERCİHİ (21.11): kullanıcı bir derleme video verirse Top 5 / sıralama yapma; videonun tamamını kullan, üstüne başlık yazısı + müzik koy, kısa tut.
+- 21.11 emr1 güncellendi: 'EVEN MESSI MISSED' etiketi kaldırıldı (kullanıcı isteği) -> 'Open Goal Missed.mp4'. top5fk yerel mp4 silindi (GitHub up-top5fk dalında duruyor).

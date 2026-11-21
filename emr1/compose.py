@@ -40,8 +40,6 @@ def caption(d, t):
         if a <= t < b:
             d.text((W / 2, 1600), c.upper(), font=FT['cap'], fill=WH, anchor='mm', stroke_width=8, stroke_fill=(0, 0, 0)); return
 def chrome(d):
-    d.rounded_rectangle((W / 2 - 190, 120, W / 2 + 190, 176), 10, fill=RED)
-    d.text((W / 2, 148), 'EVEN MESSI MISSED', font=FT['chip'], fill=WH, anchor='mm')
     d.text((W / 2, 1875), 'SOMEWHERE RIGHT NOW', font=FT['brand'], fill=(200, 204, 212), anchor='mm')
 def lower(d, k, lt):
     a = min(1, lt / 0.3)
@@ -51,8 +49,8 @@ def lower(d, k, lt):
     nx = x + (250 if rank != 1 else 225)
     d.text((nx, 322), name, font=FT['name'] if len(name) < 16 else font(F_T, 78), fill=WH, anchor='ls', stroke_width=5, stroke_fill=(0, 0, 0))
     d.text((nx + 4, 378), sub, font=FT['sub'] if len(sub) < 42 else font(F_MB, 23), fill=DIM, anchor='ls', stroke_width=3, stroke_fill=(0, 0, 0))
-p = subprocess.Popen(['ffmpeg', '-nostdin', '-loglevel', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
-                      '-c:v', 'libx264', '-preset', 'medium', '-crf', '22', '-pix_fmt', 'yuv420p', 'out/video.mp4'], stdin=subprocess.PIPE)
+p = subprocess.Popen(['ffmpeg', '-nostdin', '-loglevel', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-', '-i', 'audio/mix.wav', '-map', '0:v', '-map', '1:a', '-c:a', 'aac', '-b:a', '192k', '-shortest',
+                      '-c:v', 'libx264', '-preset', 'medium', '-crf', '22', '-pix_fmt', 'yuv420p', 'Open Goal Missed.mp4'], stdin=subprocess.PIPE)
 n = 0; last = None
 for k, (sid, a, b, *_r) in enumerate(SEG):
     for j, im in enumerate(src_reader(sid, a, b)):
