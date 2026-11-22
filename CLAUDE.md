@@ -41,6 +41,7 @@ Topluluk gönderileri (Posts): esasen abonelere gider -> abone kazanımı için 
 ## TELİF RİSK UYARISI (kullanıcı, 21.11 — Anderson videosu PL Content ID ile DÜNYA GENELİNDE ENGELLENDİ)
 Teslimden ÖNCE riski sınıfla. YÜKSEK riskte cevabın EN BAŞINA "🔴 **YÜKSEK TELİF RİSKİ — ENGELLENEBİLİR**" satırını koy ve nedenini yaz (terminal kırmızı yazı desteklemiyor; kırmızı = 🔴).
 - YÜKSEK (engellenir): Premier League yayın görüntüsü (ESKİ PL maçları da: 2025 Liverpool-MU derlemede engellendi) (TNT/Sky/NBC/beIN vb., özellikle MAÇ GÜNÜ/aynı hafta), La Liga, Bundesliga, Serie A, Ligue 1, UCL/UEL güncel yayın görüntüsü; FIFA Dünya Kupası/World Cup yayınları. Aynı gün yüklenen lig maçı yayın klibi = neredeyse kesin engel.
+- 22.11: Resmi UEFA ŞL özeti (Dortmund 8-4 Legia 2016, X @ofsayt) UEFA Content ID yedi -> UEFA/ŞL özetleri ESKİ olsa da YÜKSEK.
 - ORTA: eski maç yayın görüntüsü (yıllar önce, ikinci lig, telefonla TV çekimi), fan hesaplarındaki derlemeler.
 - DÜŞÜK: tribünden çekilmiş taraftar videosu, resmi kulüp/federasyon/UEFA sosyal klipleri (Wirtz, Nusa geçti), Commons fotoğraf + VO formatı.
 YÜKSEK riskte alternatif öner: sadece tribün çekimi, ya da Commons foto + skor kartı + VO (Almanya 5-0 formatı).
