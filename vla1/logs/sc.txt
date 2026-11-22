@@ -1,0 +1,14 @@
+frame:0    pts:34739200 pts_time:22.6167
+lavfi.scene_score=0.333519
+frame:1    pts:36710400 pts_time:23.9
+lavfi.scene_score=0.313336
+frame:2    pts:36787200 pts_time:23.95
+lavfi.scene_score=0.330972
+frame:3    pts:36864000 pts_time:24
+lavfi.scene_score=0.338523
+frame:4    pts:36915200 pts_time:24.0333
+lavfi.scene_score=0.333129
+frame:5    pts:37248000 pts_time:24.25
+lavfi.scene_score=0.638390
+frame:6    pts:40934400 pts_time:26.65
+lavfi.scene_score=0.356099
