@@ -29,7 +29,7 @@ def src(kd, s):
     if (kd, k) not in _c:
         if len(_c) > 40: _c.clear()
         if kd == 'a':
-            a = cv2.imread(f'src/fa/f_{k:04d}.jpg'); roi = a[560:1080, 0:700]; hs = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV); wh = (hs[..., 2] > 200) & (hs[..., 1] < 70); dm = ((np.abs(roi.astype(np.int16) - MED).max(2) < 45) | wh).astype(np.uint8) * 255; mk = cv2.dilate(cv2.bitwise_and(MASK, dm), np.ones((5, 5), np.uint8), iterations=2); mk = cv2.bitwise_and(mk, MASK) | cv2.dilate(cv2.bitwise_and(BIG, wh.astype(np.uint8) * 255), np.ones((5, 5), np.uint8), iterations=2); a[560:1080, 0:700] = cv2.inpaint(roi, mk, 4, cv2.INPAINT_TELEA)
+            a = cv2.imread(f'src/fa/f_{k:04d}.jpg'); roi = None; 
             im = Image.fromarray(cv2.cvtColor(a, cv2.COLOR_BGR2RGB)); b = (1080 - 95, 0, 1080, 120)
         else:
             im = Image.open(f'src/f{kd}/f_{k:04d}.jpg').convert('RGB'); b = (1080 - 210, 0, 1080, 70)
@@ -41,10 +41,27 @@ def tc(d, y, s, f, fill, stroke=7):
 def base(im):
     bg = im.resize((20, 20)).filter(ImageFilter.GaussianBlur(2)).resize((W, H), Image.BILINEAR); bg = Image.eval(bg, lambda v: int(v * 0.22))
     bg.paste(im, (0, VY + (1080 - im.height) // 2)); return bg
+def panel(img, i, lt):
+    # own leaderboard, drawn exactly over the source's ranking list (source px 45-478 x 598-1082)
+    d = ImageDraw.Draw(img); x0, y0, w, rh = 45, VY + 598, 433, 48.4
+    for r in range(10):
+        rank = r + 1; y = int(y0 + r * rh); y1 = int(y0 + (r + 1) * rh)
+        seg_idx = 10 - rank; revealed = seg_idx <= i; cur = seg_idx == i
+        fill = YEL if cur else ((22, 24, 34) if r % 2 == 0 else (30, 32, 44))
+        d.rectangle([x0, y, x0 + w, y1], fill=fill)
+        tcol = INK if cur else (YEL if revealed else (120, 120, 135))
+        d.text((x0 + 14, y + 2), f'#{rank}', font=fB(42), fill=tcol)
+        nm = PLAY[seg_idx][1].split()[-1] if revealed else '? ? ?'
+        d.text((x0 + 92, y + 2), nm, font=fB(42), fill=INK if cur else (WHITE if revealed else (90, 90, 105)))
+    d.rectangle([x0, y0 - 6, x0 + w, y0], fill=YEL)
+    # cover the source watermark with our own tag
+    d.rounded_rectangle([430, VY + 1032, 660, VY + 1080], 10, fill=(14, 16, 24)); d.text((448, VY + 1038), 'TOP 10 MISSES', font=fB(36), fill=WHITE)
 def frame(t):
     if t < CLIP:
         i = max(j for j, s in enumerate(SEG) if s[0] <= t); a, b, s0, name, club, kd = SEG[i]; lt = t - a
-        img = base(src(kd, s0 + lt)); d = ImageDraw.Draw(img)
+        img = base(src(kd, s0 + lt))
+        if kd == 'a': panel(img, i, lt)
+        d = ImageDraw.Draw(img)
         f = fB(44); s = 'TOP 10'; w = d.textlength(s, font=f); d.rectangle([60, 110, 60 + w + 32, 170], fill=RED); d.text((76, 115), s, font=f, fill=WHITE)
         rk = 10 - i
         tc(d, 200, 'TOP 10' if t < 3 else 'HOW DID HE MISS?', fB(110), YEL if t < 3 else WHITE, 8)
@@ -66,7 +83,7 @@ def frame(t):
     return img
 if __name__ == '__main__':
     if len(sys.argv) > 1:
-        ims = [frame(tt).resize((360, 640)) for tt in (22.6, 23.5, 25.0, 27.5, 66.0, 72.0)]
+        ims = [frame(tt).resize((360, 640)) for tt in (2.0, 24.0, 33.0, 50.0, 66.0, 72.0)]
         s = Image.new('RGB', (2160, 640)); [s.paste(im, (i * 360, 0)) for i, im in enumerate(ims)]; s.save('logs/stills.jpg'); print(TOTAL); sys.exit()
     p = subprocess.Popen(['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
                           '-c:v', 'libx264', '-preset', 'medium', '-crf', '16', '-pix_fmt', 'yuv420p', 'out/video.mp4'], stdin=subprocess.PIPE)

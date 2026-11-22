@@ -16,7 +16,7 @@ Tüm hesaplar tek hafızadan ilerler: kalıcı her bilgi SADECE bu klasöre yaz�
 ## Kurallar
 - Bir görüntü/klip/fotoğraf yalnızca BİR KEZ kullanılır (aynı klibin başka saniyesi/kırpması da tekrar sayılır); eski videolarda kullanılanlar kullanılmaz (OPERASYON.md'deki listeye bak, kullandığını oraya yaz).
 - Wikimedia 429/hız sınırında BEKLEME (kullanıcı 22.11, tekrar tekrar söyledi): hemen başka kaynağa geç (kulüp/federasyon basın fotoğrafları, Flickr CC, Unsplash/Pexels, haber siteleri HD) ya da eldekiyle bitir.
-- Kaynak klipteki üçüncü taraf yazı/liste/filigran: büyük blur YAPMA (kullanıcı 22.11 'kocaman blur'); OpenCV inpainting ile sil (ogm2/mask.py: sabit piksel maskesi + cv2.inpaint). Sağ üst yayıncı logosu küçük blur kuralı aynen geçerli.
+- Kaynak klipteki üçüncü taraf yazı/liste/filigran: büyük blur YAPMA (kullanıcı 22.11 'kocaman blur'); OpenCV inpainting denendi ama oyuncu geçişlerinde bozulma yaptı (kullanıcı beğenmedi) -> TERCİH: kaynağın yazısını tam örten KENDİ tasarım grafiğimiz (ör. ogm2 panel(): kendi geri sayım listemiz aynı yerde, kendi fontumuz). Sağ üst yayıncı logosu küçük blur kuralı aynen geçerli.
 - Sıralama/derleme videoları (kullanıcı 22.11): her zaman GERİ SAYIM (#10 -> #1), en büyük isim/an #1 en sonda, büyük #rakam ekranda; merak için.
 - BİLDİRİM (kullanıcı 22.11): her iş/video bitince (teslim dosyası gönderilince) PushNotification ile kısa bildirim at (ne bitti + telif riski).
 - Eksik yetenek -> GitHub'da açık kaynak araç; ücretli servis yok.
