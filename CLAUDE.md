@@ -16,6 +16,7 @@ Tüm hesaplar tek hafızadan ilerler: kalıcı her bilgi SADECE bu klasöre yaz�
 ## Kurallar
 - Bir görüntü/klip/fotoğraf yalnızca BİR KEZ kullanılır (aynı klibin başka saniyesi/kırpması da tekrar sayılır); eski videolarda kullanılanlar kullanılmaz (OPERASYON.md'deki listeye bak, kullandığını oraya yaz).
 - Wikimedia 429/hız sınırında BEKLEME (kullanıcı 22.11, tekrar tekrar söyledi): hemen başka kaynağa geç (kulüp/federasyon basın fotoğrafları, Flickr CC, Unsplash/Pexels, haber siteleri HD) ya da eldekiyle bitir.
+- BİLDİRİM (kullanıcı 22.11): her iş/video bitince (teslim dosyası gönderilince) PushNotification ile kısa bildirim at (ne bitti + telif riski).
 - Eksik yetenek -> GitHub'da açık kaynak araç; ücretli servis yok.
 - Stil: profesyonel futbol haber kanalı (BREAKING/CONFIRMED/CLASSIC etiketleri, temiz lower-third, hatasız İngilizce VO + altyazı, merak + abone CTA). Çocukça/duygusal ekran yazısı yok ("tears", "AURA" vb.). Seri başına farklı Kokoro sesi (OPERASYON.md STRATEJİ).
 - Bilgiyi 2 kaynakla doğrula; tek kaynaklıysa videoya koyma ya da belirt.
