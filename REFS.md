@@ -28,3 +28,9 @@ Reddit, X, YouTube, TikTok, HN, Polymarket, web'deki son 30 günlük gönderiler
 Kurulum: bootstrap _refs/last30days-skill olarak klonlar ve ~/.claude/skills/last30days'e kopyalar -> /last30days <konu> ile çağrılır.
 Kullanım (ajan içinde): engine önce bir sorgu planı ister (references/research-runbook.md Step 0.75, --plan - <<'PLAN_EOF' ... ) ya da --auto-resolve. HER ZAMAN --no-browser-cookies (kural: cookie yok).
 SINIRLAR (22.11 test): bu ortamda Reddit/HN/DuckDuckGo/Startpage proxy'de KAPALI -> sonuç 0. Ortam izni eklenmek istendi ama servis reddetti; kullanıcı Ayarlar > ortam ağ izinlerinden www.reddit.com, old.reddit.com, hn.algolia.com, html.duckduckgo.com, www.startpage.com ekleyebilir. X/TikTok/Instagram ücretli anahtar (ScrapeCreators 10k ücretsiz kayıt, XAI) veya tarayıcı cookie istiyor -> cookie KULLANMA, ücretli servis yok. YouTube yt-dlp ile çalışır (bot korumasını aşma yok).
+
+## 6. OpenCreator (krillinai, eski adı KrillinAI, Apache-2.0) — İÇERİK ÜRETİCİ ÇALIŞMA ALANI (kullanıcı ekledi 22.11)
+Codex CLI tabanlı masaüstü/web uygulaması: video çevirisi (Whisper + LLM, iki dilli altyazı, dublaj, dikey/yatay render), indirici (yt-dlp), kapak/görsel/video üretimi, TTS, kısa video senaryosu, çöp adam animasyonu (packages/stickman-remotion), otomatik klip (geliştirmede).
+Yol: _refs/opencreator. Ajan becerileri: skills/krillinai-{cli,subtitle,tts,render-vertical,render-horizontal,cover,pipeline}/SKILL.md.
+SINIRLAR: çeviri/görsel/video üretimi/bulut TTS ÜCRETLİ anahtar ister (OpenAI, Aliyun, MiniMax, Kling, Veo...) -> KULLANMA. Ücretsiz kısımlar bizde zaten var (yt-dlp, Whisper/ffmpeg-skill, Kokoro/Supertonic, kendi motorumuz). Cookie gerektiren indirmeler YOK.
+İşe yarayan fikirler: dikey videoda İKİ DİLLİ altyazı düzeni (render-vertical: üstte EN, altta TR), altyazı zamanlama/bölme mantığı (references/), stickman-remotion formatı (anlatımlı çizgi animasyon) fikir olarak.
