@@ -2,6 +2,7 @@
 # Visuals: X @FabrizioRomano 2124542743238074800 (Pochettino photo), @LiamBekker 2124545253893898269 (Szoboszlai FK wide photo),
 # @nafi_auwal80838 2124545748914069596 (4-panel FK collage: middle + bottom panels), @FootballXtra0 2124544215883419947 (Ferguson TV still, scorebug cropped),
 # @LFCTransferRoom 2124546911587746203 (Wirtz celebration, 612px), @themanhamzah 2124545971124122046 (Wirtz goal clip 7.0-21.3, overlay text cropped) — USED.
+# v4 (user): Wirtz broadcast clip REMOVED (not used) -> X @jo1952015 2124555309800960046 Wirtz shot photo. No match broadcast footage left.
 # v3 (user): FK = TRIBUNE clip X @caughtoffside 2124552797970649226 0-9.0 (fan view from the stands; watermark + caption covered by own bands); red card = X @TheHateCentral2 2124550470933065851 Yoro photo. Phone-TV clip and szo2/collage dropped.
 # Facts: ESPN 401878755 (Yoro red 8', Szoboszlai FK 10', Wirtz 13' assist Ngumoha) + Romano + The Star/Reuters (Pochettino debut).
 import os, subprocess, sys, json
@@ -12,8 +13,8 @@ F = '/home/user/Filmler/fonts/'
 fB = lambda s: ImageFont.truetype(F + 'BigShoulders-Bold.ttf', s)
 fO = lambda s: ImageFont.truetype(F + 'Outfit-Bold.ttf', s)
 WHITE = (255, 255, 255); YEL = (253, 215, 0); INK = (8, 8, 12); LFC = (200, 16, 46); MU = (218, 41, 28)
-VO = json.load(open('vo/vo.json')); VT = [0.3, 5.8, 11.1, 15.2, 20.1, 23.1, 37.5]
-NC = len(os.listdir('src/fa')); NP = len(os.listdir('src/fk')); FK0 = 11.0; FK1 = FK0 + NP / 30 - 0.05; CLIP0 = FK1 + 3.0; CLIP1 = CLIP0 + NC / 30 - 0.05; TOTAL = CLIP1 + 7.4
+VO = json.load(open('vo/vo.json')); VT = [0.3, 5.8, 11.1, 15.2, 20.1, 23.1, 27.8]
+NC = len(os.listdir('src/fa')); NP = len(os.listdir('src/fk')); FK0 = 11.0; FK1 = FK0 + NP / 30 - 0.05; CLIP0 = FK1 + 3.0; CLIP1 = CLIP0 + 4.6; TOTAL = CLIP1 + 7.4
 def cover(im, fx=0.5, fy=0.3, z=1.0):
     im = im.convert('RGB'); s = max(W / im.width, H / im.height) * z
     im = im.resize((int(im.width * s), int(im.height * s)), Image.LANCZOS); x = int((im.width - W) * fx); y = int((im.height - H) * fy)
@@ -21,11 +22,11 @@ def cover(im, fx=0.5, fy=0.3, z=1.0):
 def fitw(im, maxh=1300):
     im = im.convert('RGB'); s = W / im.width; im = im.resize((W, int(im.height * s)), Image.LANCZOS)
     return im.filter(ImageFilter.UnsharpMask(1.4, 60, 2))
-P = {k: Image.open(f'ph/{k}.jpg') for k in ('poch', 'szo1', 'szo2', 'fergie', 'w3', 'yoro')}
+P = {k: Image.open(f'ph/{k}.jpg') for k in ('poch', 'szo1', 'szo2', 'fergie', 'w3', 'yoro', 'wirtz')}
 C = P['szo1']; cw, ch = C.size
 IMG = {'poch': cover(P['poch'], 0.5, 0.1), 'szo2': fitw(P['szo2']), 'mid': fitw(C.crop((0, int(ch * 0.30), cw, int(ch * 0.655)))),
        'celL': fitw(C.crop((0, int(ch * 0.66), int(cw * 0.495), ch))), 'celR': fitw(C.crop((int(cw * 0.505), int(ch * 0.66), cw, ch))),
-       'fergie': cover(P['fergie'].crop((1150, 0, 2750, 2304)), 0.5, 0.0), 'w3': fitw(P['w3']), 'yoro': fitw(P['yoro'])}
+       'fergie': cover(P['fergie'].crop((1150, 0, 2750, 2304)), 0.5, 0.0), 'w3': fitw(P['w3']), 'yoro': fitw(P['yoro']), 'wirtz': fitw(P['wirtz'])}
 def ease(u): u = max(0, min(1, u)); return 1 - (1 - u) ** 3
 def tc(d, y, s, f, fill, stroke=7):
     w = d.textlength(s, font=f); d.text(((W - w) / 2, y), s, font=f, fill=fill, stroke_width=stroke, stroke_fill=(0, 0, 0))
@@ -80,7 +81,7 @@ def frame(t):
     elif t < CLIP0:
         img = shade(IMG['fergie'].copy(), 300, 1000); d = ImageDraw.Draw(img); tag(d, "FERGUSON'S REACTION", (40, 40, 50)); tc(d, 1300, 'SIR ALEX FERGUSON', fit(d, 'SIR ALEX FERGUSON', 130), WHITE, 9)
     elif t < CLIP1:
-        lt = t - CLIP0; im = clip(lt); img = framed(im, 880); d = ImageDraw.Draw(img); tag(d, "13'", LFC)
+        lt = t - CLIP0; img = framed(IMG['wirtz'], 880); d = ImageDraw.Draw(img); tag(d, "13'", LFC)
         tc(d, 220, 'FLORIAN WIRTZ', fB(150), WHITE, 9); tc(d, 380, 'WHAT A FINISH', fB(110), YEL, 8)
     else:
         lt = t - CLIP1; img = framed(IMG['w3'], 820); d = ImageDraw.Draw(img); tag(d, "2-0 AFTER 13'", LFC); a = ease(lt / 0.4)
@@ -94,7 +95,7 @@ def frame(t):
     return img
 if __name__ == '__main__':
     if len(sys.argv) > 1:
-        ts = [7.0, 12.0, 16.0, 21.5, 30.0, 42.0]
+        ts = [24.0, 26.5, 30.0, 34.0]
         ims = [frame(x).resize((240, 427)) for x in ts]
         s = Image.new('RGB', (240 * len(ims), 427)); [s.paste(im, (i * 240, 0)) for i, im in enumerate(ims)]; s.save('logs/stills.jpg'); print(CLIP1, TOTAL); sys.exit()
     p = subprocess.Popen(['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
