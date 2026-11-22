@@ -2,6 +2,7 @@
 # Visuals: X @FabrizioRomano 2124542743238074800 (Pochettino photo), @LiamBekker 2124545253893898269 (Szoboszlai FK wide photo),
 # @nafi_auwal80838 2124545748914069596 (4-panel FK collage: middle + bottom panels), @FootballXtra0 2124544215883419947 (Ferguson TV still, scorebug cropped),
 # @LFCTransferRoom 2124546911587746203 (Wirtz celebration, 612px), @themanhamzah 2124545971124122046 (Wirtz goal clip 7.0-21.3, overlay text cropped) — USED.
+# v2 (user): FK = phone-of-TV clip @PitchsideWorld 2124546517222781059 0-8.5 (REUSED on user's explicit request; also in szo1). szo2/collage photos dropped.
 # Facts: ESPN 401878755 (Yoro red 8', Szoboszlai FK 10', Wirtz 13' assist Ngumoha) + Romano + The Star/Reuters (Pochettino debut).
 import os, subprocess, sys, json
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -11,8 +12,8 @@ F = '/home/user/Filmler/fonts/'
 fB = lambda s: ImageFont.truetype(F + 'BigShoulders-Bold.ttf', s)
 fO = lambda s: ImageFont.truetype(F + 'Outfit-Bold.ttf', s)
 WHITE = (255, 255, 255); YEL = (253, 215, 0); INK = (8, 8, 12); LFC = (200, 16, 46); MU = (218, 41, 28)
-VO = json.load(open('vo/vo.json')); VT = [0.3, 5.8, 11.1, 15.3, 18.7, 21.7, 36.1]
-NC = len(os.listdir('src/fa')); CLIP0 = 21.6; CLIP1 = CLIP0 + NC / 30 - 0.05; TOTAL = 43.4
+VO = json.load(open('vo/vo.json')); VT = [0.3, 5.8, 11.1, 13.2, 19.6, 22.6, 37.0]
+NC = len(os.listdir('src/fa')); NP = len(os.listdir('src/fp')); FK0 = 11.0; FK1 = FK0 + NP / 30 - 0.05; CLIP0 = 22.5; CLIP1 = CLIP0 + NC / 30 - 0.05; TOTAL = CLIP1 + 7.4
 def cover(im, fx=0.5, fy=0.3, z=1.0):
     im = im.convert('RGB'); s = max(W / im.width, H / im.height) * z
     im = im.resize((int(im.width * s), int(im.height * s)), Image.LANCZOS); x = int((im.width - W) * fx); y = int((im.height - H) * fy)
@@ -55,6 +56,14 @@ def clip(s):
         if len(_c) > 40: _c.clear()
         _c[k] = Image.open(f'src/fa/f_{k:04d}.jpg').convert('RGB').filter(ImageFilter.UnsharpMask(1.4, 50, 2))
     return _c[k]
+_p = {}
+def phone(s):
+    k = min(NP, max(1, int(round(s * 30)) + 1))
+    if k not in _p:
+        if len(_p) > 40: _p.clear()
+        im = Image.open(f'src/fp/f_{k:04d}.jpg').convert('RGB'); b = (1110, 0, 1280, 125); im.paste(im.crop(b).filter(ImageFilter.GaussianBlur(14)), b[:2])
+        _p[k] = im.resize((W, int(W * im.height / im.width)), Image.LANCZOS).filter(ImageFilter.UnsharpMask(1.6, 60, 2))
+    return _p[k]
 def frame(t):
     if t < 5.6:
         img = shade(IMG['poch'].copy(), 300, 1000); d = ImageDraw.Draw(img); tag(d, 'PREMIER LEAGUE  ·  ANFIELD', LFC); a = ease(t / 0.4)
@@ -63,13 +72,12 @@ def frame(t):
         lt = t - 5.6; img = Image.new('RGB', (W, H), (20, 6, 8)); d = ImageDraw.Draw(img); tag(d, "8'", MU); a = ease(lt / 0.3)
         cw_, ch_ = 300, 420; x0 = (W - cw_) // 2; y0 = 420 + int((1 - a) * 80)
         d.rounded_rectangle([x0, y0, x0 + cw_, y0 + ch_], 26, fill=(220, 20, 30)); tc(d, 940, 'RED CARD', fB(170), WHITE, 9); tc(d, 1130, 'LENY YORO  ·  UNITED DOWN TO 10', fit(d, 'LENY YORO  ·  UNITED DOWN TO 10', 72), YEL, 6)
-    elif t < 15.2:
-        img = framed(IMG['szo2'], 850); d = ImageDraw.Draw(img); tag(d, "10'", LFC); tc(d, 220, 'SZOBOSZLAI', fB(150), WHITE, 9); tc(d, 380, 'FREE KICK', fB(120), YEL, 8)
-    elif t < 18.6:
-        lt = t - 15.2; img = framed(IMG['mid'] if lt < 1.6 else (IMG['celL'] if lt < 2.6 else IMG['celR']), 850); d = ImageDraw.Draw(img); tag(d, 'GOAL', LFC)
-        tc(d, 220, 'BOTTOM CORNER', fB(140), YEL, 9); score(d, 1, 0)
+    elif t < FK1:
+        lt = t - FK0; img = framed(phone(lt), 860); d = ImageDraw.Draw(img); tag(d, "10'", LFC)
+        if lt < 1.6: tc(d, 220, 'SZOBOSZLAI', fB(150), WHITE, 9); tc(d, 380, 'FREE KICK', fB(120), YEL, 8)
+        else: tc(d, 220, 'BOTTOM CORNER', fB(140), YEL, 9); score(d, 1, 0, 1300)
     elif t < CLIP0:
-        img = shade(IMG['fergie'].copy(), 300, 1000); d = ImageDraw.Draw(img); tag(d, 'IN THE STANDS', (40, 40, 50)); tc(d, 1300, 'SIR ALEX FERGUSON', fit(d, 'SIR ALEX FERGUSON', 130), WHITE, 9)
+        img = shade(IMG['fergie'].copy(), 300, 1000); d = ImageDraw.Draw(img); tag(d, "FERGUSON'S REACTION", (40, 40, 50)); tc(d, 1300, 'SIR ALEX FERGUSON', fit(d, 'SIR ALEX FERGUSON', 130), WHITE, 9)
     elif t < CLIP1:
         lt = t - CLIP0; im = clip(lt); img = framed(im, 880); d = ImageDraw.Draw(img); tag(d, "13'", LFC)
         tc(d, 220, 'FLORIAN WIRTZ', fB(150), WHITE, 9); tc(d, 380, 'WHAT A FINISH', fB(110), YEL, 8)
@@ -79,13 +87,13 @@ def frame(t):
         c = ease((lt - 3.5) / 0.4)
         if c > 0: tc(d, 1420 + int((1 - c) * 20), 'HOW MANY WILL LIVERPOOL SCORE?', fit(d, 'HOW MANY WILL LIVERPOOL SCORE?', 74), YEL, 6)
     d = ImageDraw.Draw(img); caption(d, t)
-    for s0 in (5.6, 11.0, 15.2, 18.6, CLIP0, CLIP1):
+    for s0 in (5.6, FK0, FK1, CLIP0, CLIP1):
         if 0 <= t - s0 < 0.1: img = Image.blend(img, Image.new('RGB', (W, H), WHITE), 0.3 * (1 - (t - s0) / 0.1))
     if t > TOTAL - 0.4: img = Image.eval(img, lambda x, q=(TOTAL - t) / 0.4: int(x * max(0, q)))
     return img
 if __name__ == '__main__':
     if len(sys.argv) > 1:
-        ts = [2.5, 20, 40]
+        ts = [12.0, 14.0, 21.0, 30.0, 42.0]
         ims = [frame(x).resize((240, 427)) for x in ts]
         s = Image.new('RGB', (240 * len(ims), 427)); [s.paste(im, (i * 240, 0)) for i, im in enumerate(ims)]; s.save('logs/stills.jpg'); print(CLIP1, TOTAL); sys.exit()
     p = subprocess.Popen(['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
