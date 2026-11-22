@@ -22,3 +22,9 @@ Kullanım: yeni seri/format tasarlarken ilgili STYLE.md'yi oku, kendi motorumuza
 ## 4. OpenMontage (OpenMontageInc, AGPLv3) — AJAN VİDEO ÜRETİM HATTI
 Araştırma -> senaryo -> varlık -> kurgu -> render (Remotion). pipeline_defs/: documentary-montage, clip-factory (uzun videodan çok kısa çıkarma), cinematic, animated-explainer, localization-dub (TR dublaj için fikir). Ücretsiz stok görüntü/arşivden gerçek hareketli klip korpusu kurabiliyor.
 Kullanım: belgesel/uzun format ve "clip-factory" mantığı için referans; doğrudan kurmak ağır (Node + Remotion). AGPL: kodu değiştirip dağıtmıyoruz, sadece içeride kullanım -> sorun yok.
+
+## 5. last30days-skill (mvanhorn, MIT) — SON 30 GÜNDE İNSANLAR NE KONUŞUYOR (kullanıcı ekledi 22.11)
+Reddit, X, YouTube, TikTok, HN, Polymarket, web'deki son 30 günlük gönderileri etkileşime (upvote/beğeni) göre puanlayıp özet çıkarır. Kanal için: hangi futbolcu/olay şu an viral (video fikri), taraftar yorumlarından başlık/yorum sorusu, "tribün videosu" var mı araştırması.
+Kurulum: bootstrap _refs/last30days-skill olarak klonlar ve ~/.claude/skills/last30days'e kopyalar -> /last30days <konu> ile çağrılır.
+Kullanım (ajan içinde): engine önce bir sorgu planı ister (references/research-runbook.md Step 0.75, --plan - <<'PLAN_EOF' ... ) ya da --auto-resolve. HER ZAMAN --no-browser-cookies (kural: cookie yok).
+SINIRLAR (22.11 test): bu ortamda Reddit/HN/DuckDuckGo/Startpage proxy'de KAPALI -> sonuç 0. Ortam izni eklenmek istendi ama servis reddetti; kullanıcı Ayarlar > ortam ağ izinlerinden www.reddit.com, old.reddit.com, hn.algolia.com, html.duckduckgo.com, www.startpage.com ekleyebilir. X/TikTok/Instagram ücretli anahtar (ScrapeCreators 10k ücretsiz kayıt, XAI) veya tarayıcı cookie istiyor -> cookie KULLANMA, ücretli servis yok. YouTube yt-dlp ile çalışır (bot korumasını aşma yok).
