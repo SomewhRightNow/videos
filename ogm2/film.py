@@ -15,20 +15,21 @@ RAW = {'dzeko': ('a', 0.0, 6.82), 'kane': ('a', 7.98, 15.28), 'dele': ('a', 15.2
 ORDER = [('messi', 'LIONEL MESSI', 'BARCELONA'), ('ronaldo', 'CRISTIANO RONALDO', 'MANCHESTER UNITED'), ('aguero', 'SERGIO AGÜERO', 'MANCHESTER CITY'),
          ('kane', 'HARRY KANE', 'TOTTENHAM'), ('valbuena', 'MATHIEU VALBUENA', 'LYON'), ('lewa', 'ROBERT LEWANDOWSKI', 'BAYERN MUNICH'), ('dele', 'DELE ALLI', 'TOTTENHAM'), ('ninga', 'CASIMIR NINGA', 'CAEN'),
          ('dzeko', 'EDIN DŽEKO', 'ROMA'), ('vranckx', 'AARON VRANCKX', '')]
+PLAY = ORDER[::-1]
 SEG = []; t0 = 0
-for k, n, c in ORDER: kd, a, b = RAW[k]; SEG.append((t0, t0 + b - a, a, n, c, kd)); t0 += b - a
+for k, n, c in PLAY: kd, a, b = RAW[k]; SEG.append((t0, t0 + b - a, a, n, c, kd)); t0 += b - a
 CLIP = t0; END = 3.0; TOTAL = CLIP + END
 VY = 430
 _c = {}
 import cv2, numpy as np
-MASK = cv2.imread('logs/mask.png', 0)[560:1080, 0:700]
+MASK = cv2.imread('logs/mask.png', 0)[560:1080, 0:700]; MED = cv2.imread('logs/med.png')[560:1080, 0:700].astype(np.int16); BIG = cv2.dilate(MASK, np.ones((15, 15), np.uint8), iterations=3)
 NUM = {'a': NSRC, 'v': len(os.listdir('src/fv')), 'n': len(os.listdir('src/fn'))}
 def src(kd, s):
     k = min(NUM[kd], max(1, int(round(s * 30)) + 1))
     if (kd, k) not in _c:
         if len(_c) > 40: _c.clear()
         if kd == 'a':
-            a = cv2.imread(f'src/fa/f_{k:04d}.jpg'); roi = a[560:1080, 0:700]; a[560:1080, 0:700] = cv2.inpaint(roi, MASK, 4, cv2.INPAINT_TELEA)
+            a = cv2.imread(f'src/fa/f_{k:04d}.jpg'); roi = a[560:1080, 0:700]; hs = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV); wh = (hs[..., 2] > 200) & (hs[..., 1] < 70); dm = ((np.abs(roi.astype(np.int16) - MED).max(2) < 45) | wh).astype(np.uint8) * 255; mk = cv2.dilate(cv2.bitwise_and(MASK, dm), np.ones((5, 5), np.uint8), iterations=2); mk = cv2.bitwise_and(mk, MASK) | cv2.dilate(cv2.bitwise_and(BIG, wh.astype(np.uint8) * 255), np.ones((5, 5), np.uint8), iterations=2); a[560:1080, 0:700] = cv2.inpaint(roi, mk, 4, cv2.INPAINT_TELEA)
             im = Image.fromarray(cv2.cvtColor(a, cv2.COLOR_BGR2RGB)); b = (1080 - 95, 0, 1080, 120)
         else:
             im = Image.open(f'src/f{kd}/f_{k:04d}.jpg').convert('RGB'); b = (1080 - 210, 0, 1080, 70)
@@ -44,14 +45,15 @@ def frame(t):
     if t < CLIP:
         i = max(j for j, s in enumerate(SEG) if s[0] <= t); a, b, s0, name, club, kd = SEG[i]; lt = t - a
         img = base(src(kd, s0 + lt)); d = ImageDraw.Draw(img)
-        f = fB(44); s = 'OPEN GOAL MISSES'; w = d.textlength(s, font=f); d.rectangle([60, 110, 60 + w + 32, 170], fill=RED); d.text((76, 115), s, font=f, fill=WHITE)
-        cnt = f'{i + 1}/10'; w = d.textlength(cnt, font=fB(56)); d.text((W - 60 - w, 108), cnt, font=fB(56), fill=YEL)
-        tc(d, 200, '10 STARS.' if t < 3 else 'HOW DID HE MISS?', fB(110), WHITE, 8)
-        if t < 3: tc(d, 315, '10 OPEN GOALS.', fB(80), YEL, 6)
+        f = fB(44); s = 'TOP 10'; w = d.textlength(s, font=f); d.rectangle([60, 110, 60 + w + 32, 170], fill=RED); d.text((76, 115), s, font=f, fill=WHITE)
+        rk = 10 - i
+        tc(d, 200, 'TOP 10' if t < 3 else 'HOW DID HE MISS?', fB(110), YEL if t < 3 else WHITE, 8)
+        if t < 3: tc(d, 315, 'OPEN GOAL MISSES', fB(80), WHITE, 6)
         u = ease(lt / 0.35); ly = VY + 1080 + 50; x0 = 60 - int((1 - u) * 500)
-        d.rectangle([x0, ly, x0 + 14, ly + 160], fill=YEL)
-        d.text((x0 + 40, ly - 8), name, font=fB(96 if len(name) < 16 else 84), fill=WHITE)
-        if club: d.text((x0 + 42, ly + 100), club, font=fO(38), fill=(210, 210, 220))
+        rs = f'#{rk}'; fr = fB(170); rw = d.textlength(rs, font=fr); d.text((x0, ly - 40), rs, font=fr, fill=YEL, stroke_width=6, stroke_fill=(0, 0, 0)); x0 += int(rw) + 30
+        d.rectangle([x0, ly, x0 + 10, ly + 160], fill=WHITE)
+        d.text((x0 + 34, ly - 8), name, font=fB(84 if len(name) < 16 else 64), fill=WHITE)
+        if club: d.text((x0 + 36, ly + 100), club, font=fO(38), fill=(210, 210, 220))
         if 0 <= lt < 0.1 and i > 0: img = Image.blend(img, Image.new('RGB', (W, H), WHITE), 0.3 * (1 - lt / 0.1))
     else:
         lt = t - CLIP; img = base(src('a', SEG[-1][2] + SEG[-1][1] - SEG[-1][0] - 0.05)); img = Image.eval(img, lambda v: int(v * 0.35)); d = ImageDraw.Draw(img)
@@ -64,7 +66,7 @@ def frame(t):
     return img
 if __name__ == '__main__':
     if len(sys.argv) > 1:
-        ims = [frame(tt).resize((360, 640)) for tt in (1.5, 30, 40, 55, 70, TOTAL - 1)]
+        ims = [frame(tt).resize((360, 640)) for tt in (22.6, 23.5, 25.0, 27.5, 66.0, 72.0)]
         s = Image.new('RGB', (2160, 640)); [s.paste(im, (i * 360, 0)) for i, im in enumerate(ims)]; s.save('logs/stills.jpg'); print(TOTAL); sys.exit()
     p = subprocess.Popen(['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
                           '-c:v', 'libx264', '-preset', 'medium', '-crf', '16', '-pix_fmt', 'yuv420p', 'out/video.mp4'], stdin=subprocess.PIPE)
