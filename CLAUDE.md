@@ -18,6 +18,7 @@ Tüm hesaplar tek hafızadan ilerler: kalıcı her bilgi SADECE bu klasöre yaz�
 - Wikimedia 429/hız sınırında BEKLEME (kullanıcı 22.11, tekrar tekrar söyledi): hemen başka kaynağa geç (kulüp/federasyon basın fotoğrafları, Flickr CC, Unsplash/Pexels, haber siteleri HD) ya da eldekiyle bitir.
 - Kaynak klipteki üçüncü taraf yazı/liste/filigran: büyük blur YAPMA (kullanıcı 22.11 'kocaman blur'); OpenCV inpainting denendi ama oyuncu geçişlerinde bozulma yaptı (kullanıcı beğenmedi) -> TERCİH: kaynağın yazısını tam örten KENDİ tasarım grafiğimiz (ör. ogm2 panel(): kendi geri sayım listemiz aynı yerde, kendi fontumuz). Sağ üst yayıncı logosu küçük blur kuralı aynen geçerli.
 - Sıralama/derleme videoları (kullanıcı 22.11): her zaman GERİ SAYIM (#10 -> #1), en büyük isim/an #1 en sonda, büyük #rakam ekranda; merak için.
+- Abone CTA'sı (kullanıcı 23.11): sadece sonda değil, videonun ALTINDA sabit kırmızı 'SUBSCRIBE' butonu baştan sona; videolar sıkmadan hızlı (boşluk az, VO ~1.15 hız).
 - BİLDİRİM (kullanıcı 22.11): her iş/video bitince (teslim dosyası gönderilince) PushNotification ile kısa bildirim at (ne bitti + telif riski).
 - Eksik yetenek -> GitHub'da açık kaynak araç; ücretli servis yok.
 - Stil: profesyonel futbol haber kanalı (BREAKING/CONFIRMED/CLASSIC etiketleri, temiz lower-third, hatasız İngilizce VO + altyazı, merak + abone CTA). Çocukça/duygusal ekran yazısı yok ("tears", "AURA" vb.). Seri başına farklı Kokoro sesi (OPERASYON.md STRATEJİ).
