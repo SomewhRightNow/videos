@@ -33,10 +33,10 @@ def frame(t):
     im = src(min(t, CLIP - 0.01)); PY = 820 - im.height // 2
     bg = im.resize((24, 13)).filter(ImageFilter.GaussianBlur(2)).resize((W, H), Image.BILINEAR); bg = Image.eval(bg, lambda v: int(v * 0.22))
     bg.paste(im, (0, PY)); d = ImageDraw.Draw(bg)
-    f = fB(44); s = 'GOAL OF THE DAY'; w = d.textlength(s, font=f); d.rectangle([60, 110, 60 + w + 32, 170], fill=MAR); d.text((76, 115), s, font=f, fill=WHITE)
-    hl, c = ('QUERÉTARO ATTACK…', WHITE) if t < GOAL else ('STRAIGHT IN!', YEL)
+    f = fB(44); s = 'KEEPER FAIL?'; w = d.textlength(s, font=f); d.rectangle([60, 110, 60 + w + 32, 170], fill=MAR); d.text((76, 115), s, font=f, fill=WHITE)
+    hl, c = ('WATCH THE KEEPER 👀'.replace(' 👀',''), WHITE) if t < GOAL else ('KEEPER, WHAT WAS THAT?!', YEL)
     a = ease(t / 0.4); tc(d, 205 + int((1 - a) * 20), hl, fit(d, hl, 140, 960), c, 9)
-    tc(d, 370, 'THE KEEPER WILL WANT THIS ONE BACK', fO(36), WHITE, 4)
+    tc(d, 370, 'STRAIGHT AT HIM… AND STILL IN', fO(40), WHITE, 4)
     ly = PY + im.height + 60; d.rectangle([60, ly, 72, ly + 140], fill=MAR)
     d.text((96, ly - 4), "QUERÉTARO vs NECAXA  ·  75'", font=fB(78), fill=WHITE); d.text((96, ly + 88), 'LIGA MX  ·  FINAL SCORE 2-2  ·  22 NOV 2026', font=fO(30), fill=(215, 215, 225))
     if 0 <= t - GOAL < 0.12: bg = Image.blend(bg, Image.new('RGB', (W, H), WHITE), 0.35 * (1 - (t - GOAL) / 0.12)); d = ImageDraw.Draw(bg)
