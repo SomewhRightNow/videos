@@ -1,4 +1,5 @@
 # v2 (user): more professional VO (bm_george, one line per match, synced) + HD star photos per match.
+# + Leroy Sane Ecuador v Germany 2026-004 (cropped) (Bryan Berlin) and '1 adam wharton 2026 (Adam Wharton)' (Chensiyuan), CC BY-SA 4.0.
 # Photos (Commons, Bryan Berlin, CC BY-SA 4.0, World Cup 2026 series): Saka 057c, Haaland 51, Mbappe 391c, Wirtz 007, Dembele 263c, Bruno Fernandes 137, Kane 024c, Kante 397, Pulisic 186, Salah 163.
 import os, subprocess, sys, json
 from PIL import Image, ImageDraw, ImageFilter
@@ -8,7 +9,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 VO = json.load(open('vo/vo2.json')); D = VO['dur']
 STAR = {'359': ('saka', 'BUKAYO SAKA'), '382': ('haaland', 'ERLING HAALAND'), '86': ('mbappe', 'KYLIAN MBAPPÉ'), '364': ('wirtz', 'FLORIAN WIRTZ'),
         '160': ('dembele', 'OUSMANE DEMBÉLÉ'), '360': ('bruno', 'BRUNO FERNANDES'), '132': ('kane', 'HARRY KANE'), '436': ('kante', "N'GOLO KANTÉ"),
-        '103': ('pulisic', 'CHRISTIAN PULISIC'), '997': ('salah', 'MOHAMED SALAH')}
+        '103': ('pulisic', 'CHRISTIAN PULISIC'), '997': ('salah', 'MOHAMED SALAH'), '432': ('sane', 'LEROY SANÉ'), '384': ('wharton', 'ADAM WHARTON')}
 def cover(name, fy=0.12):
     im = Image.open(f'ph/{name}.jpg').convert('RGB'); s = max(W / im.width, H / im.height)
     im = im.resize((int(im.width * s), int(im.height * s)), Image.LANCZOS); x = (im.width - W) // 2; y = int((im.height - H) * fy)
@@ -69,7 +70,7 @@ def frame(tt):
         d.rectangle([0, 1690, W, 1830], fill=img.getpixel((5, 1650))); caption(d, tt, sc)
     if 0 <= lt < 0.1 and tt > 0.2: img = Image.blend(img, Image.new('RGB', (W, H), WHITE), 0.22 * (1 - lt / 0.1))
     d = ImageDraw.Draw(img)
-    if kind == 'match' and (m[1] in STAR or m[4] in STAR): d.text((W - 400, H - 50), 'Photo: Bryan Berlin / Wikimedia Commons', font=fO(20), fill=(170, 170, 180))
+    if kind == 'match' and (m[1] in STAR or m[4] in STAR): d.text((W - 400, H - 50), 'Photo: Wikimedia Commons (CC BY-SA 4.0)', font=fO(20), fill=(170, 170, 180))
     if tt > TOTAL - 0.4: img = Image.eval(img, lambda x, q=(TOTAL - tt) / 0.4: int(x * max(0, q)))
     return img
 if __name__ == '__main__':
