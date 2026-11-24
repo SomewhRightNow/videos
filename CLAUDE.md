@@ -35,6 +35,8 @@ Tüm hesaplar tek hafızadan ilerler: kalıcı her bilgi SADECE bu klasöre yaz�
 
 - ŞABLON 'MATCHDAY POSTER' (ucl1/film2.py, kullanıcı 24.11 'şablonu değiştir'): takım renklerine bölünmüş arka plan, videonun üstünde/altında dev takım adı + arma (kayarak gelir), beat'te beyaz çerçeve flaşı, kendi VS çipi, sonda bölünmüş renkli 'WHO WINS' kartları. Eski koyu kart şablonundan farklı; sıradaki videolarda şablonları dönüşümlü kullan.
 
+- ABONE BUTONU METNİ (kullanıcı 24.11 'alttaki kırmızı yere abone çekebilecek bir şey yazmalıyız'): sadece 'SUBSCRIBE · DAILY FOOTBALL' YETMEZ. Yeni tasarım (gal3/ov2.png): büyük kırmızı pill, zil ikonu + 'SUBSCRIBE' (büyük, beyaz) + 2. satır SARI vaat. Vaat içeriğe göre: gol/maç gecesi 'NEVER MISS A GOAL'; Ronaldo serisi 'DON'T MISS GOAL 988' (sıradaki sayı); seri/Part videoları 'PART 2 IS COMING'; klasik/on this day 'A NEW CLASSIC EVERY DAY'; sıralama 'MORE TOP LISTS DAILY'. Yalan vaat yok (Part 2 sadece gerçekten yapılacaksa).
+
 ## Yükleme akışı
 Video -> bu depoya tek-commit dal (`up-<isim>`), raw URL https://raw.githubusercontent.com/SomewhRightNow/videos/up-<isim>/<dosya>.mp4 -> Zapier YouTube `youtube_upload_video` (title, description, video=raw URL, tags, privacy_status public, category_id 17, made_for_kids false, default_language en, localizations tr). Zapier "throttled" derse kota dolu: kullanıcıya elle yüklemeyi öner. Zapier bağlantısı hesaba bağlıdır; yeni hesapta kullanıcı kendi Zapier+YouTube bağlantısını kurmalı.
 
