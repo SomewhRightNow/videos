@@ -1,98 +1,85 @@
-# Ronaldo goal-counter template (cfg.json: src, t_goal, t_frz, src_end, n, line). Fast sequential decoding.
-# Footage: clip sent by the user (TikTok @fr7cristiano, broadcast footage), played once in order, full frame, no zoom; one B&W freeze on the "Siu".
-# Music: "Moonlit" by FSM Team (free-stock-music.com, CC BY 4.0, not registered in Content ID) - drop placed on the goal.
-import sys, os, subprocess
-sys.path.insert(0, '/home/user/Filmler/_engine')
+# BREAKING / GOAL OF THE DAY: Ronaldo career goal 987 — Al-Nassr vs Al-Sadd, AFC Champions League Elite, 24.11.2026, 13' penalty (ESPN 401912584).
+# 986 = 20.11 vs Al-Ahli 14' (ESPN; our cr986) -> this = 987 (also @TheGoalsZone tweet). Source: X @TheGoalsZone 2125296043051106595 (1280x720, 6.8 s) FULL.
+# Top-right broadcaster logo + TheGoalsZone watermark blurred. Music: Kevin MacLeod 'Volatile Reaction' (CC BY 4.0) offset 24.2 -> rise on the kick.
+import os, subprocess
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
-import numpy as np
-import engine as G
-G.FPS = 30
-from engine import *
-from PIL import Image, ImageDraw, ImageFilter, ImageOps, ImageEnhance
-FD = '/mnt/skills/examples/canvas-design/canvas-fonts/'
-F_T = FD + 'BigShoulders-Bold.ttf'; F_MB = FD + 'GeistMono-Bold.ttf'
-WH = (255, 255, 255); GOLD = (240, 196, 70); RED = (225, 30, 40); DIM = (200, 205, 215)
-import json
-C = json.load(open('cfg.json'))
-SRC = C['src']; T_GOAL = C['t_goal']; T_FRZ = C['t_frz']; FRZ = 1.2; SRC_END = C['src_end']; N = C['n']; LINE = C['line']
-T_RES = T_FRZ + FRZ; T_END = T_RES + (SRC_END - T_FRZ); G.TOTAL = T_END + 2.8; G.NF = int(G.TOTAL * G.FPS)
-G.FADEIN[0] = 0.0; G.FADEOUT[0] = False; G.LINES[:] = []; G.CHUNKS[:] = []
-VF = f'split[a][b];[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=40:3,eq=brightness=-0.5[bg];[b]scale={W}:-2:flags=lanczos[fg];[bg][fg]overlay=0:(H-h)/2,fps=30'
-_D = {}
-def _open(k):
-    if _D.get('p'): _D['p'].kill()
-    _D['p'] = subprocess.Popen(['ffmpeg', '-nostdin', '-loglevel', 'error', '-ss', f'{k / 30:.3f}', '-i', SRC, '-vf', VF, '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], stdout=subprocess.PIPE)
-    _D['k'] = k; _D['last'] = None
-def _read():
-    b = _D['p'].stdout.read(W * H * 3)
-    if len(b) < W * H * 3: _D['k'] += 1; return _D['last']
-    _D['k'] += 1; _D['last'] = Image.frombuffer('RGB', (W, H), b, 'raw', 'RGB', 0, 1); return _D['last']
-_BW = {}
-def grab(s, bw=False):
-    k = round(s * 30)
-    if bw:
-        if k not in _BW:
-            _open(k); im = _read(); _D['p'].kill(); _D['p'] = None
-            g = ImageOps.grayscale(im); g = ImageEnhance.Contrast(g).enhance(1.6); g = ImageEnhance.Brightness(g).enhance(0.9)
-            g = Image.blend(g, ImageOps.autocontrast(g.filter(ImageFilter.GaussianBlur(18))), 0.25); _BW[k] = g.convert('RGB')
-        return _BW[k]
-    if not _D.get('p') or k < _D['k'] - 1 or k > _D['k'] + 45: _open(k)
-    if k == _D['k'] - 1 and _D['last'] is not None: return _D['last']
-    im = _read()
-    while _D['k'] <= k and im is not None and _D['k'] - 1 < k: im = _read()
-    return im
-def src_t(t):
-    if t < T_FRZ: return t, False
-    if t < T_RES: return T_FRZ, True
-    return min(T_FRZ + (t - T_RES), SRC_END), False
-def scene(t):
-    s, bw = src_t(t); im = grab(s, bw)
-    if t >= T_END: im = ImageEnhance.Brightness(im).enhance(max(0.35, 1 - (t - T_END) / 0.5 * 0.65))
-    return im, dict(sat=1.05)
-seg(0, scene); seg(T_RES, scene, 'cut', 0.0)
-G.HITS += [(T_GOAL, 18), (T_FRZ, 16), (T_END, 8)]
-G.FLASHES += [(T_GOAL, 0.08, 0.8), (T_FRZ, 0.07, 0.7)]
-_TC = {}
-def ttext(c, txt, x, y, path, size, fill, a=1.0, anchor='mm', stroke=0):
-    if a <= 0.01: return
-    key = (txt, round(x), round(y), path, size, fill, round(a, 2), anchor, stroke)
-    if key not in _TC:
-        if len(_TC) > 400: _TC.clear()
-        f = G.font(path, size); bb = ImageDraw.Draw(Image.new('L', (1, 1))).textbbox((x, y), txt, font=f, anchor=anchor, stroke_width=stroke)
-        pad = 40; ox, oy = int(bb[0]) - pad, int(bb[1]) - pad; w, h = int(bb[2] - bb[0]) + 2 * pad, int(bb[3] - bb[1]) + 2 * pad
-        lay = Image.new('RGBA', (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
-        d.text((x - ox, y - oy), txt, font=f, fill=fill + (int(255 * a),), anchor=anchor, stroke_width=stroke, stroke_fill=(0, 0, 0, int(255 * a)))
-        sh = lay.split()[3].filter(ImageFilter.GaussianBlur(12)).point(lambda v: int(v * 0.7))
-        out = Image.merge('RGBA', (sh.point(lambda v: 0),) * 3 + (sh,)); out.alpha_composite(lay); _TC[key] = (out, ox, oy)
-    out, ox, oy = _TC[key]; c.alpha_composite(out, (max(ox, 0), max(oy, 0)), (max(-ox, 0), max(-oy, 0)))
-def env_(t, a, b, fi=0.15, fo=0.2): return clamp(min((t - a) / fi, (b - t) / fo))
-def pop(t, a, k=0.3): return 1 + k * (1 - ease_out(clamp((t - a) / 0.22)))
-def overlays(c, t):
-    if t < T_END:
-        ttext(c, 'CRISTIANO RONALDO', W / 2, 120, F_T, 92, WH, 1.0, stroke=2)
-        ttext(c, LINE, W / 2, 196, F_MB, 30, GOLD, 1.0)
-        n = N if t >= T_GOAL else N - 1; col = GOLD if t >= T_GOAL else WH
-        ttext(c, str(n), W / 2, 1790, F_T, int(170 * (pop(t, T_GOAL) if t >= T_GOAL else 1)), col, 1.0, stroke=3)
-        ttext(c, 'CAREER GOALS', W / 2, 1885, F_MB, 30, DIM, 1.0)
-        if T_GOAL <= t < T_GOAL + 1.6: ttext(c, 'GOAL', W / 2, 960, F_T, int(220 * pop(t, T_GOAL)), GOLD, env_(t, T_GOAL, T_GOAL + 1.6, 0.03, 0.3), stroke=4)
-        if T_FRZ <= t < T_RES + 0.2: ttext(c, 'AURA', W / 2, 1640, F_MB, 40, RED, env_(t, T_FRZ + 0.1, T_RES + 0.2, 0.08, 0.15))
+W, H, FPS = 1080, 1920, 30
+F = '/home/user/Filmler/fonts/'
+fB = lambda s: ImageFont.truetype(F + 'BigShoulders-Bold.ttf', s); fO = lambda s: ImageFont.truetype(F + 'Outfit-Bold.ttf', s)
+WHITE = (255, 255, 255); YEL = (253, 215, 0); INK = (8, 8, 12); RED = (215, 25, 35); BLUE = (0, 40, 110)
+N = len(os.listdir('src/f')); CLIP = N / 30 - 0.04; TOTAL = CLIP + 5.2; VY = 620; VH = 608; S = W / 1280; KICK = 5.75
+KEYS = [(0.0, 547, 333), (0.5, 400, 385), (1.0, 467, 373), (1.5, 440, 360), (2.0, 600, 373), (2.5, 813, 493), (3.0, 720, 453), (3.4, 560, 467),
+        (3.6, 973, 341), (4.5, 960, 333), (5.0, 920, 320), (5.5, 853, 320), (6.0, 813, 307)]
+_c = {}
+def src(t):
+    k = min(N, max(1, int(round(t * 30)) + 1))
+    if k not in _c:
+        if len(_c) > 30: _c.clear()
+        im = Image.open(f'src/f/f_{k:04d}.jpg').convert('RGB')
+        for b in ((1280 - 220, 0, 1280, 78), (540, 610, 780, 665)): im.paste(im.crop(b).filter(ImageFilter.GaussianBlur(12)), b[:2])
+        _c[k] = im.resize((W, VH), Image.LANCZOS)
+    return _c[k]
+CREST = Image.open('logs/nassr.png').convert('RGBA').resize((120, 120), Image.LANCZOS)
+def ease(u): u = max(0, min(1, u)); return 1 - (1 - u) ** 3
+def ctext(d, y, s, f, fill, stroke=0):
+    w = d.textlength(s, font=f); d.text(((W - w) / 2, y), s, font=f, fill=fill, stroke_width=stroke, stroke_fill=INK)
+def keypos(t):
+    if t > KEYS[-1][0]: return None
+    for (t0, x0, y0), (t1, x1, y1) in zip(KEYS, KEYS[1:]):
+        if t0 <= t <= t1:
+            if t1 - t0 > 0.15 and abs(x1 - x0) > 300: return (x0, y0) if t - t0 < (t1 - t0) / 2 else (x1, y1)
+            u = (t - t0) / (t1 - t0); return x0 + (x1 - x0) * u, y0 + (y1 - y0) * u
+def name_tag(img, pos, name='RONALDO'):
+    ov = Image.new('RGBA', (W, H)); d = ImageDraw.Draw(ov); f = fB(50); w = d.textlength(name, font=f); bw, bh = int(w + 46), 64
+    X = int(pos[0] * S); Y = max(VY + 100, VY + int(pos[1] * S) - 26); x0 = int(min(max(16, X - bw / 2), W - bw - 16)); y0 = Y - bh - 20
+    d.rounded_rectangle([x0, y0, x0 + bw, y0 + bh], 32, fill=(12, 13, 18, 238), outline=(255, 255, 255, 70), width=2)
+    d.text((x0 + 23, y0 + 5), name, font=f, fill=WHITE); d.rectangle([x0 + 32, y0 + bh - 5, x0 + bw - 32, y0 + bh], fill=YEL + (255,))
+    X = max(x0 + 28, min(x0 + bw - 28, X)); d.polygon([(X - 13, y0 + bh), (X + 13, y0 + bh), (X, y0 + bh + 18)], fill=YEL + (255,))
+    img.paste(Image.alpha_composite(img.convert('RGBA'), ov).convert('RGB'))
+def sub_pill(img, t):
+    d = ImageDraw.Draw(img); p = 1.04 if int(t * 2) % 2 == 0 else 1.0
+    w, h = int(520 * p), int(88 * p); x0 = (W - w) // 2; y0 = 1800
+    d.rounded_rectangle([x0, y0, x0 + w, y0 + h], h // 2, fill=RED, outline=WHITE, width=3)
+    s = 'SUBSCRIBE  ·  DAILY FOOTBALL'; f = fB(44); tw = d.textlength(s, font=f); d.text(((W - tw) / 2, y0 + (h - 44) // 2 - 4), s, font=f, fill=WHITE)
+def bgimg():
+    bg = Image.new('RGB', (W, H)); d = ImageDraw.Draw(bg)
+    for y in range(H): u = abs(y - H / 2) / (H / 2); d.line([(0, y), (W, y)], fill=(int(6 + 8 * u), int(10 + 18 * u), int(26 + 50 * u)))
+    return bg
+BG = bgimg()
+def frame(t):
+    bg = BG.copy()
+    if t < CLIP:
+        bg.paste(src(t), (0, VY)); p = keypos(t)
+        if p: name_tag(bg, p)
+        d = ImageDraw.Draw(bg); f = fB(44); s = 'BREAKING'; w = d.textlength(s, font=f); d.rectangle([(W - w) / 2 - 18, 130, (W + w) / 2 + 18, 188], fill=RED); d.text(((W - w) / 2, 134), s, font=f, fill=WHITE)
+        hot = t >= KICK
+        ctext(d, 220, 'RONALDO DOES IT', fB(118), WHITE); ctext(d, 345, 'AGAIN...' if not hot else 'GOAL 987!', fB(150), YEL if hot else WHITE)
+        y0 = VY + VH + 50; d.rectangle([60, y0, 70, y0 + 150], fill=YEL)
+        bg.paste(CREST, (W - 180, y0 + 10), CREST)
+        d.text((94, y0 - 8), "CRISTIANO RONALDO  ·  13'", font=fB(70), fill=WHITE)
+        d.text((96, y0 + 76), 'AL-NASSR vs AL-SADD', font=fO(32), fill=(200, 205, 220)); d.text((96, y0 + 116), 'AFC CHAMPIONS LEAGUE ELITE  ·  PENALTY', font=fO(26), fill=(160, 165, 185))
+        if hot and t - KICK < 0.35: bg = Image.blend(bg, Image.new('RGB', (W, H), WHITE), 0.55 * (1 - (t - KICK) / 0.35))
     else:
-        b = ease_out(clamp((t - T_END) / 0.35))
-        ttext(c, str(N), W / 2, 640, F_T, int(300 * pop(t, T_END, 0.2)), GOLD, b, stroke=4)
-        ttext(c, f'{1000 - N} TO GO', W / 2, 830, F_T, 140, WH, b, stroke=3)
-        x0, x1, y = 140, W - 140, 960; lay = Image.new('RGBA', c.size, (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
-        d.rounded_rectangle((x0, y, x1, y + 34), 17, fill=(255, 255, 255, int(60 * b)))
-        d.rounded_rectangle((x0, y, x0 + (x1 - x0) * N / 1000 * ease_out(clamp((t - T_END - 0.2) / 0.8)), y + 34), 17, fill=GOLD + (int(255 * b),)); c.alpha_composite(lay)
-        ttext(c, '0', x0, y + 70, F_MB, 28, DIM, b); ttext(c, '1000', x1, y + 70, F_MB, 28, DIM, b)
-        ttext(c, 'WHERE WILL NUMBER 1000 COME?', W / 2, 1160, F_MB, 36, WH, b)
-        lay = Image.new('RGBA', c.size, (0, 0, 0, 0)); ImageDraw.Draw(lay).rounded_rectangle((W / 2 - 220, 1300, W / 2 + 220, 1385), 42, fill=(214, 20, 20, int(255 * b))); c.alpha_composite(lay)
-        ttext(c, 'FOLLOW FOR MORE', W / 2, 1343, F_T, 50, WH, b)
-G.OVERLAYS[0] = overlays
+        lt = t - CLIP; bg.paste(Image.eval(src(CLIP - 0.05).filter(ImageFilter.GaussianBlur(18)), lambda v: int(v * 0.3)), (0, VY)); d = ImageDraw.Draw(bg)
+        n = 980 + min(7, int(lt / 1.3 * 7.999)); ctext(d, 240, 'CAREER GOALS', fB(100), WHITE)
+        f = fB(380); s = str(n); w = d.textlength(s, font=f); d.text(((W - w) / 2, 380), s, font=f, fill=YEL if n == 987 else WHITE, stroke_width=6, stroke_fill=INK)
+        if lt > 1.5:
+            a = ease((lt - 1.5) / 0.35)
+            d.rounded_rectangle([140, 900 + int((1 - a) * 40), W - 140, 1040 + int((1 - a) * 40)], 30, fill=RED)
+            ctext(d, 920 + int((1 - a) * 40), '13 MORE TO 1,000', fB(96), WHITE)
+        if lt > 2.4:
+            ctext(d, 1180, 'WHEN WILL HE', fB(84), WHITE); ctext(d, 1270, 'HIT 1,000?', fB(84), YEL)
+        if n == 987 and lt < 1.7 and int(lt * 10) % 2 == 0: pass
+    sub_pill(bg, t)
+    if t > TOTAL - 0.35: bg = Image.eval(bg, lambda x, q=(TOTAL - t) / 0.35: int(x * max(0, q)))
+    return bg
 if __name__ == '__main__':
-    if sys.argv[1] == 'probe':
-        ts = [float(v) for v in sys.argv[2].split(',')]; ims = [G.frame(tt).resize((270, 480)) for tt in ts]
-        sh = Image.new('RGB', (270 * len(ims), 480))
-        for k, im in enumerate(ims): sh.paste(im, (k * 270, 0))
-        sh.save(sys.argv[3])
-    elif sys.argv[1] == 'deliver': G.deliver(sys.argv[2], crf=17, maxrate='20M')
-    else: G.main(sys.argv)
+    import sys
+    if len(sys.argv) > 1:
+        ims = [frame(x).resize((360, 640)) for x in (0.6, 2.6, 4.5, 5.9, 6.5, CLIP + 0.8, CLIP + 2.0, TOTAL - 0.5)]
+        s = Image.new('RGB', (2880, 640)); [s.paste(im, (i * 360, 0)) for i, im in enumerate(ims)]; s.save('logs/stills.jpg'); print(TOTAL); sys.exit()
+    p = subprocess.Popen(['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
+                          '-c:v', 'libx264', '-preset', 'medium', '-crf', '16', '-pix_fmt', 'yuv420p', 'out/video.mp4'], stdin=subprocess.PIPE)
+    for i in range(int(TOTAL * FPS)): p.stdin.write(frame(i / FPS).tobytes())
+    p.stdin.close(); p.wait(); print('TOTAL', TOTAL)
