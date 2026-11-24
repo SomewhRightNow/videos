@@ -31,6 +31,8 @@ Tüm hesaplar tek hafızadan ilerler: kalıcı her bilgi SADECE bu klasöre yaz�
 - Müzik: sadece Content ID'ye kayıtlı olmayan parçalar (free-stock-music.com'da parça sayfasında 'not registered in YouTube Content ID' ibaresi olan HER sanatçı olur — 23.11 kullanıcı 'daha iyi, patlayan phonk' istedi: Alex-Productions 'Metaphonk' (150 BPM, drop 12.5 sn) ve 'Go Hard' (150 BPM, drop 12 sn) eklendi; Kevin MacLeod). Ticari/popüler phonk şarkılar YASAK (Content ID).
 - YENİ VİDEO FORMATI (kullanıcı 23.11): oyuncunun üstünde isim etiketi (gkg1/track.py forma rengi takibi + film.py name_tag), büyük #sıra, temiz alt bant, sabit abone butonu, sert phonk. FMA "CC BY" phonk'lar Content ID yedi -> kullanma. Sentez müzik yapma (kullanıcı beğenmiyor).
 
+- TOPLULUK KURALLARI (24.11): mci1 Celta kutlaması (oyuncu arkadaşının sırtına/arkasına binen, cinsel çağrışımlı poz + 'teamwork' esprisi) YouTube 'Çıplaklık ve cinsel içerik' UYARISI aldı (ilk ihlal, kaldırıldı, gelir yok). 90 gün içinde 2. ihlal = ihtar (strike). Cinsel çağrışımlı kutlama/hareket, imalı başlık/espri, açık giyim, kavga/şiddet ağırlıklı içerik KULLANMA. Teslimde telif riskinin yanında 'topluluk kuralı riski' de değerlendir.
+
 ## Yükleme akışı
 Video -> bu depoya tek-commit dal (`up-<isim>`), raw URL https://raw.githubusercontent.com/SomewhRightNow/videos/up-<isim>/<dosya>.mp4 -> Zapier YouTube `youtube_upload_video` (title, description, video=raw URL, tags, privacy_status public, category_id 17, made_for_kids false, default_language en, localizations tr). Zapier "throttled" derse kota dolu: kullanıcıya elle yüklemeyi öner. Zapier bağlantısı hesaba bağlıdır; yeni hesapta kullanıcı kendi Zapier+YouTube bağlantısını kurmalı.
 
