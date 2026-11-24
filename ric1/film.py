@@ -45,7 +45,7 @@ def frame(t):
     if t < CLIP:
         a, b, k, s0, lt1, lt2 = [p for p in PL if p[0] <= t][-1]; lt = t - a
         bg.paste(src(k, s0 + lt), (0, VY)); d = ImageDraw.Draw(bg)
-        f = fB(44); s = 'WORLD CUP 2022'; w = d.textlength(s, font=f); d.rectangle([(W - w) / 2 - 18, 120, (W + w) / 2 + 18, 178], fill=YEL); d.text(((W - w) / 2, 124), s, font=f, fill=INK)
+        f = fB(44); s = 'ON THIS DAY  ·  4 YEARS AGO'; w = d.textlength(s, font=f); d.rectangle([(W - w) / 2 - 18, 120, (W + w) / 2 + 18, 178], fill=YEL); d.text(((W - w) / 2, 124), s, font=f, fill=INK)
         hot = t >= KICK
         ctext(d, 210, 'RICHARLISON,' if not hot else 'RICHARLISON,', fB(130), WHITE)
         ctext(d, 345, 'WATCH THIS...' if not hot else 'WHAT WAS THAT?!', fB(130), YEL if hot else WHITE)
