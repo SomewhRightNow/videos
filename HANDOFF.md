@@ -59,3 +59,4 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 ## 25.11 sabah
 - tt5 "Keeper, HOW Did You Save That?!" (Impossible GK Saves) teslim edildi, yüklenmedi.
 - Haaland uzun belgesel (haaland/): 2K render bitti; EN + TR dublaj mp4 paketleniyor (out/), SRT en/tr, thumbnail, credits hazır.
+- 25.11 öğlen: Haaland v2 (PRESSWIND yapısı + Chatterbox ses) bitti: EN önizleme + TR dublaj .m4a + SRT teslim. Yükleme kopyası: haaland/out/'Haaland v2 EN 1440p (yukleme).mp4' (1440p crf16, ~1 GB -> yüklerken LFS/up-haaland dalı). Kullanıcı 'yükle' demedi.

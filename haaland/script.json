@@ -11,7 +11,7 @@
      "tr": "Pep Guardiola ona gol makinesi dedi.",
      "hero": "legend quote card",
      "typed": "",
-     "tr_spoken": "Guardiola: gol makinesi."
+     "tr_spoken": "Guardiola: makine."
     },
     {
      "id": 41,
@@ -20,7 +20,7 @@
      "tr": "Jürgen Klopp ona gerçek bir canavar dedi.",
      "hero": "legend quote card",
      "typed": "",
-     "tr_spoken": "Klopp: gerçek bir canavar."
+     "tr_spoken": "Klopp: canavar."
     },
     {
      "id": 42,
@@ -29,7 +29,7 @@
      "tr": "Roy Keane ise neredeyse dördüncü lig oyuncusu gibi göründüğünü söyledi.",
      "hero": "legend quote card",
      "typed": "",
-     "tr_spoken": "Roy Keane: neredeyse dördüncü lig oyuncusu."
+     "tr_spoken": "Keane: dördüncü lig oyuncusu."
     },
     {
      "id": 43,
@@ -38,7 +38,8 @@
      "tr": "Peki hangisi doğru? Bunu anlamak için temmuzdaki bir geceden başlamak gerek.",
      "hero": "legend quote card",
      "typed": "",
-     "gap_after": 0.6
+     "gap_after": 0.6,
+     "tr_spoken": "Hangisi doğru? Temmuzdaki bir geceden başlayalım."
     }
    ]
   },
@@ -304,7 +305,7 @@
      "tr": "Ama Norveç 1998'den beri Dünya Kupası'na gidemiyordu. Önce eleme vardı. Sekiz maçın hepsini kazandılar.",
      "hero": "qualifying ledger 8 wins",
      "typed": "8 GAMES · 8 WINS",
-     "tr_spoken": "Ama Norveç, bin dokuz yüz doksan sekizden beri Dünya Kupası'na gidemiyordu. Önce eleme vardı. Sekiz maçın sekizini de kazandılar."
+     "tr_spoken": "Ama Norveç, doksan sekizden beri Dünya Kupası'na gidemiyordu. Önce eleme vardı. Sekiz maçta, sekiz galibiyet."
     },
     {
      "id": 34,
