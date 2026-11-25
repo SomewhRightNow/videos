@@ -2,6 +2,44 @@
  "title": "Why Football Legends Still Can't Explain Haaland",
  "takes": [
   {
+   "take": "T00_tease",
+   "lines": [
+    {
+     "id": 40,
+     "text": "Pep Guardiola called him a scoring machine.",
+     "spoken": "Pep Guardiola called him a scoring machine.",
+     "tr": "Pep Guardiola ona gol makinesi dedi.",
+     "hero": "legend quote card",
+     "typed": ""
+    },
+    {
+     "id": 41,
+     "text": "Jürgen Klopp called him a real beast.",
+     "spoken": "Jürgen Klopp called him a real beast.",
+     "tr": "Jürgen Klopp ona gerçek bir canavar dedi.",
+     "hero": "legend quote card",
+     "typed": ""
+    },
+    {
+     "id": 42,
+     "text": "Roy Keane said he looked almost like a League Two player.",
+     "spoken": "Roy Keane said he looked almost like a League Two player.",
+     "tr": "Roy Keane ise neredeyse dördüncü lig oyuncusu gibi göründüğünü söyledi.",
+     "hero": "legend quote card",
+     "typed": ""
+    },
+    {
+     "id": 43,
+     "text": "So which one is it? To find out, start with one night in July.",
+     "spoken": "So which one is it? To find out, you have to start with one night in July.",
+     "tr": "Peki hangisi doğru? Bunu anlamak için temmuzdaki bir geceden başlamak gerek.",
+     "hero": "legend quote card",
+     "typed": "",
+     "gap_after": 0.6
+    }
+   ]
+  },
+  {
    "take": "T01_cold_open",
    "lines": [
     {
@@ -14,25 +52,25 @@
     },
     {
      "id": 2,
-     "text": "On 79 minutes, one man scores. Then, in the 90th minute, he scores again.",
-     "spoken": "On seventy-nine minutes, one man scores. Then, in the ninetieth minute, he scores again.",
-     "tr": "79. dakikada bir adam gol atıyor. Sonra 90. dakikada bir gol daha.",
+     "text": "79 minutes gone. He scores. 90 on the clock, and he scores again.",
+     "spoken": "Seventy-nine minutes gone. He scores. Ninety on the clock... and he scores again.",
+     "tr": "79. dakika. Golü atıyor. 90. dakika... ve bir gol daha.",
      "hero": "two goal stamps 79' and 90'",
      "typed": "79' · 90'"
     },
     {
      "id": 3,
      "text": "Brazil are out. Norway are in their first ever World Cup quarter-final.",
-     "spoken": "Brazil are out. Norway are in their first ever World Cup quarter-final.",
-     "tr": "Brezilya elendi. Norveç, tarihinde ilk kez Dünya Kupası'nda çeyrek finalde.",
+     "spoken": "Brazil are out. And Norway are in their first ever World Cup quarter-final.",
+     "tr": "Brezilya elendi. Norveç tarihinde ilk kez Dünya Kupası çeyrek finalinde.",
      "hero": "scoreline card BRA 1-2 NOR",
      "typed": "BRAZIL 1-2 NORWAY"
     },
     {
      "id": 4,
-     "text": "His name is Erling Haaland. And even football's legends struggle to explain him.",
-     "spoken": "His name is Erling Haaland. And even football's legends struggle to explain him.",
-     "tr": "Adı Erling Haaland. Ve futbolun efsaneleri bile onu açıklamakta zorlanıyor.",
+     "text": "His name is Erling Haaland. And even football's greatest legends still can't explain him.",
+     "spoken": "His name is Erling Haaland. And even football's greatest legends still can't explain him.",
+     "tr": "Adı Erling Haaland. Ve futbolun en büyük efsaneleri bile onu hâlâ açıklayamıyor.",
      "hero": "hero portrait + title",
      "typed": "WHY FOOTBALL LEGENDS STILL CAN'T EXPLAIN HAALAND",
      "gap_after": 2.6
@@ -44,25 +82,25 @@
    "lines": [
     {
      "id": 5,
-     "text": "It started in Leeds, England, on July 21st, 2000.",
-     "spoken": "It started in Leeds, England, on July the twenty-first, two thousand.",
-     "tr": "Her şey 21 Temmuz 2000'de, İngiltere'nin Leeds şehrinde başladı.",
+     "text": "But the story doesn't start in Norway. It starts in Leeds, England. July 21st, 2000.",
+     "spoken": "But the story doesn't start in Norway. It starts in Leeds, England. July the twenty-first, two thousand.",
+     "tr": "Ama hikâye Norveç'te başlamıyor. İngiltere'de, Leeds'te başlıyor. 21 Temmuz 2000.",
      "hero": "map pin Leeds",
      "typed": "LEEDS · 21 JULY 2000"
     },
     {
      "id": 6,
-     "text": "His father, Alf-Inge Haaland, was a Premier League player, for Leeds and for Manchester City.",
-     "spoken": "His father, Alf-Inge Haaland, was a Premier League player, for Leeds, and for Manchester City.",
-     "tr": "Babası Alf-Inge Haaland, Premier Lig'de Leeds ve Manchester City formaları giymiş bir futbolcuydu.",
+     "text": "His dad, Alf-Inge Haaland, played in the Premier League, for Leeds and for Manchester City. Remember that.",
+     "spoken": "His dad, Alf-Inge Haaland, played in the Premier League, for Leeds, and for Manchester City. Remember that.",
+     "tr": "Babası Alf-Inge Haaland Premier Lig'de oynadı: Leeds'te ve Manchester City'de. Bunu aklınızda tutun.",
      "hero": "father card",
      "typed": "ALF-INGE HAALAND · LEEDS · MAN CITY"
     },
     {
      "id": 7,
-     "text": "The family moved back to Bryne, a small town on Norway's west coast. That is where he learned the game.",
-     "spoken": "The family moved back to Bryne, a small town on Norway's west coast. That is where he learned the game.",
-     "tr": "Aile, Norveç'in batı kıyısındaki küçük Bryne kasabasına döndü. Futbolu orada öğrendi.",
+     "text": "Soon after, the family moved back to Bryne, a small town on Norway's west coast. That's where he learned the game.",
+     "spoken": "Soon after, the family moved back to Bryne, a small town on Norway's west coast. That's where he learned the game.",
+     "tr": "Kısa süre sonra aile Norveç'in batı kıyısındaki küçük Bryne kasabasına döndü. Futbolu orada öğrendi.",
      "hero": "map route Leeds to Bryne",
      "typed": "BRYNE · NORWAY",
      "gap_after": 1.0
@@ -74,57 +112,57 @@
    "lines": [
     {
      "id": 8,
-     "text": "May 2019. The Under-20 World Cup in Poland. Norway against Honduras.",
-     "spoken": "May, twenty nineteen. The Under-Twenty World Cup in Poland. Norway, against Honduras.",
-     "tr": "Mayıs 2019. Polonya'da 20 Yaş Altı Dünya Kupası. Norveç, Honduras'a karşı.",
+     "text": "Fast forward to May 2019. The Under-20 World Cup in Poland. Norway against Honduras.",
+     "spoken": "Fast forward to May, twenty nineteen. The Under-Twenty World Cup, in Poland. Norway, against Honduras.",
+     "tr": "Mayıs 2019'a gelelim. Polonya'da 20 Yaş Altı Dünya Kupası. Norveç, Honduras'a karşı.",
      "hero": "U20 card",
      "typed": "U-20 WORLD CUP · POLAND 2019"
     },
     {
      "id": 9,
-     "text": "He scores nine goals. In one game. No player had ever scored more than six in a match at the tournament.",
-     "spoken": "He scores nine goals. In one game. No player had ever scored more than six in a match at the tournament.",
-     "tr": "Tek maçta dokuz gol atıyor. O turnuvada daha önce kimse bir maçta altıdan fazla atamamıştı.",
+     "text": "He scores nine. In one game. Before that night, nobody at the tournament had scored more than six in a match.",
+     "spoken": "He scores nine. In one game. Before that night, nobody at the tournament had ever scored more than six in a match.",
+     "tr": "Dokuz gol atıyor. Tek maçta. O geceye kadar turnuvada kimse bir maçta altıdan fazla atamamıştı.",
      "hero": "big counter 0 to 9",
      "typed": "9 GOALS · NORWAY 12-0 HONDURAS"
     },
     {
      "id": 10,
-     "text": "Four months later, his first Champions League game, for Red Bull Salzburg. A hat-trick.",
-     "spoken": "Four months later, his first Champions League game, for Red Bull Salzburg. A hat-trick.",
+     "text": "Four months later: his first Champions League game, for Red Bull Salzburg. Hat-trick.",
+     "spoken": "Four months later, his first ever Champions League game, for Red Bull Salzburg. Hat-trick.",
      "tr": "Dört ay sonra Red Bull Salzburg formasıyla ilk Şampiyonlar Ligi maçı. Hat-trick.",
      "hero": "Salzburg card + hat-trick stamp",
      "typed": "UCL DEBUT · HAT-TRICK"
     },
     {
      "id": 29,
-     "text": "In January 2020 he joined Borussia Dortmund.",
-     "spoken": "In January twenty twenty, he joined Borussia Dortmund.",
-     "tr": "Ocak 2020'de Borussia Dortmund'a geçti.",
+     "text": "January 2020. Borussia Dortmund came calling.",
+     "spoken": "January, twenty twenty. Borussia Dortmund came calling.",
+     "tr": "Ocak 2020. Borussia Dortmund kapıyı çaldı.",
      "hero": "Dortmund card",
      "typed": "BORUSSIA DORTMUND · 2020"
     },
     {
      "id": 36,
-     "text": "On his debut, he came off the bench and scored a hat-trick in about twenty minutes.",
-     "spoken": "On his debut, he came off the bench, and scored a hat-trick in about twenty minutes.",
-     "tr": "İlk maçında yedek kulübesinden girdi ve yaklaşık yirmi dakikada hat-trick yaptı.",
+     "text": "His debut? He came off the bench and scored a hat-trick in about twenty minutes.",
+     "spoken": "His debut? He came off the bench, and scored a hat-trick in about twenty minutes.",
+     "tr": "İlk maçı mı? Yedek kulübesinden girdi ve yaklaşık yirmi dakikada hat-trick yaptı.",
      "hero": "bench clock + hat-trick stamp",
      "typed": "DEBUT · HAT-TRICK IN ~20 MIN"
     },
     {
      "id": 11,
-     "text": "In the end: eighty-six goals in eighty-nine games.",
-     "spoken": "In the end. Eighty-six goals, in eighty-nine games.",
-     "tr": "Toplamda: 89 maçta 86 gol.",
+     "text": "By the time he left: 86 goals in 89 games.",
+     "spoken": "By the time he left: eighty-six goals, in eighty-nine games.",
+     "tr": "Ayrıldığında: 89 maçta 86 gol.",
      "hero": "Dortmund card, counter 86",
      "typed": "DORTMUND · 86 GOALS · 89 GAMES"
     },
     {
      "id": 12,
      "text": "Every big club in Europe wanted him. In 2022, he chose his father's old club.",
-     "spoken": "Every big club in Europe wanted him. In twenty twenty-two, he chose his father's old club.",
-     "tr": "Avrupa'nın bütün büyük kulüpleri onu istiyordu. 2022'de babasının eski kulübünü seçti.",
+     "spoken": "Every big club in Europe wanted him. And in twenty twenty-two, he chose his father's old club.",
+     "tr": "Avrupa'nın bütün büyükleri onu istiyordu. 2022'de babasının eski kulübünü seçti.",
      "hero": "string from father card to City card",
      "typed": "MANCHESTER CITY · 2022",
      "gap_after": 1.0
@@ -136,49 +174,49 @@
    "lines": [
     {
      "id": 13,
-     "text": "Liverpool's Jürgen Klopp called him a real beast. And, unfortunately for Liverpool, a really good signing.",
-     "spoken": "Liverpool's Jurgen Klopp called him a real beast. And, unfortunately for Liverpool, a really good signing.",
-     "tr": "Liverpool'un hocası Jürgen Klopp ona gerçek bir canavar dedi. Ve ne yazık ki, Liverpool için, çok iyi bir transfer.",
+     "text": "Even rivals were worried. Jürgen Klopp called him a real beast. And, unfortunately for Liverpool, a really good signing.",
+     "spoken": "Even rivals were worried. Jürgen Klopp called him a real beast. And, unfortunately for Liverpool, a really good signing.",
+     "tr": "Rakipler bile endişeliydi. Klopp ona gerçek bir canavar dedi. Liverpool için ne yazık ki çok iyi bir transfer.",
      "hero": "quote card Klopp",
      "typed": "\"A REAL BEAST\" · JÜRGEN KLOPP"
     },
     {
      "id": 14,
-     "text": "In his first season, he scored thirty-six Premier League goals. A new record.",
-     "spoken": "In his first season, he scored thirty-six Premier League goals. A new record.",
-     "tr": "İlk sezonunda Premier Lig'de 36 gol attı. Yeni bir rekor.",
+     "text": "He was right. In his first season, Haaland scored 36 Premier League goals. A new record.",
+     "spoken": "He was right. In his first season, Haaland scored thirty-six Premier League goals. A new record.",
+     "tr": "Haklıydı. Haaland ilk sezonunda Premier Lig'de 36 gol attı. Yeni rekor.",
      "hero": "counter 36",
      "typed": "36 GOALS · NEW RECORD"
     },
     {
      "id": 15,
-     "text": "Alan Shearer and Andy Cole had held it at thirty-four. In seasons with forty-two games.",
-     "spoken": "Alan Shearer and Andy Cole had held it at thirty-four. In seasons with forty-two games.",
-     "tr": "Rekor, 34 golle Alan Shearer ve Andy Cole'daydı. Hem de 42 maçlık sezonlarda.",
+     "text": "The old record? 34, held by Alan Shearer and Andy Cole. In seasons with 42 games.",
+     "spoken": "The old record? Thirty-four, held by Alan Shearer and Andy Cole. In seasons with forty-two games.",
+     "tr": "Eski rekor mu? 34. Alan Shearer ve Andy Cole'a aitti. Hem de 42 maçlık sezonlarda.",
      "hero": "comparison bars 36 vs 34",
      "typed": "SHEARER 34 · COLE 34"
     },
     {
      "id": 16,
-     "text": "Pep Guardiola had a name for him: the scoring machine.",
-     "spoken": "Pep Guardiola had a name for him. The scoring machine.",
-     "tr": "Pep Guardiola onun için bir isim bulmuştu: gol makinesi.",
+     "text": "Pep Guardiola gave him a nickname: the scoring machine.",
+     "spoken": "Pep Guardiola gave him a nickname: the scoring machine.",
+     "tr": "Guardiola ona bir lakap taktı: gol makinesi.",
      "hero": "quote card Guardiola",
      "typed": "\"THE SCORING MACHINE\" · PEP GUARDIOLA"
     },
     {
      "id": 17,
-     "text": "That season, Manchester City won the Treble.",
-     "spoken": "That season, Manchester City won the Treble.",
-     "tr": "O sezon Manchester City üçlü kupayı kazandı.",
+     "text": "And that same season, Manchester City won the Treble.",
+     "spoken": "And that same season, Manchester City won the Treble.",
+     "tr": "Ve aynı sezon Manchester City üçlemeyi kazandı.",
      "hero": "three trophy chips",
      "typed": "PREMIER LEAGUE · FA CUP · CHAMPIONS LEAGUE"
     },
     {
      "id": 30,
-     "text": "But not everyone was convinced.",
-     "spoken": "But not everyone was convinced.",
-     "tr": "Ama herkes ikna olmamıştı.",
+     "text": "But here's the thing. Not everyone was convinced.",
+     "spoken": "But here's the thing. Not everyone was convinced.",
+     "tr": "Ama işin bir de öbür yüzü var. Herkes ikna olmamıştı.",
      "hero": "shadow card ?",
      "typed": "DOUBTERS"
     },
@@ -192,9 +230,9 @@
     },
     {
      "id": 32,
-     "text": "Haaland's reply was short: I really don't care about that man.",
+     "text": "Haaland's reply was short: \"I really don't care about that man.\"",
      "spoken": "Haaland's reply was short. I really don't care about that man.",
-     "tr": "Haaland'ın cevabı kısaydı: O adam gerçekten umurumda değil.",
+     "tr": "Haaland'ın cevabı kısaydı: O adam umurumda değil.",
      "hero": "reply card Haaland",
      "typed": "\"I REALLY DON'T CARE\" · HAALAND",
      "gap_after": 1.0
@@ -206,16 +244,16 @@
    "lines": [
     {
      "id": 18,
-     "text": "Then came Premier League goal number one hundred. In only one hundred and eleven games.",
-     "spoken": "Then came Premier League goal number one hundred. In only one hundred and eleven games.",
-     "tr": "Sonra Premier Lig'deki 100. golü geldi. Sadece 111 maçta.",
+     "text": "Then he answered on the pitch. Premier League goal number 100. In just 111 games.",
+     "spoken": "Then he answered on the pitch. Premier League goal number one hundred. In just one hundred and eleven games.",
+     "tr": "Sonra cevabı sahada verdi. Premier Lig'de 100. gol. Sadece 111 maçta.",
      "hero": "counter 100 / 111 games",
      "typed": "100 GOALS · 111 GAMES"
     },
     {
      "id": 19,
-     "text": "Alan Shearer, the league's all-time top scorer, had needed one hundred and twenty-four.",
-     "spoken": "Alan Shearer, the league's all-time top scorer, had needed one hundred and twenty-four.",
+     "text": "Alan Shearer, the league's all-time top scorer, needed 124.",
+     "spoken": "Alan Shearer, the league's all-time top scorer, needed one hundred and twenty-four.",
      "tr": "Ligin tüm zamanların golcüsü Alan Shearer'ın buna 124 maçı gerekmişti.",
      "hero": "race bars 111 vs 124",
      "typed": "SHEARER · 124 GAMES"
@@ -224,15 +262,15 @@
      "id": 20,
      "text": "Shearer said it himself: if Haaland stays long enough, there's no doubt he will break that record too.",
      "spoken": "Shearer said it himself. If Haaland stays long enough, there's no doubt he will break that record too.",
-     "tr": "Shearer bunu kendisi söyledi: Haaland yeterince uzun kalırsa, o rekoru da kıracağına şüphe yok.",
+     "tr": "Shearer bunu kendisi söyledi: Haaland yeterince kalırsa o rekoru da kıracağına şüphe yok.",
      "hero": "quote card Shearer",
      "typed": "\"NO DOUBT HE WILL BREAK THAT RECORD\" · ALAN SHEARER"
     },
     {
      "id": 21,
-     "text": "For Norway, he became the country's all-time top scorer.",
-     "spoken": "For Norway, he became the country's all-time top scorer.",
-     "tr": "Norveç'te ise ülkesinin tüm zamanların en golcü oyuncusu oldu.",
+     "text": "And for Norway, he became the country's all-time top scorer.",
+     "spoken": "And for Norway, he became the country's all-time top scorer.",
+     "tr": "Norveç'te ise ülkenin tüm zamanların en golcüsü oldu.",
      "hero": "Norway flag card",
      "typed": "NORWAY'S ALL-TIME TOP SCORER",
      "gap_after": 1.0
@@ -244,49 +282,49 @@
    "lines": [
     {
      "id": 33,
-     "text": "First, Norway had to qualify for the World Cup. They won all eight games.",
-     "spoken": "First, Norway had to qualify for the World Cup. They won all eight games.",
-     "tr": "Önce Norveç'in Dünya Kupası'na katılması gerekiyordu. Sekiz maçın sekizini de kazandılar.",
+     "text": "But Norway hadn't played at a World Cup since 1998. First, they had to qualify. They won all eight games.",
+     "spoken": "But Norway hadn't played at a World Cup since nineteen ninety-eight. So first, they had to qualify. They won all eight games.",
+     "tr": "Ama Norveç 1998'den beri Dünya Kupası'na gidemiyordu. Önce eleme vardı. Sekiz maçın hepsini kazandılar.",
      "hero": "qualifying ledger 8 wins",
      "typed": "8 GAMES · 8 WINS"
     },
     {
      "id": 34,
-     "text": "Haaland scored in every one of them. Sixteen goals.",
-     "spoken": "Haaland scored in every one of them. Sixteen goals.",
-     "tr": "Haaland hepsinde gol attı. Toplam 16 gol.",
+     "text": "Haaland scored in every single one. 16 goals.",
+     "spoken": "Haaland scored in every single one. Sixteen goals.",
+     "tr": "Haaland hepsinde gol attı. 16 gol.",
      "hero": "counter 16",
      "typed": "16 GOALS"
     },
     {
      "id": 35,
-     "text": "The last one was a 4-1 win over Italy in Milan. Norway's first World Cup in twenty-eight years.",
-     "spoken": "The last one was a four-one win over Italy, in Milan. Norway's first World Cup in twenty-eight years.",
-     "tr": "Sonuncusu Milano'da İtalya'ya karşı 4-1'lik galibiyetti. Norveç 28 yıl sonra ilk kez Dünya Kupası'nda.",
+     "text": "The last one: a 4-1 win over Italy, in Milan. Norway's first World Cup in 28 years.",
+     "spoken": "The last one, a four-one win over Italy, in Milan. Norway's first World Cup in twenty-eight years.",
+     "tr": "Sonuncusu Milano'da İtalya'ya karşı 4-1. Norveç 28 yıl sonra Dünya Kupası'nda.",
      "hero": "scoreline ITA 1-4 NOR",
      "typed": "ITALY 1-4 NORWAY · MILAN"
     },
     {
      "id": 22,
-     "text": "And at the World Cup itself, he did what he always does.",
-     "spoken": "And at the World Cup itself, he did what he always does.",
-     "tr": "Ve Dünya Kupası'nda, hep yaptığını yaptı.",
+     "text": "And at the World Cup itself? He did what he always does.",
+     "spoken": "And at the World Cup itself? He did what he always does.",
+     "tr": "Peki Dünya Kupası'nda? Her zaman yaptığını yaptı.",
      "hero": "World Cup 2026 card",
      "typed": "WORLD CUP 2026"
     },
     {
      "id": 23,
      "text": "Two against Iraq. Two against Senegal. The winner against Ivory Coast. Two to knock out Brazil.",
-     "spoken": "Two against Iraq. Two against Senegal. The winner against Ivory Coast. Two to knock out Brazil.",
-     "tr": "Irak'a iki gol. Senegal'e iki gol. Fildişi Sahili'ne galibiyet golü. Brezilya'yı eleyen iki gol.",
+     "spoken": "Two against Iraq. Two against Senegal. The winner against Ivory Coast. Two, to knock out Brazil.",
+     "tr": "Irak'a iki. Senegal'e iki. Fildişi Sahili'ne galibiyet golü. Brezilya'yı eleyen iki gol.",
      "hero": "goal ledger ticking 2,2,1,2",
      "typed": "IRAQ 2 · SENEGAL 2 · IVORY COAST 1 · BRAZIL 2"
     },
     {
      "id": 24,
-     "text": "England ended the run in the quarter-final. But he left with seven goals.",
-     "spoken": "England ended the run in the quarter-final. But he left with seven goals.",
-     "tr": "Çeyrek finalde İngiltere yolculuğu bitirdi. Ama o turnuvadan yedi golle ayrıldı.",
+     "text": "England ended the run in the quarter-final. But he went home with seven goals.",
+     "spoken": "England ended the run in the quarter-final. But he went home with seven goals.",
+     "tr": "Yolculuğu çeyrek finalde İngiltere bitirdi. Ama yedi golle döndü.",
      "hero": "counter 7",
      "typed": "7 GOALS",
      "gap_after": 1.0
@@ -298,34 +336,34 @@
    "lines": [
     {
      "id": 25,
-     "text": "This season, he is the Premier League's top scorer again. Nine goals in eleven games.",
-     "spoken": "This season, he is the Premier League's top scorer again. Nine goals in eleven games.",
-     "tr": "Bu sezon yine Premier Lig'in gol kralı. 11 maçta 9 gol.",
+     "text": "And this season? Top of the Premier League scoring charts again. 9 goals in 11 games.",
+     "spoken": "And this season? Top of the Premier League scoring charts again. Nine goals in eleven games.",
+     "tr": "Ya bu sezon? Yine Premier Lig'in gol kralı: 11 maçta 9 gol.",
      "hero": "table card",
      "typed": "2026/27 · 9 GOALS · 11 GAMES"
     },
     {
      "id": 26,
-     "text": "Nine goals in one game at eighteen. A World Cup quarter-final at twenty-five. And he is only twenty-six.",
-     "spoken": "Nine goals in one game, at eighteen. A World Cup quarter-final, at twenty-five. And he is only twenty-six.",
-     "tr": "18 yaşında bir maçta dokuz gol. 25 yaşında Dünya Kupası çeyrek finali. Ve henüz 26 yaşında.",
+     "text": "Nine goals in one game at eighteen. A World Cup quarter-final at twenty-five. And he's still only twenty-six.",
+     "spoken": "Nine goals in one game at eighteen. A World Cup quarter-final at twenty-five. And he's still only twenty-six.",
+     "tr": "On sekizinde tek maçta dokuz gol. Yirmi beşinde Dünya Kupası çeyrek finali. Ve daha yirmi altı yaşında.",
      "hero": "pull back over the whole board",
      "typed": "AGE 26"
     },
     {
      "id": 27,
-     "text": "Maybe that is why the legends can't explain him. He isn't finished yet.",
-     "spoken": "Maybe that is why the legends can't explain him. He isn't finished yet.",
-     "tr": "Belki de efsanelerin onu açıklayamamasının sebebi bu. Daha bitirmedi.",
+     "text": "Machine, beast, or League Two player? Maybe that's why the legends can't explain him. He isn't finished yet.",
+     "spoken": "So. Machine, beast, or League Two player? Maybe that's why the legends can't explain him. He isn't finished yet.",
+     "tr": "Makine mi, canavar mı, dördüncü lig oyuncusu mu? Belki de efsanelerin onu açıklayamamasının sebebi bu. Daha bitmedi.",
      "hero": "hero portrait, final",
      "typed": "",
      "gap_after": 0.8
     },
     {
      "id": 28,
-     "text": "Who will he become? Tell us in the comments, and subscribe for the next one: Mbappé.",
-     "spoken": "Who will he become? Tell us in the comments, and subscribe, for the next one. Mbappé.",
-     "tr": "Sence nasıl bir efsane olacak? Yorumlarda yaz, sıradaki video için abone ol: Mbappé.",
+     "text": "Who will he become? Tell us in the comments, and subscribe, because next, it's Mbappé.",
+     "spoken": "Who will he become? Tell us in the comments. And subscribe, because next, it's Mbappé.",
+     "tr": "Sence nasıl bir oyuncuya dönüşecek? Yorumlara yaz ve abone ol, sırada Mbappé var.",
      "hero": "subscribe card + next: MBAPPE",
      "typed": "NEXT: MBAPPÉ"
     }
@@ -347,6 +385,7 @@
   "2026/27 PL: 9 goals in 11, top scorer (ESPN 25.11.2026).",
   "Dortmund debut Jan 2020 vs Augsburg: off the bench, hat-trick in ~20 min (widely reported).",
   "Keane 'almost like a League Two player' in general play — Sky Sports, after City 0-0 Arsenal, end of March 2024 (Sportbible, Yahoo/Goal); Haaland: 'I really don't care about that man' (Yahoo, Sportbible).",
-  "WC qualifying 2025: 8 wins from 8, Haaland scored in all 8, 16 goals; 4-1 at Italy in Milan 16.11.2025; first WC since 1998 (ESPN, TSN, The Star, Arab News)."
+  "WC qualifying 2025: 8 wins from 8, Haaland scored in all 8, 16 goals; 4-1 at Italy in Milan 16.11.2025; first WC since 1998 (ESPN, TSN, The Star, Arab News).",
+  "Norway previous WC 1998 (ESPN/TSN). Haaland age 18 at U20 WC May 2019, 25 at WC QF July 2026 (born 21.07.2000)."
  ]
 }

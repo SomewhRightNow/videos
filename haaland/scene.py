@@ -62,6 +62,12 @@ def build_film(doc):
     eu = film.add(GeoMap(doc.map("europe"), K, look="explainer"))
     P = {n: eu.place(n) for n in ("Leeds", "Bryne", "Lublin", "Salzburg", "Dortmund", "Manchester")}
 
+    # ===================================================== TEASE (40-43): the three verdicts, then the question
+    TX = 32500
+    quote(film, TX, 700, 5400, 1500, L(40) + 0.1, "\"A SCORING MACHINE\"", None, "PEP GUARDIOLA", accent=SKY, rot=-1.0)
+    quote(film, TX + 300, 2600, 5400, 1500, L(41) + 0.1, "\"A REAL BEAST\"", None, "JÜRGEN KLOPP", rot=1.0)
+    quote(film, TX - 200, 4600, 5600, 1700, L(42) + 0.1, "\"ALMOST LIKE A", "LEAGUE TWO PLAYER\"", "ROY KEANE", accent=GREY, rot=-0.8)
+    film.add(BigText("WHICH ONE IS IT?", TX - 2700, 6900, 480, W(43, "which") - 0.1, bar=HILITE, bar_h=0.92, rgb=INKD, shadow=False, hit=0.6))
     # ===================================================== COLD OPEN (1-4)
     film.add(BigText("JULY 5, 2026", CX - 800, CY - 2600, 560, L(1) - 0.1, type_on=0.5, bar=HILITE, bar_h=0.92, rgb=INKD, shadow=False))
     film.add(BigText("WORLD CUP · NORWAY vs BRAZIL", CX - 800, CY - 1850, 300, W(1, "Norway") - 0.2))
@@ -169,7 +175,8 @@ def build_film(doc):
 
 
 
-    HERO = {1: (CX + 900, CY - 1700, 0.55), 2: (CX + 900, CY - 600, 0.55), 3: (CX + 900, CY + 700, 0.55), 4: (CX + 3400, CY + 400, 0.75),
+    HERO = {40: (32500, 700, 0.62), 41: (32800, 2600, 0.62), 42: (32300, 4600, 0.6), 43: (31500, 4200, 0.32),
+            1: (CX + 900, CY - 1700, 0.55), 2: (CX + 900, CY - 600, 0.55), 3: (CX + 900, CY + 700, 0.55), 4: (CX + 3400, CY + 400, 0.75),
             5: (-9000, -900, 0.36), 6: (-14200, 1000, 0.65), 7: (-2500, -1800, 0.42), 8: (10200, 1900, 0.38), 9: (12800, 4300, 0.6),
             10: (4200, 10100, 0.6), 29: (-2400, 9900, 0.62), 36: (-600, 11500, 0.5), 11: (-2400, 12700, 0.6), 12: (-6000, 2500, 0.3),
             13: (-14000, 8700, 0.4), 14: (-13200, 11700, 0.62), 15: (-12000, 13800, 0.5), 16: (-21500, 13500, 0.5), 17: (-11500, 16200, 0.4),
