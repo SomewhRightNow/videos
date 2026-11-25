@@ -34,3 +34,10 @@ Codex CLI tabanlı masaüstü/web uygulaması: video çevirisi (Whisper + LLM, i
 Yol: _refs/opencreator. Ajan becerileri: skills/krillinai-{cli,subtitle,tts,render-vertical,render-horizontal,cover,pipeline}/SKILL.md.
 SINIRLAR: çeviri/görsel/video üretimi/bulut TTS ÜCRETLİ anahtar ister (OpenAI, Aliyun, MiniMax, Kling, Veo...) -> KULLANMA. Ücretsiz kısımlar bizde zaten var (yt-dlp, Whisper/ffmpeg-skill, Kokoro/Supertonic, kendi motorumuz). Cookie gerektiren indirmeler YOK.
 İşe yarayan fikirler: dikey videoda İKİ DİLLİ altyazı düzeni (render-vertical: üstte EN, altta TR), altyazı zamanlama/bölme mantığı (references/), stickman-remotion formatı (anlatımlı çizgi animasyon) fikir olarak.
+
+## Editroom (github.com/robbietilton/Editroom, MIT) — 25.11 incelendi
+macOS/Swift masaüstü editörü (Apple silicon, Xcode); bulutta ÇALIŞMAZ. İşe yarayan algoritmalar Python'a taşındı:
+- `_engine/tools/beats.py şarkı.mp3 [out.json]` -> bpm, beat'ler, bar başları, beat enerjisi, DROP zamanı. HYPE EDIT kesmelerini beat/bar'a oturtmak için (Volatile Reaction testi: 155 BPM, drop ~30.4 sn).
+- `_engine/tools/moments.py klip.mp4 [uzunluk=1.0] [adet=8]` -> netlik/pozlama/renk/sarsıntı skoruyla en iyi, çakışmayan anlar. Uzun kaynaktan en güçlü 0.3–1.3 sn kesmeleri seçmek için.
+- Fikir olarak alınacaklar: shot uzunluğu = tam sayı beat, kapanış bar sonunda, şarkı bar başında girer; speed ramp (log-hız yumuşatma) — ama gol edit'inde slow-mo kuralı geçerli.
+- Diğerleri (Claude MCP ile timeline düzenleme, LUT, loudness) bizde zaten var (ffmpeg loudnorm -14 LUFS, engine.py) veya Mac gerektiriyor.
