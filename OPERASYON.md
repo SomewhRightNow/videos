@@ -384,3 +384,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 ## 25.11 vz1 'Referee, Are You OK?!' (X @VaziyetSpor 2125694904428793907, AFC yayını Varzesh3 üzerinden, 852x480 DÜŞÜK ÇÖZ.) — KULLANILDI (8-17, 40-50, 53-60, 61-67.4)
 - Hızlı BREAKING, VO yok (vz1/film.py, ffmpeg overlay): plaka 'REFEREE, ARE YOU OK?!', alt bant Varzesh3 şeridini örter 'REFEREE HANNA HATTAB · ACCUSED ... NOT CONFIRMED', adım yazıları. -14.4 LUFS. Telif ORTA (AFC yayını). İddia doğrulanmadı -> hep 'accused/claim not confirmed'.
 - Kaynaklar: Goal (EN/TR/ES), Footmercato, Haber7, El Imparcial: Ersin Destanoğlu'na ~32' sarı, ~4 dk sonra iptal, Gol Gohar hocası Rahmati 'He's drunk!', hakem devrede değişti. Hazır, yüklenmedi.
+
+## 25.11 pm1 Bruno Fernandes 50' (X @PolymarketSport 2125699630021406766, yayın tekrarı 1080x598, 6.8 s) — KULLANILDI (TAMAMI)
+- DÜZ KLİP (pm1/plain.py): 'LAST NIGHT' + 'BRUNO FERNANDES 50'' + 'SPORTING 1-2 MAN UNITED', abone, imza. ESPN 401915373 50' Bruno sol ayak ceza sahası dışı (Amad asist). Telif 🔴 (UCL aynı gün yayın). Hazır, yüklenmedi.
