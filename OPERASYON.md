@@ -355,3 +355,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 25.11 tt6 Iconic Panenka Penalties (TikTok @magicaleight_8 ZSs6JL7jS, 48.2 s) — KULLANILDI (tüm klip)
 - RANK LADDER (tt6/film.py), #7→#1: Alexis, Ramos, Benzema, Abreu, Pirlo, Zidane, Panenka. Orijinal ses. 🔴 yayın görüntüsü. Teslim edildi, yüklenmedi.
+
+## 25.11 tt7 Most Insane Penalty Saves (TikTok @magicaleight_8 ZSs6AGymW, 53.2 s) — KULLANILDI (tüm klip)
+- RANK LADDER (tt7/film.py), #7→#1: Unai Simón, Bounou, Kepa, Ricardo (no gloves, Euro 2004), Bedenik, Joel Mall, Joe Hart (vs Brazil 2013). Orijinal ses. 🔴 yayın. Teslim edildi, yüklenmedi.
