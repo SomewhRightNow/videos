@@ -5,7 +5,7 @@ Kaynak: kanalın herkese açık listesi (yt-dlp --flat-playlist, _research/chann
 
 ## FORMAT LİSTELERİ
 ### 1. BREAKING — Football News (haber: sakatlık, sözleşme, rekor, emeklilik, teknik direktör)
-OFxxUHG0TMY Kane Out For Months | AcpeCDHJ4sg Güler & Tchouaméni 2032 | j8bnw6yFTJ4 Man United Fired Their Manager | ocki2AsFyis Lukaku Retired | jZubQRXqFeM Ronaldinho Coming Back | 1aF_CZVUhko Portugal Changed the No.7 | 1MQzZUjK_RY Ronaldo to Turkey? | FN0n-BlZtDo Salah 70 Goals | XRqjh-0ObU0 Haaland 66 in 60 | 1aL_Uh1ynto Russia Keeper as Yashin | DIsIjpABn1U Every Portugal Player Wore No.7
+OFxxUHG0TMY Kane Out For Months | AcpeCDHJ4sg Güler & Tchouaméni 2032 | j8bnw6yFTJ4 Man United Fired Their Manager | ocki2AsFyis Lukaku Retired | jZubQRXqFeM Ronaldinho Coming Back | 1aF_CZVUhko Portugal Changed the No.7 | 1MQzZUjK_RY Ronaldo to Turkey? | FN0n-BlZtDo Salah 70 Goals | XRqjh-0ObU0 Haaland 66 in 60 | 1aL_Uh1ynto Russia Keeper as Yashin | DIsIjpABn1U Every Portugal Player Wore No.7 | TZjGSyIE_Io Ronaldo Mocks the Linesman (25.11; YouTube'da BREAKING listesi yok)
 
 ### 2. LAST NIGHT — Results & Reactions (maç sonucu / "ne oldu")
 gmU7ZKbmXyI Argentina First Game Without Messi | K2ihxNkZtns Messi & Ronaldo Retired, Both Lost (uzun) | XaLDi4rwuZw Portugal Worst Night | geccguOvDrA Spain Unbeaten Run Over | LsJNGLJGvoc Vinicius Twice, Brazil Lost | nEl6I2DtL3A Turkey Lost 6 | LWu9vBo-WKs Germany 5-0 Netherlands | Qi4yqVXFZF4 Vini Hat-Trick Brazil 7-0 | rI8N8RDnQBA Netherlands 7-0 Greece | ewROJ8P0vE0 0-2 Down Then Norway | 02NSGITSt78 Norway Knocked Out Brazil | ALduQsCz59c Last Night in 20 Seconds | 2TjGhfnv9ec Neymar Is Back, Santos | ySu-l-BgmOQ Pulisic Last Game as USA Coach | pIOIYBVGPUs Klopp's Germany 1 in 4 | eLvnp-qvPk8 Man United Relegation Zone

@@ -369,4 +369,4 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 25.11 fa1 Ronaldo mocks the linesman (X @futbolarena 2125638549806461418, tribün çekimi @football_li5, 8.15 s) — KULLANILDI (tüm klip + 0.4-3.9 sn tekrar)
 - BREAKING (fa1/film.py): başlık plakası 'RONALDO, WHAT WAS THAT?!', lower third X filigranını örter, 'FAN VIDEO · FROM THE STANDS' çipi InShot'ı örter, abone 'NEVER MISS A MOMENT', imza. Chatterbox VO (whisper-base.en ile satır kontrolü) + altyazı, orijinal tribün sesi ducked, -14.6 LUFS.
-- Olay (2+ kaynak: LiveScore/Goal, Yardbarker, Wisevoter): Al-Nassr 2-1 Al-Sadd, AFC CL Elite; penaltı itirazı ofsayt, gözlerini kapatıp ofsayt işareti; tekrarlar bayrak doğru; AFC ceza değerlendiriyor. Teslim edildi, yüklenmedi.
+- Olay (2+ kaynak: LiveScore/Goal, Yardbarker, Wisevoter): Al-Nassr 2-1 Al-Sadd, AFC CL Elite; penaltı itirazı ofsayt, gözlerini kapatıp ofsayt işareti; tekrarlar bayrak doğru; AFC ceza değerlendiriyor. YÜKLENDİ 25.11 18:30 UTC -> TZjGSyIE_Io (up-ronaldo-linesman).
