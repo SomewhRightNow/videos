@@ -380,3 +380,7 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - DÜZ KLİP (tk1/plain.py, kullanıcı kuralı 'canlı gol = isim yazıp geç'): plaka 'FROM THE STANDS' + 'LUIS SUÁREZ 80'' + 'SPORTING 2-2 MAN UNITED' (kaynağın Portekizce sarı yazısını örter), imza, abone 'NEVER MISS A GOAL', orijinal ses -14.5 LUFS, 60fps. check PASS. Telif DÜŞÜK.
 - Olay: ESPN 401915373 (80' Suárez, VAR onayı; 30' Lammens penaltı kurtardı, 31' Lammens penaltı yaptırdı, 33' Suárez gol) + 101greatgoals/VAVEL (Lammens ortayı düşürdü). VO'lu 'LAMMENS, NOT AGAIN?!' sürümü de var (tk1/out/Lammens Not Again.mp4), kullanıcı düz klip istedi.
 - vf1 (Lille 2-1 Bayern, Pavlović kendi kalesine, Canal+ yayını 🔴) kullanıcı 'boşver' dedi, yarıda bırakıldı; klip KULLANILMADI.
+
+## 25.11 vz1 'Referee, Are You OK?!' (X @VaziyetSpor 2125694904428793907, AFC yayını Varzesh3 üzerinden, 852x480 DÜŞÜK ÇÖZ.) — KULLANILDI (8-17, 40-50, 53-60, 61-67.4)
+- Hızlı BREAKING, VO yok (vz1/film.py, ffmpeg overlay): plaka 'REFEREE, ARE YOU OK?!', alt bant Varzesh3 şeridini örter 'REFEREE HANNA HATTAB · ACCUSED ... NOT CONFIRMED', adım yazıları. -14.4 LUFS. Telif ORTA (AFC yayını). İddia doğrulanmadı -> hep 'accused/claim not confirmed'.
+- Kaynaklar: Goal (EN/TR/ES), Footmercato, Haber7, El Imparcial: Ersin Destanoğlu'na ~32' sarı, ~4 dk sonra iptal, Gol Gohar hocası Rahmati 'He's drunk!', hakem devrede değişti. Hazır, yüklenmedi.
