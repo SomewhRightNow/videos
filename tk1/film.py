@@ -69,7 +69,7 @@ def plate(d):
     fc = fO(34); cw = d.textlength('BREAKING', font=fc) + 44
     d.rounded_rectangle([px0 + 40, py0 + 30, px0 + 40 + cw, py0 + 84], 12, fill=RED + (255,)); d.text((px0 + 62, py0 + 36), 'BREAKING', font=fc, fill=WHITE)
     d.text((px0 + 60 + cw, py0 + 38), 'CHAMPIONS LEAGUE  ·  LISBON', font=fO(32), fill=GREY)
-    f = fB(196); d.text((px0 + 40, py0 + 86), 'LAMMENS,', font=f, fill=WHITE); d.text((px0 + 40, py0 + 262), 'NOT AGAIN?!', font=f, fill=YEL)
+    f = fB(180); d.text((px0 + 40, py0 + 250), 'LAMMENS,', font=f, fill=WHITE, anchor='ls'); d.text((px0 + 40, py0 + 422), 'NOT AGAIN?!', font=f, fill=YEL, anchor='ls')
     sg = '@somewhrightnow'; fs = fO(26); sw = d.textlength(sg, font=fs); tx1 = px1 - 40; tx0 = tx1 - sw - 70; ty0 = py1 - 4
     d.rounded_rectangle([tx0, ty0 - 20, tx1, ty0 + 46], 20, fill=PLATE + (255,)); d.rectangle([tx0, ty0 - 6, tx1, ty0], fill=YEL + (255,))
     d.rounded_rectangle([tx0 + 16, ty0 + 10, tx0 + 46, ty0 + 32], 7, fill=RED + (255,)); d.polygon([(tx0 + 27, ty0 + 15), (tx0 + 27, ty0 + 27), (tx0 + 37, ty0 + 21)], fill=WHITE)
