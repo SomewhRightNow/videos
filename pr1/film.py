@@ -15,7 +15,7 @@ LINES = ["Anthony Gordon. In Baku. Again.",
          "In February, he scored four in Baku for Newcastle. All in the first half.",
          "Tonight, for Barcelona, he was first to the rebound.",
          "What's his best goal ever? Tell us below."]
-CAP = ["ANTHONY GORDON. | IN BAKU. | AGAIN.", None, None, None]
+CAP = ["ANTHONY GORDON. | IN BAKU. | AGAIN.", None, None, ""]  # "" = no caption (end card shows the question)
 DUR = [sf.info(f'audio/s{i}.wav').duration for i in range(4)]
 # timeline
 RP = (0.3, 2.9)
@@ -31,6 +31,7 @@ TAG = [(1.5, 321, 456), (1.7, 332, 445), (1.9, 340, 447), (2.05, 350, 437), (2.2
 def chunks():
     out = []
     for (ts, i) in VO:
+        if CAP[i] == '': continue
         if CAP[i]: cs = CAP[i].split(' | ')
         else:
             words = LINES[i].split(); cs, cur = [], []
