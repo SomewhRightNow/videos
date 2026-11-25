@@ -3,7 +3,7 @@ import json, subprocess, numpy as np, os, sys, soundfile as sf, torch
 from chatterbox.mtl_tts import ChatterboxMultilingualTTS
 torch.set_num_threads(4)
 P = '/home/user/Filmler/haaland'; os.makedirs(f'{P}/tts2/tr', exist_ok=True)
-script = json.load(open(f'{P}/script.json')); tr = {l['id']: l['tr'] for t in script['takes'] for l in t['lines']}
+script = json.load(open(f'{P}/script.json')); tr = {l['id']: l.get('tr_spoken', l['tr']) for t in script['takes'] for l in t['lines']}
 tj = json.load(open(f'{P}/audio/timing.json')); segs = tj['segments']; total = tj['total_duration']
 m = ChatterboxMultilingualTTS.from_pretrained(device='cpu'); SR = m.sr
 out = np.zeros(int((total + 3) * SR), dtype=np.float32); report = []

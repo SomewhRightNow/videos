@@ -10,7 +10,8 @@
      "spoken": "Pep Guardiola called him a scoring machine.",
      "tr": "Pep Guardiola ona gol makinesi dedi.",
      "hero": "legend quote card",
-     "typed": ""
+     "typed": "",
+     "tr_spoken": "Guardiola: gol makinesi."
     },
     {
      "id": 41,
@@ -18,7 +19,8 @@
      "spoken": "Yurgen Klopp called him a real beast.",
      "tr": "Jürgen Klopp ona gerçek bir canavar dedi.",
      "hero": "legend quote card",
-     "typed": ""
+     "typed": "",
+     "tr_spoken": "Klopp: gerçek bir canavar."
     },
     {
      "id": 42,
@@ -26,7 +28,8 @@
      "spoken": "Roy Keane said he looked almost like a League Two player.",
      "tr": "Roy Keane ise neredeyse dördüncü lig oyuncusu gibi göründüğünü söyledi.",
      "hero": "legend quote card",
-     "typed": ""
+     "typed": "",
+     "tr_spoken": "Roy Keane: neredeyse dördüncü lig oyuncusu."
     },
     {
      "id": 43,
@@ -48,7 +51,8 @@
      "spoken": "July the fifth, twenty twenty-six. A World Cup knockout game. Norway, against Brazil.",
      "tr": "5 Temmuz 2026. Dünya Kupası'nda eleme maçı. Norveç, Brezilya'ya karşı.",
      "hero": "date set big over the stadium",
-     "typed": "JULY 5, 2026 · NORWAY vs BRAZIL"
+     "typed": "JULY 5, 2026 · NORWAY vs BRAZIL",
+     "tr_spoken": "Beş Temmuz, iki bin yirmi altı. Dünya Kupası, eleme maçı. Norveç, Brezilya'ya karşı."
     },
     {
      "id": 2,
@@ -56,7 +60,8 @@
      "spoken": "Seventy-nine minutes gone. He scores. Ninety on the clock... and he scores again.",
      "tr": "79. dakika. Golü atıyor. 90. dakika... ve bir gol daha.",
      "hero": "two goal stamps 79' and 90'",
-     "typed": "79' · 90'"
+     "typed": "79' · 90'",
+     "tr_spoken": "Yetmiş dokuzuncu dakika, gol. Doksanıncı dakika, bir gol daha."
     },
     {
      "id": 3,
@@ -86,7 +91,8 @@
      "spoken": "But the story doesn't start in Norway. It starts in Leeds, England. July the twenty-first, two thousand.",
      "tr": "Ama hikâye Norveç'te başlamıyor. İngiltere'de, Leeds'te başlıyor. 21 Temmuz 2000.",
      "hero": "map pin Leeds",
-     "typed": "LEEDS · 21 JULY 2000"
+     "typed": "LEEDS · 21 JULY 2000",
+     "tr_spoken": "Ama hikâye Norveç'te başlamıyor. İngiltere'de, Leeds'te başlıyor. Yirmi bir Temmuz, iki bin."
     },
     {
      "id": 6,
@@ -94,7 +100,8 @@
      "spoken": "His dad, Alf-Inge Haaland, played in the Premier League, for Leeds, and for Manchester City. Remember that.",
      "tr": "Babası Alf-Inge Haaland Premier Lig'de oynadı: Leeds'te ve Manchester City'de. Bunu aklınızda tutun.",
      "hero": "father card",
-     "typed": "ALF-INGE HAALAND · LEEDS · MAN CITY"
+     "typed": "ALF-INGE HAALAND · LEEDS · MAN CITY",
+     "tr_spoken": "Babası Alf-İnge Haaland, Premier Lig'de Leeds ve Manchester City'de oynadı. Bunu unutmayın."
     },
     {
      "id": 7,
@@ -116,7 +123,8 @@
      "spoken": "Fast forward to May, twenty nineteen. The Under-Twenty World Cup, in Poland. Norway, against Honduras.",
      "tr": "Mayıs 2019'a gelelim. Polonya'da 20 Yaş Altı Dünya Kupası. Norveç, Honduras'a karşı.",
      "hero": "U20 card",
-     "typed": "U-20 WORLD CUP · POLAND 2019"
+     "typed": "U-20 WORLD CUP · POLAND 2019",
+     "tr_spoken": "Mayıs, iki bin on dokuz. Polonya'da, yirmi yaş altı Dünya Kupası. Norveç, Honduras'a karşı."
     },
     {
      "id": 9,
@@ -140,7 +148,8 @@
      "spoken": "January, twenty twenty. Borussia Dortmund came calling.",
      "tr": "Ocak 2020. Borussia Dortmund kapıyı çaldı.",
      "hero": "Dortmund card",
-     "typed": "BORUSSIA DORTMUND · 2020"
+     "typed": "BORUSSIA DORTMUND · 2020",
+     "tr_spoken": "Ocak, iki bin yirmi. Borussia Dortmund kapıyı çaldı."
     },
     {
      "id": 36,
@@ -156,7 +165,8 @@
      "spoken": "By the time he left: eighty-six goals, in eighty-nine games.",
      "tr": "Ayrıldığında: 89 maçta 86 gol.",
      "hero": "Dortmund card, counter 86",
-     "typed": "DORTMUND · 86 GOALS · 89 GAMES"
+     "typed": "DORTMUND · 86 GOALS · 89 GAMES",
+     "tr_spoken": "Ayrıldığında: seksen dokuz maçta, seksen altı gol."
     },
     {
      "id": 12,
@@ -165,7 +175,8 @@
      "tr": "Avrupa'nın bütün büyükleri onu istiyordu. 2022'de babasının eski kulübünü seçti.",
      "hero": "string from father card to City card",
      "typed": "MANCHESTER CITY · 2022",
-     "gap_after": 1.0
+     "gap_after": 1.0,
+     "tr_spoken": "Avrupa'nın bütün büyükleri onu istiyordu. İki bin yirmi ikide, babasının eski kulübünü seçti."
     }
    ]
   },
@@ -186,7 +197,8 @@
      "spoken": "He was right. In his first season, Haaland scored thirty-six Premier League goals. A new record.",
      "tr": "Haklıydı. Haaland ilk sezonunda Premier Lig'de 36 gol attı. Yeni rekor.",
      "hero": "counter 36",
-     "typed": "36 GOALS · NEW RECORD"
+     "typed": "36 GOALS · NEW RECORD",
+     "tr_spoken": "Haklıydı. Haaland ilk sezonunda Premier Lig'de otuz altı gol attı. Yeni rekor."
     },
     {
      "id": 15,
@@ -194,7 +206,8 @@
      "spoken": "The old record? Thirty-four, held by Alan Shearer and Andy Cole. In seasons with forty-two games.",
      "tr": "Eski rekor mu? 34. Alan Shearer ve Andy Cole'a aitti. Hem de 42 maçlık sezonlarda.",
      "hero": "comparison bars 36 vs 34",
-     "typed": "SHEARER 34 · COLE 34"
+     "typed": "SHEARER 34 · COLE 34",
+     "tr_spoken": "Eski rekor mu? Otuz dört. Alan Shearer ve Andy Cole'undu. Hem de kırk iki maçlık sezonlarda."
     },
     {
      "id": 16,
@@ -226,7 +239,8 @@
      "spoken": "In twenty twenty-four, Roy Keane said that in general play, Haaland looked almost like a League Two player.",
      "tr": "2024'te Roy Keane, oyunun genelinde Haaland'ın neredeyse dördüncü lig oyuncusu gibi göründüğünü söyledi.",
      "hero": "quote card Keane",
-     "typed": "\"ALMOST LIKE A LEAGUE TWO PLAYER\" · ROY KEANE"
+     "typed": "\"ALMOST LIKE A LEAGUE TWO PLAYER\" · ROY KEANE",
+     "tr_spoken": "İki bin yirmi dörtte Roy Keane, Haaland'ın neredeyse dördüncü lig oyuncusu gibi göründüğünü söyledi."
     },
     {
      "id": 32,
@@ -248,7 +262,8 @@
      "spoken": "Then he answered on the pitch. Premier League goal number one hundred. In just one hundred and eleven games.",
      "tr": "Sonra cevabı sahada verdi. Premier Lig'de 100. gol. Sadece 111 maçta.",
      "hero": "counter 100 / 111 games",
-     "typed": "100 GOALS · 111 GAMES"
+     "typed": "100 GOALS · 111 GAMES",
+     "tr_spoken": "Sonra cevabı sahada verdi. Premier Lig'de yüzüncü gol. Sadece yüz on bir maçta."
     },
     {
      "id": 19,
@@ -256,7 +271,8 @@
      "spoken": "Alan Shearer, the league's all-time top scorer, needed one hundred and twenty-four.",
      "tr": "Ligin tüm zamanların golcüsü Alan Shearer'ın buna 124 maçı gerekmişti.",
      "hero": "race bars 111 vs 124",
-     "typed": "SHEARER · 124 GAMES"
+     "typed": "SHEARER · 124 GAMES",
+     "tr_spoken": "Ligin rekortmeni Alan Shearer'a, yüz yirmi dört maç gerekmişti."
     },
     {
      "id": 20,
@@ -264,7 +280,8 @@
      "spoken": "Shearer said it himself. If Haaland stays long enough, there's no doubt he will break that record too.",
      "tr": "Shearer bunu kendisi söyledi: Haaland yeterince kalırsa o rekoru da kıracağına şüphe yok.",
      "hero": "quote card Shearer",
-     "typed": "\"NO DOUBT HE WILL BREAK THAT RECORD\" · ALAN SHEARER"
+     "typed": "\"NO DOUBT HE WILL BREAK THAT RECORD\" · ALAN SHEARER",
+     "tr_spoken": "Shearer da söyledi: Haaland yeterince kalırsa, o rekoru da kırar."
     },
     {
      "id": 21,
@@ -286,7 +303,8 @@
      "spoken": "But Norway hadn't played at a World Cup since nineteen ninety-eight. So first, they had to qualify. They won all eight games.",
      "tr": "Ama Norveç 1998'den beri Dünya Kupası'na gidemiyordu. Önce eleme vardı. Sekiz maçın hepsini kazandılar.",
      "hero": "qualifying ledger 8 wins",
-     "typed": "8 GAMES · 8 WINS"
+     "typed": "8 GAMES · 8 WINS",
+     "tr_spoken": "Ama Norveç, bin dokuz yüz doksan sekizden beri Dünya Kupası'na gidemiyordu. Önce eleme vardı. Sekiz maçın sekizini de kazandılar."
     },
     {
      "id": 34,
@@ -294,7 +312,8 @@
      "spoken": "Haaland scored in every single one. Sixteen goals.",
      "tr": "Haaland hepsinde gol attı. 16 gol.",
      "hero": "counter 16",
-     "typed": "16 GOALS"
+     "typed": "16 GOALS",
+     "tr_spoken": "Haaland hepsinde gol attı. On altı gol."
     },
     {
      "id": 35,
@@ -302,7 +321,8 @@
      "spoken": "The last one, a four-one win over Italy, in Milan. Norway's first World Cup in twenty-eight years.",
      "tr": "Sonuncusu Milano'da İtalya'ya karşı 4-1. Norveç 28 yıl sonra Dünya Kupası'nda.",
      "hero": "scoreline ITA 1-4 NOR",
-     "typed": "ITALY 1-4 NORWAY · MILAN"
+     "typed": "ITALY 1-4 NORWAY · MILAN",
+     "tr_spoken": "Sonuncusu Milano'da, İtalya'ya karşı dört bir. Norveç, yirmi sekiz yıl sonra Dünya Kupası'nda."
     },
     {
      "id": 22,
@@ -340,7 +360,8 @@
      "spoken": "And this season? Top of the Premier League scoring charts again. Nine goals in eleven games.",
      "tr": "Ya bu sezon? Yine Premier Lig'in gol kralı: 11 maçta 9 gol.",
      "hero": "table card",
-     "typed": "2026/27 · 9 GOALS · 11 GAMES"
+     "typed": "2026/27 · 9 GOALS · 11 GAMES",
+     "tr_spoken": "Ya bu sezon? Yine Premier Lig'in gol kralı. On bir maçta dokuz gol."
     },
     {
      "id": 26,
