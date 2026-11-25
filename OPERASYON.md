@@ -387,4 +387,4 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 25.11 pm1 Bruno Fernandes 50' (X @PolymarketSport 2125699630021406766, yayın tekrarı 1080x598, 6.8 s) — KULLANILDI (TAMAMI)
 - DÜZ KLİP (pm1/plain.py): 'LAST NIGHT' + 'BRUNO FERNANDES 50'' + 'SPORTING 1-2 MAN UNITED', abone, imza. ESPN 401915373 50' Bruno sol ayak ceza sahası dışı (Amad asist). Telif 🔴 (UCL aynı gün yayın). Hazır, yüklenmedi.
-- pm1 v2 (kullanıcı 'arkadaki sesi değiş + Deniz Gül şablonu'): pm1/deniz.py -> out/Bruno 50 v2.mp4; ses = Kevin MacLeod 'Volatile Reaction' 37. sn'den (KULLANILDI; sıradaki: Cyborg Ninja, Movement Proposition, Take a Chance). Kredi: Volatile Reaction Kevin MacLeod (incompetech.com) Licensed under CC BY 4.0.
+- pm1 v3: müzik Cyborg Ninja 155. sn (KULLANILDI), yazılar beyaz, sarı yok. pm1 v2 (Volatile Reaction, kullanıcı değiştirtti): pm1/deniz.py -> out/Bruno 50 v2.mp4; ses = Kevin MacLeod 'Volatile Reaction' 37. sn'den (KULLANILDI; sıradaki: Cyborg Ninja, Movement Proposition, Take a Chance). Kredi: Volatile Reaction Kevin MacLeod (incompetech.com) Licensed under CC BY 4.0.
