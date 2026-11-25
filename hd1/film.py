@@ -62,10 +62,10 @@ def frame(t):
     d.ellipse([bx2, by2 + 6, bx2 + 46, by2 + 52], fill=WHITE); d.rectangle([bx2 + 3, by2 + 30, bx2 + 43, by2 + 52], fill=WHITE); d.rectangle([bx2 - 5, by2 + 48, bx2 + 51, by2 + 56], fill=WHITE); d.ellipse([bx2 + 16, by2 + 54, bx2 + 30, by2 + 66], fill=WHITE)
     d.text((bx2 + 76, sy + 6), s1, font=f1, fill=WHITE); d.text(((W - d.textlength(s2, font=f2)) / 2, sy + 90), s2, font=f2, fill=YEL)
     # --- channel signature (our bug): right side, always on
-    sg = '@somewhrightnow'; fs = fB(46); sw = d.textlength(sg, font=fs); gx1 = W - 24; gx0 = gx1 - sw - 96; gy = 1150
-    d.rounded_rectangle([gx0, gy, gx1, gy + 72], 36, fill=(10, 11, 16, 170))
-    d.ellipse([gx0 + 18, gy + 16, gx0 + 58, gy + 56], fill=RED + (255,)); d.polygon([(gx0 + 32, gy + 26), (gx0 + 32, gy + 46), (gx0 + 49, gy + 36)], fill=WHITE + (255,))
-    d.text((gx0 + 74, gy + 9), sg, font=fs, fill=(255, 255, 255, 230))
+    sg = '@somewhrightnow'; fs = fO(28); sw = d.textlength(sg, font=fs); gx1 = W - 20; gx0 = gx1 - sw - 62; gy = 1160
+    d.rounded_rectangle([gx0, gy, gx1, gy + 46], 23, fill=(10, 11, 16, 120))
+    d.ellipse([gx0 + 12, gy + 11, gx0 + 36, gy + 35], fill=RED + (220,)); d.polygon([(gx0 + 21, gy + 17), (gx0 + 21, gy + 29), (gx0 + 31, gy + 23)], fill=WHITE + (230,))
+    d.text((gx0 + 46, gy + 6), sg, font=fs, fill=(255, 255, 255, 200))
     im = Image.alpha_composite(im, ov).convert('RGB')
     if lt < 0.07 and t0 > 0: im = Image.blend(im, Image.new('RGB', (W, H), WHITE), 0.3)
     return im
