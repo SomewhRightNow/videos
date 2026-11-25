@@ -55,3 +55,7 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 - Proje: /home/user/Filmler/haaland (cinematic-film becerisi). script.json (36 satır, EN + 'tr' alanı Türkçe dublaj), beats.md, fact_notes (2 kaynak).
 - Türkçe dublaj: Piper TTS tr_TR-dfki-medium (haaland/tts/). EN: Kokoro (bm_george / am_onyx örnekleri).
 - Durum: senaryo + ses örnekleri kullanıcı onayında (Gate 1).
+
+## 25.11 sabah
+- tt5 "Keeper, HOW Did You Save That?!" (Impossible GK Saves) teslim edildi, yüklenmedi.
+- Haaland uzun belgesel (haaland/): 2K render bitti; EN + TR dublaj mp4 paketleniyor (out/), SRT en/tr, thumbnail, credits hazır.
