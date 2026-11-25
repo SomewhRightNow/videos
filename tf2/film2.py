@@ -27,10 +27,13 @@ def frame(t):
     ov = Image.new('RGBA', (W, H)); d = ImageDraw.Draw(ov)
     # --- title plate (covers source title, src x120-620 y160-242 -> out 240-1240, 320-484)
     u = ease(lt / 0.3)
-    px0, py0, px1, py1 = 24, 296, 1416, 506
+    px0, py0, px1, py1 = 24, 236, 1416, 566
     d.rounded_rectangle([px0 + 6, py0 + 10, px1 + 6, py1 + 10], 34, fill=(0, 0, 0, 90)); d.rounded_rectangle([px0, py0, px1, py1], 34, fill=PLATE); d.rectangle([px0 + 40, py1 - 6, px1 - 40, py1], fill=YEL + (255,))
-    s = 'SMARTEST FOULS IN FOOTBALL'; f = fO(34); d.text(((W - d.textlength(s, font=f)) / 2, py0 + 18), s, font=f, fill=GREY)
-    bs = 118; bx = px0 + 40; by = py0 + 66
+    parts = [('SMART ', WHITE), ('TACTICAL FOULS', YEL), (' IN FOOTBALL', WHITE)]; f = fB(92)
+    tw = sum(d.textlength(a, font=f) for a, _ in parts); x = (W - tw) / 2
+    for a, c in parts: d.text((x, py0 + 14), a, font=f, fill=c + (255,)); x += d.textlength(a, font=f)
+    d.line([(px0 + 60, py0 + 124), (px1 - 60, py0 + 124)], fill=(60, 62, 75, 255), width=2)
+    bs = 118; bx = px0 + 40; by = py0 + 150
     d.rounded_rectangle([bx, by, bx + bs, by + bs], 22, fill=RED if rk == 1 else YEL)
     fr = fB(104); rs = str(rk); d.text((bx + (bs - d.textlength(rs, font=fr)) / 2, by - 2), rs, font=fr, fill=WHITE if rk == 1 else INK)
     fn = fB(112)
