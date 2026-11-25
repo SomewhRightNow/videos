@@ -3,6 +3,7 @@ Kanal: 139 abone, 127k izlenme, 69 video. HEDEF: hafta sonu (22.11) bitene kadar
 Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 
 ## Son yüklenen
+- 25.11 He's Too FAST 😳 Top 7 Insane Pace Goals -> n-NPmUTAzZ0
 - 21.11 On This Day 2012 Mexès overhead kick (Anderlecht 1-3 Milan) -> to7oHtH8LaE
 - 21.11 Messi LAST UCL Goal for Barcelona -> be7R-NhxZtA
 - 21.11 On This Day 2007 England 2-3 Croatia -> WR941GM4zTY

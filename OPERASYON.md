@@ -365,4 +365,4 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - Yer açmak için 23.11'den beri dokunulmamış projelerdeki büyük medya (mp4/mov/wav/zip, 8.7 GB) silindi (kullanıcı onayı). Kod/script/notlar duruyor.
 
 ## 25.11 ref-qx Most Insane Pace Goals (TikTok @magicaleight_8 ZSs6VWcLR = YT QXFh7Bgu91k, 74.5 s) — KULLANILDI (tüm klip)
-- RANK LADDER (ref-qx/film.py, tt7 türevi; kaynak satır 1 'TOP SPEED' kırmızı çipiyle örtülü, sıra r -> kaynak satır r+1; abone pill sağda MAGICAL EIGHT filigranını örter), #7→#1: Adeyemi, Daniel James, Oberlin, Puhiri, Robben (vs Spain WC 2014), Bale (vs Barcelona Copa final 2014), Mbappé. Orijinal ses, -14 LUFS. 🔴 yayın. Teslim edildi, yüklenmedi.
+- RANK LADDER (ref-qx/film.py, tt7 türevi; kaynak satır 1 'TOP SPEED' kırmızı çipiyle örtülü, sıra r -> kaynak satır r+1; abone pill sağda MAGICAL EIGHT filigranını örter), #7→#1: Adeyemi, Daniel James, Oberlin, Puhiri, Robben (vs Spain WC 2014), Bale (vs Barcelona Copa final 2014), Mbappé. Orijinal ses, -14 LUFS. 🔴 yayın. YÜKLENDİ 25.11 16:52 UTC -> n-NPmUTAzZ0 (up-pacegoals).
