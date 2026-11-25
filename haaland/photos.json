@@ -1,0 +1,98 @@
+{
+ "grade": "natural",
+ "photos": [
+  {
+   "id": "P21",
+   "file": "P21_wc_france_full.jpg",
+   "kind": "photo",
+   "what": "Erling Haaland, France v Norway, 26 June 2026",
+   "credit": "Bryan Berlin / Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Erling_Haaland_France_v_Norway_26_June_26-008.jpg",
+   "license_ok": true,
+   "crop": [
+    0.0,
+    0.0,
+    1.0,
+    0.78
+   ]
+  },
+  {
+   "id": "P02",
+   "file": "P02_wc_morocco.jpg",
+   "kind": "photo",
+   "what": "Erling Haaland, Morocco v Norway, 7 June 2026",
+   "credit": "Bryan Berlin / Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Erling_Haaland_Morocco_v_Norway_7_June_2026-51.jpg",
+   "license_ok": true
+  },
+  {
+   "id": "P06",
+   "file": "P06_city_warmup.jpg",
+   "kind": "photo",
+   "what": "Haaland and Rodri warm up, 2022",
+   "credit": "Egghead06 / Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Haaland_and_Rodri_warm_up_2022.jpeg",
+   "license_ok": true
+  },
+  {
+   "id": "P07",
+   "file": "P07_city_2023.jpg",
+   "kind": "photo",
+   "what": "Erling Haaland, 2023",
+   "credit": "Jacek Stanislawek / Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Erling_Haaland_2023.jpg",
+   "license_ok": true
+  },
+  {
+   "id": "P11",
+   "file": "P11_etihad.jpg",
+   "kind": "photo",
+   "what": "Etihad Stadium",
+   "credit": "Cléria De Souza / Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Etihad_Stadium.jpg",
+   "license_ok": true
+  },
+  {
+   "id": "P14",
+   "file": "P14_guardiola.jpg",
+   "kind": "photo",
+   "what": "Pep Guardiola, 2015",
+   "credit": "Богдан Заяц / Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Pep_Guardiola_2015.jpg",
+   "license_ok": true
+  },
+  {
+   "id": "P16",
+   "file": "P16_keane.jpg",
+   "kind": "photo",
+   "what": "Roy Keane, 2014",
+   "credit": "Irish Defence Forces / Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Roy_keane_2014.jpg",
+   "license_ok": true
+  },
+  {
+   "id": "P24",
+   "file": "P24_salzburg_2019.jpg",
+   "kind": "photo",
+   "what": "Erling Haaland, Borussia Dortmund, 2020",
+   "credit": "Vyacheslav Evdokimov / Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Erling_Haaland_2020.jpg",
+   "license_ok": true,
+   "crop": [
+    0.0,
+    0.0,
+    1.0,
+    0.62
+   ]
+  }
+ ],
+ "recreations": []
+}

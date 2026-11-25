@@ -1,0 +1,72 @@
+{
+ "maps": [
+  {
+   "name": "europe",
+   "source": "/home/user/Filmler/haaland/assets/data/ne50.geojson",
+   "projection": {
+    "type": "albers",
+    "lon0": 8,
+    "lat0": 54,
+    "p1": 46,
+    "p2": 62
+   },
+   "keep": [
+    "United Kingdom",
+    "Norway",
+    "Germany",
+    "Austria",
+    "Poland",
+    "Netherlands",
+    "Belgium",
+    "Denmark",
+    "Sweden",
+    "France",
+    "Ireland",
+    "Czechia",
+    "Switzerland",
+    "Luxembourg",
+    "Italy",
+    "Slovakia",
+    "Hungary",
+    "Slovenia",
+    "Lithuania",
+    "Latvia",
+    "Estonia",
+    "Finland",
+    "Belarus"
+   ],
+   "frame": [
+    -10,
+    45,
+    26,
+    66
+   ],
+   "places": {
+    "Leeds": [
+     53.8,
+     -1.55
+    ],
+    "Bryne": [
+     58.73,
+     5.65
+    ],
+    "Lublin": [
+     51.25,
+     22.57
+    ],
+    "Salzburg": [
+     47.81,
+     13.05
+    ],
+    "Dortmund": [
+     51.51,
+     7.47
+    ],
+    "Manchester": [
+     53.48,
+     -2.24
+    ]
+   }
+  }
+ ]
+}

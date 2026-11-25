@@ -63,13 +63,13 @@ def build_film(doc):
     P = {n: eu.place(n) for n in ("Leeds", "Bryne", "Lublin", "Salzburg", "Dortmund", "Manchester")}
 
     # ===================================================== COLD OPEN (1-4)
-    film.add(BigText("JULY 5, 2026", CX - 1800, CY - 2600, 560, L(1) - 0.1, type_on=0.5, bar=HILITE, bar_h=0.92, rgb=INKD, shadow=False))
-    film.add(BigText("WORLD CUP · NORWAY vs BRAZIL", CX - 1800, CY - 1850, 300, W(1, "Norway") - 0.2))
-    film.add(Print("P01", CX + 2900, CY + 400, 2500, rot=1.2, t_in=L(1) + 0.4, label="ERLING HAALAND", label_t=W(4, "Erling")))
-    film.add(Stamp("79'", CX - 2700, CY - 300, size=520, rot=-7, t_in=W(2, "scores") - 0.1))
-    film.add(Stamp("90'", CX - 900, CY - 300, size=520, rot=6, t_in=W(2, "again") - 0.15))
-    film.add(BigText("BRAZIL 1-2 NORWAY", CX - 1800, CY + 1250, 460, W(3, "out") - 0.15, bar=RED, bar_h=0.92, shadow=False, hit=0.6))
-    film.add(BigText("FIRST EVER WORLD CUP QUARTER-FINAL", CX - 1800, CY + 1900, 230, W(3, "first") - 0.1, rgb=HILITE))
+    film.add(BigText("JULY 5, 2026", CX - 800, CY - 2600, 560, L(1) - 0.1, type_on=0.5, bar=HILITE, bar_h=0.92, rgb=INKD, shadow=False))
+    film.add(BigText("WORLD CUP · NORWAY vs BRAZIL", CX - 800, CY - 1850, 300, W(1, "Norway") - 0.2))
+    film.add(Print("P21", CX + 3400, CY + 400, 2500, rot=1.2, t_in=L(1) + 0.4, label="ERLING HAALAND", label_t=W(4, "Erling")))
+    film.add(Stamp("79'", CX - 1700, CY - 300, size=520, rot=-7, t_in=W(2, "scores") - 0.1))
+    film.add(Stamp("90'", CX + 100, CY - 300, size=520, rot=6, t_in=W(2, "again") - 0.15))
+    film.add(BigText("BRAZIL 1-2 NORWAY", CX - 800, CY + 1250, 460, W(3, "out") - 0.15, bar=RED, bar_h=0.92, shadow=False, hit=0.6))
+    film.add(BigText("FIRST EVER WORLD CUP QUARTER-FINAL", CX - 800, CY + 1900, 230, W(3, "first") - 0.1, rgb=HILITE))
     tt = E(4) + 0.15
     film.add(BigText("WHY FOOTBALL LEGENDS STILL", CX + 500, CY + 3500, 430, tt))
     film.add(BigText("CAN'T EXPLAIN HAALAND", CX + 500, CY + 4200, 640, tt + 0.25, bar=HILITE, bar_h=0.92, rgb=INKD, shadow=False, hit=0.8))
@@ -104,6 +104,7 @@ def build_film(doc):
     film.add(XMarker(*P["Dortmund"], "DORTMUND", t_in=W(29, "Dortmund") - 0.2, side="left", **LBL))
     film.add(Card(-2400, 9800, 4600, 1500, L(29) + 0.05, title="BORUSSIA DORTMUND", lines=["Joined January 2020"],
                   accent=(250, 214, 0), title_size=330, body_size=170))
+    film.add(Print("P24", 1600, 12900, 1500, rot=-2.2, t_in=L(36) + 0.1, label="DORTMUND · 2020", label_t=L(36) + 0.4))
     film.add(Stamp("DEBUT: HAT-TRICK IN ~20 MIN", -2400, 10950, size=230, rot=4, t_in=W(36, "hat-trick") - 0.05))
     film.add(Counter(-2400, 13300, 1300, 86, W(11, "Eighty-six") - 0.25, dur=1.0, caption="GOALS IN 89 GAMES"))
     film.add(Route(P["Dortmund"], P["Manchester"], t_in=W(12, "chose") - 0.2, dur=1.0, bend=0.25, width=50))
@@ -168,14 +169,14 @@ def build_film(doc):
 
 
 
-    HERO = {1: (CX - 1800, CY - 2300, 0.9), 2: (CX - 1800, CY - 500, 0.8), 3: (CX - 1800, CY + 1500, 0.8), 4: (CX + 2900, CY + 400, 0.75),
+    HERO = {1: (CX + 900, CY - 1700, 0.55), 2: (CX + 900, CY - 600, 0.55), 3: (CX + 900, CY + 700, 0.55), 4: (CX + 3400, CY + 400, 0.75),
             5: (-9000, -900, 0.36), 6: (-14200, 1000, 0.65), 7: (-2500, -1800, 0.42), 8: (10200, 1900, 0.38), 9: (12800, 4300, 0.6),
-            10: (4200, 10100, 0.6), 29: (-2400, 9900, 0.62), 36: (-2400, 10600, 0.62), 11: (-2400, 12700, 0.6), 12: (-6000, 2500, 0.3),
+            10: (4200, 10100, 0.6), 29: (-2400, 9900, 0.62), 36: (-600, 11500, 0.5), 11: (-2400, 12700, 0.6), 12: (-6000, 2500, 0.3),
             13: (-14000, 8700, 0.4), 14: (-13200, 11700, 0.62), 15: (-12000, 13800, 0.5), 16: (-21500, 13500, 0.5), 17: (-11500, 16200, 0.4),
             30: (-28500, 8500, 0.6), 31: (-28200, 11300, 0.42), 32: (-28200, 15000, 0.42), 18: (-14000, -9000, 0.6), 19: (-12000, -7500, 0.5),
             20: (-22200, -8200, 0.6), 21: (-4000, -6400, 0.3), 33: (15000, -11900, 0.5), 34: (14800, -9000, 0.6), 35: (14800, -6900, 0.6),
             22: (22400, -9600, 0.55), 23: (26800, -10300, 0.55), 24: (27200, -6800, 0.6), 25: (CX + 2900, CY - 2500, 0.55),
-            26: (0, 1500, 0.075), 27: (CX + 4600, CY + 450, 0.5), 28: (CX + 300, CY + 6900, 0.45)}
+            26: (0, 1500, 0.075), 27: (CX + 5000, CY + 450, 0.5), 28: (CX + 300, CY + 6900, 0.45)}
     order = sorted(HERO, key=L)
     last = -1.0
     for k, i in enumerate(order):
