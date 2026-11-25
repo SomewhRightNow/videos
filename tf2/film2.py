@@ -28,7 +28,7 @@ def frame(t):
     # --- title plate (covers source title, src x120-620 y160-242 -> out 240-1240, 320-484)
     u = ease(lt / 0.3)
     px0, py0, px1, py1 = 24, 296, 1416, 506
-    d.rounded_rectangle([px0, py0, px1, py1], 34, fill=PLATE)
+    d.rounded_rectangle([px0 + 6, py0 + 10, px1 + 6, py1 + 10], 34, fill=(0, 0, 0, 90)); d.rounded_rectangle([px0, py0, px1, py1], 34, fill=PLATE); d.rectangle([px0 + 40, py1 - 6, px1 - 40, py1], fill=YEL + (255,))
     s = 'SMARTEST FOULS IN FOOTBALL'; f = fO(34); d.text(((W - d.textlength(s, font=f)) / 2, py0 + 18), s, font=f, fill=GREY)
     bs = 118; bx = px0 + 40; by = py0 + 66
     d.rounded_rectangle([bx, by, bx + bs, by + bs], 22, fill=RED if rk == 1 else YEL)
@@ -42,15 +42,15 @@ def frame(t):
         d.rounded_rectangle([cx, py1 + 14, cx + cw, py1 + 74], 30, fill=(253, 215, 0, int(235 * v))); d.text((cx + 25, py1 + 24), ctx, font=fc, fill=INK + (int(255 * v),))
     # --- rank ladder: one slim pill per row, only where needed
     for row in range(1, 8):
-        y = ROWY[row] * 2; ours = row >= rk; cur = row == rk; need = src_has(row, st)
+        y = int(1348 + (row - 1) * 87.3); ours = row >= rk; cur = row == rk; need = src_has(row, st)
         if ours:
             label = ORDER[7 - row]; fl = fB(56); tw = d.textlength(label, font=fl); w = max(500, 110 + tw + 34)
-            d.rounded_rectangle([12, y - 38, 12 + w, y + 38], 38, fill=(253, 215, 0, 255) if cur else PLATE)
+            d.rounded_rectangle([12, y - 44, 12 + w, y + 44], 30, fill=(253, 215, 0, 255) if cur else PLATE)
             d.text((40, y - 34), str(row), font=fB(60), fill=INK if cur else YEL); d.text((110, y - 30), label, font=fl, fill=INK if cur else WHITE)
         elif need:
-            d.rounded_rectangle([12, y - 38, 512, y + 38], 38, fill=PLATE); d.text((40, y - 34), str(row), font=fB(60), fill=GREY)
+            d.rounded_rectangle([12, y - 44, 512, y + 44], 30, fill=PLATE); d.text((40, y - 34), str(row), font=fB(60), fill=GREY); d.text((110, y - 30), '· · ·', font=fB(52), fill=(80, 82, 95))
         else:
-            d.ellipse([12, y - 34, 12 + 136, y + 34], fill=PLATE); d.text((58, y - 34), str(row), font=fB(60), fill=GREY)
+            d.rounded_rectangle([12, y - 44, 200, y + 44], 30, fill=PLATE); d.text((40, y - 34), str(row), font=fB(60), fill=GREY); d.text((92, y - 30), '· · ·', font=fB(52), fill=(80, 82, 95))
     # --- subscribe (covers MAGICAL EIGHT watermark ~ out y 2260-2300)
     w, h = 760, 150; sx = (W - w) // 2; sy = 2200
     d.rounded_rectangle([sx, sy, sx + w, sy + h], 75, fill=RED + (245,), outline=WHITE + (255,), width=4)
