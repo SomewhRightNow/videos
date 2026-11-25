@@ -62,10 +62,12 @@ def frame(t):
     d.ellipse([bx2, by2 + 6, bx2 + 46, by2 + 52], fill=WHITE); d.rectangle([bx2 + 3, by2 + 30, bx2 + 43, by2 + 52], fill=WHITE); d.rectangle([bx2 - 5, by2 + 48, bx2 + 51, by2 + 56], fill=WHITE); d.ellipse([bx2 + 16, by2 + 54, bx2 + 30, by2 + 66], fill=WHITE)
     d.text((bx2 + 76, sy + 6), s1, font=f1, fill=WHITE); d.text(((W - d.textlength(s2, font=f2)) / 2, sy + 90), s2, font=f2, fill=YEL)
     # --- channel signature (our bug): right side, always on
-    sg = '@somewhrightnow'; fs = fO(28); sw = d.textlength(sg, font=fs); gx1 = W - 20; gx0 = gx1 - sw - 62; gy = 1160
-    d.rounded_rectangle([gx0, gy, gx1, gy + 46], 23, fill=(10, 11, 16, 120))
-    d.ellipse([gx0 + 12, gy + 11, gx0 + 36, gy + 35], fill=RED + (220,)); d.polygon([(gx0 + 21, gy + 17), (gx0 + 21, gy + 29), (gx0 + 31, gy + 23)], fill=WHITE + (230,))
-    d.text((gx0 + 46, gy + 6), sg, font=fs, fill=(255, 255, 255, 200))
+    # channel signature: small tab hanging from the title plate's bottom-right corner (branded, out of the play)
+    sg = '@somewhrightnow'; fs = fO(26); sw = d.textlength(sg, font=fs); tx1 = px1 - 40; tx0 = tx1 - sw - 70; ty0 = py1 - 4
+    d.rounded_rectangle([tx0, ty0 - 20, tx1, ty0 + 46], 20, fill=PLATE)
+    d.rectangle([tx0, ty0 - 6, tx1, ty0], fill=YEL + (255,))
+    d.rounded_rectangle([tx0 + 16, ty0 + 10, tx0 + 46, ty0 + 32], 7, fill=RED + (255,)); d.polygon([(tx0 + 27, ty0 + 15), (tx0 + 27, ty0 + 27), (tx0 + 37, ty0 + 21)], fill=WHITE + (255,))
+    d.text((tx0 + 56, ty0 + 6), sg, font=fs, fill=(225, 226, 232, 255))
     im = Image.alpha_composite(im, ov).convert('RGB')
     if lt < 0.07 and t0 > 0: im = Image.blend(im, Image.new('RGB', (W, H), WHITE), 0.3)
     return im
