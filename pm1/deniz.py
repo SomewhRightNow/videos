@@ -3,7 +3,7 @@
 import subprocess, sys
 from PIL import Image, ImageDraw, ImageFont
 W, H = 1440, 2560; VY = 853; VH = 797
-NAME, MIN, SCORE, OUT, SRC, MUS, OFF = "BRUNO FERNANDES", "50'", "SPORTING 1-2 MAN UNITED", 'out/Bruno 50 v4.mp4', 'src/src.mp4', '/home/user/Filmler/_music/Take a Chance.mp3', 5
+NAME, MIN, SCORE, OUT, SRC, MUS, OFF = "BRUNO FERNANDES", "50'", "SPORTING 1-2 MAN UNITED", 'out/Bruno 50 v5.mp4', 'src/src.mp4', '/home/user/Filmler/_music/Raving Energy.mp3', 236
 F = '/home/user/Filmler/fonts/'; fB = lambda s: ImageFont.truetype(F + 'BigShoulders-Bold.ttf', s); fO = lambda s: ImageFont.truetype(F + 'Outfit-Bold.ttf', s)
 WHITE = (255, 255, 255); YEL = (253, 215, 0); RED = (215, 25, 35); PLATE = (12, 13, 18)
 im = Image.new('RGBA', (W, H), (10, 10, 14, 255)); d = ImageDraw.Draw(im)
