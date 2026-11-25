@@ -49,3 +49,9 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 - brothers v2: kullanıcı QA istedi; bulunan sorunlar (altyazı bandı çakışması, Doué bölümünde İñaki fotoğrafı görünmesi, boş kareler, Liberya kadraj dışı) scene.py'de düzeltildi, v2 render + burn arka planda (logs/render2.log, burn2.log). YouTube yüklemesi bu hesapta yok (Zapier bağlı değil).
 - 22.11 Nico belgeseli kapağı: brothers/thumb/make.py (rembg kesimler P01/P03, İspanya kırmızı/Gana altın çapraz, WHY? rozeti) -> thumbnail_2560.jpg + 1280
 - 24.11: TikTok CDN hostları (v16/v19-webapp-prime.us.tiktok.com, sf16.tiktokcdn-us.com, p19-common-sign) ortam ağına EKLENDİ -> TikTok linkleri yt-dlp ile iniyor. ZSsLJsPX7 (çalım derlemesi) indirildi, edit sırada.
+
+## 25.11 UZUN VİDEO: Haaland belgeseli (DEVAM EDİYOR)
+- Konu (kullanıcı onayladı): "Why Football Legends Still Can't Explain Haaland" (~3 dk), sonra seri: Mbappé.
+- Proje: /home/user/Filmler/haaland (cinematic-film becerisi). script.json (36 satır, EN + 'tr' alanı Türkçe dublaj), beats.md, fact_notes (2 kaynak).
+- Türkçe dublaj: Piper TTS tr_TR-dfki-medium (haaland/tts/). EN: Kokoro (bm_george / am_onyx örnekleri).
+- Durum: senaryo + ses örnekleri kullanıcı onayında (Gate 1).
