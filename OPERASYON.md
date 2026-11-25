@@ -352,3 +352,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 25.11 tt5 Impossible Goalkeeper Saves (TikTok @magicaleight_8 ZSsjfu8xY, 53.2 s) — KULLANILDI (tüm klip)
 - RANK LADDER (tt5/film.py), sıra #8→#1: Courtois, Vasilios, Neuer, De Gea, Ter Stegen, Čech, Vicario, Oblak. Orijinal ses. 🔴 UCL/PL/BL yayın. Teslim edildi, yüklenmedi.
+
+## 25.11 tt6 Iconic Panenka Penalties (TikTok @magicaleight_8 ZSs6JL7jS, 48.2 s) — KULLANILDI (tüm klip)
+- RANK LADDER (tt6/film.py), #7→#1: Alexis, Ramos, Benzema, Abreu, Pirlo, Zidane, Panenka. Orijinal ses. 🔴 yayın görüntüsü. Teslim edildi, yüklenmedi.
