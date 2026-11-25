@@ -363,3 +363,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - venv + `.pth` ile /home/user/.sdvenv site-packages paylaşılır (disk tasarrufu); venv içinde kendi sürümleri: torch 2.11.0+cpu, torchaudio 2.11.0+cpu, torchvision 0.26.0+cpu (pytorch cpu index), transformers 5.2.0, tokenizers <0.23, huggingface-hub <2, chatterbox-tts 0.1.7 --no-deps + s3tokenizer resemble-perth conformer==0.3.2 omegaconf pyloudnorm librosa pykakasi einops soxr decorator joblib cloudpickle msgpack soundfile cffi.
 - Modeller ~/.cache/huggingface (ResembleAI/chatterbox: EN t3_cfg+s3gen.safetensors, TR t3_mtl23ls_v2+s3gen.pt) ~6.4 GB. EN ve TR (language_id='tr') test edildi, çalışıyor.
 - Yer açmak için 23.11'den beri dokunulmamış projelerdeki büyük medya (mp4/mov/wav/zip, 8.7 GB) silindi (kullanıcı onayı). Kod/script/notlar duruyor.
+
+## 25.11 ref-qx Most Insane Pace Goals (TikTok @magicaleight_8 ZSs6VWcLR = YT QXFh7Bgu91k, 74.5 s) — KULLANILDI (tüm klip)
+- RANK LADDER (ref-qx/film.py, tt7 türevi; kaynak satır 1 'TOP SPEED' kırmızı çipiyle örtülü, sıra r -> kaynak satır r+1; abone pill sağda MAGICAL EIGHT filigranını örter), #7→#1: Adeyemi, Daniel James, Oberlin, Puhiri, Robben (vs Spain WC 2014), Bale (vs Barcelona Copa final 2014), Mbappé. Orijinal ses, -14 LUFS. 🔴 yayın. Teslim edildi, yüklenmedi.
