@@ -443,3 +443,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - mlf2/film.py (mlf1 türevi): 'CHRISTIAN PULISIC · 71'' / 'OLYMPIACOS 2-3 AC MILAN', GOAL! 11.5-14.5 s, kapanış kartı. 32-35 s'deki ÇOCUK yüzü KULLANILMADI. Telif DÜŞÜK. Hazır, yüklenmedi.
 
 - 26.11 rm1 "Arda Guler Reaction" (tribün, @Fanaticos_RMCF via TekkerzFoot x.com/TekkerzFoot/status/2126096421333987753): Bellingham makas vuruşu kaleci kurtardı, Arda elleri başında; RM 5-1 PSV 24.11 UCL. Klip tamamı kullanıldı. Yüklenmedi.
+
+## 26.11 ajx2 Marcos Leonardo 41' (X @Farioliballl 2126081636890710452, tribün 352x624 DÜŞÜK ÇÖZ.) — KULLANILDI 0-8.7 sn (taraftar sevinci kesildi)
+- Deniz şablonu (ajx2/plain.py, -t 8.7 + hqdn3d/unsharp). Ajax 2-0 FC Thun (ESPN 401915815, 41' fast break). Gol sahibi kontra tarifinden çıkarım. Telif DÜŞÜK. Yüklenmedi.
