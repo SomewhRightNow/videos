@@ -405,3 +405,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 26.11 sy1 'Goals You Rarely See' (X @sykn1977 2125875349468651659, derleme 576x720 DÜŞÜK ÇÖZ., 60.3 s, 13 gol) — KULLANILDI (TAMAMI)
 - sy1/film.py v2 (kullanıcı 'sıralama yapsana'): 11 gol, kendi sıralamamız #11 City-Burnley ... #3 beyaz forma, #2 Vardy, #1 Pléa (kaynak etiketli isimler: Pléa, Rodrigo, Vardy; diğerleri isimsiz), plaka 'GOALS YOU RARELY SEE', 'MORE TOP LISTS DAILY'. Müzik Kevin MacLeod 'Volatile Reaction' 37. sn. 🔴 (Bundesliga/UCL vb. yayın). Hazır, yüklenmedi.
+
+## 26.11 ig1 'Arda Güler Rockets' (Instagram @aardagulerfans DfzrCeitlZ6, 1080x1920 letterbox, 60.9 s) — KULLANILDI (TAMAMI, emoji donma kareleri hariç)
+- ig1/film.py: geri sayım #5->#1 kaynağın tersi (#1 Bayern serbest vuruşu), kaynağın kurukafa emojili soluk kareleri kesildi, 'Arda Güler rocket goals' yazısı kendi çipimizle örtüldü. Müzik Kevin MacLeod 'Raving Energy' 71. sn. 🔴 (UCL/La Liga/milli maç yayını). Hazır, yüklenmedi.
