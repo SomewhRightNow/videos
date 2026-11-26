@@ -424,3 +424,7 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 26.11 mil1 '0-2 Down... Then Milan Did This' (Olympiacos 2-4 Milan, UEL MD5) — FOTO + KART + VO (telif DÜŞÜK)
 - mil1/film.py: Chatterbox VO (7 satır, whisper OK) + altyazı, BREAKING plaka, skor tabelası 2-0 -> 2-4 flaş, gol çipleri (56' Hutchinson, 63' Cissé, 71' Pulisic, 90+5' Moreira). Commons foto: 'Omari Hutchinson 22122025 (1)' (Timmy96, CC0) KULLANILDI. Diğer anlar kendi rossoneri isim kartlarımız (Wikimedia 429: API + upload sunucusu ~1 istek/10 dk; yavaş indirici bile alamadı). Kaynaklar: ESPN 401915521, Sky Italia, SempreMilan, Football Italia. Hazır, yüklenmedi.
+
+## 26.11 cmb1 Cambiaso 37' From The Stands (X @laasagnadelrey 2126054722272419978, tribün telefon 720x1280 60fps, 5.8 s) — KULLANILDI (TAMAMI)
+- DÜZ KLİP (cmb1/plain.py, Deniz Gül şablonu, dikey -> tam ekran + üst koyu geçiş): 'ANDREA CAMBIASO · 37'' + 'JUVENTUS 1-1 OMONIA' beyaz, imza, abone 'NEVER MISS A GOAL', orijinal ses -14 LUFS. ESPN 401915502 (15' Satka, 37' Cambiaso, 43' Ekhator). Telif DÜŞÜK. Hazır, yüklenmedi.
+- 26.11 X'te bulunan Olaitan (BJK-HBS) klipleri yayın görüntüsü (Rufus_45 skor grafiği) -> kullanılmadı (UEFA ihtarı günü).
