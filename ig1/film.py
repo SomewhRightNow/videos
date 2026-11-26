@@ -6,9 +6,10 @@ from PIL import Image, ImageDraw, ImageFont
 W, H = 1440, 2560; VY = 540; CROP = (0, 240, 1080, 1440)
 F = '/home/user/Filmler/fonts/'; fB = lambda s: ImageFont.truetype(F + 'BigShoulders-Bold.ttf', s); fO = lambda s: ImageFont.truetype(F + 'Outfit-Bold.ttf', s)
 WHITE = (255, 255, 255); YEL = (253, 215, 0); RED = (215, 25, 35); PLATE = (12, 13, 18); GREY = (175, 178, 190); BG = (9, 10, 14); INK = (8, 8, 12)
-EMO = [(11.2, 12.8), (16.9, 18.7), (28.3, 30.0), (34.0, 35.7), (39.7, 41.4), (45.5, 46.9), (51.3, 53.1), (55.95, 58.5)]
-GOALS = [(0, 18.7), (18.7, 30.0), (30.0, 38.5), (38.5, 49.45), (49.45, 60.9)]
+EMO = [(11.2, 12.85), (16.8, 18.75), (28.3, 30.0), (33.95, 35.75), (39.7, 41.45), (45.5, 47.2), (51.3, 53.15), (56.95, 58.7)]  # skull emoji (template-matched) -> covered by our GOAL! badge, nothing cut
+GOALS = [(0, 18.75), (18.75, 30.0), (30.0, 38.5), (38.5, 49.45), (49.45, 60.9)]
 def parts(a, b):
+    return [(a, b)]
     out, t = [], a
     for e0, e1 in EMO:
         if e1 <= t or e0 >= b: continue
@@ -46,12 +47,16 @@ for k, g in enumerate(ORDER):
         if g == 0 and a < 5 < b: SEGS += [(a, 5.0, ov(k, cap=True)), (5.0, b, ov(k))]
         else: SEGS.append((a, b, ov(k)))
 SEGS = [(a, min(b, 5.0), o) if False else (a, b, o) for a, b, o in SEGS]
+bd = Image.new('RGBA', (W, H)); db = ImageDraw.Draw(bd)
+db.rounded_rectangle([622, 1438, 818, 1618], 28, fill=RED + (255,), outline=WHITE, width=4); db.text((720, 1530), 'GOAL!', font=fB(78), fill=WHITE, anchor='mm'); bd.save('logs/badge.png')
 ins, fc = [], []
-for i, (a, b, o) in enumerate(SEGS): ins += ['-ss', str(a), '-t', f'{b-a:.3f}', '-i', 'src/src.mp4', '-i', o]
+for i, (a, b, o) in enumerate(SEGS): ins += ['-ss', str(a), '-t', f'{b-a:.3f}', '-i', 'src/src.mp4', '-i', o, '-i', 'logs/badge.png']
 for i, (a, b, o) in enumerate(SEGS):
-    fc.append(f'[{2*i}:v]fps=30,setpts=PTS-STARTPTS,crop={CROP[2]}:{CROP[3]}:{CROP[0]}:{CROP[1]},scale=1440:1920:flags=lanczos,pad={W}:{H}:0:{VY}[p{i}];[p{i}][{2*i+1}:v]overlay=0:0[v{i}]')
+    en = '+'.join(f'between(t,{max(0, e0 - a):.2f},{min(b, e1) - a:.2f})' for e0, e1 in EMO if e1 > a and e0 < b)
+    tail = f"[q{i}];[q{i}][{3*i+2}:v]overlay=0:0:enable='{en}'[v{i}]" if en else f'[v{i}]'
+    fc.append(f'[{3*i}:v]fps=30,setpts=PTS-STARTPTS,crop={CROP[2]}:{CROP[3]}:{CROP[0]}:{CROP[1]},scale=1440:1920:flags=lanczos,pad={W}:{H}:0:{VY}[p{i}];[p{i}][{3*i+1}:v]overlay=0:0' + tail)
 n = len(SEGS); total = sum(b - a for a, b, _ in SEGS)
-fc.append(''.join(f'[v{i}]' for i in range(n)) + f'concat=n={n}:v=1:a=0,format=yuv420p[o];[{2*n}:a]atrim=0:{total:.2f},afade=t=in:d=0.1,afade=t=out:st={total-1:.2f}:d=1,loudnorm=I=-14:TP=-2:LRA=11[a]')
+fc.append(''.join(f'[v{i}]' for i in range(n)) + f'concat=n={n}:v=1:a=0,format=yuv420p[o];[{3*n}:a]atrim=0:{total:.2f},afade=t=in:d=0.1,afade=t=out:st={total-1:.2f}:d=1,loudnorm=I=-14:TP=-2:LRA=11[a]')
 subprocess.run(['ffmpeg', '-y', '-v', 'error', *ins, '-ss', '71', '-i', '/home/user/Filmler/_music/Raving Energy.mp3', '-filter_complex', ';'.join(fc), '-map', '[o]', '-map', '[a]', '-ar', '48000',
                 '-c:v', 'libx264', '-preset', 'slow', '-crf', '16', '-maxrate', '45M', '-bufsize', '90M', '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709',
                 '-c:a', 'aac', '-b:a', '320k', '-movflags', '+faststart', 'out/Arda Guler Rockets.mp4'], check=True)
