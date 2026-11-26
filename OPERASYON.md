@@ -421,3 +421,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 26.11 pz1 Plzeň–Benfica TRİBÜN (X @PetrHintnaus 2126022719095648502, iki video 720x1280) — KULLANILDI (ikisi de TAMAMI)
 - v1 = Hrošovský 30' (stadyum ekranı 29:29 0-0), v2 = Prince Adu 43' (ekran 42:15 1-0). pz1/plain.py (Deniz şablonu beyaz, 'FROM THE STANDS'). Telif DÜŞÜK. Hazır, yüklenmedi.
+
+## 26.11 mil1 '0-2 Down... Then Milan Did This' (Olympiacos 2-4 Milan, UEL MD5) — FOTO + KART + VO (telif DÜŞÜK)
+- mil1/film.py: Chatterbox VO (7 satır, whisper OK) + altyazı, BREAKING plaka, skor tabelası 2-0 -> 2-4 flaş, gol çipleri (56' Hutchinson, 63' Cissé, 71' Pulisic, 90+5' Moreira). Commons foto: 'Omari Hutchinson 22122025 (1)' (Timmy96, CC0) KULLANILDI. Diğer anlar kendi rossoneri isim kartlarımız (Wikimedia 429: API + upload sunucusu ~1 istek/10 dk; yavaş indirici bile alamadı). Kaynaklar: ESPN 401915521, Sky Italia, SempreMilan, Football Italia. Hazır, yüklenmedi.
