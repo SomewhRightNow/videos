@@ -391,3 +391,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - pm1 v4: müzik Take a Chance 5. sn (KULLANILDI; kullanıcı Volatile/Cyborg'u beğenmedi). pm1 v3: Cyborg Ninja 155. sn, yazılar beyaz, sarı yok. pm1 v2 (Volatile Reaction, kullanıcı değiştirtti): pm1/deniz.py -> out/Bruno 50 v2.mp4; ses = Kevin MacLeod 'Volatile Reaction' 37. sn'den (KULLANILDI; sıradaki: Cyborg Ninja, Movement Proposition, Take a Chance). Kredi: Volatile Reaction Kevin MacLeod (incompetech.com) Licensed under CC BY 4.0.
 - pm1 v5: müzik Raving Energy (Kevin MacLeod, hızlı EDM) 236. sn (KULLANILDI; kullanıcı 'hareketli bişey'). Elde: Movement Proposition, Cut and Run (_music/).
 - pm1 v5: müzik Raving Energy (Kevin MacLeod, hızlı EDM) 236. sn (KULLANILDI; kullanıcı 'hareketli bişey'). Elde: Movement Proposition, Cut and Run (_music/).
+
+## 26.11 tt8 Insane Diagonal Passes (TikTok @magicaleight_8 ZSsrLLFc5, 720x1280, 51 s) — KULLANILDI (TAMAMI, sıra karıştırıldı)
+- RANK LADDER (tt8/film.py, ffmpeg segment+overlay): #8 Modrić, #7 Alexander-Arnold, #6 Ziyech, #5 Pogba, #4 Rakitić, #3 Alexander-Arnold, #2 De Bruyne, #1 Beckham. Müzik Kevin MacLeod 'Movement Proposition' 42. sn (KULLANILDI). 🔴 (PL/La Liga yayın görüntüsü içeriyor). Not: aynı girdiden sırası karışık trim = OOM -> segment başına -ss/-t girdi.
