@@ -71,3 +71,4 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 - 26.11 06:05 UTC: tt8 'Insane Diagonal Passes' hazır, yükleme Zapier 429 (kota). Raw: https://raw.githubusercontent.com/SomewhRightNow/videos/up-diagonal/insane-diagonal-passes.mp4 . Kota 08:00 UTC (gece yarısı PT) sıfırlanır -> Suárez (up-suarez80) + bu video yüklenecek (kullanıcı ikisine de 'yükle' dedi; önce kanalda var mı kontrol et).
 - 26.11 08:10 UTC: Bekleyen yükleme KALMADI. Yayında: Suárez D8oJgn5S4Ew, Referee 3k2Yjtd7hG8, Diagonal eHGcXlgJJAQ, Garnacho OTD ENqyRB15pOg. Yüklenmemiş hazır: Bruno 50' v5 (🔴), Garnacho v2 TikTok (🔴), Lammens VO sürümü.
 - 26.11 23:11 UTC: Ajax Fans 90 Minutes YÜKLENDİ -> sQzVYynwjHc (FANS).
+- 26.11 23:23 UTC: Milan Fans Moreira 90+5 YÜKLENDİ -> Eq7wKTtm7kQ (FANS).
