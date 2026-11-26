@@ -394,3 +394,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 26.11 tt8 Insane Diagonal Passes (TikTok @magicaleight_8 ZSsrLLFc5, 720x1280, 51 s) — KULLANILDI (TAMAMI, sıra karıştırıldı)
 - RANK LADDER (tt8/film.py, ffmpeg segment+overlay): #8 Modrić, #7 Alexander-Arnold, #6 Ziyech, #5 Pogba, #4 Rakitić, #3 Alexander-Arnold, #2 De Bruyne, #1 Beckham. Müzik Kevin MacLeod 'Movement Proposition' 42. sn (KULLANILDI). 🔴 (PL/La Liga yayın görüntüsü içeriyor). Not: aynı girdiden sırası karışık trim = OOM -> segment başına -ss/-t girdi.
+
+## 26.11 otd3 ON THIS DAY Garnacho bicycle kick (26.11.2023, Everton 0-3 Man Utd, 3') — tribün çekimi Dailymotion Diario RÉCORD x8q0aq4 (608x1080, 12.2 s) KULLANILDI (TAMAMI)
+- Kullanıcının YouTube linki (o3pv3TjWlvs, MaxiFutball) 403 -> indirilmedi (bot koruması aşılmaz). otd3/film.py: plaka 'ON THIS DAY · 26 NOV 2023 · 3 YEARS AGO TODAY' / GARNACHO'S BICYCLE KICK (RÉCORD logosunu örter), alt bant skor + Puskás 2024 + PL Goal of the Season (manutd.com, premierleague.com), 'A NEW CLASSIC EVERY DAY', orijinal tribün sesi. Telif DÜŞÜK. Hazır, yüklenmedi.
