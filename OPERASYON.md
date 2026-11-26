@@ -438,3 +438,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 26.11 mlf1 Milan deplasman tribünü, Moreira 90+5' (X @M_pipo3 2126068919450362244, taraftar 720x1280, 69.7 s) — KULLANILDI (0-23.4, 23.4-28.6, 39-44, 60.5-66.5)
 - 'Pro' kurgu (mlf1/film.py): Deniz şablonu beyaz plaka 'DIEGO MOREIRA · 90+5'' / 'OLYMPIACOS 2-4 AC MILAN', GOAL! damgası, beyaz flaş geçişler, sonda 'PARIGI ROSSONERA' pankartı + kapanış kartı. Gol eşleşmesi: Olympiakos kornerinden kontra + Pulisic asisti (ESPN tarifi), %100 teyit değil. Orijinal ses. Telif DÜŞÜK. YÜKLENDİ 26.11 23:23 UTC -> Eq7wKTtm7kQ (up-milanfans, LFS).
+
+## 26.11 mlf2 Pulisic 71' tribünden (X @SempreMilanCom 2126065089954333117, aynı Milan taraftarı, 720x1280, 36.8 s) — KULLANILDI (0-17.4, 18-23.5)
+- mlf2/film.py (mlf1 türevi): 'CHRISTIAN PULISIC · 71'' / 'OLYMPIACOS 2-3 AC MILAN', GOAL! 11.5-14.5 s, kapanış kartı. 32-35 s'deki ÇOCUK yüzü KULLANILMADI. Telif DÜŞÜK. Hazır, yüklenmedi.
