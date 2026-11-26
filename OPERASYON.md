@@ -433,5 +433,5 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - DÜZ KLİP (cu1/plain.py, Deniz Gül şablonu): 'FREIBURG FANS · 'UEFA MAFIA'' + 'FREIBURG vs TWENTE · CONFERENCE LEAGUE', imza, abone 'NEVER MISS A MOMENT', orijinal ses. İddia taraftarlara atfedildi. Telif DÜŞÜK. Hazır, yüklenmedi. Playlist FANS.
 
 ## 26.11 ajx1 Ajax fans (X @vanpogototpopo 2126054131823415377, tribün 1080x1920, 40 s) — KULLANILDI (TAMAMI)
-- FANS düz klip (ajx1/plain.py): 'AJAX FANS, 90 MINUTES' / 'AJAX 4-0 FC THUN' (ESPN 401915815). Gol anı yok, atmosfer. Telif DÜŞÜK. Hazır, yüklenmedi.
+- FANS düz klip (ajx1/plain.py): 'AJAX FANS, 90 MINUTES' / 'AJAX 4-0 FC THUN' (ESPN 401915815). Gol anı yok, atmosfer. Telif DÜŞÜK. YÜKLENDİ 26.11 23:11 UTC -> sQzVYynwjHc (up-ajaxfans, LFS: 114 MB).
 - Not 26.11: Mohamed Salah bu sezon TRABZONSPOR'da (CSKA Sofya 1-2 Trabzonspor: 69' Salah, 90+3' Saviolo). demarkesports ve tsruhu61_ Salah klipleri yayın görüntüsü -> KULLANILMADI (UEFA ihtarı).

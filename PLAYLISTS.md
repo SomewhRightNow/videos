@@ -38,3 +38,4 @@ agXRvQ7yvzE Boca Fans Colombia | Sh8Hbau2Fqw Corinthians Fans | hVefvKozYK8 Brø
 Xxd5lS02zg0 | 03OeUuF2Jh4 | FHHEhfT12lQ | AcpeCDHJ4sg | nEl6I2DtL3A | Q-zFQNaZjRE
 ### Bekleyen (6'ya ulaşınca aç): Premier League (3: w-eYrQLiWjI, j8bnw6yFTJ4, eLvnp-qvPk8 + OFxxUHG0TMY Bundesliga değil), Messi (4: gmU7ZKbmXyI, be7R-NhxZtA, auJkeFKJ8iQ, K2ihxNkZtns)
 26.11: D8oJgn5S4Ew Suárez 80' (FANS) | 3k2Yjtd7hG8 Referee Are You OK (BREAKING) | eHGcXlgJJAQ Diagonal Passes (TOP 5) | ENqyRB15pOg Garnacho OTD (ON THIS DAY)
+26.11: sQzVYynwjHc Ajax Fans 90 Minutes (FANS)
