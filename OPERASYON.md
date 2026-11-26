@@ -402,3 +402,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 26.11 as1 'Bruno, Did You Plan This?!' (X @asistanaliz 2125860820185670057, telefonla TV analiz videosu 1080x1080, 29.5 s) — KULLANILDI (TAMAMI)
 - FAN THEORY (as1/film.py, ffmpeg overlay, VO yok): Bruno'nun çimi kazıyıp iz bıraktığı, 50' şutunun oradan sektiği iddiası TEK KAYNAK -> soru olarak. Kaynağın daire/X işaretleri konu olduğu için duruyor. Orijinal ses. 🔴 (UCL yayını). Hazır, yüklenmedi.
+
+## 26.11 sy1 'Goals You Rarely See' (X @sykn1977 2125875349468651659, derleme 576x720 DÜŞÜK ÇÖZ., 60.3 s, 13 gol) — KULLANILDI (TAMAMI)
+- sy1/film.py: geri sayım #13->#1 kaynak sırasıyla (isimler doğrulanamadığı için isim yok), plaka 'GOALS YOU RARELY SEE', 'MORE TOP LISTS DAILY'. Müzik Kevin MacLeod 'Volatile Reaction' 37. sn. 🔴 (Bundesliga/UCL vb. yayın). Hazır, yüklenmedi.
