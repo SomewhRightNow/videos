@@ -428,3 +428,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 ## 26.11 cmb1 Cambiaso 37' From The Stands (X @laasagnadelrey 2126054722272419978, tribün telefon 720x1280 60fps, 5.8 s) — KULLANILDI (TAMAMI)
 - DÜZ KLİP (cmb1/plain.py, Deniz Gül şablonu, dikey -> tam ekran + üst koyu geçiş): 'ANDREA CAMBIASO · 37'' + 'JUVENTUS 1-1 OMONIA' beyaz, imza, abone 'NEVER MISS A GOAL', orijinal ses -14 LUFS. ESPN 401915502 (15' Satka, 37' Cambiaso, 43' Ekhator). Telif DÜŞÜK. Hazır, yüklenmedi.
 - 26.11 X'te bulunan Olaitan (BJK-HBS) klipleri yayın görüntüsü (Rufus_45 skor grafiği) -> kullanılmadı (UEFA ihtarı günü).
+
+## 26.11 cu1 Freiburg 'UEFA MAFIA' tifo (X @thecasualultra 2126055919809376703, tribün telefon 720x1280, 16.4 s) — KULLANILDI (TAMAMI)
+- DÜZ KLİP (cu1/plain.py, Deniz Gül şablonu): 'FREIBURG FANS · 'UEFA MAFIA'' + 'FREIBURG vs TWENTE · CONFERENCE LEAGUE', imza, abone 'NEVER MISS A MOMENT', orijinal ses. İddia taraftarlara atfedildi. Telif DÜŞÜK. Hazır, yüklenmedi. Playlist FANS.
