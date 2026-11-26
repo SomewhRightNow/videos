@@ -408,3 +408,8 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 26.11 ig1 'Arda Güler Rockets' (Instagram @aardagulerfans DfzrCeitlZ6, 1080x1920 letterbox, 60.9 s) — KULLANILDI (TAMAMI, emoji donma kareleri hariç)
 - ig1/film.py v2 (kullanıcı 'gollerin olduğu yeri kesmişsin, kurukafa çıkıyor'): HİÇBİR ŞEY KESİLMEDİ; kurukafa (hep aynı yerde, şablon eşleştirmeyle 8 an) kendi 'GOAL!' rozetimizle örtüldü. Geri sayım #5->#1 (#1 Bayern serbest vuruşu). DERS: emoji donma kareleri = gol anı, kesme -> ört. 'Arda Güler rocket goals' yazısı kendi çipimizle örtüldü. Müzik Kevin MacLeod 'Raving Energy' 71. sn. 🔴 (UCL/La Liga/milli maç yayını). Hazır, yüklenmedi.
+
+## 26.11 ⚠️ TELİF İHTARI #1 (UEFA)
+- 26.11.2026 UEFA kaldırma talebi -> kanal 1 telif ihtarı. Eşleşen varlık: 'UCL_Sporting_CP_vs_Man_Utd_Wor...' (UEFA yayını). Video silindi. Telif Hakkı Okulu tamamlanırsa ihtar 24.02.2027'de düşer. 3 ihtar = kanal kapanır.
+- Bizim kayıtlı yüklemelerimizden Suárez 80' (D8oJgn5S4Ew), Referee (3k2Yjtd7hG8), Diagonal (eHGcXlgJJAQ), Garnacho (ENqyRB15pOg) 26.11'de hâlâ yayında -> silinen büyük olasılıkla kullanıcının elle yüklediği Sporting-MU yayın klibi (Bruno 50' pm1 ya da 'Bruno, Did You Plan This?!'). Kesinleşince buraya yaz.
+- DERS: UEFA güncel ŞL yayın görüntüsünü Content ID'nin ötesinde MANUEL kaldırma + ihtarla takip ediyor. ŞL maç günü yayın klibi = ihtar riski.
