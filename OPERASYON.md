@@ -441,3 +441,5 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 26.11 mlf2 Pulisic 71' tribünden (X @SempreMilanCom 2126065089954333117, aynı Milan taraftarı, 720x1280, 36.8 s) — KULLANILDI (0-17.4, 18-23.5)
 - mlf2/film.py (mlf1 türevi): 'CHRISTIAN PULISIC · 71'' / 'OLYMPIACOS 2-3 AC MILAN', GOAL! 11.5-14.5 s, kapanış kartı. 32-35 s'deki ÇOCUK yüzü KULLANILMADI. Telif DÜŞÜK. Hazır, yüklenmedi.
+
+- 26.11 rm1 "Arda Guler Reaction" (tribün, @Fanaticos_RMCF via TekkerzFoot x.com/TekkerzFoot/status/2126096421333987753): Bellingham makas vuruşu kaleci kurtardı, Arda elleri başında; RM 5-1 PSV 24.11 UCL. Klip tamamı kullanıldı. Yüklenmedi.
