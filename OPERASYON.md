@@ -413,3 +413,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - 26.11.2026 UEFA kaldırma talebi -> kanal 1 telif ihtarı. Eşleşen varlık: 'UCL_Sporting_CP_vs_Man_Utd_Wor...' (UEFA yayını). Video silindi. Telif Hakkı Okulu tamamlanırsa ihtar 24.02.2027'de düşer. 3 ihtar = kanal kapanır.
 - Bizim kayıtlı yüklemelerimizden Suárez 80' (D8oJgn5S4Ew), Referee (3k2Yjtd7hG8), Diagonal (eHGcXlgJJAQ), Garnacho (ENqyRB15pOg) 26.11'de hâlâ yayında -> silinen büyük olasılıkla kullanıcının elle yüklediği Sporting-MU yayın klibi (Bruno 50' pm1 ya da 'Bruno, Did You Plan This?!'). Kesinleşince buraya yaz.
 - DERS: UEFA güncel ŞL yayın görüntüsünü Content ID'nin ötesinde MANUEL kaldırma + ihtarla takip ediyor. ŞL maç günü yayın klibi = ihtar riski.
+
+## 26.11 sk1 Beşiktaş fans in Batumi (X @sportskafa 2125978443682648136, taraftar 4K 2160x3840, 20.2 s) — KULLANILDI (TAMAMI)
+- FANS düz klip (sk1/plain.py): 'BEŞİKTAŞ IN BATUMI' / 'BEŞİKTAŞ vs HAPOEL BEER SHEVA', Europa League · Batumi · Tonight (ESPN 401915506, Batumi Stadium 17:45 UTC). Orijinal ses. Telif DÜŞÜK. Meşale var; siyasi ifade yok, nötr metin. Hazır, yüklenmedi.
