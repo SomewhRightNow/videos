@@ -6,8 +6,11 @@ from PIL import Image, ImageDraw, ImageFont
 W, H = 1440, 2560; VW, VH = 1440, 1800; VY = 600
 F = '/home/user/Filmler/fonts/'; fB = lambda s: ImageFont.truetype(F + 'BigShoulders-Bold.ttf', s); fO = lambda s: ImageFont.truetype(F + 'Outfit-Bold.ttf', s)
 WHITE = (255, 255, 255); YEL = (253, 215, 0); RED = (215, 25, 35); PLATE = (12, 13, 18); GREY = (175, 178, 190); BG = (9, 10, 14); INK = (8, 8, 12)
-CUTS = [0, 8.6, 12.53, 17.33, 20.83, 22.7, 28.27, 34.0, 37.9, 40.63, 46.33, 50.8, 54.37, 60.3]
-SEG = list(zip(CUTS[:-1], CUTS[1:])); N = len(SEG)
+CUTS = [0, 7.0, 12.5, 15.95, 20.83, 26.0, 30.0, 36.3, 42.93, 49.9, 54.37, 60.3]
+G = list(zip(CUTS[:-1], CUTS[1:]))  # G0..G10 in source order
+NAMES = {1: 'PLÉA', 2: 'RODRIGO', 7: 'VARDY'}
+ORDER = [8, 10, 3, 5, 6, 9, 2, 4, 0, 7, 1]  # our countdown #11 -> #1 (most spectacular last)
+SEG = [G[i] for i in ORDER]; N = len(SEG)
 def ov(k):
     rank = N - k; im = Image.new('RGBA', (W, H)); d = ImageDraw.Draw(im)
     d.rectangle([0, 0, W, VY], fill=BG); d.rectangle([0, VY + VH, W, H], fill=BG)
@@ -18,7 +21,9 @@ def ov(k):
     bs = 150; bx0, by0 = px0 + 40, py0 + 200
     d.rounded_rectangle([bx0, by0, bx0 + bs, by0 + bs], 20, fill=(YEL if rank == 1 else RED))
     d.text((bx0 + bs / 2, by0 + bs / 2 + 4), f'#{rank}', font=fB(100), fill=(INK if rank == 1 else WHITE), anchor='mm')
-    d.text((bx0 + bs + 34, by0 + bs / 2 + 4), 'THE BEST ONE IS LAST' if rank > 1 else 'SAVED THE BEST FOR LAST', font=fB(84), fill=GREY if rank > 1 else YEL, anchor='lm')
+    nm = NAMES.get(ORDER[k])
+    if nm: d.text((bx0 + bs + 34, by0 + bs / 2 + 6), nm, font=fB(130), fill=WHITE, anchor='lm')
+    else: d.text((bx0 + bs + 34, by0 + bs / 2 + 4), 'THE BEST ONE IS LAST' if rank > 1 else 'SAVED THE BEST FOR LAST', font=fB(84), fill=GREY, anchor='lm')
     sg = '@somewhrightnow'; fs = fO(26); sw = d.textlength(sg, font=fs); tx1 = px1 - 40; tx0 = tx1 - sw - 70; ty0 = py1 - 4
     d.rounded_rectangle([tx0, ty0 - 20, tx1, ty0 + 46], 20, fill=PLATE); d.rectangle([tx0, ty0 - 6, tx1, ty0], fill=YEL)
     d.rounded_rectangle([tx0 + 16, ty0 + 10, tx0 + 46, ty0 + 32], 7, fill=RED); d.polygon([(tx0 + 27, ty0 + 15), (tx0 + 27, ty0 + 27), (tx0 + 37, ty0 + 21)], fill=WHITE)
@@ -30,10 +35,9 @@ def ov(k):
     d.text((bx + 70, sy + 4), t1, font=f1, fill=WHITE); d.text((sx + (w2 - d.textlength(t2, font=f3)) / 2, sy + 80), t2, font=f3, fill=YEL)
     im.save(f'logs/ov{k}.png')
 for k in range(N): ov(k)
-ins = ['-i', 'src/src.mp4'] + sum([['-i', f'logs/ov{k}.png'] for k in range(N)], []) + ['-ss', '37', '-i', '/home/user/Filmler/_music/Volatile Reaction.mp3']
-fc = [f'[0:v]fps=30,scale={VW}:{VH}:flags=lanczos,pad={W}:{H}:0:{VY}[v0]']
-for k, (a, b) in enumerate(SEG): fc.append(f"[v{k}][{k+1}:v]overlay=0:0:enable='between(t,{a},{b})'[v{k+1}]")
-fc.append(f'[v{N}]format=yuv420p[o];[{N+1}:a]atrim=0:60.3,afade=t=in:d=0.1,afade=t=out:st=59.3:d=1,loudnorm=I=-14:TP=-2:LRA=11[a]')
+ins = sum([['-ss', str(a), '-t', f'{b-a:.3f}', '-i', 'src/src.mp4'] for a, b in SEG], []) + sum([['-i', f'logs/ov{k}.png'] for k in range(N)], []) + ['-ss', '37', '-i', '/home/user/Filmler/_music/Volatile Reaction.mp3']
+fc = [f'[{k}:v]fps=30,setpts=PTS-STARTPTS,scale={VW}:{VH}:flags=lanczos,pad={W}:{H}:0:{VY}[p{k}];[p{k}][{N+k}:v]overlay=0:0,fade=t=in:d=0.12:color=white[v{k}]' for k in range(N)]
+fc.append(''.join(f'[v{k}]' for k in range(N)) + f'concat=n={N}:v=1:a=0,format=yuv420p[o];[{2*N}:a]atrim=0:60.3,afade=t=in:d=0.1,afade=t=out:st=59.3:d=1,loudnorm=I=-14:TP=-2:LRA=11[a]')
 subprocess.run(['ffmpeg', '-y', '-v', 'error', *ins, '-filter_complex', ';'.join(fc), '-map', '[o]', '-map', '[a]', '-ar', '48000', '-shortest',
                 '-c:v', 'libx264', '-preset', 'slow', '-crf', '16', '-maxrate', '45M', '-bufsize', '90M', '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709',
                 '-c:a', 'aac', '-b:a', '320k', '-movflags', '+faststart', 'out/Goals You Rarely See.mp4'], check=True)

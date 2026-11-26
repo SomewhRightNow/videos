@@ -404,4 +404,4 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - FAN THEORY (as1/film.py, ffmpeg overlay, VO yok): Bruno'nun çimi kazıyıp iz bıraktığı, 50' şutunun oradan sektiği iddiası TEK KAYNAK -> soru olarak. Kaynağın daire/X işaretleri konu olduğu için duruyor. Orijinal ses. 🔴 (UCL yayını). Hazır, yüklenmedi.
 
 ## 26.11 sy1 'Goals You Rarely See' (X @sykn1977 2125875349468651659, derleme 576x720 DÜŞÜK ÇÖZ., 60.3 s, 13 gol) — KULLANILDI (TAMAMI)
-- sy1/film.py: geri sayım #13->#1 kaynak sırasıyla (isimler doğrulanamadığı için isim yok), plaka 'GOALS YOU RARELY SEE', 'MORE TOP LISTS DAILY'. Müzik Kevin MacLeod 'Volatile Reaction' 37. sn. 🔴 (Bundesliga/UCL vb. yayın). Hazır, yüklenmedi.
+- sy1/film.py v2 (kullanıcı 'sıralama yapsana'): 11 gol, kendi sıralamamız #11 City-Burnley ... #3 beyaz forma, #2 Vardy, #1 Pléa (kaynak etiketli isimler: Pléa, Rodrigo, Vardy; diğerleri isimsiz), plaka 'GOALS YOU RARELY SEE', 'MORE TOP LISTS DAILY'. Müzik Kevin MacLeod 'Volatile Reaction' 37. sn. 🔴 (Bundesliga/UCL vb. yayın). Hazır, yüklenmedi.
