@@ -416,3 +416,4 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 26.11 sk1 Beşiktaş fans in Batumi (X @sportskafa 2125978443682648136, taraftar 4K 2160x3840, 20.2 s) — KULLANILDI (TAMAMI)
 - FANS düz klip (sk1/plain.py): 'BEŞİKTAŞ IN BATUMI' / 'BEŞİKTAŞ vs HAPOEL BEER SHEVA', Europa League · Batumi · Tonight (ESPN 401915506, Batumi Stadium 17:45 UTC). Orijinal ses. Telif DÜŞÜK. Meşale var; siyasi ifade yok, nötr metin. Hazır, yüklenmedi.
+- 26.11: _engine/tools/x_find.py eklendi (tweet linki -> video + kare şeridi). Test: sportskafa/inasosyal OK; dünkü Suárez tribün videosu artık 403 (kaldırılmış). in1 (Beşiktaş-Hapoel tribün olayları, Filistin bayrağı/polis biber gazı) topluluk kuralı + siyasi risk nedeniyle YAPILMADI.
