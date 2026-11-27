@@ -449,3 +449,7 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 26.11 mor1 Diego Moreira (X @ibra65_8 2125937858733052038, 720x1280, 16.9 s: 0-4 s tribün + Milan kulüp sinematik ödül görüntüleri) — KULLANILDI (TAMAMI)
 - mor1/film.py: Deniz şablonu, etiket AC MILAN, DIEGO MOREIRA / 90+5' WINNER LAST NIGHT. Kaynak ses = fan edit şarkısı -> Kevin MacLeod Movement Proposition 90. sn (KULLANILDI). Ödül/kupanın ne olduğu doğrulanmadı (ekrana yazılmadı). Telif DÜŞÜK-ORTA. Yüklenmedi.
+
+## 27.11 REF POV denemeleri (ref1 2D, ref2 Blender 3D) — RAFA KALDIRILDI
+- Kullanıcı 'hakem POV' konsepti istedi; 2D animasyon 'kötü', Blender mankenleri 'robot gibi' bulundu; istek gerçek görüntü gibi POV. Bu ortamda yapılamaz (GPU yok, ücretli servis yok, gerçek oyuncu deepfake riski, yayın görüntüsü UEFA). Gerçek hakem bodycam paylaşımı IFAB deneme protokolünde yasak.
+- Karar: şimdilik tribün çekimi gol/olay + tribünden hakem anları + haftalık belgesel. Araçlar duruyor: /home/user/.bpyvenv (bpy 5.0.1), ref2/scene.py (Xbot mankenleri), ref1/film.py.
