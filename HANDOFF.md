@@ -72,3 +72,8 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 - 26.11 08:10 UTC: Bekleyen yükleme KALMADI. Yayında: Suárez D8oJgn5S4Ew, Referee 3k2Yjtd7hG8, Diagonal eHGcXlgJJAQ, Garnacho OTD ENqyRB15pOg. Yüklenmemiş hazır: Bruno 50' v5 (🔴), Garnacho v2 TikTok (🔴), Lammens VO sürümü.
 - 26.11 23:11 UTC: Ajax Fans 90 Minutes YÜKLENDİ -> sQzVYynwjHc (FANS).
 - 26.11 23:23 UTC: Milan Fans Moreira 90+5 YÜKLENDİ -> Eq7wKTtm7kQ (FANS).
+
+## 27.11 kanal kontrolü (gece işleri)
+- Yayında: ajx2 Marcos Leonardo (ZXrKxQzCRbE, kullanıcı yükledi 04:05), mlf1, ajx1, cu1, cmb1, sy1, pz1 Adu, sk1, Haaland, tt8.
+- YÜKLENMEDİ (düşük risk, hazır): rm1 Arda Güler tepki, mor1 Moreira, mlf2 Pulisic 71', pz1 Hrošovský 30', mil1 Milan comeback (foto+VO).
+- YÜKLENMEDİ 🔴 (ihtar döneminde atma): as1 Bruno, ig1 Arda rockets, otd4 Garnacho Sky.
