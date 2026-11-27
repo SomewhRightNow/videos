@@ -470,3 +470,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 ## 27.11 itt1 Rajković kurtarışı (X @wlv_s1 2126380962120380658, tribün 1080x1920, 16.9 s, canlı Al-Ittihad–NEOM ilk yarı) — KULLANILDI (TAMAMI)
 - itt1/clean.py: kullanıcı 'ortadaki yazıyı sil' -> çekenin sabit filigranı (@wlv_s1 + rozetler) SADECE filigran pikselleri maskelenip cv2.inpaint TELEA ile silindi (oyuncu geçişinde hafif iz). Açıklamada kredi YOK (kullanıcı istedi).
 - itt1/plain.py (Deniz şablonu): 'RAJKOVIĆ, WHAT A SAVE!' / 'AL-ITTIHAD 0-0 NEOM · 1ST HALF' (ESPN 401900873 HT 0-0, kaleci Rajković ESPN kadrosu). Dakika yok (ESPN anlatımı boş). Orijinal ses. Telif DÜŞÜK. Yüklenmedi.
+
+## 27.11 itt2 Ilenikhena fırsatı (X @alaa_saeed88 2126380823796420705, tribün 1080x1920, 12.8 s, Al-Ittihad–NEOM 1. yarı) — KULLANILDI (TAMAMI)
+- itt2/clean.py (filigran inpaint, sıkı maske) + plain.py: 'ILENIKHENA, SO CLOSE!' / 'AL-ITTIHAD 0-0 NEOM · 1ST HALF' (George Ilenikhena ESPN ilk 11). Kredi yok. Telif DÜŞÜK. Yüklenmedi.
