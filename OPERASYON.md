@@ -448,7 +448,7 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - Deniz şablonu (ajx2/plain.py, -t 8.7 + hqdn3d/unsharp). Ajax 2-0 FC Thun (ESPN 401915815, 41' fast break). Gol sahibi kontra tarifinden çıkarım. Telif DÜŞÜK. Yüklenmedi.
 
 ## 26.11 mor1 Diego Moreira (X @ibra65_8 2125937858733052038, 720x1280, 16.9 s: 0-4 s tribün + Milan kulüp sinematik ödül görüntüleri) — KULLANILDI (TAMAMI)
-- mor1/film.py: Deniz şablonu, etiket AC MILAN, DIEGO MOREIRA / 90+5' WINNER LAST NIGHT. Kaynak ses = fan edit şarkısı -> Kevin MacLeod Movement Proposition 90. sn (KULLANILDI). Ödül/kupanın ne olduğu doğrulanmadı (ekrana yazılmadı). Telif DÜŞÜK-ORTA. Yüklenmedi.
+- mor1/film.py: Deniz şablonu, etiket AC MILAN, DIEGO MOREIRA / 90+5' WINNER LAST NIGHT. Kaynak ses = fan edit şarkısı -> Kevin MacLeod Movement Proposition 90. sn (KULLANILDI). Ödül/kupanın ne olduğu doğrulanmadı (ekrana yazılmadı). Telif DÜŞÜK-ORTA. YÜKLENDİ 27.11 04:59 UTC -> Pl1g-dlLDEs (up-moreira).
 
 ## 27.11 REF POV denemeleri (ref1 2D, ref2 Blender 3D) — RAFA KALDIRILDI
 - Kullanıcı 'hakem POV' konsepti istedi; 2D animasyon 'kötü', Blender mankenleri 'robot gibi' bulundu; istek gerçek görüntü gibi POV. Bu ortamda yapılamaz (GPU yok, ücretli servis yok, gerçek oyuncu deepfake riski, yayın görüntüsü UEFA). Gerçek hakem bodycam paylaşımı IFAB deneme protokolünde yasak.

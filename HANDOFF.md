@@ -75,5 +75,6 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 
 ## 27.11 kanal kontrolü (gece işleri)
 - Yayında: ajx2 Marcos Leonardo (ZXrKxQzCRbE, kullanıcı yükledi 04:05), mlf1, ajx1, cu1, cmb1, sy1, pz1 Adu, sk1, Haaland, tt8.
-- YÜKLENMEDİ (düşük risk, hazır): rm1 Arda Güler tepki, mor1 Moreira, mlf2 Pulisic 71', pz1 Hrošovský 30', mil1 Milan comeback (foto+VO).
+- YÜKLENMEDİ (düşük risk, hazır): rm1 Arda Güler tepki, mlf2 Pulisic 71', pz1 Hrošovský 30', mil1 Milan comeback (foto+VO).
 - YÜKLENMEDİ 🔴 (ihtar döneminde atma): as1 Bruno, ig1 Arda rockets, otd4 Garnacho Sky.
+- 27.11 mor1 Moreira YÜKLENDİ -> Pl1g-dlLDEs (Playlist LAST NIGHT).
