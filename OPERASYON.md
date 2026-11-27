@@ -468,4 +468,5 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - KARAR ÖNERİSİ: günde 3-5 video, sadece güçlü olanlar; canlı gol tribün klibi ilk 30-60 dk; büyük isim/kulüp; özgün format (foto+VO haber, istatistik) ağırlığı artsın; Telif Okulu tamamlansın; Studio > İçerik > Telif sekmesinde bölge engeli kontrol.
 
 ## 27.11 itt1 Rajković kurtarışı (X @wlv_s1 2126380962120380658, tribün 1080x1920, 16.9 s, canlı Al-Ittihad–NEOM ilk yarı) — KULLANILDI (TAMAMI)
+- itt1/clean.py: kullanıcı 'ortadaki yazıyı sil' -> çekenin sabit filigranı (@wlv_s1 + rozetler) SADECE filigran pikselleri maskelenip cv2.inpaint TELEA ile silindi (oyuncu geçişinde hafif iz). Açıklamada kredi YOK (kullanıcı istedi).
 - itt1/plain.py (Deniz şablonu): 'RAJKOVIĆ, WHAT A SAVE!' / 'AL-ITTIHAD 0-0 NEOM · 1ST HALF' (ESPN 401900873 HT 0-0, kaleci Rajković ESPN kadrosu). Dakika yok (ESPN anlatımı boş). Orijinal ses. Telif DÜŞÜK. Yüklenmedi.
