@@ -481,3 +481,7 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - _live/tribun_alarm.py: ESPN 14 lig, 45 sn'de bir; her yeni golde 'GOL | oyuncu dk | skor | TikTok/X arama linkleri'. Bulut oturumunda Monitor ile çalışır -> her golde PushNotification (kullanıcı telefonda linke basar, tribün videosunu bize atar). Oturum kapanınca durur; kalıcı sürüm = GitHub Actions + ntfy (kullanıcı onayı gerekir).
 - 27.11: alarm BÜYÜK KULÜP filtresi (BIG listesi ~35 kulüp) -> akşam ~5-15 bildirim. X embed timeline (syndication timeline-profile) 429 -> hesap takibi otomatikleştirilemedi.
 - 27.11: alarm GÜZEL GOL modu: tüm maçlarda ESPN anlatımında 'outside the box / free kick / very long range / bicycle / volley / solo' geçen goller de bildirilir (etiket 🔥 UZAKTAN/FRİKİK/RÖVEŞATA/VOLE/DOKSAN). Büyük kulüp golleri her zaman.
+
+## 27.11 CANLI SİSTEM v2 (kullanıcı: 'büyük kulüp golleri, küçük kulüpte güzel goller, önemli olaylar; herkesten önce')
+- _live/tribun_alarm.py v2: 20 lig, 30 sn. Bildirim türleri: GOL (büyük kulüp / ⭐ yıldız / 🔥 güzel: UZAKTAN-FRİKİK-RÖVEŞATA-VOLE-SOLO-DOKSAN / 🎩 hat-trick / ⏱️ son dakika / 😱 küçükten büyüğe), 🟥 kırmızı (büyük maç), ⛔/🧤 penaltı kaçtı/kurtarıldı, 📺 VAR gol iptal, 😱 sürpriz sonuç. Monitor ile çalıştır (30 dk'da bir yeniden kur).
+- _live/hizli.py: python3 _live/hizli.py <link> <ad> "İSİM · DK'" "SKOR" [--push] [--ss/--to] -> 30-75 sn'de Deniz şablonu video (dikey tam ekran / yatay ortada), 2 geçiş -14 LUFS, check.py, --push ile up-<ad> dalı + RAW link.
