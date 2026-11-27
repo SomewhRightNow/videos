@@ -26,5 +26,5 @@ d.ellipse([bx, by + 6, bx + 48, by + 54], fill=WHITE); d.rectangle([bx + 3, by +
 d.text((bx + 80, sy + 6), t1, font=f1, fill=WHITE); d.text((sx + (w - d.textlength(t2, font=f3)) / 2, sy + 96), t2, font=f3, fill=WHITE)
 im.save('logs/ov.png')
 subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', src, '-i', 'logs/ov.png', '-filter_complex', '[0:v]scale=1440:2560:flags=lanczos[v];[v][1:v]overlay=0:0,format=yuv420p[o]',
-                '-map', '[o]', '-map', '0:a', '-af', 'loudnorm=I=-14:TP=-2:LRA=11,volume=1.5dB,alimiter=limit=0.85:level=false', '-ar', '48000', '-c:v', 'libx264', '-preset', 'slow', '-crf', '16', '-maxrate', '45M', '-bufsize', '90M',
+                '-map', '[o]', '-map', '0:a', '-af', 'loudnorm=I=-14:TP=-2:LRA=11,volume=-3dB,alimiter=limit=0.85:level=false', '-ar', '48000', '-c:v', 'libx264', '-preset', 'slow', '-crf', '16', '-maxrate', '45M', '-bufsize', '90M',
                 '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709', '-c:a', 'aac', '-b:a', '320k', '-movflags', '+faststart', out], check=True)
