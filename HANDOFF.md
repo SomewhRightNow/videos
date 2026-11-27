@@ -79,3 +79,4 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 - YÜKLENMEDİ 🔴 (ihtar döneminde atma): as1 Bruno, ig1 Arda rockets, otd4 Garnacho Sky.
 - 27.11 mor1 Moreira YÜKLENDİ -> Pl1g-dlLDEs (Playlist LAST NIGHT).
 - 27.11 rm1 Arda Güler tepki YÜKLENDİ -> O_CCHxfLHEg (Playlist FANS).
+- 27.11 tt9 Embarrassing Mistakes YÜKLENDİ -> Za6m-xBaRbc.

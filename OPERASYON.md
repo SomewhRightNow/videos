@@ -454,3 +454,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 ## 27.11 REF POV denemeleri (ref1 2D, ref2 Blender 3D) — RAFA KALDIRILDI
 - Kullanıcı 'hakem POV' konsepti istedi; 2D animasyon 'kötü', Blender mankenleri 'robot gibi' bulundu; istek gerçek görüntü gibi POV. Bu ortamda yapılamaz (GPU yok, ücretli servis yok, gerçek oyuncu deepfake riski, yayın görüntüsü UEFA). Gerçek hakem bodycam paylaşımı IFAB deneme protokolünde yasak.
 - Karar: şimdilik tribün çekimi gol/olay + tribünden hakem anları + haftalık belgesel. Araçlar duruyor: /home/user/.bpyvenv (bpy 5.0.1), ref2/scene.py (Xbot mankenleri), ref1/film.py.
+
+## 27.11 tt9 'Embarrassing Mistakes' (TikTok @magicaleight_8 ZSsB4aAGT, 720x1280, 53 s, yayın derlemesi) — KULLANILDI 0-43.9 (Szoboszlai, Marçal, Ronaldo, Gavran, Maitland, Zirkzee); Karius 43.9-52.6 (UCL finali 2018) UEFA ihtarı nedeniyle KULLANILMADI
+- tt9/film.py (tt8 RANK LADDER türevi): kendi geri sayım #6 Marçal, #5 Gavran, #4 Zirkzee, #3 Maitland, #2 Szoboszlai, #1 Ronaldo. Müzik Kevin MacLeod Raving Energy 120. sn (KULLANILDI). 🔴 Content ID (PL/La Liga/Ligue 1/Bundesliga/MLS yayını). YÜKLENDİ 27.11 10:23 UTC -> Za6m-xBaRbc (up-mistakes). Playlist TOP 5.
