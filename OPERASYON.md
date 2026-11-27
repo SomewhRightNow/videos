@@ -476,3 +476,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 27.11 nfo1 Gibbs-White 72' (X @TekkerzFoot 2126433537889096111, tribün 1280x720, 18.5 s, PL Forest–Chelsea) — KULLANILDI (TAMAMI)
 - nfo1/film.py (cj1 türevi, yatay video ortada): 'MORGAN GIBBS-WHITE · 72'' / 'NOTTM FOREST 3-1 CHELSEA' (ESPN 401879225; tweet 'BRACE goal' = 2. golü 72'). Orijinal ses. Telif DÜŞÜK (tribün; PL yayını yok). Dal up-gibbswhite hazır (Zapier kota dolu).
+
+## 27.11 TRİBÜN ALARMI kuruldu
+- _live/tribun_alarm.py: ESPN 14 lig, 45 sn'de bir; her yeni golde 'GOL | oyuncu dk | skor | TikTok/X arama linkleri'. Bulut oturumunda Monitor ile çalışır -> her golde PushNotification (kullanıcı telefonda linke basar, tribün videosunu bize atar). Oturum kapanınca durur; kalıcı sürüm = GitHub Actions + ntfy (kullanıcı onayı gerekir).
