@@ -479,3 +479,4 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 27.11 TRİBÜN ALARMI kuruldu
 - _live/tribun_alarm.py: ESPN 14 lig, 45 sn'de bir; her yeni golde 'GOL | oyuncu dk | skor | TikTok/X arama linkleri'. Bulut oturumunda Monitor ile çalışır -> her golde PushNotification (kullanıcı telefonda linke basar, tribün videosunu bize atar). Oturum kapanınca durur; kalıcı sürüm = GitHub Actions + ntfy (kullanıcı onayı gerekir).
+- 27.11: alarm BÜYÜK KULÜP filtresi (BIG listesi ~35 kulüp) -> akşam ~5-15 bildirim. X embed timeline (syndication timeline-profile) 429 -> hesap takibi otomatikleştirilemedi.

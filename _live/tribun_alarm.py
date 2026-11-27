@@ -4,6 +4,10 @@
 import sys, json, time, datetime, urllib.request, urllib.parse
 LEAGUES = sys.argv[1:] or ['eng.1', 'esp.1', 'ita.1', 'ger.1', 'fra.1', 'tur.1', 'por.1', 'ned.1', 'ksa.1',
                            'uefa.champions', 'uefa.europa', 'uefa.europa.conf', 'eng.fa', 'esp.copa_del_rey']
+BIG = ['Real Madrid', 'Barcelona', 'Atletico', 'Atlético', 'Arsenal', 'Chelsea', 'Liverpool', 'Manchester', 'Man United', 'Man City', 'Tottenham', 'Newcastle',
+       'Bayern', 'Dortmund', 'Leverkusen', 'Juventus', 'Inter', 'Milan', 'Napoli', 'Roma', 'Paris', 'PSG', 'Marseille', 'Benfica', 'Porto', 'Sporting',
+       'Ajax', 'PSV', 'Feyenoord', 'Galatasaray', 'Fenerbahce', 'Fenerbahçe', 'Besiktas', 'Beşiktaş', 'Trabzonspor', 'Al Nassr', 'Al-Nassr', 'Al Hilal', 'Al Ittihad', 'Al Ahli']
+def big(e): return any(b.lower() in e['name'].lower() for b in BIG)
 def get(u):
     return json.load(urllib.request.urlopen(urllib.request.Request(u, headers={'User-Agent': 'Mozilla/5.0'}), timeout=20))
 def q(s): return urllib.parse.quote(s)
@@ -15,7 +19,7 @@ while True:
             try: sb = get(f'https://site.api.espn.com/apis/site/v2/sports/soccer/{L}/scoreboard?dates={day}')
             except Exception: continue
             for e in sb.get('events', []):
-                if e['status']['type']['state'] == 'pre': continue
+                if e['status']['type']['state'] == 'pre' or not big(e): continue
                 c = e['competitions'][0]; cs = c['competitors']
                 home = next(x for x in cs if x['homeAway'] == 'home'); away = next(x for x in cs if x['homeAway'] == 'away')
                 for dt in c.get('details', []):
