@@ -460,3 +460,9 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 27.11 cj1 Cristiano Jr.? frikik (X @CFC_Janty 2126319457211756801, 720x720, 16.5 s) — KULLANILDI (TAMAMI)
 - cj1/film.py: Deniz şablonu koyu zemin, kare video ortada; plaka 'LIKE FATHER, LIKE SON?' / 'FANS SAY IT'S CRISTIANO JR.' (kimlik/rakip/tarih TEK KAYNAK, doğrulanamadı -> temkinli dil). Orijinal ses (ortam). Telif DÜŞÜK. YÜKLENDİ 27.11 17:25 UTC -> ZCnfK2AoG04 (up-cristianojr).
+
+## 27.11 İZLENME DÜŞÜŞÜ ANALİZİ (ihtar sonrası)
+- İhtar öncesi (24.11): Félix 206K, Ronaldo 987 41K, Gyökeres 17K, Deniz Gül 16K = AYNI GECE büyük isim canlı gol.
+- 25.11: 1-6K. 26.11 sonrası: çoğu 100-3K (Adu 2.9K, Cambiaso 1.2K); 27.11: Ajax 995, Moreira 311, Arda tepki 7, Mistakes 4 (12 saatte).
+- Nedenler: büyük isim canlı gol yok (yayın yasağı); 26.11'de ~13 yükleme (her video küçük test kitlesi alıyor, kanal sinyali dağılıyor); bir gün önceki/viral olmuş klipler (Arda) geç kalıyor; düşük çözünürlüklü/başkasının filigranlı repost'ları.
+- KARAR ÖNERİSİ: günde 3-5 video, sadece güçlü olanlar; canlı gol tribün klibi ilk 30-60 dk; büyük isim/kulüp; özgün format (foto+VO haber, istatistik) ağırlığı artsın; Telif Okulu tamamlansın; Studio > İçerik > Telif sekmesinde bölge engeli kontrol.
