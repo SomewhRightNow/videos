@@ -43,3 +43,4 @@ Xxd5lS02zg0 | 03OeUuF2Jh4 | FHHEhfT12lQ | AcpeCDHJ4sg | nEl6I2DtL3A | Q-zFQNaZjR
 - 27.11 Pl1g-dlLDEs Milan's 90+5' Hero (Moreira) -> LAST NIGHT (listeye ekle)
 - 27.11 O_CCHxfLHEg Arda Güler Couldn't Believe It -> FANS (listeye ekle)
 - 27.11 Za6m-xBaRbc Top 6 Embarrassing Mistakes -> TOP 5 (listeye ekle)
+- 27.11 ZCnfK2AoG04 Like Father, Like Son? (Cristiano Jr) -> BREAKING (listeye ekle)

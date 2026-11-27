@@ -446,7 +446,7 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - 26.11 rm1 "Arda Guler Reaction" (tribün, @Fanaticos_RMCF via TekkerzFoot x.com/TekkerzFoot/status/2126096421333987753): Bellingham makas vuruşu kaleci kurtardı, Arda elleri başında; RM 5-1 PSV 24.11 UCL. Klip tamamı kullanıldı. YÜKLENDİ 27.11 05:40 UTC -> O_CCHxfLHEg (up-ardareact).
 
 ## 26.11 ajx2 Marcos Leonardo 41' (X @Farioliballl 2126081636890710452, tribün 352x624 DÜŞÜK ÇÖZ.) — KULLANILDI 0-8.7 sn (taraftar sevinci kesildi)
-- Deniz şablonu (ajx2/plain.py, -t 8.7 + hqdn3d/unsharp). Ajax 2-0 FC Thun (ESPN 401915815, 41' fast break). Gol sahibi kontra tarifinden çıkarım. Telif DÜŞÜK. Yüklenmedi.
+- Deniz şablonu (ajx2/plain.py, -t 8.7 + hqdn3d/unsharp). Ajax 2-0 FC Thun (ESPN 401915815, 41' fast break). Gol sahibi kontra tarifinden çıkarım. Telif DÜŞÜK. YÜKLENDİ 27.11 17:25 UTC -> ZCnfK2AoG04 (up-cristianojr).
 
 ## 26.11 mor1 Diego Moreira (X @ibra65_8 2125937858733052038, 720x1280, 16.9 s: 0-4 s tribün + Milan kulüp sinematik ödül görüntüleri) — KULLANILDI (TAMAMI)
 - mor1/film.py: Deniz şablonu, etiket AC MILAN, DIEGO MOREIRA / 90+5' WINNER LAST NIGHT. Kaynak ses = fan edit şarkısı -> Kevin MacLeod Movement Proposition 90. sn (KULLANILDI). Ödül/kupanın ne olduğu doğrulanmadı (ekrana yazılmadı). Telif DÜŞÜK-ORTA. YÜKLENDİ 27.11 04:59 UTC -> Pl1g-dlLDEs (up-moreira).
@@ -459,4 +459,4 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - tt9/film.py (tt8 RANK LADDER türevi): kendi geri sayım #6 Marçal, #5 Gavran, #4 Zirkzee, #3 Maitland, #2 Szoboszlai, #1 Ronaldo. Müzik Kevin MacLeod Raving Energy 120. sn (KULLANILDI). 🔴 Content ID (PL/La Liga/Ligue 1/Bundesliga/MLS yayını). YÜKLENDİ 27.11 10:23 UTC -> Za6m-xBaRbc (up-mistakes). Playlist TOP 5.
 
 ## 27.11 cj1 Cristiano Jr.? frikik (X @CFC_Janty 2126319457211756801, 720x720, 16.5 s) — KULLANILDI (TAMAMI)
-- cj1/film.py: Deniz şablonu koyu zemin, kare video ortada; plaka 'LIKE FATHER, LIKE SON?' / 'FANS SAY IT'S CRISTIANO JR.' (kimlik/rakip/tarih TEK KAYNAK, doğrulanamadı -> temkinli dil). Orijinal ses (ortam). Telif DÜŞÜK. Yüklenmedi.
+- cj1/film.py: Deniz şablonu koyu zemin, kare video ortada; plaka 'LIKE FATHER, LIKE SON?' / 'FANS SAY IT'S CRISTIANO JR.' (kimlik/rakip/tarih TEK KAYNAK, doğrulanamadı -> temkinli dil). Orijinal ses (ortam). Telif DÜŞÜK. YÜKLENDİ 27.11 17:25 UTC -> ZCnfK2AoG04 (up-cristianojr).
