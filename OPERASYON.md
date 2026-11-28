@@ -499,3 +499,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 28.11 ronaldo-bike (X @TekkerzFoot 2126672690731999727, tribün 1080x1920, 21 s, Ronaldo rövaşata denemesi, Al Hazem–Al Nassr 2. yarı) — KULLANILDI (TAMAMI)
 - live/ronaldo-bike: filigran otomatik bulunup inpaint + hizli.py 'RONALDO TRIES A BICYCLE KICK!' / 'AL HAZEM 0-1 AL NASSR · 2ND HALF' (ESPN 67' 0-1). Telif DÜŞÜK. Dal up-ronaldo-bike. YÜKLENDİ 28.11 13:50 UTC -> qCSLYPAi3J8.
+
+## 28.11 15:00 UTC dağıtım kontrolü
+- Ronaldo direk xBSd2cco4fM 317 (2 sa), Messi Orja-QndRaQ 489 (sabah 4'tü, 11 sa), Ronaldo rövaşata qCSLYPAi3J8 23 (1 sa), Ilenikhena 137, Gibbs-White 32, Maracanã 11. Dağıtım kısmen düzeliyor; büyük isim (Ronaldo/Messi) yüzlerce alıyor, küçük konular almıyor. Aynı maçtan ikinci video düşük.
