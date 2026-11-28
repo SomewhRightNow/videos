@@ -8,7 +8,7 @@ LEAGUES = sys.argv[1:] or ['eng.1', 'esp.1', 'ita.1', 'ger.1', 'fra.1', 'tur.1',
 BIG = ['Real Madrid', 'Barcelona', 'Atletico', 'Atlético', 'Arsenal', 'Chelsea', 'Liverpool', 'Manchester', 'Man United', 'Man City', 'Tottenham', 'Newcastle',
        'Bayern', 'Dortmund', 'Leverkusen', 'Juventus', 'Internazionale', 'Inter Milan', 'AC Milan', 'Napoli', 'Roma', 'Paris Saint', 'PSG', 'Marseille', 'Benfica', 'Porto', 'Sporting CP',
        'Ajax', 'PSV', 'Feyenoord', 'Galatasaray', 'Fenerbahce', 'Fenerbahçe', 'Besiktas', 'Beşiktaş', 'Trabzonspor', 'Al Nassr', 'Al-Nassr', 'Al Hilal', 'Al Ittihad', 'Al Ahli', 'Celtic', 'Rangers', 'Atalanta', 'Lazio', 'Fiorentina', 'Aston Villa', 'Villarreal', 'Sevilla', 'Athletic Club', 'Real Sociedad', 'Lyon', 'Monaco', 'Lille', 'Leipzig', 'Stuttgart', 'Brighton', 'Nottingham', 'Al Qadsiah', 'Atlanta United', 'Inter Miami', 'LA Galaxy', 'Boca Juniors', 'River Plate', 'Racing Club', 'Independiente', 'San Lorenzo', 'Flamengo', 'Palmeiras', 'Corinthians', 'São Paulo', 'Santos', 'Botafogo', 'Fluminense', 'América', 'Chivas', 'Guadalajara', 'Tigres', 'Monterrey']
-STARS = ['Ronaldo', 'Messi', 'Mbapp', 'Haaland', 'Yamal', 'Vinícius', 'Vinicius', 'Bellingham', 'Kane', 'Salah', 'Güler', 'Guler', 'Kenan Y', 'Osimhen', 'Icardi', 'Neymar', 'Benzema', 'Gyökeres', 'Gyokeres', 'Saka', 'Palmer', 'Wirtz', 'Musiala', 'Nico Williams', 'Pedri', 'Raphinha', 'Lewandowski', 'Rodrygo', 'De Bruyne', 'Lautaro', 'Leão', 'Leao', 'Dembélé', 'Dembele', 'Kvaratskhelia', 'Olise', 'Isak', 'Ødegaard', 'Rice', 'Foden', 'Bruno Fernandes', 'Mac Allister', 'Szoboszlai']
+STARS = ['Ronaldo', 'Messi', 'Mbappé', 'Mbappe', 'Haaland', 'Yamal', 'Vinícius', 'Vinicius', 'Bellingham', 'Kane', 'Salah', 'Güler', 'Guler', 'Kenan Yildiz', 'Kenan Yıldız', 'Osimhen', 'Icardi', 'Neymar', 'Benzema', 'Gyökeres', 'Gyokeres', 'Saka', 'Palmer', 'Wirtz', 'Musiala', 'Nico Williams', 'Pedri', 'Raphinha', 'Lewandowski', 'Rodrygo', 'De Bruyne', 'Lautaro', 'Leão', 'Leao', 'Dembélé', 'Dembele', 'Kvaratskhelia', 'Olise', 'Isak', 'Ødegaard', 'Rice', 'Foden', 'Bruno Fernandes', 'Mac Allister', 'Szoboszlai']
 NICE = (('bicycle', 'RÖVEŞATA'), ('very long range', 'ÇOK UZAKTAN'), ('outside the box', 'UZAKTAN'), ('free kick', 'FRİKİK'), ('volley', 'VOLE'),
         ('solo', 'SOLO'), ('top left corner', 'DOKSAN'), ('top right corner', 'DOKSAN'), ('scorpion', 'AKREP'), ('rabona', 'RABONA'))
 NICE_CORE = ('RÖVEŞATA', 'ÇOK UZAKTAN', 'UZAKTAN', 'FRİKİK', 'VOLE', 'SOLO', 'AKREP', 'RABONA')
@@ -59,7 +59,7 @@ while True:
                     for kw, tr in NICE:
                         if kw in desc and tr not in tag: tag.append(tr)
                     nice = any(t in tag for t in NICE_CORE)
-                    star = any(re.search(r'(^|\s)' + re.escape(s.lower()) + r'($|\s)', who.lower()) or (len(s.split()) == 1 and s.lower() in who.lower().split()) for s in STARS)
+                    star = any(re.search(r'(^|\s)' + re.escape(s.lower()) + r'($|\s)', who.lower()) for s in STARS)
                     m = int(''.join(ch for ch in mn.split("'")[0].split('+')[0] if ch.isdigit()) or 0)
                     hat = len(goals[f"{e['id']}|{a.get('id')}"]) == 3
                     extra = (['⏱️ SON DAKİKA'] if m >= 85 and (big or nice) else []) + (['🎩 HAT-TRICK'] if hat else []) \
