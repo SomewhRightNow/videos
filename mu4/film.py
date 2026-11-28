@@ -1,5 +1,5 @@
 # BREAKING: Man United 0-4 Brentford, PL 28.11.2026 (ESPN 401879226). Visuals: fan stand clip of Ajer 82' (X @pitchreplay, Old Trafford),
-# Sir Alex Ferguson in the stands (X @433 still, their logo cropped out), Bruno head down (X @FabrizioRomano photo) + Romano's defence stat (attributed).
+# Sir Alex Ferguson in the stands (X @433 still, their logo cropped out). Romano stat/photo removed (user).
 import os, subprocess, numpy as np, soundfile as sf, cv2
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -8,15 +8,15 @@ F = '/home/user/Filmler/fonts/'; fB = lambda s: ImageFont.truetype(F + 'BigShoul
 WHITE = (255, 255, 255); YEL = (253, 215, 0); RED = (215, 25, 35); PLATE = (12, 13, 18); GREY = (175, 178, 190); INK = (8, 8, 12)
 LINES = ["Manchester United just lost 4-0 at Old Trafford.", "Callum Wilson scored twice for Brentford. Then Kristoffer Ajer made it three.",
          "In stoppage time, Kevin Schade added a fourth.", "Sir Alex Ferguson was watching in the stands.",
-         "And according to Fabrizio Romano, United now have the worst defence in Europe's top five leagues.", "What has gone wrong at United? Tell us below."]
+         "What has gone wrong at United? Tell us below."]
 DUR = [sf.info(f'audio/s{i}.wav').duration for i in range(len(LINES))]
-GAPS = [0.25, 0.25, 1.8, 0.3, 0.3]
+GAPS = [0.25, 0.25, 1.8, 0.4]
 T = [0.3]
 for d, g in zip(DUR[:-1], GAPS): T.append(T[-1] + d + g)
 TOTAL = T[-1] + DUR[-1] + 0.9
 CLIP, C0 = 'src/2126720295784591741.mp4', 55.8
 CLIP_END = T[3] - 0.15  # clip until Ferguson line
-SEG = lambda t: 'clip' if t < CLIP_END else ('fergie' if t < T[4] - 0.15 else 'bruno')
+SEG = lambda t: 'clip' if t < CLIP_END else 'fergie'
 GOALS = ["19' WILSON", "32' WILSON", "82' AJER", "90+1' SCHADE"]
 cap = cv2.VideoCapture(CLIP); cap.set(cv2.CAP_PROP_POS_MSEC, C0 * 1000); _last = [None, -1]
 def clip_frame(t):
@@ -74,16 +74,15 @@ OV = overlay()
 def frame(t):
     k = SEG(t)
     if k == 'clip': im = clip_frame(t)
-    elif k == 'fergie': im = cover('fergie', (0.62, 0.4), (t - CLIP_END) / 3)
-    else: im = cover('bruno', (0.52, 0.4), (t - T[4]) / 8)
+    else: im = cover('fergie', (0.62, 0.4), (t - CLIP_END) / 7)
     im = Image.alpha_composite(im.convert('RGBA'), OV); d = ImageDraw.Draw(im)
     if k != 'clip':
-        lab = 'SIR ALEX FERGUSON' if k == 'fergie' else 'VIA FABRIZIO ROMANO'
+        lab = 'SIR ALEX FERGUSON'
         fl = fO(36); lw = d.textlength(lab, font=fl) + 48; d.rounded_rectangle([40, 600, 40 + lw, 664], 14, fill=PLATE); d.text((64, 632), lab, font=fl, fill=WHITE, anchor='lm')
     for a, b, c in CAPS:
         if a <= t < b: d.text((W / 2, 1640), c.upper(), font=fB(104), fill=WHITE, anchor='mm', stroke_width=9, stroke_fill=(0, 0, 0)); break
     im = im.convert('RGB')
-    for tc in (CLIP_END, T[4] - 0.15):
+    for tc in (CLIP_END,):
         if 0 <= t - tc < 0.1: im = Image.blend(im, Image.new('RGB', (W, H), WHITE), 0.4)
     return im
 def audio():
@@ -101,7 +100,7 @@ if __name__ == '__main__':
     import sys
     print('T', [round(x, 2) for x in T], 'CLIP_END', round(CLIP_END, 2), 'TOTAL', round(TOTAL, 2))
     if len(sys.argv) > 1:
-        ts = [1.0, T[1] + 2.5, T[2] + 1, T[3] + 0.8, T[4] + 1.5, T[5] + 1]
+        ts = [1.0, T[1] + 2.5, T[2] + 1, T[3] + 0.8, T[4] + 1.0]
         frames = []; j = 0
         for x in range(int(TOTAL * FPS)):
             t = x / FPS; fr = frame(t)
