@@ -504,4 +504,4 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - Ronaldo direk xBSd2cco4fM 317 (2 sa), Messi Orja-QndRaQ 489 (sabah 4'tü, 11 sa), Ronaldo rövaşata qCSLYPAi3J8 23 (1 sa), Ilenikhena 137, Gibbs-White 32, Maracanã 11. Dağıtım kısmen düzeliyor; büyük isim (Ronaldo/Messi) yüzlerce alıyor, küçük konular almıyor. Aynı maçtan ikinci video düşük.
 
 ## 28.11 wilson-19 (X @Rufus_45 2126701134312083910, tribün Old Trafford 1080x1920, 9.4 s) — KULLANILDI (TAMAMI)
-- hizli.py: 'CALLUM WILSON · 19'' / 'MAN UNITED 0-1 BRENTFORD' (ESPN eng.1; tweet 'first goal of the season' = 19'). Telif DÜŞÜK (tribün, PL yayını yok). Dal up-wilson-19. Yüklenmedi.
+- hizli.py: 'CALLUM WILSON · 19'' / 'MAN UNITED 0-1 BRENTFORD' (ESPN eng.1; tweet 'first goal of the season' = 19'). Telif DÜŞÜK (tribün, PL yayını yok). Dal up-wilson-19. YÜKLENDİ 28.11 15:43 UTC -> _k5RcIoe_RE.
