@@ -82,3 +82,4 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 - 27.11 tt9 Embarrassing Mistakes YÜKLENDİ -> Za6m-xBaRbc.
 - 27.11 cj1 Cristiano Jr frikik YÜKLENDİ -> ZCnfK2AoG04.
 - 27.11 ~19:30 UTC itt2 yükleme: Zapier 'throttled' (kota) -> YÜKLENMEDİ; kullanıcıya elle yükleme linki verildi: https://raw.githubusercontent.com/SomewhRightNow/videos/up-ilenikhena/ilenikhena-chance.mp4
+- 28.11 ronaldo-post YÜKLENDİ -> xBSd2cco4fM. Dağıtım testi: 2-3 saat sonra izlenmeye bak.
