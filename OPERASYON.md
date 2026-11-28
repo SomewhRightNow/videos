@@ -516,3 +516,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - mu4/film.py: tribün klibi X @pitchreplay 2126720295784591741 (55.8-67.6 s, Ajer golü) KULLANILDI; @433 Ferguson tribün karesi (üst panel, 433 logosu kırpıldı; PL yayın karesi = ORTA risk) KULLANILDI; v2: kullanıcı 'Romano'yu katma' -> Bruno fotoğrafı + istatistik ÇIKARILDI (kullanılmadı). Chatterbox VO 6 satır, kalabalık sesi altta. 23 s. Dal up-united-0-4. YÜKLENDİ 28.11 17:06 UTC -> kMAemv7l51o.
 
 ## 28.11 Yeni referans kitleri: every-frame-is-code (motion-kit) + cinematic-video-skill -> _refs/ + ~/.claude/skills (bootstrap otomatik klonlar/kurar). Ayrıntı REFS.md.
+
+## 28.11 mbp1 'How Fast Is Mbappé?' (X @Kelvindot08 2126750463160660286 hız derlemesi) — SADECE tribün/antrenman parçaları KULLANILDI: 0.05-3.40, 3.45-6.90, 12.80-14.55, 28.42-30.08, 38.42-41.10, 54.72-60.30; yayın parçaları (UCL Juve, WC yakın planlar, Polonya/İngiltere/Danimarka takip) ÇIKARILDI
+- mbp1/film.py: arada kendi kartlarımız (38 km/h PSG-Monaco 2019; 37.6 km/h 2026 DK en hızlı (WorldSoccerTalk+Tuttomercato); Bolt 44.72 karşılaştırma). Müzik Kevin MacLeod Cut and Run 8. sn (KULLANILDI). 24.7 s. Kaynak 576x768 düşük çöz. Telif DÜŞÜK-ORTA (antrenman görüntüsü kaynağı belirsiz). Yüklenmedi.
