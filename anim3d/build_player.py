@@ -15,6 +15,7 @@ info['eyes'] = f'{D}/eyes/high-poly/high-poly.mhclo'; eb = spec.get('eyebrows', 
 info['hair'] = f"{D}/hair/{spec.get('hair', 'short02')}/{spec.get('hair', 'short02')}.mhclo"
 info['eyes_material_settings'] = {}
 info['rig'] = 'cmu_mb'
+info['targets'] = [{'target': k, 'value': v} for k, v in spec.get('targets', {}).items()]
 info['clothes'] = [f"{D}/clothes/{c}/{c}.mhclo" for c in ['elvs_crude_t-shirt_male', 'cortu_jeans_shorts', 'shoes05']]
 st = HumanService.get_default_deserialization_settings(); st['subdiv_levels'] = 1
 basemesh = HumanService.deserialize_from_dict(info, st)
@@ -45,6 +46,7 @@ for o in bpy.data.objects:
     if 't-shirt' in n or 'shirt' in n: recolor(o, kit['shirt'])
     elif 'shorts' in n: recolor(o, kit['shorts'])
     elif 'shoes' in n: recolor(o, kit.get('boots', [0.9, 0.9, 0.92]), 0.35)
+    elif n.startswith('human.') and spec.get('hair') and spec['hair'] in n and spec.get('hair_rgb'): recolor(o, spec['hair_rgb'], 0.45)
 print('OBJECTS', [o.name for o in bpy.data.objects])
 bpy.ops.wm.save_as_mainfile(filepath=os.path.abspath(out))
 print('SAVED', out)
