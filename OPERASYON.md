@@ -496,3 +496,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 28.11 ronaldo-post (X @TekkerzFoot 2126659943147122949, tribün 1080x1920, 10.6 s, Ronaldo direkten döndü, Al Hazem–Al Nassr 1. yarı) — KULLANILDI (TAMAMI)
 - live/ronaldo-post: filigran inpaint (clean.py) + hizli.py 'RONALDO HITS THE POST!' / 'AL HAZEM 0-1 AL NASSR · 1ST HALF' (ESPN 401900442, 39' 0-1). Telif DÜŞÜK. Dal up-ronaldo-post. YÜKLENDİ 28.11 12:57 UTC -> xBSd2cco4fM.
+
+## 28.11 ronaldo-bike (X @TekkerzFoot 2126672690731999727, tribün 1080x1920, 21 s, Ronaldo rövaşata denemesi, Al Hazem–Al Nassr 2. yarı) — KULLANILDI (TAMAMI)
+- live/ronaldo-bike: filigran otomatik bulunup inpaint + hizli.py 'RONALDO TRIES A BICYCLE KICK!' / 'AL HAZEM 0-1 AL NASSR · 2ND HALF' (ESPN 67' 0-1). Telif DÜŞÜK. Dal up-ronaldo-bike. Yüklenmedi.
