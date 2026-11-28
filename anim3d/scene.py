@@ -164,7 +164,7 @@ sc.frame_start, sc.frame_end = 1, K + 36
 if FR: a, bb = FR.split('-'); sc.frame_start, sc.frame_end = int(a), int(bb)
 sc.render.engine = 'CYCLES'; sc.cycles.device = 'CPU'; sc.cycles.samples = int(os.environ.get('SAMPLES', 20)); sc.cycles.use_denoising = True; sc.cycles.denoiser = 'OPENIMAGEDENOISE'
 sc.cycles.max_bounces = 4; sc.cycles.diffuse_bounces = 2; sc.cycles.glossy_bounces = 2; sc.cycles.transmission_bounces = 2
-sc.render.use_motion_blur = True; sc.render.motion_blur_shutter = 0.4
+sc.render.use_motion_blur = bool(int(os.environ.get('MB', 0))); sc.render.motion_blur_shutter = 0.4
 sc.render.resolution_x, sc.render.resolution_y = 1080, 1920; sc.render.resolution_percentage = int(os.environ.get('RES', 66))
 sc.view_settings.view_transform = 'AgX'; sc.view_settings.look = 'AgX - Medium High Contrast'
 sc.render.image_settings.file_format = 'PNG'; sc.render.filepath = OUT
