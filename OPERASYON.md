@@ -489,3 +489,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 27.11 flu-maracana Fluminense taraftarı (X @fimdejogo 2126450698464194832, tribün 2336x1080, 32 s, bayraklar + takımlar sahaya çıkış) — KULLANILDI (TAMAMI)
 - _live/hizli.py: 'MARACANÃ, TONIGHT' / 'FLUMINENSE vs CRUZEIRO'. Orijinal ses. Telif DÜŞÜK. Dal up-flu-maracana. Yüklenmedi.
+
+## 28.11 messi-season-over (X @ISHQ577 2126515642505613812, tribün 720x748, 9 s, Messi sahadan çıkıyor) — KULLANILDI (TAMAMI)
+- _live/hizli.py: 'MESSI'S SEASON IS OVER' / 'COLUMBUS 1-0 INTER MIAMI · 90+2'' (ESPN 401933727: Santiago Rodríguez 90+2', Columbus seriyi 2-0 aldı, MLS playoff 1. tur). Telif DÜŞÜK. Dal up-messi-season-over. Yüklenmedi.
