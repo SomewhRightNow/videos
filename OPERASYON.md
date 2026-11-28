@@ -511,3 +511,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 28.11 feyenoord-fans (X @Ultrasbible_ 2126705985884696675, taraftar 720x1280, 76 s; Feyenoord antrenmanında meşale şovu, Klassieker öncesi) — KULLANILDI 0-32 s
 - hizli.py: 'FEYENOORD FANS ARE READY' / 'DE KLASSIEKER · TOMORROW vs AJAX' (ESPN: 29.11 13:30 UTC De Kuip). Telif DÜŞÜK. Topluluk: meşale var, şiddet yok. Dal up-feyenoord-fans. YÜKLENDİ 28.11 16:48 UTC -> 13x7Bfn0cj8.
+
+## 28.11 mu4 'United Lose 4-0' (BREAKING klip+foto+VO) — Man Utd 0-4 Brentford (ESPN 401879226: Wilson 19', 32', Ajer 82', Schade 90+1')
+- mu4/film.py: tribün klibi X @pitchreplay 2126720295784591741 (55.8-67.6 s, Ajer golü) KULLANILDI; @433 Ferguson tribün karesi (üst panel, 433 logosu kırpıldı; PL yayın karesi = ORTA risk) KULLANILDI; @FabrizioRomano Bruno fotoğrafı (ajans fotoğrafı olabilir) + 'en kötü savunma' istatistiği (atıflı) KULLANILDI. Chatterbox VO 6 satır, kalabalık sesi altta. 23 s. Dal up-united-0-4. Yüklenmedi.
