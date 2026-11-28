@@ -514,3 +514,5 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 28.11 mu4 'United Lose 4-0' (BREAKING klip+foto+VO) — Man Utd 0-4 Brentford (ESPN 401879226: Wilson 19', 32', Ajer 82', Schade 90+1')
 - mu4/film.py: tribün klibi X @pitchreplay 2126720295784591741 (55.8-67.6 s, Ajer golü) KULLANILDI; @433 Ferguson tribün karesi (üst panel, 433 logosu kırpıldı; PL yayın karesi = ORTA risk) KULLANILDI; v2: kullanıcı 'Romano'yu katma' -> Bruno fotoğrafı + istatistik ÇIKARILDI (kullanılmadı). Chatterbox VO 6 satır, kalabalık sesi altta. 23 s. Dal up-united-0-4. YÜKLENDİ 28.11 17:06 UTC -> kMAemv7l51o.
+
+## 28.11 Yeni referans kitleri: every-frame-is-code (motion-kit) + cinematic-video-skill -> _refs/ + ~/.claude/skills (bootstrap otomatik klonlar/kurar). Ayrıntı REFS.md.

@@ -9,6 +9,6 @@ mkdir -p ~/.claude/skills; [ -d ~/.claude/skills/cinematic-film ] || cp -r $D/_s
 [ -f ~/.cinecode/kokoro/voices-v1.0.bin ] || (nohup bash $D/setup.sh > /tmp/srn_setup.log 2>&1 &)
 [ -f /home/user/.yolo/sam_vit_b.pth ] || (nohup bash $D/setup_ml.sh > /tmp/srn_setup_ml.log 2>&1 &)
 # reference repos the user added (21.11): cloned in background
-(mkdir -p $D/_refs; cd $D/_refs; for r in OpenMontageInc/openmontage lemomo-ai/lemo-opuscar JuneYaooo/rea-video kajisho5/ffmpeg-skill mvanhorn/last30days-skill krillinai/OpenCreator; do n=$(echo ${r#*/} | tr A-Z a-z); [ -d "$n" ] || git clone -q --depth 1 https://github.com/$r $n 2>/dev/null; done) >/dev/null 2>&1 &
-(sleep 60; [ -d ~/.claude/skills/last30days ] || cp -r $D/_refs/last30days-skill/skills/last30days ~/.claude/skills/ 2>/dev/null) >/dev/null 2>&1 &
+(mkdir -p $D/_refs; cd $D/_refs; for r in OpenMontageInc/openmontage lemomo-ai/lemo-opuscar JuneYaooo/rea-video kajisho5/ffmpeg-skill mvanhorn/last30days-skill krillinai/OpenCreator kiselas/every-frame-is-code mylxsw/cinematic-video-skill; do n=$(echo ${r#*/} | tr A-Z a-z); [ -d "$n" ] || git clone -q --depth 1 https://github.com/$r $n 2>/dev/null; done) >/dev/null 2>&1 &
+(sleep 60; [ -d ~/.claude/skills/last30days ] || cp -r $D/_refs/last30days-skill/skills/last30days ~/.claude/skills/ 2>/dev/null; [ -d ~/.claude/skills/motion-kit ] || cp -r $D/_refs/every-frame-is-code ~/.claude/skills/motion-kit 2>/dev/null; [ -d ~/.claude/skills/cinematic-video ] || cp -r $D/_refs/cinematic-video-skill ~/.claude/skills/cinematic-video 2>/dev/null) >/dev/null 2>&1 &
 bash $D/_sync/context.sh

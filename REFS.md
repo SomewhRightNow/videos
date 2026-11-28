@@ -41,3 +41,13 @@ macOS/Swift masaüstü editörü (Apple silicon, Xcode); bulutta ÇALIŞMAZ. İ�
 - `_engine/tools/moments.py klip.mp4 [uzunluk=1.0] [adet=8]` -> netlik/pozlama/renk/sarsıntı skoruyla en iyi, çakışmayan anlar. Uzun kaynaktan en güçlü 0.3–1.3 sn kesmeleri seçmek için.
 - Fikir olarak alınacaklar: shot uzunluğu = tam sayı beat, kapanış bar sonunda, şarkı bar başında girer; speed ramp (log-hız yumuşatma) — ama gol edit'inde slow-mo kuralı geçerli.
 - Diğerleri (Claude MCP ile timeline düzenleme, LUT, loudness) bizde zaten var (ffmpeg loudnorm -14 LUFS, engine.py) veya Mac gerektiriyor.
+
+## every-frame-is-code (motion-kit) — kiselas/every-frame-is-code (MIT) — eklendi 28.11
+- Kod ile çizilen hareketli grafik/kısa film kiti: "her kare zamanın saf fonksiyonu" draw(ctx,t); HTML/Canvas/WebGL/Three.js -> headless Chrome ile MP4 (render/render.mjs), kontakt sayfası QA (render/contact-sheet.sh), referans video çözümleme (node render/analyze.mjs ref.mp4 out/ -> çekim/tempo/kesme raporu).
+- Kullanım alanımız: kinetik tipografi (08), geçişler (05: iris, push, luma, whip pan), efektler (07: parçacık, glow, grain), beat senkronu (09), 1-3 dk açıklayıcı (14 + runtime/film.js). Yol: _refs/every-frame-is-code ; beceri: ~/.claude/skills/motion-kit.
+- Not: chiptune/sentez müzik (16) KULLANMA (kural: sentez müzik yok). Pikselli/retro stil kanal stiline uymaz; sadece kullanıcı isterse.
+
+## cinematic-video-skill — mylxsw/cinematic-video-skill (MIT) — eklendi 28.11
+- Remotion (React) ile sinematik hareketli grafik video iş akışı: brief -> araştırma/doğrulanmış zaman çizelgesi -> hikâye (perdeler, sahneler) -> timeline.json -> sahneler + otomatik yerleşim QA (kırpılan/örtülen yazı yok) -> render. Şablon: template/ (tools/build.sh, contact_sheet.py, audio_check.py, video/qa.mjs). Örnek: examples/openai-2015-2026 (41 sahne).
+- Kullanım alanımız: uzun belgesel/tarih videoları (haftada 1 belgesel), şirket/kulüp tarihçesi; timeline.json + yerleşim QA fikri Shorts grafiklerimize de uyar. Yol: _refs/cinematic-video-skill ; beceri: ~/.claude/skills/cinematic-video.
+- Not: kendi sentez müzik üreticisi (tools/music.py) KULLANMA (kural); müzik = Kevin MacLeod / orijinal ses. Node + Remotion kurulumu gerekir (template/tools/setup.sh).
