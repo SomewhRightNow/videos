@@ -51,7 +51,11 @@ while True:
                     if not d.get('scoringPlay'): continue
                     a = (d.get('athletesInvolved') or [{}])[0]; who = a.get('displayName', '?'); mn = d.get('clock', {}).get('displayValue', '')
                     key = gkey(d)
-                    goals.setdefault(f"{e['id']}|{a.get('id')}", set()).add(mn)
+                    mnum = int(''.join(ch for ch in mn.split("'")[0].split('+')[0] if ch.isdigit()) or 0)
+                    gk = f"{e['id']}|{a.get('id')}"
+                    near = [m for m in goals.get(gk, set()) if abs(m - mnum) <= 2]
+                    if key not in seen and near: seen.add(key); continue  # ESPN shifted the minute by 1-2: same goal
+                    goals.setdefault(gk, set()).add(mnum)
                     if key in seen: continue
                     team = tname.get(d.get('team', {}).get('id'), '')
                     desc = next((x.get('text', '') for x in comm if x.get('time', {}).get('displayValue') == mn and 'Goal!' in x.get('text', '')), '').lower()
@@ -61,7 +65,7 @@ while True:
                     nice = any(t in tag for t in NICE_CORE)
                     star = any(re.search(r'(^|\s)' + re.escape(s.lower()) + r'($|\s)', who.lower()) for s in STARS)
                     m = int(''.join(ch for ch in mn.split("'")[0].split('+')[0] if ch.isdigit()) or 0)
-                    hat = len(goals[f"{e['id']}|{a.get('id')}"]) == 3
+                    hat = len(goals[gk]) == 3
                     extra = (['⏱️ SON DAKİKA'] if m >= 85 and (big or nice) else []) + (['🎩 HAT-TRICK'] if hat else []) \
                             + (['😱 KÜÇÜK TAKIMDAN BÜYÜĞE'] if big and not isbig(tfull.get(d.get('team', {}).get('id'), team)) else []) + (['⭐ YILDIZ'] if star else [])
                     if not (big or nice or hat or star): seen.add(key); continue
