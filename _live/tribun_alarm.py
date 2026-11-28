@@ -6,15 +6,17 @@ import sys, json, time, datetime, urllib.request, urllib.parse
 LEAGUES = sys.argv[1:] or ['eng.1', 'esp.1', 'ita.1', 'ger.1', 'fra.1', 'tur.1', 'por.1', 'ned.1', 'ksa.1', 'eng.2', 'sco.1', 'bel.1',
                            'uefa.champions', 'uefa.europa', 'uefa.europa.conf', 'eng.fa', 'eng.league_cup', 'usa.1', 'arg.1', 'arg.2', 'bra.1', 'mex.1', 'conmebol.libertadores', 'conmebol.sudamericana', 'esp.copa_del_rey', 'ita.coppa_italia', 'ger.dfb_pokal']
 BIG = ['Real Madrid', 'Barcelona', 'Atletico', 'Atlético', 'Arsenal', 'Chelsea', 'Liverpool', 'Manchester', 'Man United', 'Man City', 'Tottenham', 'Newcastle',
-       'Bayern', 'Dortmund', 'Leverkusen', 'Juventus', 'Internazionale', 'Inter Milan', 'AC Milan', 'Napoli', 'Roma', 'Paris Saint', 'PSG', 'Marseille', 'Benfica', 'Porto', 'Sporting',
-       'Ajax', 'PSV', 'Feyenoord', 'Galatasaray', 'Fenerbahce', 'Fenerbahçe', 'Besiktas', 'Beşiktaş', 'Trabzonspor', 'Al Nassr', 'Al-Nassr', 'Al Hilal', 'Al Ittihad', 'Al Ahli', 'Celtic', 'Rangers', 'Atalanta', 'Lazio', 'Fiorentina', 'Aston Villa', 'Villarreal', 'Sevilla', 'Athletic', 'Real Sociedad', 'Lyon', 'Monaco', 'Lille', 'Leipzig', 'Stuttgart', 'Brighton', 'Nottingham', 'Al Qadsiah', 'Atlanta United', 'Inter Miami', 'LA Galaxy', 'Boca Juniors', 'River Plate', 'Racing Club', 'Independiente', 'San Lorenzo', 'Flamengo', 'Palmeiras', 'Corinthians', 'São Paulo', 'Santos', 'Botafogo', 'Fluminense', 'América', 'Chivas', 'Guadalajara', 'Tigres', 'Monterrey']
+       'Bayern', 'Dortmund', 'Leverkusen', 'Juventus', 'Internazionale', 'Inter Milan', 'AC Milan', 'Napoli', 'Roma', 'Paris Saint', 'PSG', 'Marseille', 'Benfica', 'Porto', 'Sporting CP',
+       'Ajax', 'PSV', 'Feyenoord', 'Galatasaray', 'Fenerbahce', 'Fenerbahçe', 'Besiktas', 'Beşiktaş', 'Trabzonspor', 'Al Nassr', 'Al-Nassr', 'Al Hilal', 'Al Ittihad', 'Al Ahli', 'Celtic', 'Rangers', 'Atalanta', 'Lazio', 'Fiorentina', 'Aston Villa', 'Villarreal', 'Sevilla', 'Athletic Club', 'Real Sociedad', 'Lyon', 'Monaco', 'Lille', 'Leipzig', 'Stuttgart', 'Brighton', 'Nottingham', 'Al Qadsiah', 'Atlanta United', 'Inter Miami', 'LA Galaxy', 'Boca Juniors', 'River Plate', 'Racing Club', 'Independiente', 'San Lorenzo', 'Flamengo', 'Palmeiras', 'Corinthians', 'São Paulo', 'Santos', 'Botafogo', 'Fluminense', 'América', 'Chivas', 'Guadalajara', 'Tigres', 'Monterrey']
 STARS = ['Ronaldo', 'Messi', 'Mbapp', 'Haaland', 'Yamal', 'Vinícius', 'Vinicius', 'Bellingham', 'Kane', 'Salah', 'Güler', 'Guler', 'Kenan Y', 'Osimhen', 'Icardi', 'Neymar', 'Benzema', 'Gyökeres', 'Gyokeres', 'Saka', 'Palmer', 'Wirtz', 'Musiala']
 NICE = (('bicycle', 'RÖVEŞATA'), ('very long range', 'ÇOK UZAKTAN'), ('outside the box', 'UZAKTAN'), ('free kick', 'FRİKİK'), ('volley', 'VOLE'),
         ('solo', 'SOLO'), ('top left corner', 'DOKSAN'), ('top right corner', 'DOKSAN'), ('scorpion', 'AKREP'), ('rabona', 'RABONA'))
 NICE_CORE = ('RÖVEŞATA', 'ÇOK UZAKTAN', 'UZAKTAN', 'FRİKİK', 'VOLE', 'SOLO', 'AKREP', 'RABONA')
 def get(u):
     return json.load(urllib.request.urlopen(urllib.request.Request(u, headers={'User-Agent': 'Mozilla/5.0'}), timeout=15))
-def isbig(name): return any(b.lower() in name.lower() for b in BIG)
+def isbig(name):  # name = team displayName or 'A at B' event name; match team names by prefix (avoids 'Charlton Athletic', 'QPR Rangers')
+    teams = [t.strip() for t in name.replace(' vs ', ' at ').split(' at ')]
+    return any(t.lower().startswith(b.lower()) for t in teams for b in BIG)
 def links(who, team):
     q = urllib.parse.quote
     return (f'TikTok: https://www.tiktok.com/search/video?q={q(who + " goal")} | X: https://x.com/search?q={q(who + " filter:videos")}&f=live'
