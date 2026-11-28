@@ -39,7 +39,7 @@ while True:
                 home = next(x for x in cs if x['homeAway'] == 'home'); away = next(x for x in cs if x['homeAway'] == 'away')
                 hn, an = home['team']['shortDisplayName'], away['team']['shortDisplayName']
                 big = isbig(e['name']); score = f"{hn} {home.get('score')}-{away.get('score')} {an}"
-                tname = {x['team']['id']: x['team']['shortDisplayName'] for x in cs}
+                tname = {x['team']['id']: x['team']['shortDisplayName'] for x in cs}; tfull = {x['team']['id']: x['team']['displayName'] for x in cs}
                 det = c.get('details', [])
                 gkey = lambda d: f"{e['id']}|g|{d.get('clock', {}).get('displayValue')}|{(d.get('athletesInvolved') or [{}])[0].get('id')}"
                 new_goal = any(d.get('scoringPlay') and gkey(d) not in seen for d in det)
@@ -63,7 +63,7 @@ while True:
                     m = int(''.join(ch for ch in mn.split("'")[0].split('+')[0] if ch.isdigit()) or 0)
                     hat = len(goals[f"{e['id']}|{a.get('id')}"]) == 3
                     extra = (['⏱️ SON DAKİKA'] if m >= 85 and (big or nice) else []) + (['🎩 HAT-TRICK'] if hat else []) \
-                            + (['😱 KÜÇÜK TAKIMDAN BÜYÜĞE'] if big and not isbig(team) else []) + (['⭐ YILDIZ'] if star else [])
+                            + (['😱 KÜÇÜK TAKIMDAN BÜYÜĞE'] if big and not isbig(tfull.get(d.get('team', {}).get('id'), team)) else []) + (['⭐ YILDIZ'] if star else [])
                     if not (big or nice or hat or star): seen.add(key); continue
                     head = 'GOL' + (' 🔥 ' + '/'.join(tag) if tag else '') + (' ' + ' '.join(extra) if extra else '')
                     emit(key, f"{head} | {who} {mn} | {score} | {L} | {links(who, team)}")
@@ -79,7 +79,8 @@ while True:
                 if state == 'post' and big:  # upset at full time
                     hs, as_ = int(home.get('score') or 0), int(away.get('score') or 0)
                     loser = hn if hs < as_ else an if as_ < hs else ''; winner = an if hs < as_ else hn if as_ < hs else ''
-                    if loser and isbig(loser) and not isbig(winner):
+                    lf = home['team']['displayName'] if loser == hn else away['team']['displayName']; wf = away['team']['displayName'] if loser == hn else home['team']['displayName']
+                    if loser and isbig(lf) and not isbig(wf):
                         emit(f"{e['id']}|upset", f"😱 SÜRPRİZ SONUÇ | {score} (MS) | {L} | {links(winner, winner)}")
     if first: print(f'ALARM HAZIR v2: {len(seen)} eski olay atlandı, {len(LEAGUES)} lig izleniyor', flush=True); first = False
     time.sleep(30)
