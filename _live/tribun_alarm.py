@@ -2,7 +2,7 @@
 # ESPN (anahtarsız) 30 sn'de bir. Her olayda tek satır: TÜR | oyuncu dk | skor | lig | TikTok/X arama linkleri.
 # Bulut oturumunda Monitor ile çalışır -> her satırda telefon bildirimi. Kullanıcı tribün videosunu bulur, _live/hizli.py ile 5 dk'da video.
 # Kullanım: python3 tribun_alarm.py [lig ...]
-import sys, json, time, datetime, urllib.request, urllib.parse
+import sys, re, json, time, datetime, urllib.request, urllib.parse
 LEAGUES = sys.argv[1:] or ['eng.1', 'esp.1', 'ita.1', 'ger.1', 'fra.1', 'tur.1', 'por.1', 'ned.1', 'ksa.1', 'eng.2', 'sco.1', 'bel.1',
                            'uefa.champions', 'uefa.europa', 'uefa.europa.conf', 'eng.fa', 'eng.league_cup', 'usa.1', 'arg.1', 'arg.2', 'bra.1', 'mex.1', 'conmebol.libertadores', 'conmebol.sudamericana', 'esp.copa_del_rey', 'ita.coppa_italia', 'ger.dfb_pokal']
 BIG = ['Real Madrid', 'Barcelona', 'Atletico', 'Atlético', 'Arsenal', 'Chelsea', 'Liverpool', 'Manchester', 'Man United', 'Man City', 'Tottenham', 'Newcastle',
@@ -59,7 +59,7 @@ while True:
                     for kw, tr in NICE:
                         if kw in desc and tr not in tag: tag.append(tr)
                     nice = any(t in tag for t in NICE_CORE)
-                    star = any(s.lower() in who.lower() for s in STARS)
+                    star = any(re.search(r'(^|\s)' + re.escape(s.lower()) + r'($|\s)', who.lower()) or (len(s.split()) == 1 and s.lower() in who.lower().split()) for s in STARS)
                     m = int(''.join(ch for ch in mn.split("'")[0].split('+')[0] if ch.isdigit()) or 0)
                     hat = len(goals[f"{e['id']}|{a.get('id')}"]) == 3
                     extra = (['⏱️ SON DAKİKA'] if m >= 85 and (big or nice) else []) + (['🎩 HAT-TRICK'] if hat else []) \
