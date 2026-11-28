@@ -510,4 +510,4 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 - s04/film.py (mil1 türevi): @s04 resmi X fotoğrafı (ABPFIFF 8:1, 2126714585365524934) KULLANILDI + kendi kartlarımız (3-0 HT, MARINO HAT-TRICK, 8-1 FT), skor tabelası, 9 gol çipi, Chatterbox VO 5 satır. 15 s. Müzik yok. Telif DÜŞÜK. Dal up-schalke81. Yüklenmedi.
 
 ## 28.11 feyenoord-fans (X @Ultrasbible_ 2126705985884696675, taraftar 720x1280, 76 s; Feyenoord antrenmanında meşale şovu, Klassieker öncesi) — KULLANILDI 0-32 s
-- hizli.py: 'FEYENOORD FANS ARE READY' / 'DE KLASSIEKER · TOMORROW vs AJAX' (ESPN: 29.11 13:30 UTC De Kuip). Telif DÜŞÜK. Topluluk: meşale var, şiddet yok. Dal up-feyenoord-fans. Yüklenmedi.
+- hizli.py: 'FEYENOORD FANS ARE READY' / 'DE KLASSIEKER · TOMORROW vs AJAX' (ESPN: 29.11 13:30 UTC De Kuip). Telif DÜŞÜK. Topluluk: meşale var, şiddet yok. Dal up-feyenoord-fans. YÜKLENDİ 28.11 16:48 UTC -> 13x7Bfn0cj8.

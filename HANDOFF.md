@@ -85,3 +85,4 @@ Strateji ve seri/ses planı: OPERASYON.md -> "STRATEJİ" ve "STİL KURALI".
 - 28.11 ronaldo-post YÜKLENDİ -> xBSd2cco4fM. Dağıtım testi: 2-3 saat sonra izlenmeye bak.
 - 28.11 ronaldo-bike YÜKLENDİ -> qCSLYPAi3J8.
 - 28.11 wilson-19 YÜKLENDİ -> _k5RcIoe_RE.
+- 28.11 feyenoord-fans YÜKLENDİ -> 13x7Bfn0cj8. Bekleyen: s04 Schalke 8-1 (up-schalke81).
