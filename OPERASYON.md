@@ -493,3 +493,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 28.11 messi-season-over (X @ISHQ577 2126515642505613812, tribün 720x748, 9 s, Messi sahadan çıkıyor) — KULLANILDI (TAMAMI)
 - _live/hizli.py: 'MESSI'S SEASON IS OVER' / 'COLUMBUS 1-0 INTER MIAMI · 90+2'' (ESPN 401933727: Santiago Rodríguez 90+2', Columbus seriyi 2-0 aldı, MLS playoff 1. tur). Telif DÜŞÜK. Dal up-messi-season-over. Yüklenmedi.
+
+## 28.11 ronaldo-post (X @TekkerzFoot 2126659943147122949, tribün 1080x1920, 10.6 s, Ronaldo direkten döndü, Al Hazem–Al Nassr 1. yarı) — KULLANILDI (TAMAMI)
+- live/ronaldo-post: filigran inpaint (clean.py) + hizli.py 'RONALDO HITS THE POST!' / 'AL HAZEM 0-1 AL NASSR · 1ST HALF' (ESPN 401900442, 39' 0-1). Telif DÜŞÜK. Dal up-ronaldo-post. Yüklenmedi.
