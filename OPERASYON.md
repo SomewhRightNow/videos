@@ -505,3 +505,6 @@ Bizim uygulama: kesmeler müzik vuruşlarına (FSM phonk, onset tespiti) hizalan
 
 ## 28.11 wilson-19 (X @Rufus_45 2126701134312083910, tribün Old Trafford 1080x1920, 9.4 s) — KULLANILDI (TAMAMI)
 - hizli.py: 'CALLUM WILSON · 19'' / 'MAN UNITED 0-1 BRENTFORD' (ESPN eng.1; tweet 'first goal of the season' = 19'). Telif DÜŞÜK (tribün, PL yayını yok). Dal up-wilson-19. YÜKLENDİ 28.11 15:43 UTC -> _k5RcIoe_RE.
+
+## 28.11 s04 'Schalke Lose 8-1' (BREAKING foto+VO) — Paderborn 8-1 Schalke, Bundesliga (ESPN 401884719 + haber.com + baykusen.de)
+- s04/film.py (mil1 türevi): @s04 resmi X fotoğrafı (ABPFIFF 8:1, 2126714585365524934) KULLANILDI + kendi kartlarımız (3-0 HT, MARINO HAT-TRICK, 8-1 FT), skor tabelası, 9 gol çipi, Chatterbox VO 5 satır. 15 s. Müzik yok. Telif DÜŞÜK. Dal up-schalke81. Yüklenmedi.
