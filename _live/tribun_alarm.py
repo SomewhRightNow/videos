@@ -17,9 +17,9 @@ def get(u):
 def isbig(name):  # name = team displayName or 'A at B' event name; match team names by prefix (avoids 'Charlton Athletic', 'QPR Rangers')
     teams = [t.strip() for t in name.replace(' vs ', ' at ').split(' at ')]
     return any(t.lower().startswith(b.lower()) for t in teams for b in BIG)
-def links(who, team):
+def links(who, team, what='goal'):
     q = urllib.parse.quote
-    return (f'TikTok: https://www.tiktok.com/search/video?q={q(who + " goal")} | X: https://x.com/search?q={q(who + " filter:videos")}&f=live'
+    return (f'TikTok: https://www.tiktok.com/search/video?q={q(who + " " + what)} | X: https://x.com/search?q={q(who + " filter:videos")}&f=live'
             f' | X taraftar: https://x.com/search?q={q(team + " fans filter:videos")}&f=live')
 seen = set(); goals = {}; first = True
 def emit(key, line):
@@ -70,7 +70,7 @@ while True:
                 for d in det:  # red cards in big games
                     if not d.get('redCard') or not big: continue
                     a = (d.get('athletesInvolved') or [{}])[0]; who = a.get('displayName', '?'); mn = d.get('clock', {}).get('displayValue', '')
-                    emit(f"{e['id']}|r|{mn}|{a.get('id')}", f"🟥 KIRMIZI KART | {who} {mn} | {score} | {L} | {links(who, tname.get(d.get('team', {}).get('id'), ''))}")
+                    emit(f"{e['id']}|r|{mn}|{a.get('id')}", f"🟥 KIRMIZI KART | {who} {mn} | {score} | {L} | {links(who, tname.get(d.get('team', {}).get('id'), ''), 'red card')}")
                 for x in comm:  # penalties missed/saved, VAR disallowed (big games)
                     t = x.get('text', ''); tl = t.lower(); mn = x.get('time', {}).get('displayValue', '')
                     kind = ('⛔ PENALTI KAÇTI' if 'penalty missed' in tl else '🧤 PENALTI KURTARILDI' if 'penalty saved' in tl else
